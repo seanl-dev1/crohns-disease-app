@@ -1,0 +1,2008 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-03-31",
+    "description": "Comprehensive Crohn's Disease Medication Database for Patient Self-Management App",
+    "disclaimer": "This database is for informational purposes only and does not replace professional medical advice. Always consult your gastroenterologist or pharmacist before making medication changes.",
+    "sources": [
+      "FDA prescribing information / package inserts",
+      "Crohn's & Colitis Foundation medication guides",
+      "ACG Clinical Guidelines (2025 update)",
+      "ECCO Guidelines",
+      "PubMed / PMC peer-reviewed literature",
+      "UpToDate clinical summaries (summarized in own words)",
+      "Drugs.com / MedlinePlus drug information"
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "aminosalicylates",
+      "name": "Aminosalicylates (5-ASAs)",
+      "description": "Anti-inflammatory drugs that work directly on the lining of the GI tract. More effective for ulcerative colitis than Crohn's; limited role in Crohn's, mainly for mild colonic or ileal disease.",
+      "medications": [
+        {
+          "id": "mesalamine",
+          "generic_name": "Mesalamine (5-aminosalicylic acid)",
+          "brand_names": ["Asacol HD", "Pentasa", "Lialda", "Apriso", "Delzicol", "Canasa (rectal)", "Rowasa (rectal enema)"],
+          "drug_class": "Aminosalicylate (5-ASA)",
+          "mechanism_plain_language": "Works by reducing inflammation directly in the lining of the intestine. It blocks the production of chemicals (prostaglandins and leukotrienes) that cause swelling, pain, and diarrhea in your gut.",
+          "crohns_use": "Mild to moderate Crohn's disease, primarily colonic or ileal involvement. Limited evidence for Crohn's compared to UC. Sometimes used as maintenance after mild flares.",
+          "use_phase": "maintenance",
+          "route": ["oral", "rectal"],
+          "dosing_schedule": {
+            "Pentasa": "1g four times daily or 2g twice daily (up to 4g/day)",
+            "Asacol_HD": "1600mg three times daily (4.8g/day) for active disease; take on EMPTY STOMACH, 1hr before or 2hr after meals",
+            "Lialda": "2.4-4.8g once daily WITH FOOD",
+            "Apriso": "1.5g once daily in the morning",
+            "Delzicol": "800mg three times daily (2.4g/day)",
+            "Canasa_suppository": "1g rectally at bedtime",
+            "Rowasa_enema": "4g rectally at bedtime"
+          },
+          "common_side_effects": [
+            "Headache",
+            "Nausea",
+            "Abdominal pain/cramping",
+            "Diarrhea (paradoxically)",
+            "Gas/flatulence",
+            "Rash",
+            "Fever",
+            "Back pain"
+          ],
+          "serious_side_effects": [
+            "Kidney damage (nephrotoxicity) — rare but serious; requires monitoring",
+            "Acute intolerance syndrome (worsening of colitis symptoms — mimics a flare)",
+            "Pericarditis/myocarditis (very rare heart inflammation)",
+            "Pancreatitis (rare)",
+            "Hepatotoxicity (rare liver injury)",
+            "Blood disorders (rare)"
+          ],
+          "food_interactions": {
+            "take_with_food": "Lialda — must take with food for proper absorption",
+            "take_without_food": "Asacol HD — take on empty stomach (1hr before or 2hr after meals)",
+            "flexible": "Pentasa, Apriso, Delzicol — can take with or without food",
+            "notes": "Do NOT crush, chew, or break delayed-release/extended-release tablets — the coating controls where the drug is released in your GI tract"
+          },
+          "nutrient_depletions": [
+            "Folate/Folic acid — mesalamine may interfere with folate absorption; supplement with 1mg folic acid daily"
+          ],
+          "monitoring": {
+            "baseline": ["Renal function (BUN, creatinine)", "CBC", "Urinalysis"],
+            "ongoing": ["Renal function every 3-6 months for first year, then annually", "CBC periodically"],
+            "notes": "Patients with pre-existing kidney disease should NOT use aminosalicylates"
+          },
+          "post_resection_considerations": "Different formulations release in different parts of the gut. Post-ileal resection, Pentasa (releases throughout small bowel) may have reduced effectiveness since less intestinal surface is available. Discuss with GI which formulation targets your remaining affected areas.",
+          "appetite_weight_digestion": "Generally weight-neutral. May cause nausea or diarrhea that can temporarily reduce appetite.",
+          "special_notes": "Not a sulfa drug — safe for patients with sulfa allergies (unlike sulfasalazine). Safe in pregnancy."
+        },
+        {
+          "id": "sulfasalazine",
+          "generic_name": "Sulfasalazine",
+          "brand_names": ["Azulfidine", "Azulfidine EN-tabs"],
+          "drug_class": "Aminosalicylate (5-ASA) + sulfonamide",
+          "mechanism_plain_language": "A combination of a sulfa antibiotic and 5-ASA. Bacteria in your colon split it into its active anti-inflammatory component (5-ASA) and sulfapyridine. The 5-ASA reduces inflammation in the gut lining.",
+          "crohns_use": "Mild to moderate Crohn's colitis (colon involvement). Less effective for small bowel Crohn's since the drug is activated in the colon.",
+          "use_phase": "both",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "induction": "3-6g/day in divided doses",
+            "maintenance": "2-4g/day in divided doses (typically 1g twice daily to 1g four times daily)",
+            "notes": "Start at a low dose and gradually increase to reduce side effects"
+          },
+          "common_side_effects": [
+            "Nausea/vomiting (very common)",
+            "Headache",
+            "Loss of appetite",
+            "Heartburn",
+            "Rash",
+            "Orange-yellow discoloration of urine and skin",
+            "Reversible male infertility (reduced sperm count)",
+            "Diarrhea"
+          ],
+          "serious_side_effects": [
+            "Severe allergic reaction (sulfa allergy — CONTRAINDICATED in sulfa-allergic patients)",
+            "Blood disorders (agranulocytosis, aplastic anemia)",
+            "Hepatotoxicity",
+            "Stevens-Johnson syndrome (rare severe skin reaction)",
+            "Pancreatitis",
+            "Lung toxicity (pneumonitis)"
+          ],
+          "food_interactions": {
+            "take_with_food": "Yes — take with food or immediately after meals to reduce nausea",
+            "avoid": "No specific foods to avoid, but stay well-hydrated to prevent kidney stones",
+            "notes": "Drink at least 8 glasses of water daily"
+          },
+          "nutrient_depletions": [
+            "Folate/Folic acid — sulfasalazine is a known folate antagonist; MUST supplement with 1-2mg folic acid daily",
+            "Vitamin B12 — may reduce absorption"
+          ],
+          "monitoring": {
+            "baseline": ["CBC with differential", "Liver function tests", "Renal function", "G6PD status (if at risk)"],
+            "ongoing": ["CBC every 2-4 weeks for first 3 months, then every 3 months", "Liver and renal function every 3-6 months"],
+            "notes": "CONTRAINDICATED in sulfa allergy. Also contraindicated in G6PD deficiency, porphyria, and intestinal/urinary obstruction."
+          },
+          "post_resection_considerations": "Since sulfasalazine is activated by colonic bacteria, it requires an intact colon to work. If you've had significant colon resection, this drug may be less effective. Post-ileal resection patients should discuss alternatives.",
+          "appetite_weight_digestion": "Frequently causes nausea and loss of appetite, especially at higher doses. Starting low and titrating up helps. Reversible male infertility is a significant concern for men of reproductive age.",
+          "special_notes": "Much cheaper than other 5-ASAs. The sulfa component causes most of the side effects. If intolerant, switch to a different mesalamine formulation."
+        },
+        {
+          "id": "balsalazide",
+          "generic_name": "Balsalazide disodium",
+          "brand_names": ["Colazal", "Giazo"],
+          "drug_class": "Aminosalicylate (5-ASA) prodrug",
+          "mechanism_plain_language": "A prodrug that gets converted to 5-ASA by bacteria in the colon. Delivers the anti-inflammatory mesalamine directly to the large intestine with fewer systemic side effects.",
+          "crohns_use": "Primarily approved for ulcerative colitis. Sometimes used off-label for Crohn's colitis. Limited evidence for Crohn's specifically.",
+          "use_phase": "both",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "typical": "2.25g (three 750mg capsules) three times daily for 8-12 weeks",
+            "maintenance": "May be continued at same or reduced dose"
+          },
+          "common_side_effects": [
+            "Headache",
+            "Abdominal pain",
+            "Diarrhea",
+            "Nausea",
+            "Vomiting",
+            "Respiratory infection",
+            "Joint pain"
+          ],
+          "serious_side_effects": [
+            "Kidney toxicity (rare)",
+            "Acute intolerance syndrome",
+            "Hepatotoxicity",
+            "Blood disorders (rare)"
+          ],
+          "food_interactions": {
+            "take_with_food": "Can be taken with or without food",
+            "notes": "Capsules can be opened and sprinkled on applesauce for those who have difficulty swallowing"
+          },
+          "nutrient_depletions": ["Folate — supplement recommended"],
+          "monitoring": {
+            "baseline": ["Renal function", "CBC"],
+            "ongoing": ["Renal function and CBC periodically"]
+          },
+          "post_resection_considerations": "Activated in the colon by bacteria — requires intact colon for efficacy. Not useful for small bowel Crohn's or patients with extensive colonic resection.",
+          "appetite_weight_digestion": "Generally well-tolerated. May cause mild nausea or appetite changes.",
+          "special_notes": "Does NOT contain sulfa — safe for sulfa-allergic patients."
+        },
+        {
+          "id": "olsalazine",
+          "generic_name": "Olsalazine sodium",
+          "brand_names": ["Dipentum"],
+          "drug_class": "Aminosalicylate (5-ASA) prodrug",
+          "mechanism_plain_language": "Two molecules of 5-ASA linked together. Colonic bacteria split them apart, releasing the active anti-inflammatory drug directly in the colon.",
+          "crohns_use": "Primarily for ulcerative colitis maintenance. Rarely used in Crohn's; only for Crohn's colitis if other 5-ASAs fail.",
+          "use_phase": "maintenance",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "typical": "500mg twice daily (1g/day total)",
+            "notes": "Take with food to reduce diarrhea"
+          },
+          "common_side_effects": [
+            "Diarrhea (very common — up to 17% of patients; dose-related secretory diarrhea)",
+            "Abdominal pain/cramping",
+            "Nausea",
+            "Headache",
+            "Rash",
+            "Heartburn"
+          ],
+          "serious_side_effects": [
+            "Severe diarrhea leading to dehydration",
+            "Kidney damage (rare)",
+            "Pancreatitis (rare)",
+            "Pericarditis (rare)",
+            "Blood disorders (rare)"
+          ],
+          "food_interactions": {
+            "take_with_food": "YES — always take with food to minimize diarrhea",
+            "notes": "The high rate of diarrhea limits its use"
+          },
+          "nutrient_depletions": ["Folate — supplement recommended"],
+          "monitoring": {
+            "baseline": ["Renal function", "CBC"],
+            "ongoing": ["Renal function periodically", "Monitor for worsening diarrhea"]
+          },
+          "post_resection_considerations": "Requires colonic bacteria for activation — not suitable for patients with significant colon resection. The high diarrhea rate makes this a poor choice for post-resection patients who already have loose stools.",
+          "appetite_weight_digestion": "Significant diarrhea risk. May cause weight loss due to fluid losses. Generally avoided in patients already prone to diarrhea.",
+          "special_notes": "Least commonly used 5-ASA due to high diarrhea rate. Does not contain sulfa."
+        }
+      ]
+    },
+
+    {
+      "id": "corticosteroids",
+      "name": "Corticosteroids",
+      "description": "Powerful anti-inflammatory drugs used for short-term treatment of moderate to severe Crohn's flares. NOT appropriate for long-term maintenance due to serious side effects. The goal is always to taper off steroids.",
+      "medications": [
+        {
+          "id": "prednisone",
+          "generic_name": "Prednisone",
+          "brand_names": ["Deltasone", "Rayos", "Prednisone Intensol"],
+          "drug_class": "Systemic corticosteroid",
+          "mechanism_plain_language": "A powerful anti-inflammatory that suppresses your entire immune system. It blocks many of the chemicals that cause inflammation throughout your body, which quickly reduces swelling, pain, and diarrhea — but affects your whole body, not just your gut.",
+          "crohns_use": "Moderate to severe Crohn's flares. Induction of remission only — NOT for maintenance. Should be tapered and discontinued as soon as possible.",
+          "use_phase": "induction",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "induction": "40mg daily for 1-2 weeks until symptoms improve",
+            "taper": "Reduce by 5mg per week over 8-12 weeks. NEVER stop abruptly — can cause adrenal crisis",
+            "notes": "Take in the morning with food to mimic natural cortisol rhythm and reduce insomnia"
+          },
+          "common_side_effects": [
+            "Moon face (facial swelling)",
+            "Weight gain / increased appetite",
+            "Insomnia",
+            "Mood changes (irritability, anxiety, euphoria, depression)",
+            "Acne",
+            "Elevated blood sugar",
+            "Fluid retention / bloating",
+            "Increased sweating",
+            "Muscle weakness",
+            "Easy bruising"
+          ],
+          "serious_side_effects": [
+            "Osteoporosis / bone loss (long-term use)",
+            "Adrenal suppression (body stops making its own cortisol)",
+            "Increased infection risk (including opportunistic infections)",
+            "Cataracts and glaucoma",
+            "Avascular necrosis (bone death, especially hip joints)",
+            "Diabetes / glucose intolerance",
+            "Hypertension",
+            "GI bleeding / peptic ulcers",
+            "Psychosis (at high doses)",
+            "Growth suppression in children"
+          ],
+          "food_interactions": {
+            "take_with_food": "YES — always take with food to reduce stomach irritation",
+            "avoid": "Limit sodium/salt (worsens fluid retention). Limit sugar (worsens blood glucose effects). Avoid grapefruit juice (may increase drug levels).",
+            "increase": "Increase calcium-rich foods and protein to counteract bone and muscle loss"
+          },
+          "nutrient_depletions": [
+            "Calcium — steroids block calcium absorption and increase urinary calcium loss",
+            "Vitamin D — steroids interfere with vitamin D metabolism",
+            "Potassium — steroids increase urinary potassium loss",
+            "Magnesium — depleted through increased urinary excretion",
+            "Zinc — increased urinary zinc loss",
+            "Vitamin C — depleted; important for immune function and wound healing",
+            "Vitamin B6 — depleted",
+            "Vitamin B12 — may be reduced",
+            "Folate — may be depleted",
+            "Selenium — increased urinary loss",
+            "Chromium — depleted; may worsen blood sugar control",
+            "Vitamin K — increased urinary loss; important for bone health"
+          ],
+          "monitoring": {
+            "baseline": ["Blood glucose", "Blood pressure", "Bone density (DEXA scan if prolonged use anticipated)", "Eye exam"],
+            "ongoing": ["Blood glucose regularly (especially if diabetic or pre-diabetic)", "Blood pressure at each visit", "Bone density annually if used >3 months", "Eye exam annually for cataracts/glaucoma", "Monitor for signs of infection"],
+            "supplements_during_use": "Take calcium citrate 1000-1200mg/day + vitamin D3 1000-2000 IU/day while on steroids to protect bones"
+          },
+          "post_resection_considerations": "Oral prednisone is absorbed in the upper GI tract (stomach/duodenum), so absorption is generally not affected by ileal or colonic resection. However, post-resection patients are ALREADY at higher risk for bone loss and nutrient deficiencies, so steroid use compounds these risks significantly. Extra vigilance with calcium, vitamin D, and bone density monitoring is essential.",
+          "appetite_weight_digestion": "SIGNIFICANTLY increases appetite and causes weight gain, especially central/abdominal fat. Causes fluid retention. Can worsen blood sugar control. These effects reverse after tapering off.",
+          "special_notes": "Steroid dependency (inability to taper) is a sign that you need escalation to an immunomodulator or biologic. If you've needed steroids more than twice in a year, discuss step-up therapy with your GI."
+        },
+        {
+          "id": "prednisolone",
+          "generic_name": "Prednisolone",
+          "brand_names": ["Orapred", "Prelone", "Pediapred"],
+          "drug_class": "Systemic corticosteroid",
+          "mechanism_plain_language": "The active form of prednisone. Your liver normally converts prednisone to prednisolone. If you have liver problems, prednisolone may be preferred since it's already in its active form.",
+          "crohns_use": "Same as prednisone — moderate to severe Crohn's flares. Often preferred in patients with liver disease or children.",
+          "use_phase": "induction",
+          "route": ["oral", "IV"],
+          "dosing_schedule": {
+            "induction": "40mg daily (European guidelines); taper by 5mg per week over 8 weeks",
+            "notes": "Liquid formulation available for patients who have difficulty swallowing"
+          },
+          "common_side_effects": "Same as prednisone",
+          "serious_side_effects": "Same as prednisone",
+          "food_interactions": "Same as prednisone — take with food",
+          "nutrient_depletions": "Same as prednisone",
+          "monitoring": "Same as prednisone",
+          "post_resection_considerations": "Same as prednisone. Liquid form may be useful for patients with strictures who have difficulty swallowing tablets.",
+          "appetite_weight_digestion": "Same as prednisone — significant appetite increase and weight gain.",
+          "special_notes": "Preferred over prednisone in patients with significant liver disease since it doesn't require hepatic conversion."
+        },
+        {
+          "id": "budesonide",
+          "generic_name": "Budesonide",
+          "brand_names": ["Entocort EC (ileal/right colon release)", "Uceris (colonic release)", "Ortikos"],
+          "drug_class": "Locally-acting corticosteroid",
+          "mechanism_plain_language": "A steroid that is designed to work locally in your gut with much less effect on the rest of your body. About 90% of it gets broken down by the liver on first pass, so you get the anti-inflammatory benefit in your intestine without as many of the systemic steroid side effects like moon face and weight gain.",
+          "crohns_use": "Mild to moderate Crohn's disease affecting the ileum and/or right colon (Entocort EC). Short-term induction and sometimes short-term maintenance. NOT for severe Crohn's.",
+          "use_phase": "both",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "Entocort_EC_induction": "9mg once daily (or 3mg three times daily) for 8 weeks",
+            "Entocort_EC_taper": "Reduce to 6mg daily for 2 weeks, then 3mg daily for 2 weeks before stopping",
+            "Entocort_EC_maintenance": "3-6mg daily for up to 3 months (not recommended beyond 3 months)",
+            "timing": "Take in the morning, preferably before breakfast. Can take with or without food."
+          },
+          "common_side_effects": [
+            "Headache",
+            "Nausea",
+            "Upper respiratory infection",
+            "Back pain",
+            "Dizziness",
+            "Abdominal pain",
+            "Fatigue",
+            "Less moon face and weight gain than prednisone (but still possible at 9mg)"
+          ],
+          "serious_side_effects": [
+            "Adrenal suppression (less than prednisone but still possible, especially at 9mg)",
+            "Increased infection risk",
+            "Bone loss (less than systemic steroids but still a concern with prolonged use)",
+            "Elevated blood sugar (less than prednisone)",
+            "Rare: cataracts, glaucoma"
+          ],
+          "food_interactions": {
+            "take_with_food": "Can take with or without food. If stomach upset occurs, take with food.",
+            "avoid": "Avoid grapefruit and grapefruit juice — inhibits CYP3A4 metabolism, increasing budesonide levels and systemic side effects",
+            "notes": "Swallow capsules whole — do not chew, crush, or open"
+          },
+          "nutrient_depletions": [
+            "Calcium and Vitamin D — less depletion than systemic steroids but still consider supplementation",
+            "Same nutrients as prednisone but to a lesser degree"
+          ],
+          "monitoring": {
+            "baseline": ["Blood glucose", "Blood pressure"],
+            "ongoing": ["Less intensive monitoring than systemic steroids", "Blood glucose if diabetic", "Bone density if prolonged use"],
+            "notes": "Still needs a taper — do NOT stop abruptly"
+          },
+          "post_resection_considerations": "CRITICAL: Entocort EC is designed to release in the ileum and right colon. If you've had an ileocecal resection, the capsule may pass through before fully releasing its medication, reducing effectiveness. Discuss with your GI — you may need a different steroid formulation. Additionally, if you have a shortened gut, the transit time may be too fast for proper drug release.",
+          "appetite_weight_digestion": "Less appetite stimulation and weight gain than prednisone, but these effects can still occur. Generally better tolerated.",
+          "special_notes": "Preferred first-line steroid for mild-moderate ileal/right colonic Crohn's due to better side effect profile than prednisone. NOT effective for Crohn's affecting the left colon, rectum, or upper GI tract."
+        },
+        {
+          "id": "methylprednisolone",
+          "generic_name": "Methylprednisolone",
+          "brand_names": ["Medrol (oral)", "Solu-Medrol (IV)", "Depo-Medrol (injection)"],
+          "drug_class": "Systemic corticosteroid",
+          "mechanism_plain_language": "A potent IV steroid used when you're hospitalized for a severe Crohn's flare. Works the same way as prednisone but is given through your vein for faster, more reliable delivery when your gut may not absorb oral medications well.",
+          "crohns_use": "Acute severe Crohn's disease flares requiring hospitalization. Bridge to other therapies.",
+          "use_phase": "induction",
+          "route": ["IV", "oral"],
+          "dosing_schedule": {
+            "IV_acute": "40-60mg IV daily for 3-5 days",
+            "oral": "Medrol dose pack: tapered over 6 days (not ideal for Crohn's — too short)",
+            "transition": "Switch to oral prednisone 40mg daily once tolerating oral intake, then standard taper"
+          },
+          "common_side_effects": "Same as prednisone — see prednisone entry",
+          "serious_side_effects": "Same as prednisone. IV administration may additionally cause: infusion site reactions, rapid heart rate, flushing.",
+          "food_interactions": "IV form: not applicable. Oral form: same as prednisone.",
+          "nutrient_depletions": "Same as prednisone",
+          "monitoring": "Same as prednisone. During IV administration: heart rate, blood pressure, blood glucose more frequently.",
+          "post_resection_considerations": "IV form bypasses the gut entirely — ideal for post-resection patients during severe flares when oral absorption is unreliable.",
+          "appetite_weight_digestion": "Same as prednisone.",
+          "special_notes": "Hospital drug — not for outpatient self-management. Used as rescue therapy."
+        },
+        {
+          "id": "hydrocortisone",
+          "generic_name": "Hydrocortisone",
+          "brand_names": ["Cortenema (rectal enema)", "Anusol-HC (rectal)", "Cortifoam (rectal foam)", "Solu-Cortef (IV)"],
+          "drug_class": "Corticosteroid",
+          "mechanism_plain_language": "A naturally-occurring steroid hormone (your body makes cortisol). Used topically in the rectum to reduce inflammation locally, or IV in the hospital for severe flares.",
+          "crohns_use": "Rectal formulations for Crohn's proctitis or distal colitis. IV for acute severe flares (hospital setting).",
+          "use_phase": "induction",
+          "route": ["rectal", "IV"],
+          "dosing_schedule": {
+            "rectal_enema": "100mg rectally at bedtime for 21 days, then every other night for 2-3 weeks",
+            "rectal_foam": "One applicatorful (80mg) rectally once or twice daily for 2-3 weeks",
+            "IV": "100mg IV every 6-8 hours for acute severe disease"
+          },
+          "common_side_effects": [
+            "Rectal: local irritation, rectal bleeding, discomfort",
+            "Systemic (IV): same as prednisone"
+          ],
+          "serious_side_effects": "Rectal forms have minimal systemic absorption. IV forms carry same risks as prednisone.",
+          "food_interactions": "Rectal: not applicable. IV: not applicable.",
+          "nutrient_depletions": "Minimal with rectal use. IV: same as prednisone.",
+          "monitoring": "Rectal: minimal monitoring needed. IV: same as methylprednisolone.",
+          "post_resection_considerations": "Rectal formulations require enough rectum/distal colon to be present. If you've had a proctectomy or distal colon resection, rectal formulations won't work.",
+          "appetite_weight_digestion": "Rectal forms generally don't affect appetite/weight. IV forms have same effects as prednisone.",
+          "special_notes": "Rectal hydrocortisone is a good option for isolated rectal/distal Crohn's inflammation with fewer systemic effects."
+        }
+      ]
+    },
+
+    {
+      "id": "immunomodulators",
+      "name": "Immunomodulators",
+      "description": "Drugs that modify or suppress the immune system to reduce chronic inflammation. Take weeks to months to reach full effect. Often used as steroid-sparing agents or in combination with biologics.",
+      "medications": [
+        {
+          "id": "azathioprine",
+          "generic_name": "Azathioprine",
+          "brand_names": ["Imuran", "Azasan"],
+          "drug_class": "Thiopurine immunomodulator",
+          "mechanism_plain_language": "Tricks your rapidly dividing immune cells into using a fake building block when they try to multiply. This slows down the overactive immune attack on your intestines. Takes 3-6 months to reach full effectiveness.",
+          "crohns_use": "Maintenance of remission. Steroid-sparing agent (allows you to taper off steroids). Often combined with biologics (especially infliximab) to prevent antibody formation against the biologic.",
+          "use_phase": "maintenance",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "target_dose": "2-2.5 mg/kg/day (e.g., ~150-175mg for a 70kg person)",
+            "start_low": "Start at 50mg daily and increase by 25mg every 1-2 weeks to target dose",
+            "notes": "Dose adjusted based on TPMT/NUDT15 enzyme levels and 6-TGN metabolite levels"
+          },
+          "common_side_effects": [
+            "Nausea/vomiting (common early on; improves with time)",
+            "Fatigue",
+            "Diarrhea",
+            "Low white blood cell count (leukopenia)",
+            "Elevated liver enzymes",
+            "Increased susceptibility to infections",
+            "Hair thinning",
+            "Muscle aches"
+          ],
+          "serious_side_effects": [
+            "Bone marrow suppression (severe leukopenia — life-threatening if white count drops too low)",
+            "Pancreatitis (3-5% of patients; usually occurs in first few weeks — requires immediate discontinuation)",
+            "Hepatotoxicity (liver damage)",
+            "Increased lymphoma risk (small but real; hepatosplenic T-cell lymphoma in young males when combined with anti-TNF)",
+            "Non-melanoma skin cancer risk (use sunscreen!)",
+            "Severe infections"
+          ],
+          "food_interactions": {
+            "take_with_food": "Take with food or after meals to reduce nausea",
+            "avoid": "No specific food interactions",
+            "notes": "Can split dose (half in morning, half at evening) if nausea is a problem. Some patients tolerate it better at bedtime."
+          },
+          "nutrient_depletions": [
+            "No major direct nutrient depletions",
+            "Nausea may reduce overall food intake indirectly"
+          ],
+          "monitoring": {
+            "before_starting": [
+              "TPMT and/or NUDT15 genotype or enzyme activity — CRITICAL (identifies patients at risk for severe bone marrow suppression)",
+              "CBC with differential",
+              "Liver function tests",
+              "Hepatitis B/C testing",
+              "Varicella immunity status"
+            ],
+            "ongoing": [
+              "CBC weekly for first 4 weeks",
+              "CBC every 2 weeks for next 4 weeks",
+              "CBC at 12 weeks, then every 3 months",
+              "Liver function tests every 3 months",
+              "6-TGN and 6-MMP metabolite levels to optimize dosing (target 6-TGN 235-450 pmol/8x10^8 RBC)",
+              "Check CBC 2 weeks after ANY dose increase"
+            ],
+            "notes": "10% of people are intermediate TPMT metabolizers (need lower dose). 0.3% are TPMT-deficient (CANNOT take thiopurines at standard doses)."
+          },
+          "post_resection_considerations": "Oral absorption occurs in the upper GI tract, so ileal resection generally does not affect absorption. However, post-resection patients may already have impaired immunity and nutritional deficiencies — monitor more closely.",
+          "appetite_weight_digestion": "Nausea is the main issue, especially when starting. Weight neutral once tolerated. Does not typically affect digestion beyond initial nausea.",
+          "special_notes": "MUST get TPMT tested before starting. Annual skin cancer screening required. Avoid prolonged sun exposure and use SPF 30+. Do NOT take with allopurinol unless specifically directed by your GI (allopurinol dramatically increases azathioprine levels — dose must be reduced by 75% if combining intentionally)."
+        },
+        {
+          "id": "mercaptopurine",
+          "generic_name": "6-Mercaptopurine (6-MP)",
+          "brand_names": ["Purinethol", "Purixan (liquid)"],
+          "drug_class": "Thiopurine immunomodulator",
+          "mechanism_plain_language": "The active metabolite of azathioprine — works the same way by tricking immune cells with fake DNA building blocks. Some patients who can't tolerate azathioprine can tolerate 6-MP and vice versa.",
+          "crohns_use": "Same as azathioprine — maintenance of remission and steroid-sparing. Often tried if azathioprine causes intolerable nausea.",
+          "use_phase": "maintenance",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "target_dose": "1-1.5 mg/kg/day (e.g., ~75-100mg for a 70kg person)",
+            "notes": "Same TPMT/metabolite monitoring as azathioprine. Liquid form (Purixan) available for precise dosing."
+          },
+          "common_side_effects": "Similar to azathioprine but may cause LESS nausea in some patients",
+          "serious_side_effects": "Same as azathioprine",
+          "food_interactions": {
+            "take_with_food": "Can take with or without food. Consistency is key — take the same way each day.",
+            "avoid": "Avoid dairy products within 1 hour — may decrease absorption"
+          },
+          "nutrient_depletions": "Same as azathioprine",
+          "monitoring": "Same as azathioprine — TPMT testing, regular CBC, liver enzymes, metabolite levels",
+          "post_resection_considerations": "Same as azathioprine. Liquid formulation (Purixan) useful for precise dosing in patients with absorption concerns.",
+          "appetite_weight_digestion": "May be better tolerated GI-wise than azathioprine for some patients. Otherwise similar.",
+          "special_notes": "Same warnings as azathioprine regarding TPMT, allopurinol, sun exposure, and lymphoma risk."
+        },
+        {
+          "id": "methotrexate",
+          "generic_name": "Methotrexate (MTX)",
+          "brand_names": ["Rheumatrex", "Trexall", "Otrexup (auto-injector)", "Rasuvo (auto-injector)"],
+          "drug_class": "Antimetabolite immunomodulator",
+          "mechanism_plain_language": "Blocks an enzyme called dihydrofolate reductase that cells need to make DNA. This slows down rapidly dividing immune cells that are attacking your intestines. Also has direct anti-inflammatory effects.",
+          "crohns_use": "Maintenance of remission in Crohn's disease, especially for patients who fail or are intolerant of thiopurines. Sometimes used as a steroid-sparing agent. Can be combined with biologics. Better evidence in Crohn's than in UC.",
+          "use_phase": "maintenance",
+          "route": ["subcutaneous injection (preferred)", "intramuscular injection", "oral"],
+          "dosing_schedule": {
+            "induction": "25mg weekly (subcutaneous preferred for better absorption)",
+            "maintenance": "15-25mg weekly",
+            "folate_supplementation": "MUST take folic acid 1-5mg daily (skip the day you take methotrexate) or 5mg the day after MTX. Reduces side effects without reducing efficacy.",
+            "notes": "Given ONCE WEEKLY — NOT daily. Oral absorption is less reliable than injection."
+          },
+          "common_side_effects": [
+            "Nausea/vomiting (especially day of and day after injection)",
+            "Fatigue (often worst 24-48hrs after dose)",
+            "Mouth sores (stomatitis)",
+            "Hair thinning",
+            "Loss of appetite",
+            "Headache",
+            "Dizziness",
+            "Low white blood cell count"
+          ],
+          "serious_side_effects": [
+            "Hepatotoxicity / liver fibrosis (long-term risk; worsened by alcohol)",
+            "Bone marrow suppression (pancytopenia)",
+            "Lung toxicity (pneumonitis — report any new cough or shortness of breath immediately)",
+            "Severe infections",
+            "TERATOGENIC — causes severe birth defects. MUST use reliable contraception. Stop 3-6 months before attempting pregnancy (both men and women).",
+            "Kidney damage (rare at IBD doses)"
+          ],
+          "food_interactions": {
+            "take_with_food": "If taking oral MTX, can take with or without food. Some prefer empty stomach for consistent absorption.",
+            "avoid": "ABSOLUTELY NO ALCOHOL — dramatically increases liver toxicity risk. Even moderate drinking is dangerous.",
+            "notes": "Subcutaneous injection bypasses GI absorption issues entirely — preferred route."
+          },
+          "nutrient_depletions": [
+            "Folate/Folic acid — MTX is a folate antagonist; supplementation is MANDATORY (1-5mg folic acid daily)",
+            "Vitamin B12 — may be affected",
+            "Note: Take folic acid every day EXCEPT the day you take MTX"
+          ],
+          "monitoring": {
+            "baseline": ["CBC with differential", "Comprehensive metabolic panel (liver, kidney function)", "Hepatitis B/C testing", "Chest X-ray", "Pregnancy test (women of childbearing age)"],
+            "ongoing": [
+              "CBC and liver function tests every 2-4 weeks for first 3 months",
+              "Then every 8-12 weeks once stable",
+              "Liver biopsy or FibroScan if cumulative dose reaches 1.5g or if persistent liver enzyme elevations"
+            ],
+            "notes": "Report any new cough, shortness of breath, or fever immediately — could indicate lung toxicity."
+          },
+          "post_resection_considerations": "Subcutaneous injection is strongly preferred for post-resection patients — bypasses the GI tract entirely and ensures consistent absorption. Oral methotrexate has variable absorption even in healthy individuals, and post-resection patients may absorb even less.",
+          "appetite_weight_digestion": "Commonly causes nausea and reduced appetite on injection day and 1-2 days after. Some patients experience 'methotrexate fog' (fatigue, brain fog) for 24-48 hours after dosing. Weight neutral to mild weight loss.",
+          "special_notes": "Weekly dosing — NEVER take daily (toxic). Always take with folic acid. Must avoid pregnancy (both partners). No alcohol. Injectable form generally better tolerated than oral."
+        },
+        {
+          "id": "cyclosporine",
+          "generic_name": "Cyclosporine",
+          "brand_names": ["Sandimmune", "Neoral", "Gengraf"],
+          "drug_class": "Calcineurin inhibitor",
+          "mechanism_plain_language": "Blocks a protein called calcineurin that T-cells need to activate. This rapidly shuts down the immune attack on your intestines. Works faster than thiopurines (days to weeks vs. months).",
+          "crohns_use": "Rarely used in Crohn's disease. Sometimes used as rescue therapy for severe, steroid-refractory Crohn's. More commonly used in severe ulcerative colitis as a bridge to thiopurines.",
+          "use_phase": "induction",
+          "route": ["IV", "oral"],
+          "dosing_schedule": {
+            "IV": "2-4 mg/kg/day as continuous infusion",
+            "oral": "Neoral 5-8 mg/kg/day in 2 divided doses",
+            "notes": "Requires therapeutic drug monitoring — target trough level 150-300 ng/mL. Duration usually limited to 3-6 months as a bridge."
+          },
+          "common_side_effects": [
+            "Kidney toxicity (dose-related — most important)",
+            "Hypertension",
+            "Tremor",
+            "Headache",
+            "Nausea",
+            "Gum overgrowth (gingival hyperplasia)",
+            "Excessive hair growth (hirsutism)",
+            "Elevated cholesterol",
+            "Paresthesias (tingling/numbness)"
+          ],
+          "serious_side_effects": [
+            "Nephrotoxicity (can cause permanent kidney damage)",
+            "Severe infections (including opportunistic)",
+            "Seizures (especially with low magnesium or cholesterol)",
+            "Lymphoma risk",
+            "Hepatotoxicity",
+            "Posterior reversible encephalopathy syndrome (PRES)"
+          ],
+          "food_interactions": {
+            "avoid": "Avoid grapefruit and grapefruit juice (increases cyclosporine levels significantly). Avoid potassium-rich foods in excess (risk of hyperkalemia).",
+            "notes": "Neoral (microemulsion) has more consistent absorption than Sandimmune. These are NOT interchangeable."
+          },
+          "nutrient_depletions": [
+            "Magnesium — cyclosporine causes significant magnesium wasting",
+            "Potassium — can cause hyperkalemia (too much potassium) despite also causing magnesium loss"
+          ],
+          "monitoring": {
+            "baseline": ["Renal function (creatinine, BUN)", "Blood pressure", "Magnesium", "Cholesterol", "CBC", "Liver function tests"],
+            "ongoing": [
+              "Cyclosporine trough levels 2-3 times per week initially",
+              "Renal function and electrolytes twice weekly",
+              "Blood pressure daily",
+              "Magnesium weekly",
+              "Cholesterol monthly"
+            ]
+          },
+          "post_resection_considerations": "Absorption of oral cyclosporine is highly variable and may be significantly reduced post-resection. Neoral (microemulsion) is preferred over Sandimmune for more reliable absorption. IV administration may be necessary in post-resection patients.",
+          "appetite_weight_digestion": "Nausea common. Gum overgrowth can make eating uncomfortable. Generally not a long-term medication.",
+          "special_notes": "Specialist drug — typically managed by GI in hospital/specialty clinic settings. Many drug interactions (CYP3A4 substrate). Not commonly used for Crohn's anymore given better biologic options."
+        },
+        {
+          "id": "tacrolimus",
+          "generic_name": "Tacrolimus",
+          "brand_names": ["Prograf", "Envarsus XR", "Astagraf XL"],
+          "drug_class": "Calcineurin inhibitor",
+          "mechanism_plain_language": "Works similarly to cyclosporine by blocking calcineurin in T-cells, but is 10-100x more potent. Shuts down the immune attack quickly. Used mainly for perianal and fistulizing Crohn's disease.",
+          "crohns_use": "Off-label for refractory Crohn's disease, especially fistulizing and perianal disease. Sometimes used topically for oral Crohn's or perianal disease.",
+          "use_phase": "induction",
+          "route": ["oral", "topical"],
+          "dosing_schedule": {
+            "oral": "0.1-0.2 mg/kg/day in 2 divided doses",
+            "target_trough": "5-10 ng/mL for Crohn's (lower than transplant dosing)",
+            "topical": "0.5mg/mL oral suspension or 0.1% ointment for perianal disease"
+          },
+          "common_side_effects": [
+            "Tremor",
+            "Headache",
+            "Nausea/diarrhea",
+            "Kidney toxicity",
+            "Hypertension",
+            "Hyperglycemia / diabetes",
+            "Insomnia",
+            "Hair loss (opposite of cyclosporine)"
+          ],
+          "serious_side_effects": [
+            "Nephrotoxicity",
+            "Neurotoxicity (tremor, seizures, posterior reversible encephalopathy)",
+            "New-onset diabetes",
+            "Severe infections",
+            "Lymphoma/malignancy risk",
+            "Hyperkalemia"
+          ],
+          "food_interactions": {
+            "take_with_food": "Take consistently — either always with food or always without food. Food decreases absorption.",
+            "avoid": "Avoid grapefruit and grapefruit juice. Avoid excessive potassium-rich foods."
+          },
+          "nutrient_depletions": [
+            "Magnesium — significant renal magnesium wasting",
+            "May cause hyperkalemia"
+          ],
+          "monitoring": {
+            "baseline": ["Renal function", "Blood glucose", "Blood pressure", "Electrolytes (K+, Mg2+)", "CBC"],
+            "ongoing": [
+              "Tacrolimus trough levels weekly until stable, then monthly",
+              "Renal function and electrolytes weekly initially",
+              "Blood glucose regularly (diabetes risk)",
+              "Blood pressure at each visit"
+            ]
+          },
+          "post_resection_considerations": "Oral absorption is affected by food and gut conditions. Post-resection patients may have unpredictable absorption — trough level monitoring is essential. Topical use for perianal disease bypasses absorption concerns.",
+          "appetite_weight_digestion": "Nausea and diarrhea common. New-onset diabetes can affect appetite and weight. Topical use has minimal systemic effects.",
+          "special_notes": "Specialist drug. Topical tacrolimus for perianal fistulas is a useful niche application. Many drug interactions."
+        }
+      ]
+    },
+
+    {
+      "id": "biologics_tnf",
+      "name": "Biologics - TNF Inhibitors",
+      "description": "Genetically engineered proteins (antibodies) that block tumor necrosis factor alpha (TNF-alpha), a key inflammatory chemical. First class of biologics approved for Crohn's. Highly effective for moderate-severe disease.",
+      "medications": [
+        {
+          "id": "infliximab",
+          "generic_name": "Infliximab",
+          "brand_names": ["Remicade"],
+          "biosimilars": ["Inflectra (infliximab-dyyb)", "Renflexis (infliximab-abda)", "Avsola (infliximab-axxq)", "Ixifi (infliximab-qbtx)"],
+          "drug_class": "Anti-TNF-alpha monoclonal antibody (chimeric — part mouse, part human)",
+          "mechanism_plain_language": "A lab-made antibody that finds and neutralizes TNF-alpha, a chemical your immune system produces that causes much of the inflammation in Crohn's disease. By blocking TNF, it calms down the immune attack on your intestines, allowing healing.",
+          "crohns_use": "Moderate to severe Crohn's disease. Both induction and maintenance of remission. Fistulizing Crohn's disease. Often combined with azathioprine or methotrexate to prevent antibody formation.",
+          "use_phase": "both",
+          "route": ["IV infusion"],
+          "dosing_schedule": {
+            "induction": "5 mg/kg IV at weeks 0, 2, and 6",
+            "maintenance": "5 mg/kg IV every 8 weeks",
+            "dose_escalation": "Can increase to 10 mg/kg or shorten interval to every 4-6 weeks if losing response",
+            "infusion_duration": "At least 2 hours (may be shortened to 1 hour after several well-tolerated infusions)"
+          },
+          "common_side_effects": [
+            "Infusion reactions (flushing, headache, nausea, shortness of breath during infusion)",
+            "Upper respiratory infections",
+            "Headache",
+            "Abdominal pain",
+            "Fatigue",
+            "Nausea",
+            "Joint pain",
+            "Rash"
+          ],
+          "serious_side_effects": [
+            "Serious infections (including tuberculosis reactivation, fungal infections, sepsis)",
+            "Severe infusion/allergic reactions (anaphylaxis — rare but possible)",
+            "Hepatotoxicity (rare liver failure)",
+            "Lymphoma and other malignancies (small increased risk)",
+            "Hepatosplenic T-cell lymphoma (very rare; mainly young males on combo with thiopurines)",
+            "Demyelinating disorders (new or worsening MS-like symptoms)",
+            "Heart failure worsening (contraindicated in moderate-severe heart failure)",
+            "Drug-induced lupus-like syndrome",
+            "Psoriasis (paradoxical new-onset psoriasis)",
+            "Cytopenias (low blood counts)"
+          ],
+          "food_interactions": {
+            "notes": "No direct food interactions since it's given IV. Eat normally before infusions. Stay hydrated."
+          },
+          "nutrient_depletions": [
+            "No direct nutrient depletions from the drug itself",
+            "However, if the drug controls inflammation effectively, it may IMPROVE nutrient absorption by healing the gut"
+          ],
+          "monitoring": {
+            "before_starting": [
+              "TB testing (QuantiFERON-Gold or PPD) — MANDATORY",
+              "Hepatitis B and C testing",
+              "CBC with differential",
+              "Liver function tests",
+              "Varicella immunity",
+              "Chest X-ray if TB risk factors",
+              "Update ALL vaccines (especially live vaccines) BEFORE starting — no live vaccines once on therapy"
+            ],
+            "ongoing": [
+              "Drug level and antibody testing (therapeutic drug monitoring) when clinically indicated",
+              "CBC and liver function tests every 3-6 months",
+              "Annual TB testing if ongoing risk factors",
+              "Annual skin exam (skin cancer screening)",
+              "Monitor for signs of infection at every visit"
+            ]
+          },
+          "post_resection_considerations": "IV administration bypasses the GI tract — no absorption concerns post-resection. Infliximab is particularly effective for fistulizing Crohn's, which may be a concern post-operatively. Drug levels should be monitored as some post-surgical patients may clear the drug faster.",
+          "appetite_weight_digestion": "If effective, often IMPROVES appetite and weight gain by controlling inflammation and allowing better nutrient absorption. Some patients gain significant weight when disease comes under control.",
+          "special_notes": "Chimeric (part mouse) antibody — higher risk of antibody formation than fully human antibodies. Combining with an immunomodulator (azathioprine/methotrexate) reduces this risk. Therapeutic drug monitoring is increasingly standard of care. Biosimilars are therapeutically equivalent and significantly cheaper."
+        },
+        {
+          "id": "adalimumab",
+          "generic_name": "Adalimumab",
+          "brand_names": ["Humira"],
+          "biosimilars": ["Hadlima (adalimumab-bwwd)", "Hyrimoz (adalimumab-adaz)", "Cyltezo (adalimumab-adbm)", "Amjevita (adalimumab-atto)", "Yusimry (adalimumab-aqvh)"],
+          "drug_class": "Anti-TNF-alpha monoclonal antibody (fully human)",
+          "mechanism_plain_language": "Same as infliximab — blocks TNF-alpha to calm inflammation. But it's a fully human antibody (not part mouse like infliximab), which means slightly lower risk of antibody formation. Given as an injection you do yourself at home.",
+          "crohns_use": "Moderate to severe Crohn's disease. Both induction and maintenance. First-line biologic option alongside infliximab.",
+          "use_phase": "both",
+          "route": ["subcutaneous injection"],
+          "dosing_schedule": {
+            "induction": "160mg at week 0 (four 40mg injections), then 80mg at week 2 (two injections)",
+            "maintenance": "40mg every other week starting at week 4",
+            "dose_escalation": "Can increase to 40mg weekly if losing response",
+            "notes": "Available as prefilled syringe or auto-injector pen. Citrate-free formulations available (less injection pain)."
+          },
+          "common_side_effects": [
+            "Injection site reactions (redness, pain, swelling, itching)",
+            "Upper respiratory infections",
+            "Headache",
+            "Rash",
+            "Nausea",
+            "Back pain",
+            "Urinary tract infections"
+          ],
+          "serious_side_effects": "Same as infliximab — serious infections, TB reactivation, lymphoma risk, hepatotoxicity, demyelinating disorders, heart failure worsening, drug-induced lupus, paradoxical psoriasis",
+          "food_interactions": {
+            "notes": "No food interactions — subcutaneous injection."
+          },
+          "nutrient_depletions": "None directly. May improve nutrient absorption by healing gut inflammation.",
+          "monitoring": "Same as infliximab — TB testing before starting, regular CBC, liver function, drug levels when indicated, annual skin exams.",
+          "post_resection_considerations": "Subcutaneous injection bypasses the GI tract — no absorption concerns. Self-injection at home is more convenient than infliximab infusions. Some studies suggest slightly lower efficacy than infliximab for Crohn's, but both are effective first-line options.",
+          "appetite_weight_digestion": "Same as infliximab — disease control typically improves appetite and weight.",
+          "special_notes": "Self-administered at home — more convenient than infliximab. Multiple biosimilars now available at lower cost. Rotate injection sites (thigh, abdomen). Store in refrigerator but let warm to room temperature before injecting (reduces pain)."
+        },
+        {
+          "id": "certolizumab_pegol",
+          "generic_name": "Certolizumab pegol",
+          "brand_names": ["Cimzia"],
+          "biosimilars": [],
+          "drug_class": "PEGylated anti-TNF-alpha Fab' fragment",
+          "mechanism_plain_language": "Unlike other anti-TNFs, this is only a fragment (piece) of an antibody attached to PEG (a chemical that makes it last longer in your body). It blocks TNF-alpha but doesn't cross the placenta easily — making it the preferred anti-TNF during pregnancy.",
+          "crohns_use": "Moderate to severe Crohn's disease. Both induction and maintenance. Preferred anti-TNF for women who are pregnant or planning pregnancy.",
+          "use_phase": "both",
+          "route": ["subcutaneous injection"],
+          "dosing_schedule": {
+            "induction": "400mg at weeks 0, 2, and 4",
+            "maintenance": "400mg every 4 weeks",
+            "notes": "Each 400mg dose = two 200mg injections at different sites"
+          },
+          "common_side_effects": [
+            "Upper respiratory infections",
+            "Urinary tract infections",
+            "Rash",
+            "Injection site reactions",
+            "Headache",
+            "Abdominal pain",
+            "Joint pain"
+          ],
+          "serious_side_effects": "Same class warnings as other anti-TNFs — serious infections, TB, lymphoma, etc.",
+          "food_interactions": {
+            "notes": "No food interactions — subcutaneous injection."
+          },
+          "nutrient_depletions": "None directly.",
+          "monitoring": "Same as other anti-TNFs.",
+          "post_resection_considerations": "Subcutaneous injection — no GI absorption concerns. Good option for post-resection patients.",
+          "appetite_weight_digestion": "Similar to other anti-TNFs — disease control improves overall nutrition.",
+          "special_notes": "UNIQUE ADVANTAGE: Minimal placental transfer — safest anti-TNF for use during pregnancy. The PEGylated Fab fragment structure means it does NOT cross the placenta significantly, unlike infliximab and adalimumab. Also, the lack of an Fc region means it does NOT trigger antibody-dependent cell-mediated cytotoxicity or complement activation."
+        }
+      ]
+    },
+
+    {
+      "id": "biologics_integrin",
+      "name": "Biologics - Integrin Inhibitors",
+      "description": "Antibodies that block immune cells from traveling to the gut. They target 'integrins' — adhesion molecules that immune cells use to stick to blood vessel walls and enter the intestinal tissue.",
+      "medications": [
+        {
+          "id": "vedolizumab",
+          "generic_name": "Vedolizumab",
+          "brand_names": ["Entyvio"],
+          "biosimilars": [],
+          "drug_class": "Gut-selective anti-integrin (anti-alpha4beta7)",
+          "mechanism_plain_language": "Blocks a specific 'homing signal' (alpha4beta7 integrin) that immune cells use to find and enter your gut. By preventing these inflammatory cells from reaching your intestines, it reduces inflammation. Importantly, it ONLY affects gut-directed immune cells — it doesn't suppress your immune system throughout your entire body, which means fewer systemic infection risks.",
+          "crohns_use": "Moderate to severe Crohn's disease, especially for patients who have failed or are intolerant of anti-TNFs. Better for patients with higher infection risk due to gut-selective mechanism. May work better for colonic Crohn's than isolated small bowel disease.",
+          "use_phase": "both",
+          "route": ["IV infusion", "subcutaneous injection (maintenance only)"],
+          "dosing_schedule": {
+            "IV_induction": "300mg IV infusion at weeks 0, 2, and 6",
+            "IV_maintenance": "300mg IV every 8 weeks",
+            "SC_maintenance": "108mg subcutaneous every 2 weeks (after at least 2 IV infusions)",
+            "infusion_duration": "~30 minutes",
+            "notes": "Slower onset of action than anti-TNFs — may take 14+ weeks to see full benefit. Don't give up too early."
+          },
+          "common_side_effects": [
+            "Common cold (nasopharyngitis)",
+            "Headache",
+            "Joint pain (arthralgia)",
+            "Nausea",
+            "Fever",
+            "Upper respiratory infections",
+            "Fatigue",
+            "Cough",
+            "Back pain",
+            "Rash/itching",
+            "Injection site reactions (SC form)"
+          ],
+          "serious_side_effects": [
+            "Serious infections (lower risk than systemic immunosuppressants)",
+            "Infusion reactions (during or hours after IV infusion)",
+            "Progressive multifocal leukoencephalopathy (PML) — theoretically possible but NO confirmed cases with vedolizumab alone",
+            "Liver injury (rare)",
+            "Anaphylaxis (rare)"
+          ],
+          "food_interactions": {
+            "notes": "No food interactions — IV/SC administration."
+          },
+          "nutrient_depletions": "None directly. Disease control may improve nutrient absorption.",
+          "monitoring": {
+            "before_starting": ["TB testing", "Hepatitis B testing", "Update vaccines (no live vaccines once on therapy)"],
+            "ongoing": [
+              "Monitor for signs of infection at each visit",
+              "Consider drug level monitoring if losing response",
+              "No routine blood work specifically required for vedolizumab, but standard IBD monitoring continues"
+            ]
+          },
+          "post_resection_considerations": "IV/SC administration — no GI absorption issues. Gut-selective mechanism is an advantage for post-resection patients who may already be immunocompromised. Slower onset means you may need a bridge therapy (steroids) while waiting for it to work.",
+          "appetite_weight_digestion": "Generally weight-neutral. Nausea is mild. Disease control improves nutrition.",
+          "special_notes": "Safest biologic in terms of systemic infection risk due to gut-selective mechanism. DO NOT use with natalizumab (increased PML risk). SC pen injection option available for maintenance — more convenient than IV. Good safety profile in elderly patients."
+        },
+        {
+          "id": "natalizumab",
+          "generic_name": "Natalizumab",
+          "brand_names": ["Tysabri"],
+          "biosimilars": ["Tyruko (natalizumab-sztn) — first biosimilar, launched November 2025"],
+          "drug_class": "Anti-integrin (anti-alpha4)",
+          "mechanism_plain_language": "Blocks alpha4 integrin on immune cells, preventing them from crossing blood vessel walls into both the brain AND the gut. Very effective, but because it also affects brain immunity, it carries a risk of a rare and dangerous brain infection called PML.",
+          "crohns_use": "Moderate to severe Crohn's disease. Reserved for patients who have failed other therapies (anti-TNFs, immunomodulators) due to PML risk. Restricted prescribing program (TOUCH program).",
+          "use_phase": "both",
+          "route": ["IV infusion"],
+          "dosing_schedule": {
+            "standard": "300mg IV infusion every 4 weeks",
+            "infusion_duration": "~1 hour, with 1-hour post-infusion observation",
+            "notes": "Available ONLY through the TOUCH prescribing program due to PML risk."
+          },
+          "common_side_effects": [
+            "Headache",
+            "Fatigue",
+            "Joint pain",
+            "Urinary tract infections",
+            "Lower respiratory tract infections",
+            "Gastroenteritis",
+            "Nausea",
+            "Diarrhea"
+          ],
+          "serious_side_effects": [
+            "PROGRESSIVE MULTIFOCAL LEUKOENCEPHALOPATHY (PML) — rare but potentially fatal brain infection caused by JC virus reactivation. Risk increases with: (1) positive JC virus antibody, (2) prior immunosuppressant use, (3) longer duration of natalizumab treatment (>2 years)",
+            "Serious infections",
+            "Liver injury / hepatotoxicity",
+            "Severe allergic reactions",
+            "Immune reconstitution inflammatory syndrome (IRIS) if switching from natalizumab to other therapies"
+          ],
+          "food_interactions": {
+            "notes": "No food interactions — IV administration."
+          },
+          "nutrient_depletions": "None directly.",
+          "monitoring": {
+            "before_starting": [
+              "JC virus antibody test — CRITICAL (if positive, PML risk is significantly higher)",
+              "Brain MRI (baseline for comparison)",
+              "TB testing",
+              "CBC, liver function tests",
+              "Enroll in TOUCH prescribing program"
+            ],
+            "ongoing": [
+              "JC virus antibody testing every 6 months",
+              "Brain MRI every 3-6 months if JC virus antibody positive",
+              "Anti-natalizumab antibody testing if infusion reactions occur",
+              "Liver function tests periodically",
+              "Monitor for any neurological symptoms (new weakness, vision changes, confusion, personality changes)"
+            ],
+            "notes": "If you develop ANY new neurological symptoms, report IMMEDIATELY — could indicate PML."
+          },
+          "post_resection_considerations": "IV administration — no GI absorption issues. Very effective drug but PML risk makes it a last-resort option for most patients.",
+          "appetite_weight_digestion": "Disease control improves appetite and nutrition. The drug itself has minimal direct GI effects.",
+          "special_notes": "HIGH-RISK MEDICATION — only used when other options have failed. JC virus-negative patients have very low PML risk (~0.01%). PML risk factors: JC virus antibody positive + prior immunosuppressant use + >2 years on natalizumab. NEVER combine with other immunosuppressants. When switching FROM natalizumab to another biologic, a washout period is needed but must be balanced against risk of disease flare."
+        }
+      ]
+    },
+
+    {
+      "id": "biologics_il12_23",
+      "name": "Biologics - IL-12/23 Inhibitors",
+      "description": "Antibodies that target interleukin-12 and/or interleukin-23, key inflammatory signaling molecules. Newer class with excellent safety profiles. Increasingly first-line for moderate-severe Crohn's.",
+      "medications": [
+        {
+          "id": "ustekinumab",
+          "generic_name": "Ustekinumab",
+          "brand_names": ["Stelara"],
+          "biosimilars": [
+            "Wezlana (ustekinumab-auub) — interchangeable",
+            "Selarsdi (ustekinumab-aekn) — interchangeable",
+            "Pyzchiva (ustekinumab-ttwe)",
+            "Otulfi (ustekinumab-aauz) — interchangeable",
+            "Yesintek (ustekinumab-kfce)",
+            "Steqeyma (ustekinumab-stba)",
+            "Starjemza (ustekinumab-hmny) — interchangeable"
+          ],
+          "drug_class": "Anti-IL-12/23 monoclonal antibody (targets p40 subunit shared by IL-12 and IL-23)",
+          "mechanism_plain_language": "Blocks two inflammatory messengers, IL-12 and IL-23, by targeting a piece (p40 subunit) they share. These messengers tell immune cells to attack your gut. By blocking them, ustekinumab calms the immune response. It has an excellent safety profile because it's more targeted than drugs that suppress the entire immune system.",
+          "crohns_use": "Moderate to severe Crohn's disease. Both induction and maintenance. Effective in both TNF-naive and TNF-experienced patients. Good option for patients concerned about infection risk.",
+          "use_phase": "both",
+          "route": ["IV infusion (induction)", "subcutaneous injection (maintenance)"],
+          "dosing_schedule": {
+            "induction": "Single weight-based IV infusion: 260mg (<55kg), 390mg (55-85kg), 520mg (>85kg) at week 0",
+            "maintenance": "90mg subcutaneous every 8 weeks (can shorten to every 4 weeks if losing response)",
+            "notes": "Only ONE IV infusion needed. Then all maintenance is self-injection at home."
+          },
+          "common_side_effects": [
+            "Upper respiratory infections",
+            "Headache",
+            "Fatigue",
+            "Injection site reactions",
+            "Nausea",
+            "Joint pain",
+            "Itching"
+          ],
+          "serious_side_effects": [
+            "Serious infections (lower risk than anti-TNFs)",
+            "Malignancy (theoretical; no clear increased risk in clinical trials)",
+            "Severe allergic reactions (rare)",
+            "Posterior reversible encephalopathy syndrome (very rare)",
+            "Reactivation of TB (test before starting)"
+          ],
+          "food_interactions": {
+            "notes": "No food interactions — IV/SC administration."
+          },
+          "nutrient_depletions": "None directly.",
+          "monitoring": {
+            "before_starting": ["TB testing", "Hepatitis B testing", "Update vaccines", "CBC"],
+            "ongoing": [
+              "Monitor for signs of infection",
+              "Drug level monitoring if losing response",
+              "No specific routine blood work required for the drug itself",
+              "Annual TB testing if risk factors"
+            ]
+          },
+          "post_resection_considerations": "IV/SC administration — no GI absorption concerns. Excellent safety profile makes it a good choice for post-resection patients. Multiple biosimilars now available, reducing cost significantly.",
+          "appetite_weight_digestion": "Generally weight-neutral. Some weight gain possible as disease comes under control. Minimal direct GI side effects.",
+          "special_notes": "One of the safest biologics overall. Multiple interchangeable biosimilars launched in early 2025, making it much more affordable. Being gradually superseded by selective IL-23 inhibitors (risankizumab, guselkumab) which may be more effective, especially in anti-TNF-experienced patients."
+        },
+        {
+          "id": "risankizumab",
+          "generic_name": "Risankizumab",
+          "brand_names": ["Skyrizi"],
+          "biosimilars": [],
+          "drug_class": "Selective anti-IL-23 monoclonal antibody (targets p19 subunit of IL-23 only)",
+          "mechanism_plain_language": "Blocks ONLY IL-23 (not IL-12 like ustekinumab). IL-23 is a key driver of chronic gut inflammation. By being more selective than ustekinumab, it may be more effective while maintaining an excellent safety profile. Think of it as a more precise version of ustekinumab.",
+          "crohns_use": "Moderate to severe Crohn's disease. Both induction and maintenance. 2025 ACG guidelines suggest risankizumab may be preferred over ustekinumab, especially in anti-TNF-experienced patients. Increasingly considered first-line biologic.",
+          "use_phase": "both",
+          "route": ["IV infusion (induction)", "subcutaneous injection (maintenance)"],
+          "dosing_schedule": {
+            "induction": "600mg IV infusion at weeks 0, 4, and 8 (three infusions)",
+            "maintenance": "180mg or 360mg subcutaneous every 8 weeks starting at week 12",
+            "notes": "Use lowest effective maintenance dose. 360mg may be used for patients with more severe or refractory disease."
+          },
+          "common_side_effects": [
+            "Upper respiratory infections",
+            "Headache",
+            "Joint pain (arthralgia)",
+            "Abdominal pain",
+            "Injection site reactions",
+            "Anemia",
+            "Fever",
+            "Back pain",
+            "Urinary tract infection",
+            "Rash"
+          ],
+          "serious_side_effects": [
+            "Serious infections (low risk)",
+            "TB reactivation (test before starting)",
+            "Hepatotoxicity — monitor liver enzymes during induction (elevated liver enzymes and bilirubin reported)",
+            "Elevated lipids (monitor at week 4)",
+            "Malignancy (theoretical)"
+          ],
+          "food_interactions": {
+            "notes": "No food interactions — IV/SC administration."
+          },
+          "nutrient_depletions": "None directly. May cause anemia — monitor iron levels.",
+          "monitoring": {
+            "before_starting": ["TB testing", "Hepatitis B testing", "CBC", "Liver function tests", "Lipid panel", "Update vaccines"],
+            "ongoing": [
+              "Liver enzymes and bilirubin at baseline and during induction (at least through week 12)",
+              "Lipid panel at week 4 (elevations observed)",
+              "Routine patient management thereafter",
+              "Drug level monitoring if losing response"
+            ]
+          },
+          "post_resection_considerations": "IV/SC administration — no GI absorption concerns. Excellent safety profile. Strong evidence in anti-TNF-experienced patients, which is common in the post-surgical Crohn's population.",
+          "appetite_weight_digestion": "Generally weight-neutral. Disease control improves overall nutrition and absorption.",
+          "special_notes": "Top-ranked drug for both induction and maintenance in anti-TNF-experienced Crohn's patients (per 2025 network meta-analysis). More effective than ustekinumab in head-to-head SEQUENCE trial. Excellent safety profile. Currently no biosimilars — may be more expensive."
+        },
+        {
+          "id": "guselkumab",
+          "generic_name": "Guselkumab",
+          "brand_names": ["Tremfya"],
+          "biosimilars": [],
+          "drug_class": "Selective anti-IL-23 monoclonal antibody (targets p19 subunit)",
+          "mechanism_plain_language": "Same mechanism as risankizumab — selectively blocks IL-23 by targeting its p19 subunit. Another precise tool for calming gut inflammation without broadly suppressing the immune system.",
+          "crohns_use": "Moderate to severe Crohn's disease. FDA approved for Crohn's in March 2025. Both induction and maintenance. First IL-23 inhibitor with a fully subcutaneous dosing option (no IV needed).",
+          "use_phase": "both",
+          "route": ["IV infusion (induction option)", "subcutaneous injection (induction and maintenance)"],
+          "dosing_schedule": {
+            "SC_induction": "200mg subcutaneous at weeks 0, 4, and 8 — NO IV NEEDED (unique advantage)",
+            "IV_induction_alternative": "Available for patients who prefer IV",
+            "maintenance": "100mg subcutaneous every 4 weeks or 200mg every 4 weeks depending on response",
+            "notes": "First IL-23 inhibitor to offer fully subcutaneous induction — all self-injection at home, no infusion center visits needed."
+          },
+          "common_side_effects": [
+            "Injection site reactions",
+            "Upper respiratory infections",
+            "Headache",
+            "Diarrhea",
+            "Joint pain",
+            "Gastroenteritis"
+          ],
+          "serious_side_effects": [
+            "Serious infections",
+            "TB reactivation",
+            "Hypersensitivity reactions",
+            "Similar safety profile to risankizumab"
+          ],
+          "food_interactions": {
+            "notes": "No food interactions — SC administration."
+          },
+          "nutrient_depletions": "None directly.",
+          "monitoring": {
+            "before_starting": ["TB testing", "Hepatitis B testing", "Update vaccines", "CBC"],
+            "ongoing": ["Monitor for infections", "Drug levels if losing response"]
+          },
+          "post_resection_considerations": "SC administration — no absorption concerns. Fully subcutaneous option means no infusion center visits, which is very convenient for patients managing chronic disease post-surgery.",
+          "appetite_weight_digestion": "Similar to other IL-23 inhibitors — generally well-tolerated, disease control improves nutrition.",
+          "special_notes": "NEWLY APPROVED for Crohn's (March 2025). Unique advantage of fully subcutaneous dosing from induction through maintenance — no IV infusions needed at all. Based on GRAVITI and ASTRO trial data."
+        },
+        {
+          "id": "mirikizumab",
+          "generic_name": "Mirikizumab",
+          "brand_names": ["Omvoh"],
+          "biosimilars": [],
+          "drug_class": "Selective anti-IL-23 monoclonal antibody (targets p19 subunit)",
+          "mechanism_plain_language": "Another selective IL-23 blocker. Works the same way as risankizumab and guselkumab but is a different antibody molecule. Provides another option in this increasingly important drug class.",
+          "crohns_use": "Moderate to severe Crohn's disease. FDA approved for Crohn's in January 2025 (VIVID-1 trial). Both induction and maintenance.",
+          "use_phase": "both",
+          "route": ["IV infusion (induction)", "subcutaneous injection (maintenance)"],
+          "dosing_schedule": {
+            "induction": "900mg IV at weeks 0, 4, and 8",
+            "maintenance": "300mg subcutaneous every 4 weeks (single injection) or 200mg SC every 4 weeks",
+            "notes": "Approved as single-injection monthly maintenance in October 2025."
+          },
+          "common_side_effects": [
+            "Injection site reactions",
+            "Upper respiratory infections",
+            "Headache",
+            "Joint pain",
+            "Rash"
+          ],
+          "serious_side_effects": [
+            "Serious infections",
+            "TB reactivation",
+            "Hepatotoxicity (monitor liver enzymes)",
+            "Hypersensitivity"
+          ],
+          "food_interactions": {
+            "notes": "No food interactions — IV/SC administration."
+          },
+          "nutrient_depletions": "None directly.",
+          "monitoring": {
+            "before_starting": ["TB testing", "Hepatitis B", "Liver function tests", "Vaccines"],
+            "ongoing": ["Liver function tests during induction", "Monitor for infections"]
+          },
+          "post_resection_considerations": "IV/SC administration — no absorption concerns. Good safety profile for post-surgical patients.",
+          "appetite_weight_digestion": "Well-tolerated. Disease control improves nutrition.",
+          "special_notes": "NEWLY APPROVED for Crohn's (January 2025). Has disclosed 2-year Phase 3 efficacy data at time of approval — first biologic to do so in 15+ years. 53% clinical remission at 1 year (vs. 36% placebo) in VIVID-1."
+        }
+      ]
+    },
+
+    {
+      "id": "jak_inhibitors",
+      "name": "JAK Inhibitors",
+      "description": "Small molecule drugs (pills) that block Janus kinase enzymes inside immune cells. These enzymes relay inflammatory signals. Advantage: oral pills instead of injections/infusions. Disadvantage: higher cardiovascular and malignancy risk signals.",
+      "medications": [
+        {
+          "id": "upadacitinib",
+          "generic_name": "Upadacitinib",
+          "brand_names": ["Rinvoq"],
+          "drug_class": "Selective JAK-1 inhibitor",
+          "mechanism_plain_language": "A pill that enters your immune cells and blocks JAK-1, an enzyme that acts like a switch for many inflammatory signals. By blocking this switch, it reduces the inflammation attacking your gut. Unlike biologics (which are large proteins), this is a small molecule that can be taken as a pill.",
+          "crohns_use": "Moderate to severe Crohn's disease in adults who have had an inadequate response or intolerance to one or more TNF blockers. Updated indication in October 2025.",
+          "use_phase": "both",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "induction": "45mg once daily for 12 weeks",
+            "maintenance": "15mg or 30mg once daily (use lowest effective dose)",
+            "notes": "If on strong CYP3A4 inhibitors (e.g., ketoconazole, clarithromycin), reduce induction dose to 30mg and maintenance to 15mg. Swallow whole — do not crush, split, or chew."
+          },
+          "common_side_effects": [
+            "Upper respiratory infections (nasopharyngitis)",
+            "Acne",
+            "Headache",
+            "Elevated cholesterol (LDL and total)",
+            "Elevated liver enzymes (CPK)",
+            "Herpes zoster (shingles) — higher risk than biologics",
+            "Nausea",
+            "Cold sores (herpes simplex)",
+            "Rash",
+            "Folliculitis"
+          ],
+          "serious_side_effects": [
+            "Serious infections (including TB, opportunistic infections)",
+            "Herpes zoster reactivation (shingles) — significantly higher risk; get Shingrix vaccine before starting if possible",
+            "Malignancy risk (lymphomas, lung cancer — FDA boxed warning)",
+            "Major adverse cardiovascular events (MACE — heart attack, stroke) — FDA boxed warning, especially in patients >50 with CV risk factors",
+            "Venous thromboembolism (blood clots — DVT, PE) — FDA boxed warning",
+            "GI perforations (bowel perforation — use with caution if at risk)",
+            "Elevated lipids",
+            "Neutropenia / lymphopenia",
+            "Liver enzyme elevations",
+            "Anemia"
+          ],
+          "food_interactions": {
+            "take_with_food": "Can be taken with or without food",
+            "avoid": "Avoid grapefruit and grapefruit juice (CYP3A4 interaction — may increase drug levels)",
+            "notes": "Many drug-drug interactions via CYP3A4 pathway. Inform your doctor/pharmacist of ALL medications."
+          },
+          "nutrient_depletions": "No direct nutrient depletions, but monitor for anemia (may need iron supplementation).",
+          "monitoring": {
+            "before_starting": [
+              "TB testing",
+              "Hepatitis B/C testing",
+              "CBC with differential (lymphocytes, neutrophils, hemoglobin)",
+              "Lipid panel",
+              "Liver function tests",
+              "Shingles vaccination (Shingrix — ideally before starting)",
+              "Update all vaccines"
+            ],
+            "ongoing": [
+              "CBC at baseline, 4 weeks, 8 weeks, then every 3 months",
+              "Lipid panel at 12 weeks, then periodically",
+              "Liver function tests periodically",
+              "Monitor for signs of infection, DVT/PE, cardiac symptoms",
+              "Annual skin cancer screening"
+            ]
+          },
+          "post_resection_considerations": "ORAL medication — absorption could be affected by extensive small bowel resection or rapid transit. However, upadacitinib is absorbed in the upper GI tract and has high bioavailability, so moderate ileal resection is unlikely to significantly affect absorption. IMPORTANT: GI perforation risk means extra caution in patients with strictures or recent surgery.",
+          "appetite_weight_digestion": "Acne and nausea are common. Some patients report improved appetite as disease comes under control. Weight changes are variable.",
+          "special_notes": "Oral pill — major convenience advantage over biologics. FDA BOXED WARNINGS for malignancy, MACE, VTE, serious infections, and mortality. Risk assessment important — weigh benefits against cardiovascular/cancer risks. Get Shingrix vaccine BEFORE starting. One of the most effective therapies for anti-TNF-refractory Crohn's alongside risankizumab."
+        },
+        {
+          "id": "tofacitinib",
+          "generic_name": "Tofacitinib",
+          "brand_names": ["Xeljanz", "Xeljanz XR"],
+          "drug_class": "Non-selective JAK inhibitor (JAK-1 and JAK-3, with some JAK-2 activity)",
+          "mechanism_plain_language": "Similar to upadacitinib but blocks multiple JAK enzymes (less selective). Approved for ulcerative colitis but showed LIMITED efficacy in Crohn's disease clinical trials.",
+          "crohns_use": "NOT FDA-approved for Crohn's disease. Clinical trials showed limited efficacy for Crohn's. Sometimes used off-label when other options have failed. FDA-approved for moderate-severe UC.",
+          "use_phase": "off-label",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "UC_dosing_for_reference": "10mg twice daily for induction (8 weeks), then 5-10mg twice daily for maintenance",
+            "notes": "NOT recommended for Crohn's disease — limited evidence of efficacy."
+          },
+          "common_side_effects": "Similar to upadacitinib — infections, elevated cholesterol, shingles, headache",
+          "serious_side_effects": "Same FDA boxed warnings as upadacitinib — MACE, malignancy, VTE, serious infections",
+          "food_interactions": "Can take with or without food. Avoid grapefruit.",
+          "nutrient_depletions": "None directly.",
+          "monitoring": "Same as upadacitinib.",
+          "post_resection_considerations": "Not recommended for Crohn's disease regardless of surgical history.",
+          "appetite_weight_digestion": "Similar to upadacitinib.",
+          "special_notes": "DO NOT USE for Crohn's disease — insufficient evidence. Upadacitinib (Rinvoq) is the JAK inhibitor for Crohn's. Tofacitinib is for UC only."
+        }
+      ]
+    },
+
+    {
+      "id": "s1p_modulators",
+      "name": "S1P Receptor Modulators",
+      "description": "Small molecules that trap immune cells in lymph nodes, preventing them from reaching the gut. Approved for ulcerative colitis; Crohn's trials are ongoing or have failed.",
+      "medications": [
+        {
+          "id": "ozanimod",
+          "generic_name": "Ozanimod",
+          "brand_names": ["Zeposia"],
+          "drug_class": "S1P receptor modulator (S1P1 and S1P5 selective)",
+          "mechanism_plain_language": "Traps certain immune cells (lymphocytes) in your lymph nodes so they can't travel to and attack your gut. Like trapping soldiers in their barracks so they can't reach the battlefield.",
+          "crohns_use": "NOT approved for Crohn's disease. YELLOWSTONE Phase 3 trials for Crohn's FAILED — Bristol Myers Squibb terminated the program after not meeting primary endpoints. Approved only for ulcerative colitis and relapsing multiple sclerosis.",
+          "use_phase": "not_applicable",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "UC_reference": "Titration over 1 week to 0.92mg daily",
+            "notes": "NOT for Crohn's disease."
+          },
+          "common_side_effects": ["Upper respiratory infections", "Liver enzyme elevation", "Headache", "Bradycardia (slow heart rate at initiation)"],
+          "serious_side_effects": ["Bradycardia/AV block at initiation", "Macular edema", "Liver injury", "Infections", "Increased blood pressure"],
+          "food_interactions": "Can take with or without food.",
+          "nutrient_depletions": "None directly.",
+          "monitoring": "Cardiac monitoring at first dose (ECG). Liver enzymes. Eye exam if history of uveitis or macular edema.",
+          "post_resection_considerations": "Not applicable — not used for Crohn's disease.",
+          "appetite_weight_digestion": "Not applicable for Crohn's.",
+          "special_notes": "FAILED in Crohn's disease trials. Do not use for Crohn's."
+        },
+        {
+          "id": "etrasimod",
+          "generic_name": "Etrasimod",
+          "brand_names": ["Velsipity"],
+          "drug_class": "S1P receptor modulator (S1P1, S1P4, S1P5 selective)",
+          "mechanism_plain_language": "Similar to ozanimod — traps immune cells in lymph nodes. Currently being studied for Crohn's disease in the CULTIVATE trial.",
+          "crohns_use": "NOT currently approved for Crohn's disease. Phase 2/3 CULTIVATE trial is ongoing. Approved for ulcerative colitis (late 2023).",
+          "use_phase": "investigational",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "UC_reference": "2mg once daily",
+            "crohns_trial": "Being studied in CULTIVATE trial"
+          },
+          "common_side_effects": "Similar to ozanimod — bradycardia at initiation, infections, liver enzyme elevation",
+          "serious_side_effects": "Similar to ozanimod",
+          "food_interactions": "Can take with or without food.",
+          "nutrient_depletions": "None directly.",
+          "monitoring": "Same as ozanimod — cardiac monitoring, liver enzymes, eye exam.",
+          "post_resection_considerations": "Investigational for Crohn's — no data yet.",
+          "appetite_weight_digestion": "Insufficient Crohn's-specific data.",
+          "special_notes": "Still under investigation for Crohn's (CULTIVATE trial). Results pending. After ozanimod's failure, expectations are cautious."
+        }
+      ]
+    },
+
+    {
+      "id": "antibiotics",
+      "name": "Antibiotics Used in Crohn's Disease",
+      "description": "Antibiotics used to treat specific complications of Crohn's (perianal disease, fistulas, abscesses, SIBO) rather than the underlying disease itself.",
+      "medications": [
+        {
+          "id": "metronidazole",
+          "generic_name": "Metronidazole",
+          "brand_names": ["Flagyl", "Flagyl ER", "MetroGel"],
+          "drug_class": "Nitroimidazole antibiotic/antiprotozoal",
+          "mechanism_plain_language": "Kills certain bacteria and parasites by damaging their DNA. Also has direct anti-inflammatory effects on the gut. Used mainly for perianal Crohn's disease, fistulas, abscesses, and prevention of post-surgical recurrence.",
+          "crohns_use": "Perianal Crohn's disease, fistulas, abscesses. Post-operative prophylaxis (after ileocolonic resection, 3-month course reduces recurrence). Not for primary treatment of luminal Crohn's.",
+          "use_phase": "both",
+          "route": ["oral", "IV", "topical"],
+          "dosing_schedule": {
+            "perianal_disease": "250-500mg three times daily (750-1500mg/day total)",
+            "weight_based": "10-20 mg/kg/day",
+            "duration": "8-12 weeks typically; limited by side effects. 3 months post-operatively for recurrence prevention.",
+            "notes": "Long-term use limited by peripheral neuropathy risk."
+          },
+          "common_side_effects": [
+            "Metallic taste in mouth (very common)",
+            "Nausea/vomiting",
+            "Loss of appetite",
+            "Diarrhea",
+            "Abdominal cramping",
+            "Headache",
+            "Dark/red-brown urine (harmless)",
+            "Dizziness"
+          ],
+          "serious_side_effects": [
+            "Peripheral neuropathy (numbness, tingling in hands/feet — may be irreversible with prolonged use; DOSE-LIMITING side effect)",
+            "Seizures (rare, at high doses)",
+            "CNS toxicity (confusion, cerebellar dysfunction)",
+            "Disulfiram-like reaction with ALCOHOL — causes severe nausea, vomiting, flushing, headache",
+            "Leukopenia (low white blood cells)"
+          ],
+          "food_interactions": {
+            "take_with_food": "Take with food to reduce stomach upset",
+            "CRITICAL_AVOID": "ABSOLUTELY NO ALCOHOL while taking and for at least 3 days after stopping. Causes severe disulfiram-like reaction (violent nausea, vomiting, cramping, flushing). This includes alcohol in mouthwash and cooking.",
+            "avoid": "Also avoid alcohol-containing medications (e.g., some cough syrups)"
+          },
+          "nutrient_depletions": [
+            "Vitamin B12 — metronidazole may interfere with B12 absorption with prolonged use",
+            "Folate — may be affected"
+          ],
+          "monitoring": {
+            "ongoing": [
+              "Watch for signs of peripheral neuropathy (numbness, tingling, burning in extremities) — report immediately",
+              "CBC if prolonged use",
+              "Liver function if prolonged use"
+            ],
+            "notes": "Stop immediately if neuropathy symptoms develop. Neuropathy may not fully reverse."
+          },
+          "post_resection_considerations": "Important drug post-ileocolonic resection — a 3-month course after surgery significantly reduces endoscopic recurrence. Oral absorption may be affected by rapid transit; ensure adequate dosing. The neuropathy risk is particularly relevant for post-resection patients who may already have B12-related neuropathy from ileal resection — monitor B12 levels closely.",
+          "appetite_weight_digestion": "Frequently causes nausea, metallic taste, and loss of appetite. These effects can worsen nutrition in already malnourished post-resection patients.",
+          "special_notes": "Perianal disease recurrence rate is ~80% within 4 months of stopping. Usually used as adjunct to biologics and/or surgery, not as sole therapy."
+        },
+        {
+          "id": "ciprofloxacin",
+          "generic_name": "Ciprofloxacin",
+          "brand_names": ["Cipro", "Cipro XR"],
+          "drug_class": "Fluoroquinolone antibiotic",
+          "mechanism_plain_language": "Kills bacteria by blocking an enzyme (DNA gyrase) they need to copy their DNA. Used for perianal Crohn's infections and fistulas, often combined with metronidazole.",
+          "crohns_use": "Perianal Crohn's disease, fistulas, abscesses. Often used in combination with metronidazole. May work slightly better than metronidazole for perianal fistulas (40% response vs. 14.3% in one trial).",
+          "use_phase": "both",
+          "route": ["oral", "IV"],
+          "dosing_schedule": {
+            "typical": "500mg twice daily (1000mg/day total)",
+            "duration": "8-12 weeks",
+            "notes": "Extended-release (Cipro XR) is 500-1000mg once daily"
+          },
+          "common_side_effects": [
+            "Nausea",
+            "Diarrhea",
+            "Headache",
+            "Dizziness",
+            "Rash",
+            "Photosensitivity (sunburn easily)",
+            "Abdominal pain"
+          ],
+          "serious_side_effects": [
+            "Tendinitis and tendon rupture (especially Achilles tendon — FDA BLACK BOX WARNING; risk higher with corticosteroids, age >60)",
+            "Peripheral neuropathy (may be irreversible)",
+            "CNS effects (seizures, psychosis, increased intracranial pressure)",
+            "QT prolongation (heart rhythm issues)",
+            "C. difficile colitis (antibiotic-associated diarrhea)",
+            "Aortic aneurysm/dissection (rare but serious)",
+            "Photosensitivity (severe sunburn)"
+          ],
+          "food_interactions": {
+            "take_with_food": "Can take with or without food. Food may help reduce nausea.",
+            "CRITICAL_AVOID": "Do NOT take with dairy products, calcium-fortified foods/drinks, antacids, iron supplements, or zinc supplements within 2 hours — these dramatically reduce ciprofloxacin absorption.",
+            "timing": "Take ciprofloxacin at least 2 hours BEFORE or 6 hours AFTER calcium, iron, zinc, antacids, or sucralfate."
+          },
+          "nutrient_depletions": [
+            "Magnesium — fluoroquinolones can chelate magnesium",
+            "Iron — binds to iron in the gut (take separately)",
+            "Calcium — binds to calcium (take separately)"
+          ],
+          "monitoring": {
+            "ongoing": [
+              "Watch for tendon pain or swelling (STOP and report immediately)",
+              "Watch for numbness/tingling (neuropathy)",
+              "Renal function if prolonged use"
+            ]
+          },
+          "post_resection_considerations": "Oral absorption is primarily in the upper GI tract, so ileal resection generally doesn't affect absorption significantly. IMPORTANT: Post-resection Crohn's patients are often on corticosteroids — the combination of fluoroquinolones + corticosteroids significantly increases tendon rupture risk. Use with great caution in patients on steroids.",
+          "appetite_weight_digestion": "May cause nausea and diarrhea. C. difficile risk is a concern — report any worsening diarrhea, especially if watery or bloody.",
+          "special_notes": "FDA BLACK BOX WARNING for tendinitis/tendon rupture, peripheral neuropathy, and CNS effects. Reserve for serious infections where benefits outweigh risks. Avoid concurrent use with steroids when possible. Stay out of direct sunlight. Separate from mineral supplements by 2+ hours."
+        },
+        {
+          "id": "rifaximin",
+          "generic_name": "Rifaximin",
+          "brand_names": ["Xifaxan"],
+          "drug_class": "Non-absorbable rifamycin antibiotic",
+          "mechanism_plain_language": "An antibiotic that stays in your gut — very little gets absorbed into your bloodstream. It kills bacteria in the small intestine, making it useful for small intestinal bacterial overgrowth (SIBO), which is common in Crohn's patients, especially those with strictures or post-resection.",
+          "crohns_use": "SIBO treatment in Crohn's patients. Mild to moderate Crohn's disease (emerging evidence — not first-line). Some evidence for induction of remission at higher doses. Commonly used for SIBO prevention in patients with strictures.",
+          "use_phase": "both",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "SIBO": "550mg three times daily for 14 days",
+            "Crohns_trial_dose": "800mg twice daily (1600mg/day) for 12 weeks",
+            "SIBO_recurrence": "May need repeat courses; recurrence rate ~28% at 6 months, ~44% at 9 months",
+            "notes": "Higher doses (1200-1600mg/day) show better SIBO eradication than lower doses"
+          },
+          "common_side_effects": [
+            "Generally very well tolerated (stays in the gut)",
+            "Flatulence",
+            "Headache",
+            "Abdominal pain",
+            "Nausea (mild)",
+            "Constipation"
+          ],
+          "serious_side_effects": [
+            "C. difficile-associated diarrhea (rare)",
+            "Hypersensitivity reactions (rare)",
+            "Overall adverse event rate is only ~4.6% — one of the safest antibiotics"
+          ],
+          "food_interactions": {
+            "take_with_food": "Can take with or without food",
+            "notes": "Since it's minimally absorbed, food interactions are minimal"
+          },
+          "nutrient_depletions": "Minimal — since it stays in the gut and is not systemically absorbed.",
+          "monitoring": {
+            "notes": "Minimal monitoring needed. SIBO recurrence is common — may need hydrogen breath testing to confirm eradication and plan retreatment."
+          },
+          "post_resection_considerations": "ESPECIALLY RELEVANT for post-resection patients. Crohn's patients with strictures or post-surgical anatomy changes are at high risk for SIBO. Rifaximin is a go-to treatment. The non-absorbable nature means it works regardless of systemic absorption changes. May need repeated courses.",
+          "appetite_weight_digestion": "SIBO treatment often dramatically improves bloating, gas, and diarrhea — can significantly improve quality of life and nutrient absorption post-resection.",
+          "special_notes": "Very safe antibiotic with minimal resistance concerns. Expensive without insurance. Can be used repeatedly for SIBO without the side effect concerns of metronidazole or ciprofloxacin."
+        }
+      ]
+    },
+
+    {
+      "id": "antidiarrheal_supportive",
+      "name": "Anti-Diarrheal / Supportive Medications",
+      "description": "Medications that manage symptoms (especially diarrhea) rather than treating the underlying inflammation. Important for quality of life, especially post-resection.",
+      "medications": [
+        {
+          "id": "loperamide",
+          "generic_name": "Loperamide",
+          "brand_names": ["Imodium", "Imodium A-D"],
+          "drug_class": "Opioid receptor agonist (gut-selective, non-CNS)",
+          "mechanism_plain_language": "Activates opioid receptors in the wall of your intestine, which slows down gut motility (how fast food moves through). This gives your intestines more time to absorb water, resulting in firmer stools and less frequent bowel movements. Unlike other opioids, it does NOT cross into the brain — no addiction or pain-relief effects.",
+          "crohns_use": "Symptomatic relief of diarrhea. NOT a treatment for Crohn's inflammation — controls symptoms while other therapies work. Very commonly used day-to-day.",
+          "use_phase": "supportive",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "typical": "2mg after each loose stool, up to 16mg/day maximum",
+            "chronic_use": "2-4mg once or twice daily as regular prevention (common in post-resection patients)",
+            "notes": "Start low and adjust. Take BEFORE meals if you know certain foods trigger loose stools."
+          },
+          "common_side_effects": [
+            "Constipation (dose too high)",
+            "Abdominal cramping",
+            "Nausea",
+            "Dizziness",
+            "Dry mouth",
+            "Bloating"
+          ],
+          "serious_side_effects": [
+            "TOXIC MEGACOLON — do NOT use during acute severe colitis flare (can be life-threatening by masking worsening inflammation)",
+            "Paralytic ileus (gut stops moving) — especially concerning with strictures",
+            "Cardiac arrhythmia at very high doses (massive overdose)",
+            "Do NOT use if you have a stricture with obstructive symptoms"
+          ],
+          "food_interactions": {
+            "notes": "Can take with or without food. Often taken before meals proactively."
+          },
+          "nutrient_depletions": "None directly. However, by slowing transit, it may slightly improve nutrient absorption time.",
+          "monitoring": {
+            "notes": "No routine blood monitoring needed. Monitor stool frequency/consistency. Watch for signs of obstruction (severe abdominal pain, distension, vomiting) if you have strictures."
+          },
+          "post_resection_considerations": "EXTREMELY USEFUL post-resection. After ileal resection, faster transit and bile acid-related diarrhea are common. Loperamide is the first-line symptomatic treatment. Take proactively before meals and before leaving the house. CAUTION: Do not use if you have known strictures or signs of obstruction.",
+          "appetite_weight_digestion": "By controlling diarrhea, can improve appetite indirectly and allow better food enjoyment. Does not directly affect appetite.",
+          "special_notes": "OTC — no prescription needed. Keep it with you at all times. Very safe when used at recommended doses. Can be combined with cholestyramine for post-resection diarrhea."
+        },
+        {
+          "id": "cholestyramine",
+          "generic_name": "Cholestyramine",
+          "brand_names": ["Questran", "Questran Light", "Prevalite"],
+          "drug_class": "Bile acid sequestrant",
+          "mechanism_plain_language": "Acts like a sponge in your gut that soaks up bile acids. After ileal resection, your body can't reabsorb bile acids normally — they spill into the colon and cause watery diarrhea (bile acid malabsorption/diarrhea). Cholestyramine binds these excess bile acids so they can't irritate your colon.",
+          "crohns_use": "CRITICAL post-ileal resection medication for bile acid malabsorption/diarrhea. ~90% of patients with ileocecal resection have abnormal bile acid absorption. Also used for cholesterol lowering (original indication).",
+          "use_phase": "supportive",
+          "route": ["oral (powder mixed with liquid)"],
+          "dosing_schedule": {
+            "starting": "4g (one packet/scoop) once daily, mixed with water or juice",
+            "typical": "4g one to three times daily (before meals)",
+            "maximum": "24g/day in divided doses",
+            "timing": "Take 30 minutes BEFORE meals for best effect. Take OTHER MEDICATIONS at least 1 hour before or 4-6 hours after cholestyramine (it binds many drugs).",
+            "notes": "Start low — can worsen bloating/constipation initially. Increase gradually."
+          },
+          "common_side_effects": [
+            "Constipation (most common — dose-related)",
+            "Bloating/gas",
+            "Nausea",
+            "Abdominal discomfort",
+            "Heartburn",
+            "Unpleasant gritty texture and taste",
+            "Steatorrhea (fatty stools) at high doses"
+          ],
+          "serious_side_effects": [
+            "CRITICAL DRUG INTERACTION: Binds many medications in the gut, preventing their absorption. Must separate timing of all other oral medications.",
+            "Fat-soluble vitamin depletion (A, D, E, K) with long-term use",
+            "Fecal impaction (rare, if constipation is severe)",
+            "Hyperchloremic metabolic acidosis (rare)"
+          ],
+          "food_interactions": {
+            "take_with_food": "Take 30 minutes BEFORE meals",
+            "notes": "Mix powder with 4-6 oz of water, juice, or non-carbonated beverage. Never take dry. The powder does not dissolve — it forms a suspension. Mix well and drink immediately."
+          },
+          "nutrient_depletions": [
+            "Vitamin A — bile acid binding reduces fat-soluble vitamin absorption",
+            "Vitamin D — significantly impaired absorption; supplement aggressively",
+            "Vitamin E — reduced absorption",
+            "Vitamin K — reduced absorption (risk of bleeding if severe)",
+            "Folate — may reduce absorption",
+            "Iron — may bind iron in the gut",
+            "Calcium — may reduce absorption",
+            "Fat-soluble medications — binding reduces absorption of many drugs"
+          ],
+          "monitoring": {
+            "ongoing": [
+              "Fat-soluble vitamin levels (A, D, E, K) every 6-12 months",
+              "INR if on blood thinners (vitamin K effect)",
+              "Lipid panel periodically",
+              "Monitor all concurrent medication levels — may need dose adjustments"
+            ]
+          },
+          "post_resection_considerations": "THIS IS THE KEY POST-RESECTION MEDICATION. After ileocecal resection, ~90% of patients have bile acid malabsorption causing watery diarrhea. Cholestyramine is first-line treatment and often dramatically improves diarrhea. HOWEVER: it worsens fat-soluble vitamin depletion (A, D, E, K), which post-resection patients are already prone to. Must supplement aggressively and monitor levels. Also, the drug binds OTHER medications — this is critical for patients on multiple Crohn's drugs. Time all other meds carefully.",
+          "appetite_weight_digestion": "Reduces diarrhea and improves stool consistency, which often improves appetite and quality of life. Constipation and bloating may occur initially. The taste/texture is unpleasant — some patients find it hard to tolerate.",
+          "special_notes": "Essentially mandatory for post-ileal resection patients with bile acid diarrhea. ~19 out of 22 patients had good symptomatic response in studies. DRUG INTERACTION ALERT: Take all other medications at least 1 hour BEFORE or 4-6 hours AFTER cholestyramine. This includes mesalamine, levothyroxine, warfarin, digoxin, and many others."
+        },
+        {
+          "id": "diphenoxylate_atropine",
+          "generic_name": "Diphenoxylate/Atropine",
+          "brand_names": ["Lomotil"],
+          "drug_class": "Opioid antidiarrheal (prescription; Schedule V controlled substance)",
+          "mechanism_plain_language": "Diphenoxylate is related to opioids and slows gut motility (similar to loperamide but crosses the blood-brain barrier slightly). Atropine is added to discourage abuse (causes unpleasant side effects if taken in excess). Stronger than loperamide.",
+          "crohns_use": "Symptomatic diarrhea relief when loperamide alone is insufficient. Prescription only. Used for more severe chronic diarrhea.",
+          "use_phase": "supportive",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "typical": "5mg/0.05mg (2 tablets or 10mL liquid) four times daily initially",
+            "maintenance": "Reduce to lowest effective dose (often 5mg two to three times daily)",
+            "maximum": "20mg/day of diphenoxylate"
+          },
+          "common_side_effects": [
+            "Drowsiness/sedation",
+            "Dizziness",
+            "Dry mouth (atropine effect)",
+            "Nausea",
+            "Constipation",
+            "Headache",
+            "Blurred vision (atropine effect)"
+          ],
+          "serious_side_effects": [
+            "Toxic megacolon (same warning as loperamide — do NOT use in acute severe colitis)",
+            "Respiratory depression (at high doses)",
+            "CNS depression/sedation",
+            "Anticholinergic toxicity (confusion, hallucinations, urinary retention — from atropine)",
+            "Paralytic ileus"
+          ],
+          "food_interactions": {
+            "take_with_food": "Can take with or without food",
+            "avoid": "Avoid alcohol — increases CNS depression"
+          },
+          "nutrient_depletions": "None directly.",
+          "monitoring": {
+            "notes": "Watch for signs of obstruction. Monitor for excessive sedation. Controlled substance — track use."
+          },
+          "post_resection_considerations": "Second-line after loperamide for post-resection diarrhea. More sedating. Same obstruction cautions as loperamide.",
+          "appetite_weight_digestion": "May cause dry mouth affecting eating. Sedation may reduce activity. Controls diarrhea effectively.",
+          "special_notes": "Prescription only (Schedule V). More side effects than loperamide — used when loperamide alone fails. Avoid in patients with liver disease (atropine can build up). Can cause CNS depression — caution when driving."
+        },
+        {
+          "id": "bismuth_subsalicylate",
+          "generic_name": "Bismuth subsalicylate",
+          "brand_names": ["Pepto-Bismol", "Kaopectate"],
+          "drug_class": "Antisecretory / antimicrobial",
+          "mechanism_plain_language": "Has multiple actions: reduces fluid secretion in the intestines, has mild antibacterial properties, and coats and protects the gut lining. Helps with diarrhea, nausea, and indigestion.",
+          "crohns_use": "Mild symptom relief for diarrhea and upset stomach. NOT a treatment for Crohn's inflammation. Use cautiously and short-term only.",
+          "use_phase": "supportive",
+          "route": ["oral"],
+          "dosing_schedule": {
+            "typical": "524mg (2 tablets or 30mL) every 30-60 minutes as needed, up to 8 doses in 24 hours",
+            "notes": "For short-term use only (up to 2 days). Not for chronic daily use."
+          },
+          "common_side_effects": [
+            "Black stools (harmless — the bismuth turns stools dark)",
+            "Black tongue (harmless and temporary)",
+            "Constipation",
+            "Nausea"
+          ],
+          "serious_side_effects": [
+            "Salicylate toxicity (contains aspirin-like compound — risk if taking other salicylates, blood thinners, or at high doses)",
+            "Reye's syndrome in children (do NOT give to children under 12)",
+            "May mask worsening IBD symptoms"
+          ],
+          "food_interactions": {
+            "notes": "Can take with or without food."
+          },
+          "nutrient_depletions": "None significant with short-term use.",
+          "monitoring": {
+            "notes": "Watch for signs of salicylate toxicity (ringing in ears, rapid breathing). Inform patients that black stools are a drug effect, not blood."
+          },
+          "post_resection_considerations": "Limited role. The salicylate component is a concern since it's related to aspirin/NSAIDs, which may irritate the gut. Use loperamide or cholestyramine instead for post-resection diarrhea.",
+          "appetite_weight_digestion": "May help with nausea and stomach discomfort temporarily.",
+          "special_notes": "Do NOT use if also taking: aspirin, warfarin/blood thinners, methotrexate (salicylate interactions). Do NOT use if you're allergic to aspirin. Inform your GI before using, especially if on immunosuppressants."
+        }
+      ]
+    },
+
+    {
+      "id": "supplements",
+      "name": "Common Supplements for Crohn's Disease",
+      "description": "Nutritional supplements to address deficiencies common in Crohn's disease, especially in patients with active disease, malabsorption, or post-bowel resection.",
+      "medications": [
+        {
+          "id": "vitamin_b12",
+          "generic_name": "Vitamin B12 (Cobalamin)",
+          "forms": {
+            "cyanocobalamin": "Most common and studied form. Synthetic. Body must convert it to active forms (methylcobalamin and adenosylcobalamin). Slightly better at maintaining serum levels in studies.",
+            "methylcobalamin": "Active coenzyme form. Does NOT require conversion. Popular as 'better absorbed' but studies show NO significant difference in bioavailability vs. cyanocobalamin. More expensive.",
+            "hydroxocobalamin": "Used for IM injections. Longer retention in the body — fewer injections needed.",
+            "adenosylcobalamin": "Another active form. Less commonly available as supplement."
+          },
+          "best_form_post_resection": "Either cyanocobalamin or methylcobalamin is acceptable. The form matters LESS than the route: post-ileal resection patients cannot absorb B12 from the gut because the terminal ileum is the ONLY site of B12 absorption. If >60cm of terminal ileum is resected, INJECTIONS or HIGH-DOSE SUBLINGUAL supplementation is required.",
+          "route_recommendations": {
+            "mild_resection_under_60cm": "Oral or sublingual may work — monitor levels to verify",
+            "significant_resection_over_60cm": "IM injection (hydroxocobalamin 1000mcg monthly or cyanocobalamin 1000mcg monthly) OR high-dose sublingual (1000-5000mcg daily — absorption is via passive diffusion, NOT requiring ileum)",
+            "notes": "Sublingual B12 at high doses can achieve adequate levels even without an ileum, because ~1% of oral B12 is absorbed passively throughout the GI tract. At 1000-5000mcg doses, this 1% is enough."
+          },
+          "dosing": {
+            "IM_injection": "1000mcg monthly (after loading: 1000mcg daily for 1 week, then weekly for 1 month, then monthly)",
+            "sublingual": "1000-5000mcg daily",
+            "oral_if_ileum_intact": "1000-2000mcg daily"
+          },
+          "deficiency_symptoms": "Fatigue, weakness, numbness/tingling in hands and feet (neuropathy), difficulty walking, memory problems, depression, glossitis (sore tongue), megaloblastic anemia",
+          "monitoring": "Serum B12 levels, methylmalonic acid (MMA — more sensitive marker), homocysteine. Check at diagnosis and every 6-12 months in patients with ileal disease or resection.",
+          "special_notes": "B12 deficiency is almost universal after significant ileal resection. Symptoms overlap with Crohn's symptoms (fatigue, diarrhea) — easy to miss. Neuropathy from B12 deficiency can be irreversible if not treated promptly. Start supplementation immediately after ileal resection — don't wait for deficiency to develop."
+        },
+        {
+          "id": "vitamin_d3",
+          "generic_name": "Vitamin D3 (Cholecalciferol)",
+          "forms": {
+            "D3_cholecalciferol": "Preferred form — more effective at raising blood levels than D2. From animal sources (lanolin from sheep's wool or fish liver oil).",
+            "D2_ergocalciferol": "Plant-derived. Less effective at raising blood levels. Less commonly recommended."
+          },
+          "crohns_relevance": "Vitamin D deficiency is extremely common in Crohn's (up to 70% of patients). Contributes to bone loss, may worsen disease activity, and is further depleted by corticosteroid use. May have direct anti-inflammatory effects in the gut.",
+          "dosing": {
+            "maintenance": "1000-4000 IU daily (varies by level)",
+            "deficiency_repletion": "50,000 IU weekly for 8-12 weeks, then maintenance",
+            "target_level": "30-50 ng/mL (some experts suggest >40 ng/mL for IBD patients)",
+            "on_corticosteroids": "Take at least 1000-2000 IU daily, ideally more"
+          },
+          "food_interactions": "Take with a meal containing fat for best absorption (fat-soluble vitamin).",
+          "monitoring": "25-hydroxyvitamin D level at diagnosis, after repletion, and every 6-12 months.",
+          "post_resection_considerations": "Fat-soluble vitamin — absorption may be reduced post-resection, especially with fat malabsorption. May need higher doses. If on cholestyramine, take vitamin D at least 4-6 hours apart. Sublingual or liquid drop forms may help with absorption.",
+          "special_notes": "Take with fatty food. If on cholestyramine, separate by 4-6 hours. Consider pairing with vitamin K2 (MK-7) for optimal bone health. Monitor calcium levels when supplementing D at high doses."
+        },
+        {
+          "id": "iron",
+          "generic_name": "Iron supplements",
+          "forms": {
+            "ferrous_sulfate": "Most common, cheapest. 65mg elemental iron per 325mg tablet. Highest GI side effects (nausea, constipation, black stools). Can worsen IBD-related gut inflammation via oxidative stress.",
+            "ferrous_gluconate": "Lower elemental iron (35mg per 325mg tablet). Slightly better tolerated than ferrous sulfate.",
+            "iron_bisglycinate": "Chelated form. Better tolerated (fewer GI side effects). Lower dose needed. MAY be less well-absorbed in Crohn's patients specifically (one study found ferrous calcium citrate was absorbed better in Crohn's patients).",
+            "ferrous_calcium_citrate": "May be better absorbed than iron bisglycinate in Crohn's patients specifically.",
+            "IV_iron": {
+              "iron_sucrose": "Venofer — 200mg per infusion, multiple infusions needed",
+              "ferric_carboxymaltose": "Ferinject/Injectafer — 750-1000mg in one infusion (preferred for convenience)",
+              "ferumoxytol": "Feraheme — 510mg x2 doses, 3-8 days apart",
+              "notes": "IV iron is increasingly preferred for IBD patients — avoids GI side effects, doesn't worsen gut inflammation, faster repletion"
+            }
+          },
+          "crohns_relevance": "Anemia affects up to 75% of Crohn's patients. Caused by: chronic blood loss, poor iron absorption (especially with duodenal/jejunal disease), chronic inflammation (anemia of chronic disease), and medication effects.",
+          "dosing": {
+            "oral": "Every-other-day dosing of 40-80mg elemental iron may be better absorbed and better tolerated than daily dosing (recent evidence)",
+            "iv": "Based on calculated iron deficit. Ferric carboxymaltose 750-1000mg in a single infusion is most convenient.",
+            "notes": "Oral iron exacerbates inflammation at the site of bowel damage. IV iron is recommended when: oral iron is not tolerated, hemoglobin <10, active inflammation, or oral iron has failed."
+          },
+          "food_interactions": {
+            "take_on_empty_stomach": "Oral iron absorbed best on empty stomach, 1 hour before meals",
+            "vitamin_C": "Taking with vitamin C (100-200mg) enhances absorption",
+            "avoid_together": "Do NOT take with calcium, dairy, coffee, tea, eggs, whole grains, or antacids within 2 hours — they block iron absorption",
+            "cholestyramine_interaction": "Separate from cholestyramine by 4-6 hours"
+          },
+          "monitoring": "Ferritin (target >100 ng/mL in IBD), transferrin saturation (target 20-50%), hemoglobin, CRP (ferritin is an acute phase reactant — may be falsely elevated during inflammation).",
+          "post_resection_considerations": "Post-resection patients with ongoing diarrhea and malabsorption may not absorb oral iron well. IV iron is often the better option. Every-other-day oral dosing may improve absorption by avoiding the hepcidin-related absorption block that occurs with daily dosing.",
+          "special_notes": "IMPORTANT: Oral iron can WORSEN Crohn's disease inflammation. Ferrous sulfate in particular increases oxidative stress at the site of bowel inflammation. If you need oral iron, iron bisglycinate may be gentler. Discuss IV iron with your GI — it's increasingly the standard of care for moderate-severe IBD anemia."
+        },
+        {
+          "id": "calcium",
+          "generic_name": "Calcium supplements",
+          "forms": {
+            "calcium_citrate": "PREFERRED for Crohn's patients and post-resection. Does NOT require stomach acid for absorption. 21% elemental calcium. Can take with or without food.",
+            "calcium_carbonate": "Cheapest and most common. 40% elemental calcium. REQUIRES stomach acid for absorption — problematic for patients on PPIs or with reduced acid. Must take with food.",
+            "notes": "Calcium citrate is 22-27% better absorbed than calcium carbonate, especially on an empty stomach and in patients with reduced gastric acid."
+          },
+          "best_form_post_resection": "Calcium CITRATE — does not require stomach acid, better absorbed in surgical patients. Additionally, citrate helps prevent kidney stones (calcium oxalate stones are common after ileal resection).",
+          "dosing": {
+            "typical": "1000-1200mg elemental calcium daily in divided doses (body absorbs max ~500mg at a time)",
+            "on_corticosteroids": "1000-1200mg daily (non-negotiable for bone protection)",
+            "notes": "Always take WITH vitamin D for proper absorption. Divide into 2-3 doses throughout the day."
+          },
+          "food_interactions": {
+            "calcium_citrate": "Can take with or without food — flexible",
+            "calcium_carbonate": "MUST take with food (needs acid for absorption)",
+            "separate_from": "Iron supplements (2 hours apart), ciprofloxacin (2 hours apart), cholestyramine (4-6 hours apart), levothyroxine (4 hours apart)"
+          },
+          "monitoring": "Serum calcium, vitamin D level, bone density (DEXA scan) especially if on/after corticosteroids.",
+          "post_resection_considerations": "After ileal resection, calcium absorption is impaired AND oxalate kidney stone risk increases. Calcium citrate serves double duty: it provides calcium for bones AND the citrate helps prevent calcium oxalate kidney stones. This is a strong reason to choose citrate over carbonate.",
+          "special_notes": "Do NOT take more than 500mg at once. Spread doses throughout the day. Take with vitamin D. Citrate form is clearly superior post-resection."
+        },
+        {
+          "id": "zinc",
+          "generic_name": "Zinc supplements",
+          "forms": ["Zinc picolinate", "Zinc citrate", "Zinc gluconate", "Zinc sulfate"],
+          "crohns_relevance": "Zinc deficiency is common in Crohn's due to chronic diarrhea, malabsorption, and small bowel disease. Important for immune function, wound healing, taste perception, and intestinal barrier integrity.",
+          "dosing": {
+            "maintenance": "15-30mg elemental zinc daily",
+            "deficiency": "40-50mg daily for 2-3 months, then reduce to maintenance",
+            "notes": "Zinc picolinate and zinc citrate may be better absorbed. Zinc sulfate can cause nausea. Take with food to reduce stomach upset."
+          },
+          "food_interactions": {
+            "take_with": "Take with food to reduce nausea",
+            "avoid": "Do not take with iron supplements (compete for absorption). Separate by 2 hours.",
+            "notes": "High-dose zinc (>40mg long-term) can deplete copper — supplement copper 1-2mg daily if taking high-dose zinc."
+          },
+          "monitoring": "Serum zinc levels (though not always reliable). Monitor clinically for deficiency signs: poor wound healing, taste changes, hair loss, skin lesions.",
+          "post_resection_considerations": "Chronic diarrhea from any cause (including post-resection) increases zinc loss. Monitor and supplement proactively.",
+          "special_notes": "Long-term high-dose zinc depletes COPPER — must co-supplement copper. Zinc competes with iron for absorption — take at different times."
+        },
+        {
+          "id": "magnesium",
+          "generic_name": "Magnesium supplements",
+          "forms": {
+            "magnesium_glycinate": "PREFERRED for Crohn's/IBD patients. Well-absorbed (chelated form). Least likely to cause diarrhea. Gentle on the stomach. Also has calming/relaxation benefits.",
+            "magnesium_citrate": "Good bioavailability but DRAWS WATER into the bowel — can worsen diarrhea. Acts as a mild laxative. Avoid if you have active diarrhea.",
+            "magnesium_oxide": "Cheapest but WORST absorbed (only ~4% bioavailability). Also causes significant diarrhea. NOT recommended for Crohn's patients.",
+            "magnesium_malate": "Good absorption. May help with energy and muscle pain.",
+            "magnesium_threonate": "Crosses blood-brain barrier. Good for cognitive function but expensive."
+          },
+          "best_form_for_crohns": "Magnesium GLYCINATE — best absorbed with least diarrhea risk. Critical for IBD patients who already have loose stools.",
+          "dosing": {
+            "maintenance": "200-400mg elemental magnesium daily",
+            "deficiency": "400-600mg daily in divided doses",
+            "notes": "Divide doses to improve absorption and reduce GI side effects"
+          },
+          "crohns_relevance": "Deficiency common due to chronic diarrhea, malabsorption, and certain medications (cyclosporine, tacrolimus, PPIs). Symptoms: muscle cramps, fatigue, weakness, irritability, abnormal heart rhythms.",
+          "monitoring": "Serum magnesium (though levels can be normal despite tissue depletion). RBC magnesium is a better marker but less commonly available.",
+          "post_resection_considerations": "Most magnesium is absorbed in the small intestine, including the ileum. Post-resection patients are at high risk for depletion, especially with ongoing diarrhea. Glycinate form is essential — oxide and citrate will worsen diarrhea.",
+          "special_notes": "AVOID magnesium oxide and magnesium citrate if you have diarrhea — they make it worse. Glycinate is the clear winner for Crohn's patients."
+        },
+        {
+          "id": "folate",
+          "generic_name": "Folate / Folic Acid / Methylfolate",
+          "forms": {
+            "folic_acid": "Synthetic form. Most studied and widely available. Must be converted by the body to active methylfolate. ~40% of people have MTHFR gene variants that reduce this conversion.",
+            "methylfolate_5_MTHF": "Active form — no conversion needed. Better for patients with MTHFR variants. More bioavailable. More expensive.",
+            "folinic_acid_leucovorin": "Another active form. Used medically to 'rescue' from methotrexate toxicity."
+          },
+          "crohns_relevance": "Depleted by: sulfasalazine (strong folate antagonist), methotrexate (folate antagonist), proximal small bowel disease/resection (folate absorbed in jejunum), and chronic inflammation.",
+          "dosing": {
+            "general_supplementation": "400-1000mcg (0.4-1mg) folic acid daily",
+            "on_sulfasalazine": "1-2mg folic acid daily (mandatory)",
+            "on_methotrexate": "1-5mg folic acid daily — take every day EXCEPT the day you take methotrexate",
+            "methylfolate": "400-800mcg L-methylfolate daily (especially if MTHFR variant suspected)"
+          },
+          "monitoring": "Serum folate and RBC folate levels. Homocysteine (elevated in folate deficiency).",
+          "post_resection_considerations": "Folate is absorbed in the jejunum (upper small intestine), not the ileum. Ileal resection alone typically does NOT impair folate absorption. However, patients with extensive proximal small bowel disease or resection may be affected.",
+          "special_notes": "MANDATORY supplementation with sulfasalazine and methotrexate. Consider methylfolate if you know you have MTHFR variants or if standard folic acid doesn't correct your levels."
+        },
+        {
+          "id": "probiotics",
+          "generic_name": "Probiotics",
+          "strains_with_evidence": {
+            "VSL_3_now_Visbiome": {
+              "strains": "8-strain formulation (4 Lactobacillus, 3 Bifidobacterium, 1 Streptococcus thermophilus)",
+              "evidence": "Some evidence for reducing inflammation after ileocecal resection (reduced inflammatory cytokines). Better evidence for UC pouchitis than for Crohn's. NOT proven for Crohn's maintenance of remission.",
+              "dose": "1-2 packets daily (450-900 billion CFU)"
+            },
+            "Saccharomyces_boulardii": {
+              "strains": "Saccharomyces boulardii CNCM I-745",
+              "evidence": "Variable results. Some studies show benefit in combination with standard therapy for Crohn's. A yeast, not a bacterium — not killed by antibiotics. USE WITH CAUTION in immunocompromised patients (fungemia risk).",
+              "dose": "250-500mg twice daily"
+            },
+            "Lactobacillus_rhamnosus_GG": {
+              "strains": "L. rhamnosus GG",
+              "evidence": "Mixed results for Crohn's. Better evidence for preventing antibiotic-associated diarrhea.",
+              "dose": "10-20 billion CFU daily"
+            }
+          },
+          "overall_evidence_for_crohns": "WEAK. A 2025 systematic review concluded there is NO proven role for probiotics in maintaining remission in Crohn's disease. Evidence is stronger for UC pouchitis (VSL#3) and antibiotic-associated diarrhea. Probiotics may have a role as adjunctive therapy but should NOT replace proven medications.",
+          "safety_concerns": [
+            "Immunocompromised patients: risk of probiotic-related sepsis/fungemia (especially S. boulardii in severely immunosuppressed patients)",
+            "Quality control: supplement industry is poorly regulated; CFU counts may not match labels",
+            "Do NOT take live probiotics through central venous catheters"
+          ],
+          "post_resection_considerations": "Some evidence that VSL#3 may reduce inflammatory markers post-ileocecal resection, but this has not translated into proven clinical benefit. May help with post-resection diarrhea subjectively. Use as adjunct, not replacement for proven therapies.",
+          "special_notes": "Despite widespread use, evidence for probiotics in Crohn's is disappointing. If you choose to use them, VSL#3/Visbiome and S. boulardii have the most (albeit limited) evidence. Discuss with your GI, especially if immunosuppressed."
+        },
+        {
+          "id": "omega_3",
+          "generic_name": "Omega-3 Fatty Acids (Fish Oil)",
+          "forms": ["EPA/DHA fish oil capsules", "Cod liver oil", "Algal oil (vegan source)"],
+          "crohns_relevance": "Anti-inflammatory properties. One early study showed 59% fish oil group in remission at 1 year vs. 26% placebo. However, two subsequent large, high-quality trials (EPIC-1 and EPIC-2) showed omega-3 fatty acids are probably INEFFECTIVE for maintenance of remission in Crohn's.",
+          "dosing": {
+            "typical": "2-4g of EPA+DHA daily",
+            "notes": "Enteric-coated capsules may reduce fishy burps and GI side effects"
+          },
+          "side_effects": ["Fishy burps/taste", "Diarrhea (at high doses)", "Nausea", "Potential increased bleeding risk (high doses)"],
+          "evidence_summary": "Overall INSUFFICIENT evidence to recommend omega-3 for Crohn's disease maintenance. May have general health benefits but should not be relied upon for IBD management.",
+          "post_resection_considerations": "Fat malabsorption post-resection may reduce absorption of fish oil. If significant steatorrhea, may not absorb well. Consider algal-derived omega-3 or pharmaceutical-grade formulations.",
+          "special_notes": "Not harmful but probably not effective for Crohn's disease specifically. If using, choose high-quality, third-party tested brands to avoid contaminants."
+        },
+        {
+          "id": "glutamine",
+          "generic_name": "L-Glutamine",
+          "crohns_relevance": "Glutamine is the primary fuel source for intestinal epithelial cells. Theoretical benefit for gut barrier repair ('leaky gut'). However, clinical evidence is DISAPPOINTING.",
+          "evidence_summary": "A Cochrane review and multiple systematic reviews conclude there is INSUFFICIENT evidence for glutamine in active Crohn's disease. No significant improvement in intestinal permeability or clinical remission in controlled trials. Subgroup analysis suggests doses >30g/day MAY have some effect on permeability, but this is not clinically proven.",
+          "dosing": {
+            "typical_studied": "7g three times daily (21g/day) or 0.5g/kg/day",
+            "notes": "Evidence does not support routine use"
+          },
+          "side_effects": "Generally well-tolerated. Bloating, gas. At very high doses: potential for ammonia buildup in patients with liver disease.",
+          "post_resection_considerations": "Theoretical benefit for gut barrier repair post-surgery, but no clinical evidence supports this in Crohn's patients.",
+          "special_notes": "NOT recommended as a Crohn's treatment. If you choose to try it, it's unlikely to cause harm but evidence of benefit is lacking."
+        },
+        {
+          "id": "curcumin",
+          "generic_name": "Curcumin / Turmeric",
+          "crohns_relevance": "Anti-inflammatory compound from turmeric. Reduces levels of inflammatory cytokines (TNF-alpha, IL-1, IL-6, IL-12). Multiple small studies show promising results but larger trials are needed.",
+          "evidence_summary": "Small studies show: 55% decrease in CDAI in 5 Crohn's patients over 2 months; Theracurmin formulation reduced CDAI from 211 to 149 (vs. 211 to 203 placebo, p=0.035). Anti-inflammatory mechanism is well-established. HOWEVER: curcumin has VERY poor bioavailability — most is not absorbed from the gut. Special formulations (Theracurmin, BCM-95, piperine/bioperine-enhanced) improve absorption.",
+          "dosing": {
+            "studied_ranges": "360mg three times daily to 3g twice daily",
+            "enhanced_forms": "Theracurmin 360mg/day, or curcumin with piperine (BioPerine) 500-2000mg daily",
+            "notes": "Must use enhanced-absorption formulations for any meaningful blood levels"
+          },
+          "side_effects": ["Gas/bloating", "Diarrhea (at high doses)", "Nausea", "May increase bleeding risk (anticoagulant properties)", "May lower blood sugar"],
+          "drug_interactions": "May interact with blood thinners (warfarin), blood sugar medications, and drugs metabolized by CYP enzymes. Discuss with pharmacist.",
+          "post_resection_considerations": "Poor absorption is made worse by reduced intestinal surface area. Enhanced-absorption formulations are even more important post-resection.",
+          "special_notes": "Promising but unproven for Crohn's. Use as adjunctive (alongside proven therapies), NOT as a replacement. Variable formulations make dosing recommendations difficult. If using, choose bioavailability-enhanced forms."
+        }
+      ]
+    },
+
+    {
+      "id": "pipeline_2025_2026",
+      "name": "Newest/Pipeline Medications (2025-2026)",
+      "description": "Recently approved and investigational therapies for Crohn's disease.",
+      "approved_2025": [
+        {
+          "drug": "Mirikizumab (Omvoh)",
+          "approval_date": "January 2025",
+          "indication": "Moderate to severe Crohn's disease (adults)",
+          "significance": "First biologic in 15+ years to have 2-year Phase 3 data at time of approval. IL-23p19 inhibitor. 53% clinical remission at 1 year."
+        },
+        {
+          "drug": "Guselkumab (Tremfya)",
+          "approval_date": "March 2025",
+          "indication": "Moderate to severe Crohn's disease (adults)",
+          "significance": "First IL-23 inhibitor with fully subcutaneous dosing option (no IV needed). GRAVITI and ASTRO trial data."
+        },
+        {
+          "drug": "Upadacitinib (Rinvoq) — updated indication",
+          "approval_date": "October 2025",
+          "indication": "Updated label for moderate to severe Crohn's disease",
+          "significance": "Streamlined indication language."
+        },
+        {
+          "drug": "Tyruko (natalizumab-sztn)",
+          "approval_date": "November 2025 launch",
+          "indication": "First biosimilar to Tysabri (natalizumab)",
+          "significance": "Lower cost option for natalizumab therapy."
+        },
+        {
+          "drug": "Multiple ustekinumab (Stelara) biosimilars",
+          "approval_date": "Early 2025",
+          "names": ["Wezlana", "Selarsdi", "Pyzchiva", "Otulfi", "Yesintek", "Steqeyma", "Starjemza"],
+          "significance": "7+ biosimilars launched, dramatically reducing ustekinumab costs. Several have interchangeability designations."
+        }
+      ],
+      "pipeline_investigational": [
+        {
+          "drug": "Etrasimod (Velsipity)",
+          "class": "S1P receptor modulator",
+          "trial": "CULTIVATE Phase 2/3",
+          "status": "Ongoing for Crohn's disease",
+          "notes": "Already approved for UC. Crohn's results pending. Caution after ozanimod Crohn's trial failure."
+        },
+        {
+          "drug": "ALK5 inhibitor (oral)",
+          "class": "Activin receptor-like kinase 5 inhibitor",
+          "trial": "STENOVA Phase IIa",
+          "status": "Showed safety/tolerability over 12 weeks for ileal stricturing",
+          "notes": "Novel target — specifically for stricturing Crohn's disease. First-in-class for fibrosis/stricture treatment."
+        },
+        {
+          "drug": "Combination biologic strategies",
+          "class": "Various",
+          "status": "Emerging concept for 2026",
+          "notes": "Deliberate combinations (e.g., IL-23 inhibitor + JAK inhibitor for induction) being studied for patients hitting therapeutic ceiling. 'Induction blasting' with JAKs is a new strategic concept."
+        }
+      ]
+    }
+  ],
+
+  "cross_references": {
+    "drug_interaction_warnings": [
+      {
+        "drugs": ["Azathioprine/6-MP", "Allopurinol"],
+        "severity": "HIGH",
+        "description": "Allopurinol dramatically increases thiopurine levels by blocking metabolism. If intentionally combined (to optimize metabolites), azathioprine dose must be reduced by 75%. Fatal bone marrow suppression has occurred when combined at full doses."
+      },
+      {
+        "drugs": ["Anti-TNF biologics (infliximab, adalimumab)", "Natalizumab"],
+        "severity": "HIGH",
+        "description": "NEVER combine. Dramatically increases risk of progressive multifocal leukoencephalopathy (PML) and serious infections."
+      },
+      {
+        "drugs": ["Any biologic", "Any other biologic"],
+        "severity": "HIGH",
+        "description": "Do not combine two biologics unless specifically directed by a specialist in a clinical trial setting. Profound immunosuppression risk."
+      },
+      {
+        "drugs": ["Ciprofloxacin", "Corticosteroids"],
+        "severity": "HIGH",
+        "description": "Combination significantly increases risk of Achilles tendon rupture. Use with extreme caution, especially in patients >60."
+      },
+      {
+        "drugs": ["Methotrexate", "NSAIDs"],
+        "severity": "HIGH",
+        "description": "NSAIDs reduce renal clearance of methotrexate, potentially causing toxic accumulation. Avoid combination."
+      },
+      {
+        "drugs": ["Methotrexate", "Trimethoprim/sulfamethoxazole (Bactrim)"],
+        "severity": "HIGH",
+        "description": "Both are folate antagonists. Combination can cause severe bone marrow suppression. Avoid if possible."
+      },
+      {
+        "drugs": ["Metronidazole", "Alcohol"],
+        "severity": "HIGH",
+        "description": "Disulfiram-like reaction: severe nausea, vomiting, flushing, cramping. No alcohol for 3 days after stopping metronidazole."
+      },
+      {
+        "drugs": ["Cholestyramine", "Nearly all oral medications"],
+        "severity": "MODERATE",
+        "description": "Cholestyramine binds drugs in the gut. Take ALL other oral medications at least 1 hour BEFORE or 4-6 hours AFTER cholestyramine. This includes levothyroxine, warfarin, mesalamine, oral contraceptives, and vitamins."
+      },
+      {
+        "drugs": ["JAK inhibitors (upadacitinib)", "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, itraconazole)"],
+        "severity": "MODERATE",
+        "description": "Increase JAK inhibitor levels. Upadacitinib dose must be reduced when combined."
+      },
+      {
+        "drugs": ["Immunosuppressants (any)", "Live vaccines"],
+        "severity": "HIGH",
+        "description": "Do NOT give live vaccines to patients on immunosuppressants (thiopurines, methotrexate, biologics, JAK inhibitors). Live vaccines include: MMR, varicella, zoster (Zostavax — NOT Shingrix which is inactivated), yellow fever, oral polio, BCG, live influenza nasal spray."
+      },
+      {
+        "drugs": ["Ciprofloxacin", "Calcium/Iron/Zinc/Antacids"],
+        "severity": "MODERATE",
+        "description": "These minerals chelate ciprofloxacin, dramatically reducing its absorption. Separate by at least 2 hours before or 6 hours after."
+      },
+      {
+        "drugs": ["Sulfasalazine", "Folic acid/Folate"],
+        "severity": "LOW",
+        "description": "Sulfasalazine depletes folate. Not a dangerous interaction but requires mandatory folate supplementation (1-2mg daily)."
+      }
+    ],
+
+    "medications_to_AVOID_with_crohns": [
+      {
+        "drug": "NSAIDs (ibuprofen, naproxen, aspirin in anti-inflammatory doses)",
+        "reason": "Can trigger Crohn's flares, cause small bowel ulceration, and increase emergency hospitalizations. ACG recommends avoidance. Use acetaminophen (Tylenol) for pain instead. COX-2 inhibitors (celecoxib) may be safer but use cautiously.",
+        "alternative": "Acetaminophen for pain. Celecoxib (Celebrex) with GI approval if needed."
+      },
+      {
+        "drug": "Antibiotics (indiscriminate use)",
+        "reason": "Unnecessary antibiotics can disrupt gut microbiome and trigger Crohn's flares. Only use antibiotics when specifically indicated.",
+        "alternative": "Use antibiotics only for documented infections, perianal disease, or SIBO."
+      },
+      {
+        "drug": "Isotretinoin (Accutane)",
+        "reason": "Some reports of IBD onset/flare, though causal link is debated. Use with caution and GI awareness.",
+        "alternative": "Discuss dermatologic alternatives with both dermatologist and GI."
+      },
+      {
+        "drug": "Live vaccines",
+        "reason": "Contraindicated while on immunosuppressive therapy. Can cause active infection from the vaccine strain.",
+        "alternative": "Get all live vaccines BEFORE starting immunosuppressive therapy. Use inactivated alternatives when available (e.g., Shingrix instead of Zostavax)."
+      }
+    ],
+
+    "medications_affecting_nutrient_absorption": {
+      "take_with_food": [
+        "Sulfasalazine", "Prednisone/Prednisolone", "Azathioprine", "Metronidazole",
+        "Lialda (mesalamine)", "Vitamin D3 (with fat)", "Iron (with vitamin C for better absorption, though empty stomach is also OK)"
+      ],
+      "take_on_empty_stomach": [
+        "Asacol HD (mesalamine — 1hr before or 2hr after meals)",
+        "Cholestyramine (30 min before meals)",
+        "Ciprofloxacin (separate from dairy/minerals by 2+ hours)"
+      ],
+      "take_consistently_either_way": [
+        "Mercaptopurine", "Tacrolimus", "Upadacitinib", "Budesonide"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1481 @@
+{
+  "_metadata": {
+    "version": "1.0.0",
+    "created": "2026-03-31",
+    "description": "Comprehensive database of food ingredients problematic for Crohn's disease patients, with special focus on post-bowel-resection considerations",
+    "severity_scale": {
+      "RED": "Avoid — strong evidence of harm or high symptom risk",
+      "YELLOW": "Caution — moderate risk, dose-dependent, or individual variation",
+      "GREEN": "Generally safe — minimal evidence of harm at normal doses"
+    },
+    "flare_context": {
+      "FLARE": "During active disease / flare-up",
+      "REMISSION": "During remission / quiescent disease"
+    },
+    "sources_note": "Citations reference PubMed IDs, DOIs, or institution names. Full URLs in companion sources file."
+  },
+
+  "categories": [
+
+    {
+      "category_id": "emulsifiers",
+      "category_name": "Emulsifiers",
+      "description": "Food additives that stabilize mixtures of oil and water. Multiple studies link dietary emulsifiers to gut mucosal barrier disruption, microbiota changes, and IBD inflammation.",
+
+      "ingredients": [
+        {
+          "id": "carrageenan",
+          "name": "Carrageenan",
+          "aliases": ["E407", "Irish moss extract", "red seaweed extract", "kappa-carrageenan", "iota-carrageenan", "lambda-carrageenan", "processed Eucheuma seaweed", "PES"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Activates NF-κB inflammatory pathway in epithelial cells. Destroys mucosal barrier by altering Akkermansia muciniphila populations. Promotes pro-inflammatory cytokine production (IL-6, TNF-α). In clinical trial, carrageenan supplementation accelerated relapse in UC patients vs. carrageenan-free diet. Even food-grade (undegraded) carrageenan may degrade to poligeenan in acidic gut conditions.",
+          "citations": [
+            "Martino JV et al. Front Pediatr. 2017;5:96 — Carrageenan and CMC in intestinal inflammation",
+            "Bhattacharyya S et al. PLoS ONE. 2017 — NF-κB activation by carrageenan",
+            "ADDapt Trial, J Crohn's Colitis. 2025 — Emulsifier-free diet improved Crohn's remission rates",
+            "Wei W et al. Carbohydr Polym. 2023 — How carrageenan causes colitis review",
+            "PMC11085445 — Carrageenan as potential factor of IBD"
+          ],
+          "common_foods": ["ice cream", "chocolate milk", "yogurt", "cottage cheese", "deli meats", "infant formula", "protein shakes", "non-dairy milks", "whipping cream substitutes"]
+        },
+        {
+          "id": "polysorbate_80",
+          "name": "Polysorbate 80",
+          "aliases": ["E433", "Tween 80", "polyoxyethylene sorbitan monooleate", "sorbitan monooleate ethoxylated"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Thins the protective mucus layer over intestinal epithelial cells. Causes bacterial translocation across the epithelium. Alters mucosal proteins. Promotes low-grade intestinal inflammation in animal models. ADDapt trial (2025) showed emulsifier-free diets doubled Crohn's remission rates.",
+          "citations": [
+            "Chassaing B et al. Nature. 2015 — Dietary emulsifiers impact microbiota promoting colitis",
+            "ADDapt Trial, J Crohn's Colitis. 2025 — 154 patients, emulsifier-free meals improved CD",
+            "Viennois E et al. Cancer Res. 2017 — PS80 promotes colonic inflammation and carcinogenesis",
+            "CGH 2025 — Five dietary emulsifiers RCT on inflammation and permeability"
+          ],
+          "common_foods": ["ice cream", "salad dressings", "sauces", "baked goods", "vitamin supplements", "gelatin capsules", "shortenings"]
+        },
+        {
+          "id": "cmc",
+          "name": "Carboxymethylcellulose",
+          "aliases": ["CMC", "E466", "cellulose gum", "sodium carboxymethylcellulose", "modified cellulose"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Thins mucus layer protecting intestinal epithelial cells. Promotes bacterial overgrowth in small intestine. Alters gut microbiota composition and behavior. Promotes low-grade inflammation that can escalate to colitis in predisposed individuals.",
+          "citations": [
+            "Chassaing B et al. Nature. 2015",
+            "ADDapt Trial, J Crohn's Colitis. 2025",
+            "Holder MK et al. Gut Microbes. 2019 — CMC behavioral and microbiome effects",
+            "CGH 2025 — Placebo-controlled RCT on five emulsifiers"
+          ],
+          "common_foods": ["ice cream", "baked goods", "salad dressings", "cheese spreads", "gluten-free products", "toothpaste", "syrups"]
+        },
+        {
+          "id": "soy_lecithin",
+          "name": "Soy Lecithin",
+          "aliases": ["E322", "lecithin", "soya lecithin"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "GREEN",
+          "worse_during_flare": false,
+          "mechanism": "Unlike synthetic emulsifiers, soy lecithin shows neutral to beneficial effects on gut microbiota. Increases butyrate-producing bacteria (Clostridium leptum). May improve gut microbiota composition and function. Phosphatidylcholine (a lecithin component) is naturally present in intestinal mucus barrier.",
+          "citations": [
+            "Viennois E et al. Microbiome. 2021 — Direct impact of dietary emulsifiers on human gut microbiota",
+            "PMC9331555 — Food emulsifiers and metabolic syndrome: role of gut microbiota",
+            "J Funct Foods. 2023 — Natural emulsifiers lecithins preserve gut microbiota diversity"
+          ],
+          "common_foods": ["chocolate", "baked goods", "margarine", "peanut butter", "cooking sprays", "instant foods"]
+        },
+        {
+          "id": "sunflower_lecithin",
+          "name": "Sunflower Lecithin",
+          "aliases": ["sunflower phospholipids"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "More detrimentally impactful on gut microbiota compared with soy lecithin in in-vitro studies. Can cause dysbiosis in MiniBioReactor Array models. Less well-studied than soy lecithin.",
+          "citations": [
+            "Viennois E et al. Microbiome. 2021 — Direct impact of dietary emulsifiers on gut microbiota"
+          ],
+          "common_foods": ["organic/non-GMO products", "chocolate", "plant-based milks", "protein bars"]
+        },
+        {
+          "id": "mono_diglycerides",
+          "name": "Mono- and Diglycerides",
+          "aliases": ["E471", "monoglycerides", "diglycerides", "glycerol monostearate", "GMS", "DATEM", "diacetyl tartaric acid ester of mono- and diglycerides"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "Mixed evidence. Some studies show little to no impact on gut microbiome. However, one study observed decreased Faecalibacterium genus (anti-inflammatory bacterium depleted in Crohn's). Impairs circulating lipid and glucose metabolism.",
+          "citations": [
+            "Viennois E et al. Microbiome. 2021",
+            "Nat Commun Biol. 2024 — Common dietary emulsifiers promote metabolic disorders"
+          ],
+          "common_foods": ["bread", "tortillas", "peanut butter", "margarine", "baked goods", "ice cream", "whipped toppings"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "artificial_sweeteners",
+      "category_name": "Artificial Sweeteners",
+      "description": "Non-nutritive sweeteners that provide sweetness without calories. Multiple studies link them to gut dysbiosis, increased intestinal permeability, and worsened IBD inflammation.",
+
+      "ingredients": [
+        {
+          "id": "sucralose",
+          "name": "Sucralose",
+          "aliases": ["Splenda", "E955", "trichlorogalactosucrose"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Promotes gut Proteobacteria expansion and dysbiosis. Increases myeloperoxidase (MPO) reactivity in Crohn's-like ileitis. Exacerbates inflammation specifically in individuals with pro-inflammatory predisposition (like CD) but not healthy subjects. Note: Splenda also contains maltodextrin which compounds the harm.",
+          "citations": [
+            "Rodriguez-Palacios A et al. Inflamm Bowel Dis. 2018;24(5):1005-1020 — Splenda promotes Proteobacteria and MPO reactivity in CD-like ileitis",
+            "ScienceDaily March 2018 — Artificial sweetener intensifies Crohn's symptoms",
+            "PMC6939682 — Sucralose inhibitory effect on Streptococci in CD-like ileitis"
+          ],
+          "common_foods": ["diet sodas", "sugar-free gum", "protein powders", "flavored water", "sugar-free syrups", "low-calorie yogurt", "sugar-free candy"]
+        },
+        {
+          "id": "aspartame",
+          "name": "Aspartame",
+          "aliases": ["E951", "NutraSweet", "Equal", "aspartyl-phenylalanine methyl ester"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Decreases overall bacterial diversity in the gut. Damages the intestinal wall and 'good bacteria' in the gut. Evidence less strong than sucralose for direct IBD exacerbation but contributes to dysbiosis.",
+          "citations": [
+            "Suez J et al. Cell. 2022 — Personalized microbiome-driven effects of non-nutritive sweeteners",
+            "MDPI Diseases. 2025;13(4):115 — Artificial sweeteners double-edged sword for gut microbiome"
+          ],
+          "common_foods": ["diet sodas", "sugar-free gum", "tabletop sweeteners", "diet desserts", "sugar-free gelatin", "flavored medications"]
+        },
+        {
+          "id": "saccharin",
+          "name": "Saccharin",
+          "aliases": ["E954", "Sweet'N Low", "sodium saccharin", "calcium saccharin"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Causes gut dysbiosis with increased Bacteroides and Clostridiales and reduced Lactobacillus reuteri. At FDA-approved ADI doses, increases TNF-α and iNOS expression. Increases intestinal permeability, allowing endotoxins to trigger systemic inflammation. Increases adhesion and invasion of pathogenic bacteria into epithelial cells.",
+          "citations": [
+            "Suez J et al. Nature. 2014 — Artificial sweeteners induce glucose intolerance by altering gut microbiota",
+            "MDPI Diseases. 2025;13(4):115 — Artificial sweeteners and gut microbiome",
+            "PMC10501561 — Long-term effect of artificial sweeteners on metabolic health"
+          ],
+          "common_foods": ["Sweet'N Low packets", "diet drinks", "canned fruit", "salad dressings", "some medications"]
+        },
+        {
+          "id": "acesulfame_k",
+          "name": "Acesulfame Potassium",
+          "aliases": ["acesulfame-K", "Ace-K", "E950", "Sunett", "Sweet One"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Induces dysbiosis and intestinal injury with enhanced lymphocyte migration to intestinal mucosa. Triggers IBD development via suppression of focal adhesion pathway (shown in mice and zebrafish). Inhibits glucose fermentation by intestinal bacteria. Reduces beneficial bacteria and increases inflammation-associated Collinsella. Effects are microbiota-independent — direct cellular toxicity.",
+          "citations": [
+            "Hanawa Y et al. J Gastroenterol Hepatol. 2021 — Ace-K induces dysbiosis and intestinal injury",
+            "ScienceDirect. 2024 — Ace-K triggers IBD via focal adhesion pathway inhibition",
+            "Bian X et al. PLoS ONE. 2017 — Ace-K affects gut microbiome and body weight in mice"
+          ],
+          "common_foods": ["diet sodas", "sugar-free candy", "protein shakes", "flavored water", "baked goods", "frozen desserts", "chewing gum"]
+        },
+        {
+          "id": "neotame",
+          "name": "Neotame",
+          "aliases": ["E961"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Negatively regulates intestinal epithelium directly through T1R3 signaling. Causes pathogenic changes to gut bacteria. Less well-studied than other sweeteners but emerging evidence of harm.",
+          "citations": [
+            "Front Nutr. 2024 — Neotame negatively regulates intestinal epithelium via T1R3-signaling"
+          ],
+          "common_foods": ["processed foods", "beverages", "baked goods"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "sugar_alcohols",
+      "category_name": "Sugar Alcohols (Polyols)",
+      "description": "Partially absorbed carbohydrates used as sugar substitutes. Cause osmotic diarrhea by drawing water into the colon. Classified as FODMAPs. Especially problematic for post-resection patients with already-compromised absorption.",
+
+      "ingredients": [
+        {
+          "id": "sorbitol",
+          "name": "Sorbitol",
+          "aliases": ["E420", "D-glucitol", "sorbitol syrup"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Poorly absorbed in the small intestine; causes osmotic diarrhea. High FODMAP. 10g/day causes mild GI distress in healthy adults; 20g/day causes significant diarrhea and pain. Post-resection patients have even less absorptive surface, dramatically lowering tolerance threshold. Fermented by colonic bacteria producing gas.",
+          "citations": [
+            "Mäkinen KK. Int J Dent. 2016 — GI disturbances from sugar alcohol consumption",
+            "PMC6693595 — Sorbitol: often forgotten cause of osmotic diarrhea",
+            "PMC5508768 — Systematic review of polyols on GI health and IBS"
+          ],
+          "common_foods": ["sugar-free gum", "sugar-free candy", "diet foods", "dried fruit", "some medications/syrups", "stone fruits (naturally occurring)"]
+        },
+        {
+          "id": "mannitol",
+          "name": "Mannitol",
+          "aliases": ["E421", "D-mannitol", "mannite"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Worst tolerated of all sugar alcohols. Causes the most severe osmotic diarrhea. High FODMAP. Even small doses can trigger significant water secretion in the colon. Post-resection patients at extremely high risk.",
+          "citations": [
+            "Mäkinen KK. Int J Dent. 2016 — Severity ranking: mannitol > sorbitol > xylitol",
+            "PMC5508768 — Systematic review of polyols on GI health"
+          ],
+          "common_foods": ["sugar-free candy", "chewing gum", "pharmaceutical excipient", "mushrooms (naturally occurring)", "cauliflower (naturally occurring)"]
+        },
+        {
+          "id": "xylitol",
+          "name": "Xylitol",
+          "aliases": ["E967", "birch sugar", "wood sugar"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Better tolerated than sorbitol and mannitol but still causes osmotic diarrhea at moderate doses. High FODMAP. Post-resection patients have reduced tolerance. Threshold approximately 20-30g/day for healthy adults; much lower for IBD patients.",
+          "citations": [
+            "Mäkinen KK. Int J Dent. 2016",
+            "PMC5508768 — Systematic review of polyols"
+          ],
+          "common_foods": ["sugar-free gum", "sugar-free mints", "toothpaste", "sugar-free candy", "some peanut butters"]
+        },
+        {
+          "id": "maltitol",
+          "name": "Maltitol",
+          "aliases": ["E965", "maltitol syrup", "hydrogenated maltose syrup", "hydrogenated high maltose content glucose syrup"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Only about 40% absorbed in the small intestine. Strong osmotic laxative effect. High FODMAP. One of the most common sugar alcohols in sugar-free chocolate and candy — often consumed in quantities that exceed tolerance thresholds.",
+          "citations": [
+            "PMC5508768 — Systematic review of polyols on GI health",
+            "Cleveland Clinic — Sugar alcohols may not be as safe as you thought"
+          ],
+          "common_foods": ["sugar-free chocolate", "sugar-free candy", "sugar-free baked goods", "protein bars", "sugar-free ice cream"]
+        },
+        {
+          "id": "isomalt",
+          "name": "Isomalt",
+          "aliases": ["E953", "Palatinit", "isomaltitol"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Only about 10% absorbed. Very strong osmotic effect. Used in hard candy where large amounts can be consumed. High FODMAP.",
+          "citations": [
+            "Mäkinen KK. Int J Dent. 2016",
+            "PMC5508768 — Systematic review"
+          ],
+          "common_foods": ["sugar-free hard candy", "sugar-free throat lozenges", "sugar-free chocolate"]
+        },
+        {
+          "id": "lactitol",
+          "name": "Lactitol",
+          "aliases": ["E966"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Poorly absorbed. Actually used clinically as a laxative. Very strong osmotic diarrhea potential. Derived from lactose — additional concern for lactose-intolerant post-resection patients.",
+          "citations": [
+            "Mäkinen KK. Int J Dent. 2016"
+          ],
+          "common_foods": ["sugar-free candy", "sugar-free baked goods", "diabetic foods"]
+        },
+        {
+          "id": "erythritol",
+          "name": "Erythritol",
+          "aliases": ["E968"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "Unlike other polyols, about 90% is absorbed in the small intestine and excreted unchanged in urine. Does not typically reach the colon in significant amounts, so minimal osmotic or fermentative effect. However, post-resection patients may have reduced small intestinal absorption, shifting it to YELLOW.",
+          "citations": [
+            "Mäkinen KK. Int J Dent. 2016 — Erythritol avoids GI reactions of other polyols",
+            "PMC5508768 — Systematic review of polyols"
+          ],
+          "common_foods": ["stevia blends", "monk fruit blends", "keto products", "zero-calorie sweeteners", "beverages"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "hfcs_fructose",
+      "category_name": "High-Fructose Corn Syrup and Excess Fructose",
+      "description": "Excess free fructose disrupts gut barrier integrity, promotes pro-inflammatory macrophage activation, and worsens colitis in a microbiota-dependent manner.",
+
+      "ingredients": [
+        {
+          "id": "hfcs",
+          "name": "High-Fructose Corn Syrup",
+          "aliases": ["HFCS", "HFCS-55", "HFCS-42", "glucose-fructose syrup", "isoglucose", "corn sugar", "maize syrup", "fructose-glucose syrup"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Promotes pro-inflammatory macrophage activation via ROS-mediated NF-κB signaling. Exacerbates colitis and deteriorates barrier integrity. Causes microbiota-dependent worsening of colitis — loss of probiotic bacteria causally linked to worsening. Aggravates colitis via microbiota dysbiosis-mediated Th17/Treg imbalance. Thins protective mucosal lining. Upregulates proportion of macrophages in IBD but not in healthy subjects.",
+          "citations": [
+            "Int Immunopharmacol. 2022 — HFCS promotes proinflammatory macrophage activation via ROS/NF-κB",
+            "PMC8215596 — Dietary interventions to prevent high-fructose diet worsening of colitis",
+            "PubMed 37818653 — HFCS aggravates colitis via Th17/Treg imbalance",
+            "Sci Rep. 2019 — High-sugar diet enhances colitis susceptibility via SCFA depletion"
+          ],
+          "common_foods": ["sodas", "fruit juices", "candy", "condiments (ketchup)", "bread", "cereals", "salad dressings", "flavored yogurt", "canned fruit", "syrups"]
+        },
+        {
+          "id": "fructose_excess",
+          "name": "Excess Free Fructose",
+          "aliases": ["crystalline fructose", "fructose", "fruit sugar (concentrated)"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Fructose in excess of glucose absorption capacity (fructose malabsorption) reaches the colon causing osmotic diarrhea and gas. Also a high FODMAP. Disrupts gut barrier integrity. Changes in fecal microbiota linked to worsening of colitis in microbiota-dependent manner.",
+          "citations": [
+            "PMC8215596 — High-fructose diet worsening of colitis is microbiota-dependent",
+            "Nat Sci Rep. 2019 — Sugar disrupts gut barrier and SCFA production"
+          ],
+          "common_foods": ["agave nectar", "honey", "apple juice", "pear juice", "mango", "watermelon", "dried fruits", "fruit juice concentrates"]
+        },
+        {
+          "id": "agave",
+          "name": "Agave Nectar / Agave Syrup",
+          "aliases": ["agave syrup", "agave inulin", "blue agave nectar"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Contains up to 90% fructose — extreme excess fructose content. High FODMAP. Same mechanisms as excess fructose plus potentially contains inulin (a fructan/FODMAP). Marketed as 'natural' and 'healthy' but extremely problematic for IBD.",
+          "citations": [
+            "Monash FODMAP database — Agave classified as high FODMAP",
+            "Int Immunopharmacol. 2022 — Fructose/IBD mechanisms"
+          ],
+          "common_foods": ["health food sweetener", "beverages", "protein bars", "granola", "vegan desserts"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "dairy",
+      "category_name": "Dairy-Related Ingredients",
+      "description": "Lactose intolerance affects ~70% of IBD patients. Post-resection patients with small bowel involvement have secondary lactose intolerance. Dairy proteins (casein) may independently trigger inflammation.",
+
+      "ingredients": [
+        {
+          "id": "lactose",
+          "name": "Lactose",
+          "aliases": ["milk sugar", "lactose monohydrate"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Lactase enzyme is produced in small intestinal brush border — damaged or resected small bowel leads to secondary lactose intolerance (affects ~70% of IBD patients). Undigested lactose causes osmotic diarrhea, gas, bloating, and cramping. Post-resection: reduced absorptive surface makes lactose intolerance almost universal. During flare: inflamed mucosa further reduces lactase production.",
+          "citations": [
+            "ScienceDirect — Lactose intolerance in IBD patients and osteoporosis prevention",
+            "PMC11750045 — Lactose-free diet as therapeutic strategy in post-surgical syndrome",
+            "Crohn's & Colitis Foundation — Resection surgery nutrition guidelines"
+          ],
+          "common_foods": ["milk", "ice cream", "cheese (soft)", "yogurt", "cream", "butter", "whey protein", "baked goods", "chocolate", "many processed foods"]
+        },
+        {
+          "id": "casein",
+          "name": "Casein",
+          "aliases": ["sodium caseinate", "calcium caseinate", "potassium caseinate", "casein hydrolysate", "micellar casein", "milk protein", "milk protein concentrate", "milk protein isolate"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "A1 beta-casein (from conventional cow's milk) may trigger abdominal pain, bloating, and loose stools in sensitive individuals. Many Crohn's patients cannot properly digest casein, leading to increased inflammation. This is separate from lactose intolerance — casein can cause issues even in lactose-free products. A2 casein (goat, sheep, some cow breeds) may be better tolerated.",
+          "citations": [
+            "MGI Clinic — Dairy proteins fueling Crohn's flare-ups",
+            "IBD Centre of BC — Dairy and IBD review",
+            "PMC11313810 — Milk and dairy effects on IBD risk and course"
+          ],
+          "common_foods": ["milk", "cheese", "yogurt", "protein powders", "coffee creamers", "processed meats", "baked goods", "protein bars"]
+        },
+        {
+          "id": "whey",
+          "name": "Whey",
+          "aliases": ["whey protein concentrate", "whey protein isolate", "whey protein hydrolysate", "acid whey", "sweet whey", "whey powder", "demineralized whey"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Contains residual lactose (whey concentrate has more than isolate). Whey protein isolate has <1% lactose and may be tolerated. Like casein, the protein itself may trigger digestive discomfort in Crohn's patients independent of lactose content. High-fat dairy products worsen perceived CD symptoms.",
+          "citations": [
+            "PubMed 21802562 — Dairy and CD symptoms influenced by fat content not lactose",
+            "PMC11313810 — Effects of milk and dairy on IBD risk"
+          ],
+          "common_foods": ["protein shakes", "protein bars", "infant formula", "baked goods", "processed cheese", "crackers"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "gluten_wheat",
+      "category_name": "Gluten and Wheat Components",
+      "description": "Celiac disease prevalence in IBD is similar to general population, but ~30% of IBD patients report non-celiac gluten sensitivity (NCGS). Wheat also contains FODMAPs (fructans) and amylase-trypsin inhibitors (ATIs).",
+
+      "ingredients": [
+        {
+          "id": "gluten",
+          "name": "Gluten",
+          "aliases": ["wheat gluten", "vital wheat gluten", "seitan", "wheat protein"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Celiac disease is NOT more common in Crohn's, but NCGS affects ~30% of IBD patients. Crohn's patients with NCGS report more joint pain (50%), fatigue (50%), and headache (27%) than UC patients. Wheat also contains ATIs (amylase-trypsin inhibitors) that activate innate immune responses, and fructans (a FODMAP) that cause gas/bloating. Dietary gluten intake is NOT associated with IBD risk in people without celiac disease. Individual testing recommended.",
+          "citations": [
+            "PMC4207593 — Celiac, NCGS, and Crohn's overlap case series",
+            "PubMed 26006779 — Celiac disease, NCGS and IBD",
+            "PubMed 32558265 — Gluten-free diet in IBD: time for recommendation?",
+            "PMC8586848 — Dietary gluten intake not associated with IBD risk"
+          ],
+          "common_foods": ["bread", "pasta", "cereal", "baked goods", "beer", "soy sauce", "gravies", "breaded foods", "crackers"]
+        },
+        {
+          "id": "modified_food_starch",
+          "name": "Modified Food Starch",
+          "aliases": ["modified starch", "modified corn starch", "modified tapioca starch", "food starch-modified"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "May be derived from wheat (potential hidden gluten source). Even when corn-based, the modification process may produce compounds that irritate the gut. Often co-occurs with other problematic additives in ultra-processed foods. In the US, wheat-derived modified food starch must declare wheat, but cross-contamination possible.",
+          "citations": [
+            "Gutsy By Nature — Crohn's disease and food additives",
+            "FDA labeling requirements for major allergens"
+          ],
+          "common_foods": ["soups", "sauces", "gravies", "puddings", "pie fillings", "frozen meals", "salad dressings"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "fiber",
+      "category_name": "Fiber Types",
+      "description": "Critical distinction between soluble and insoluble fiber. Soluble fiber generally beneficial; insoluble fiber problematic during flares and risky post-resection due to stricture/obstruction risk. State-dependent: what helps in remission may harm during a flare.",
+
+      "ingredients": [
+        {
+          "id": "insoluble_fiber_bran",
+          "name": "Wheat Bran / Insoluble Fiber",
+          "aliases": ["bran", "wheat bran", "oat bran fiber", "cellulose fiber", "whole grain hull"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Acts as mechanical irritant to inflamed bowel. Risk of obstruction at stricture sites (very dangerous post-resection where anastomosis may narrow). Does not dissolve in water — creates bulk that cannot pass through narrowed segments. During remission, may be gradually reintroduced. During flare: avoid completely.",
+          "citations": [
+            "AGA GI Patient Center — Role of fiber in IBD",
+            "Crohn's & Colitis Dietitians — Facts and fiction about fiber in IBD",
+            "PMC10005525 — Fiber supplementation in IBD: swinging pendulum"
+          ],
+          "common_foods": ["whole wheat bread", "bran cereal", "whole grain crackers", "popcorn", "raw vegetables", "fruit skins/peels"]
+        },
+        {
+          "id": "seeds_nuts_fiber",
+          "name": "Seeds and Nuts (Whole/Raw)",
+          "aliases": ["chia seeds", "flax seeds", "sunflower seeds", "pumpkin seeds", "sesame seeds", "whole nuts"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Physical obstruction risk at strictures or surgical anastomosis sites. Hard, indigestible particles can lodge in narrowed bowel segments. Nut butters (smooth) are generally safer than whole nuts. Ground flax/chia may be tolerable in remission. Absolute avoid during flares.",
+          "citations": [
+            "Crohn's & Colitis Foundation — Nutrition after resection surgery",
+            "Cleveland Clinic — Nutritional plan for CD/UC",
+            "HealthCentral — Crohn's disease and dietary fiber"
+          ],
+          "common_foods": ["trail mix", "granola", "seeded bread", "salads with seeds", "nut bars", "raw vegetables with seed coatings"]
+        },
+        {
+          "id": "raw_vegetable_skins",
+          "name": "Raw Vegetable and Fruit Skins",
+          "aliases": ["vegetable peels", "fruit peels", "raw produce"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Insoluble fiber in skins is extremely difficult to digest with compromised bowel. Mechanical irritation to inflamed mucosa. Risk of bowel obstruction post-resection. Cooking and peeling dramatically reduces risk. Well-cooked, peeled vegetables often tolerated even during flares.",
+          "citations": [
+            "Crohn's & Colitis Foundation — Nutrition guidelines",
+            "AGA Clinical Practice Update 2024 — Diet and nutrition in IBD"
+          ],
+          "common_foods": ["salads", "raw fruit", "crudités", "apple skins", "potato skins", "tomato skins"]
+        },
+        {
+          "id": "psyllium",
+          "name": "Psyllium Husk (Soluble Fiber)",
+          "aliases": ["psyllium", "ispaghula husk", "Metamucil", "psyllium seed husk"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "Soluble fiber that forms a gel — helps bulk loose stools (beneficial for diarrhea-predominant post-resection). In study: 70% remission at 12 months with mesalamine + psyllium; 60% with psyllium alone. Must be introduced gradually with adequate water. Post-resection caution: start very low dose, titrate up. Not recommended during active flare.",
+          "citations": [
+            "Crohn's & Colitis Dietitians — Fiber in IBD",
+            "PMC9696206 — Role of dietary fibers in IBD symptom management",
+            "PMC10005525 — Fiber supplementation in IBD"
+          ],
+          "common_foods": ["Metamucil", "fiber supplements", "some cereals", "gluten-free baking"]
+        },
+        {
+          "id": "oat_fiber",
+          "name": "Oat Fiber / Beta-Glucan (Soluble Fiber)",
+          "aliases": ["oat beta-glucan", "oat flour", "oatmeal"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "GREEN",
+          "worse_during_flare": false,
+          "mechanism": "Predominantly soluble fiber. Well-cooked oats are generally well tolerated even in active IBD. Beta-glucan may have anti-inflammatory properties. One of the safer fiber sources for post-resection patients. Start with small portions and well-cooked preparation.",
+          "citations": [
+            "AGA Clinical Practice Update 2024 — Diet and nutrition in IBD",
+            "Crohn's & Colitis Dietitians — Fiber in IBD"
+          ],
+          "common_foods": ["oatmeal", "oat flour", "oat milk", "granola (watch for added problem ingredients)"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "sulfites",
+      "category_name": "Sulfites and Sulfur Additives",
+      "description": "Sulfite preservatives inhibit beneficial gut bacteria at concentrations regarded as safe for food. Sulfate-reducing bacteria in the colon convert them to hydrogen sulfide, a known mucosal toxin.",
+
+      "ingredients": [
+        {
+          "id": "sodium_sulfite",
+          "name": "Sodium Sulfite",
+          "aliases": ["E221", "sulfite", "sodium sulphite"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Bactericidal and bacteriostatic against four species of beneficial gut bacteria at concentrations regarded as safe for food (250-500 ppm). Kills Lactobacillus and other probiotics. Sulfate-reducing bacteria in the colon convert sulfites to hydrogen sulfide — a plausible metabolic toxin associated with UC pathogenesis. Low-dose sulfite exposure dysregulates epithelial amino acid metabolism and energy metabolism, mimicking IBD metabolic dysfunction.",
+          "citations": [
+            "PMC5646858 — Sulfites inhibit growth of beneficial gut bacteria at safe concentrations",
+            "Oxford Academic. 2025 — Low-dose sulfite exposure dysregulates epithelial metabolism in pediatric colon organoids",
+            "PMC549081 — Associations between diet and UC disease activity"
+          ],
+          "common_foods": ["wine", "dried fruits", "shrimp", "processed meats", "pickled foods", "bottled lemon/lime juice"]
+        },
+        {
+          "id": "sodium_bisulfite",
+          "name": "Sodium Bisulfite",
+          "aliases": ["E222", "sodium hydrogen sulfite", "sodium bisulphite"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Same mechanisms as sodium sulfite. Substantial decrease of beneficial bacterial cell numbers observed within 2 hours of exposure. Particularly harmful to probiotic species common in the human gut microbiota.",
+          "citations": [
+            "PMC5646858 — Sulfites inhibit beneficial gut bacteria growth"
+          ],
+          "common_foods": ["wine", "beer", "dried fruits", "fruit juices", "canned vegetables"]
+        },
+        {
+          "id": "potassium_metabisulfite",
+          "name": "Potassium Metabisulfite",
+          "aliases": ["E224", "potassium pyrosulfite"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Releases sulfur dioxide. Same bactericidal effects on beneficial gut flora. Promotes sulfate-reducing bacteria and hydrogen sulfide production in the colon.",
+          "citations": [
+            "PMC5646858 — Sulfites and beneficial gut bacteria"
+          ],
+          "common_foods": ["wine", "beer", "dried fruits", "fruit preserves", "some medications"]
+        },
+        {
+          "id": "sulfur_dioxide",
+          "name": "Sulfur Dioxide",
+          "aliases": ["E220", "SO2", "sulphur dioxide"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Gas form of sulfite preservatives. Same bactericidal effects. Commonly used in wine production at high concentrations. Linked to increased hydrogen sulfide production in colon.",
+          "citations": [
+            "PMC5646858 — Sulfites and beneficial gut bacteria"
+          ],
+          "common_foods": ["wine", "dried fruits (especially light-colored)", "molasses", "grape juice", "vinegar"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "preservatives",
+      "category_name": "Preservatives",
+      "description": "Chemical preservatives alter gut microbiota composition, promoting pro-inflammatory bacteria and reducing beneficial species. Associated with increased intestinal inflammation.",
+
+      "ingredients": [
+        {
+          "id": "sodium_benzoate",
+          "name": "Sodium Benzoate",
+          "aliases": ["E211", "benzoate of soda", "benzoic acid sodium salt"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Promotes Proteobacteria overgrowth and decreases Clostridiales in gut. Reduces beneficial bacteria like Clostridium tyrobutyricum and Lactobacillus paracasei. Combined with other preservatives shows additive dysbiotic effects.",
+          "citations": [
+            "PMC9479712 — Impact of food additives on GI tract in IBD",
+            "PMC8780106 — Food additives as key environmental factor in IBD via gut dysbiosis",
+            "PMC7730902 — Food additives, gut microbiota, and IBS"
+          ],
+          "common_foods": ["soft drinks", "fruit juices", "pickles", "condiments", "salad dressings", "jams"]
+        },
+        {
+          "id": "potassium_sorbate",
+          "name": "Potassium Sorbate",
+          "aliases": ["E202", "sorbic acid potassium salt"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Part of preservative mixtures shown to increase Proteobacteria and decrease Clostridiales. Disrupts beneficial gut bacteria balance. Effects demonstrated in mice colonized with human microbiota.",
+          "citations": [
+            "PMC9479712 — Food additives and GI tract in IBD",
+            "PMC8780106 — Food additives in IBD development"
+          ],
+          "common_foods": ["cheese", "wine", "baked goods", "dried meats", "soft drinks", "yogurt"]
+        },
+        {
+          "id": "sodium_nitrite",
+          "name": "Sodium Nitrite",
+          "aliases": ["E250", "nitrite", "curing salt"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Part of preservative mixtures causing gut dysbiosis — increases Proteobacteria, decreases Clostridiales. Linked to increased colorectal cancer risk. Forms nitrosamines in the gut which are carcinogenic. Found primarily in processed/cured meats.",
+          "citations": [
+            "PMC9864936 — Impact of food additives on gut microbiota",
+            "MDVIP — 5 preservatives to avoid"
+          ],
+          "common_foods": ["bacon", "hot dogs", "deli meats", "ham", "sausages", "jerky", "canned meats"]
+        },
+        {
+          "id": "sodium_nitrate",
+          "name": "Sodium Nitrate",
+          "aliases": ["E251", "Chile saltpeter", "nitrate"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Converts to sodium nitrite in the body. Same concerns as nitrite. Note: 'uncured' or 'no nitrates added' meats often use celery powder which contains natural nitrates — same metabolic effect.",
+          "citations": [
+            "PMC9864936 — Food additives and gut microbiota"
+          ],
+          "common_foods": ["cured meats", "bacon", "some cheeses", "'naturally cured' meats (via celery powder)"]
+        },
+        {
+          "id": "bha",
+          "name": "Butylated Hydroxyanisole (BHA)",
+          "aliases": ["E320", "BHA", "tert-butyl-4-hydroxyanisole"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Disrupts gut microbiome composition. Increases intestinal inflammation and irritation. Classified as 'reasonably anticipated to be a human carcinogen' by NIH. Worsens pre-existing GI inflammation.",
+          "citations": [
+            "Layer Origin Nutrition — Preservatives bad for gut microbiome",
+            "FASEB J. 2025 — Food additives: emerging detrimental roles on gut health"
+          ],
+          "common_foods": ["cereals", "snack foods", "chewing gum", "butter", "dehydrated potatoes", "beer"]
+        },
+        {
+          "id": "bht",
+          "name": "Butylated Hydroxytoluene (BHT)",
+          "aliases": ["E321", "BHT", "dibutylhydroxytoluene", "2,6-di-tert-butyl-4-methylphenol"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Disrupts gut microbiome. Increases inflammation within the digestive tract. Often combined with BHA for synergistic antioxidant effects but also synergistic gut harm.",
+          "citations": [
+            "Layer Origin Nutrition — Preservatives and gut microbiome",
+            "FASEB J. 2025 — Food additives and gut health"
+          ],
+          "common_foods": ["cereals", "snack chips", "vegetable oil", "shortening", "enriched rice", "chewing gum"]
+        },
+        {
+          "id": "tbhq",
+          "name": "Tert-Butylhydroquinone (TBHQ)",
+          "aliases": ["E319", "TBHQ", "tertiary butylhydroquinone"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Synthetic antioxidant preservative. Associated with immune system disruption. May reduce effectiveness of vaccines and alter T-cell function. Adds to cumulative preservative burden in ultra-processed foods.",
+          "citations": [
+            "MDVIP — 5 preservatives to avoid",
+            "Environmental Working Group research on TBHQ"
+          ],
+          "common_foods": ["fast food", "frozen fish products", "crackers", "microwave popcorn", "cooking oils", "snack foods"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "food_colorings",
+      "category_name": "Food Colorings",
+      "description": "Synthetic food dyes, particularly Red 40 and Yellow 6, have been shown to trigger IBD-like colitis in animal models. Effects require commensal bacteria to metabolize the dyes into pro-inflammatory compounds.",
+
+      "ingredients": [
+        {
+          "id": "red_40",
+          "name": "Red 40 (Allura Red AC)",
+          "aliases": ["E129", "Allura Red", "FD&C Red No. 40", "Red 40 Lake", "CI 16035"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Causes DNA damage and colonic inflammation in mice. Triggers IBD-like colitis in mice with IL-23 dysregulation — requires commensal bacteria (E. faecalis, B. ovatus) to metabolize dye into inflammatory compounds. Increases gut serotonin production, altering microbiome composition. Causes inflammation specifically in distal colon and rectum. Continual exposure promotes chronic gut inflammation.",
+          "citations": [
+            "PMC10502305 — Red 40 causes DNA damage, colonic inflammation, and microbiome impacts in mice",
+            "PMC8266754 — Food colorants metabolized by bacteria promote colitis",
+            "Medical News Today — Red food coloring causes intestinal inflammation",
+            "University Hospitals — Red food dye and IBD"
+          ],
+          "common_foods": ["candy", "fruit snacks", "sports drinks", "cereals", "cake mixes", "flavored chips", "gelatin desserts", "medications"]
+        },
+        {
+          "id": "yellow_6",
+          "name": "Yellow 6 (Sunset Yellow)",
+          "aliases": ["E110", "Sunset Yellow FCF", "FD&C Yellow No. 6", "CI 15985"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Together with Red 40, the most abundant food colorants worldwide. Triggers IBD-like colitis via same bacterial metabolism pathway as Red 40. Requires immune dysregulation (IL-23) as a susceptibility factor — which Crohn's patients have.",
+          "citations": [
+            "PMC8266754 — Food colorants and colitis in IL-23 dysregulated mice"
+          ],
+          "common_foods": ["orange soda", "candy", "cheese-flavored snacks", "cereals", "baked goods", "medications"]
+        },
+        {
+          "id": "yellow_5",
+          "name": "Yellow 5 (Tartrazine)",
+          "aliases": ["E102", "Tartrazine", "FD&C Yellow No. 5", "CI 19140"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Less studied than Red 40 and Yellow 6 in IBD context specifically, but part of synthetic dye family with similar azo-bond structure metabolized by gut bacteria. Known to cause hypersensitivity reactions. General precautionary avoidance recommended for IBD patients.",
+          "citations": [
+            "PMC8266754 — Food colorants and experimental IBD"
+          ],
+          "common_foods": ["candy", "soft drinks", "cereals", "pickles", "mustard", "chips", "medications"]
+        },
+        {
+          "id": "blue_1",
+          "name": "Blue 1 (Brilliant Blue)",
+          "aliases": ["E133", "Brilliant Blue FCF", "FD&C Blue No. 1", "CI 42090"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "Less studied in IBD than red/yellow dyes. Part of the synthetic dye category with general concerns about gut bacterial metabolism. Precautionary avoidance recommended given overall dye-IBD connection.",
+          "citations": [
+            "General food additive-IBD literature"
+          ],
+          "common_foods": ["candy", "beverages", "ice cream", "canned peas", "soups", "frostings"]
+        },
+        {
+          "id": "titanium_dioxide",
+          "name": "Titanium Dioxide",
+          "aliases": ["E171", "TiO2", "CI 77891", "titanium white"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Nanoparticles reduce goblet cells in colon and cause dysplastic changes — directly impairs intestinal barrier. Induces oxidative stress and DNA base oxidation in intestinal epithelial cells. High doses increase pro-inflammatory cytokines IL-8 and TNF-α from macrophages. Alters gut microbiome and intestinal function. BANNED in the EU as food additive since 2022 but still permitted in the US.",
+          "citations": [
+            "PubMed 33379217 — Adverse effects of E171 related to human toxicity including immune system",
+            "PMC9479712 — Impact of food additives on GI tract in IBD",
+            "EU Commission Regulation 2022/63 — Ban on E171 in food"
+          ],
+          "common_foods": ["candy coatings", "chewing gum", "powdered sugar donuts", "coffee creamer", "white sauces", "icing", "supplements/medications (white tablet coating)"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "thickeners_gums",
+      "category_name": "Thickeners and Gums",
+      "description": "Plant-derived or microbial polysaccharides used as thickeners and stabilizers. Mixed evidence — some may be protective, others contribute to dysbiosis. Individual response varies significantly.",
+
+      "ingredients": [
+        {
+          "id": "xanthan_gum",
+          "name": "Xanthan Gum",
+          "aliases": ["E415"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Produced by bacterial fermentation. Can cause gas and bloating. Effect on gut motility may worsen diarrhea. In-vitro studies show potential to cause dysbiosis. MiniBioReactor Array study demonstrated xanthan gum can cause dysbiosis alongside other emulsifiers. However, most evidence is from animal models — human evidence limited.",
+          "citations": [
+            "Eat Well Crohn's Colitis — Food additives and IBD",
+            "ScienceDirect 2023 — Effects of food hydrocolloids on colitis",
+            "Microbiome 2021 — Direct impact of dietary emulsifiers on gut microbiota"
+          ],
+          "common_foods": ["salad dressings", "sauces", "gluten-free baked goods", "ice cream", "yogurt", "soups"]
+        },
+        {
+          "id": "guar_gum",
+          "name": "Guar Gum",
+          "aliases": ["E412", "guar flour", "guaran"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Conflicting evidence. One study found guar gum adversely impacts gut microbiota activity and colonic immune response, increasing susceptibility to colonic inflammation. However, another study found pectin and guar gum could ameliorate colitis. Extracted from a legume (cluster bean) — may be problematic for lectin-sensitive individuals. Dose-dependent effects.",
+          "citations": [
+            "PMC9194036 — Guar gum changes in gut microbiota augment susceptibility to colitis",
+            "ScienceDirect 2023 — Effects of hydrocolloids on colitis"
+          ],
+          "common_foods": ["ice cream", "baked goods", "sauces", "dressings", "beverages", "gluten-free products"]
+        },
+        {
+          "id": "locust_bean_gum",
+          "name": "Locust Bean Gum",
+          "aliases": ["E410", "carob gum", "carob bean gum", "carobin"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "GREEN",
+          "worse_during_flare": false,
+          "mechanism": "EFSA re-evaluation (2017) found no safety concern at refined exposure levels. Derived from carob seeds. Generally well tolerated. No significant evidence of harm to gut microbiota or barrier function at food-grade doses.",
+          "citations": [
+            "PMC7010100 — EFSA re-evaluation of locust bean gum E410"
+          ],
+          "common_foods": ["ice cream", "cream cheese", "yogurt", "baked goods", "salad dressings"]
+        },
+        {
+          "id": "gellan_gum",
+          "name": "Gellan Gum",
+          "aliases": ["E418"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "EFSA concluded no safety concern at refined exposure for general population. However, a 1997 animal study found intestinal microvilli abnormalities after 4 weeks of ingestion. May slow digestion. Limited but concerning evidence — caution warranted for IBD patients.",
+          "citations": [
+            "PMC7009714 — EFSA re-evaluation of gellan gum E418",
+            "Tokyo 1997 animal study — Microvilli abnormalities"
+          ],
+          "common_foods": ["plant-based milks", "yogurt alternatives", "jams", "beverages", "desserts"]
+        },
+        {
+          "id": "agar",
+          "name": "Agar",
+          "aliases": ["E406", "agar-agar", "kanten"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "Derived from red algae. Generally well tolerated. Forms a gel that may have mild prebiotic effects. However, it is a bulking fiber and post-resection patients should use caution with any bulking agents. May cause gas in large amounts.",
+          "citations": [
+            "General food safety literature"
+          ],
+          "common_foods": ["desserts", "jellies", "vegan gelatin substitute", "Asian cuisine", "some yogurts"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "acids",
+      "category_name": "Dietary Acids",
+      "description": "Organic and inorganic acids used as flavor enhancers and preservatives. Generally low concern at food-grade doses, but may irritate inflamed tissue during flares.",
+
+      "ingredients": [
+        {
+          "id": "citric_acid",
+          "name": "Citric Acid",
+          "aliases": ["E330", "citrate"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "GREEN",
+          "worse_during_flare": false,
+          "mechanism": "No evidence of adverse health effects at doses 1000x estimated daily intake. Naturally present in citrus fruits. May actually support metabolic function. However, manufactured citric acid (from Aspergillus niger) rarely triggers sensitivity reactions.",
+          "citations": [
+            "General food safety data — Citric acid at 1000x dose shows no adverse effects"
+          ],
+          "common_foods": ["soft drinks", "candy", "canned foods", "sauces", "frozen foods"]
+        },
+        {
+          "id": "phosphoric_acid",
+          "name": "Phosphoric Acid",
+          "aliases": ["E338", "orthophosphoric acid"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Primary concern is excessive phosphate intake disrupting calcium/phosphorus balance (already a concern in Crohn's patients at risk of osteoporosis). May irritate inflamed gut tissue. Associated with high dietary acid load which showed association with UC odds in case-control study.",
+          "citations": [
+            "PMC10447558 — Dietary acid load and odds of ulcerative colitis"
+          ],
+          "common_foods": ["cola drinks", "flavored waters", "processed cheese", "processed meats"]
+        },
+        {
+          "id": "malic_acid",
+          "name": "Malic Acid",
+          "aliases": ["E296", "DL-malic acid", "apple acid"],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "GREEN",
+          "worse_during_flare": false,
+          "mechanism": "Naturally found in apples and many fruits. No specific evidence of harm in IBD. Has been studied as part of therapeutic organic acid mixtures. May cause mild GI discomfort at very high doses.",
+          "citations": [
+            "General food safety literature"
+          ],
+          "common_foods": ["sour candy", "fruit-flavored drinks", "cider", "wine"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "caffeine_stimulants",
+      "category_name": "Caffeine and Stimulants",
+      "description": "Caffeine stimulates colonic motor activity and can worsen diarrhea. Evidence is mixed — some epidemiological data suggests protective effects, but clinical guidelines recommend caution for active IBD.",
+
+      "ingredients": [
+        {
+          "id": "caffeine",
+          "name": "Caffeine",
+          "aliases": ["1,3,7-trimethylxanthine", "guarana extract", "green tea extract", "yerba mate extract", "kola nut extract"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Stimulates colonic muscle contraction (peristalsis), increasing urgency and diarrhea frequency. Stimulates gastric acid secretion. Acts as a mild diuretic — risk of dehydration in patients already losing fluid through diarrhea. Post-resection: faster transit through shortened bowel further reduces nutrient/water absorption. Paradoxically, some Mendelian randomization studies suggest higher plasma caffeine may reduce IBD risk — but this is population-level, not relevant during active disease.",
+          "citations": [
+            "IBDrelief — Caffeine and IBD",
+            "Crohn's & Colitis Foundation — Smoking, alcohol, coffee and IBD risk",
+            "ScienceDirect 2024 — Mendelian randomization of plasma caffeine and IBD risk",
+            "PubMed 41320553 — Caffeine and IBD risk meta-analysis 2025"
+          ],
+          "common_foods": ["coffee", "tea", "energy drinks", "cola", "chocolate", "pre-workout supplements", "some medications (Excedrin, Midol)"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "alcohol",
+      "category_name": "Alcohol",
+      "description": "Alcohol disrupts gut bacteria balance, increases intestinal permeability, and worsens IBD inflammation both during and after consumption.",
+
+      "ingredients": [
+        {
+          "id": "ethanol",
+          "name": "Alcohol (Ethanol)",
+          "aliases": ["ethyl alcohol", "grain alcohol", "alcohol"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Disrupts gut bacterial balance. Worsens IBD inflammation both during and after a flare. Increases intestinal permeability ('leaky gut'). Impairs nutrient absorption — compounds existing malabsorption in resection patients. Promotes dehydration, worsening diarrhea. Heavy drinking strongly linked to worsening Crohn's. Wine and beer also contain sulfites, histamine, and gluten (beer) adding compound risks.",
+          "citations": [
+            "Crohn's & Colitis Foundation — Alcohol and IBD risk",
+            "Cleveland Clinic — Nutritional plan for IBD",
+            "WebMD — Best and worst drinks for Crohn's"
+          ],
+          "common_foods": ["beer", "wine", "spirits", "cocktails", "cooking wine", "vanilla extract", "some medications/mouthwashes"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "spicy_compounds",
+      "category_name": "Spicy Compounds",
+      "description": "Capsaicin and related compounds irritate the GI tract and can worsen pain and urgency in IBD patients. Nightshade alkaloids may contribute to intestinal permeability.",
+
+      "ingredients": [
+        {
+          "id": "capsaicin",
+          "name": "Capsaicin",
+          "aliases": ["cayenne", "chili pepper extract", "hot pepper", "capsicum", "oleoresin capsicum"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Directly irritates GI mucosa. Stimulates peristalsis and increases intestinal urgency. Adds 'heat to an on-fire GI tract' in Crohn's patients. Can worsen abdominal pain and diarrhea. Nightshade alkaloid with pro-inflammatory properties that may disrupt gut lining in susceptible individuals.",
+          "citations": [
+            "Cleveland Clinic — Nutritional plan for IBD",
+            "WebMD — Crohn's disease diet plan"
+          ],
+          "common_foods": ["hot sauce", "chili powder", "cayenne pepper", "jalapeños", "habaneros", "hot chips", "spicy sauces", "buffalo wings", "salsa"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "high_oxalate",
+      "category_name": "High-Oxalate Ingredients",
+      "description": "CRITICAL for post-ileal resection patients. Fat malabsorption after ileal resection leads to enteric hyperoxaluria — calcium binds to fatty acids instead of oxalate, allowing excess oxalate absorption and kidney stone formation. Resection length >65cm dramatically increases kidney stone risk.",
+
+      "ingredients": [
+        {
+          "id": "oxalate_very_high",
+          "name": "Very High Oxalate Foods (>200mg per serving)",
+          "aliases": [],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "After ileal resection, bile acid malabsorption causes fat malabsorption. Unabsorbed fatty acids bind calcium in the gut, leaving oxalate free to be absorbed. This enteric hyperoxaluria causes calcium oxalate kidney stones. Length of ileum resected is the main determinant — median 65cm in stone formers vs. 27cm in non-stone formers. Dietary oxalate restriction + oral calcium/magnesium supplementation is the treatment.",
+          "citations": [
+            "PMC10821467 — Intestinal oxalate absorption, hyperoxaluria, and kidney stones in Crohn's",
+            "PMC8011014 — Pathophysiology and treatment of enteric hyperoxaluria",
+            "OHF — Understanding hyperoxaluria"
+          ],
+          "specific_foods": [
+            {"food": "Spinach (cooked, 1/2 cup)", "oxalate_mg": 755},
+            {"food": "Rhubarb", "oxalate_mg": 541},
+            {"food": "Swiss chard", "oxalate_mg": 660},
+            {"food": "Beet greens", "oxalate_mg": 916},
+            {"food": "Almonds (1 oz)", "oxalate_mg": 122},
+            {"food": "Buckwheat groats", "oxalate_mg": 133},
+            {"food": "Rice bran", "oxalate_mg": 281},
+            {"food": "Dark chocolate", "oxalate_mg": 117}
+          ]
+        },
+        {
+          "id": "oxalate_moderate",
+          "name": "Moderate Oxalate Foods (50-200mg per serving)",
+          "aliases": [],
+          "severity_crohns": "GREEN",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": false,
+          "mechanism": "Same enteric hyperoxaluria risk but at lower doses. Combining these foods with calcium-rich foods (eaten at the same meal) can reduce oxalate absorption by binding it in the gut before absorption.",
+          "citations": [
+            "PMC10821467 — Oxalate absorption in Crohn's"
+          ],
+          "specific_foods": [
+            {"food": "Baked potato with skin", "oxalate_mg": 97},
+            {"food": "Black tea (1 cup)", "oxalate_mg": 17},
+            {"food": "Cashews (1 oz)", "oxalate_mg": 49},
+            {"food": "Peanuts (1 oz)", "oxalate_mg": 27},
+            {"food": "Beets (cooked)", "oxalate_mg": 76},
+            {"food": "Sweet potato", "oxalate_mg": 28},
+            {"food": "Cocoa powder", "oxalate_mg": 67}
+          ]
+        }
+      ]
+    },
+
+    {
+      "category_id": "fat_content",
+      "category_name": "Fat Content Thresholds",
+      "description": "Post-ileal resection patients frequently have bile acid malabsorption leading to fat malabsorption (steatorrhea). Fat intake must be managed based on resection length.",
+
+      "ingredients": [
+        {
+          "id": "high_fat_general",
+          "name": "High Fat Content (General Threshold)",
+          "aliases": [],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Ileal resection <100cm: bile acid malabsorption causes secretory diarrhea (watery). Resection >100cm: significant steatorrhea (fatty diarrhea). Clinical target: ~40g total fat per day for post-resection patients with documented fat malabsorption. Per serving: aim for <5g fat per serving to stay within daily budget. Medium-chain triglycerides (MCT oil, coconut oil) bypass bile acid requirement and are better absorbed. Fat-soluble vitamin (A, D, E, K) supplementation often needed.",
+          "citations": [
+            "PMC1412920 — Fat-reduced diet in symptomatic treatment of small bowel disease",
+            "ScienceDirect — Ileum resection overview",
+            "Cleveland Clinic — Bile acid malabsorption",
+            "PMC111082 — Short bowel syndrome nutritional approach"
+          ],
+          "thresholds": {
+            "daily_total_fat_post_resection_grams": 40,
+            "per_serving_target_grams": 5,
+            "fecal_fat_threshold_steatorrhea_g_per_day": 20,
+            "ileal_resection_length_cm_bile_acid_malabsorption": 100,
+            "note": "Medium-chain triglycerides (MCT) do not require bile acids for absorption and can supplement fat calories"
+          }
+        }
+      ]
+    },
+
+    {
+      "category_id": "resistant_starch",
+      "category_name": "Resistant Starches",
+      "description": "Starches that resist digestion and reach the colon where they are fermented. Produce butyrate (anti-inflammatory) but effects in IBD are mixed and highly individual.",
+
+      "ingredients": [
+        {
+          "id": "resistant_starch_beneficial",
+          "name": "Resistant Starch (Potentially Beneficial Types)",
+          "aliases": ["RS2 (raw potato starch, green banana flour)", "RS3 (retrograded/cooled starches)"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Fermentation produces butyrate, acetate, propionate — SCFAs that maintain gut barrier integrity and modulate inflammation. Increases Faecalibacterium prausnitzii (depleted in Crohn's). Preclinical models show improved microbiome and decreased inflammation. Clinical trials show mixed results — some patients improve, others don't. A 2024 clinical trial is actively studying RS for Crohn's. Individual microbiome composition determines response. NOT recommended during flares — may worsen gas and distension.",
+          "citations": [
+            "ScienceDirect 2024 — Resistant starch and gut microbiome review",
+            "PMC7653724 — Systematic review of RS in IBD",
+            "WithPower — Clinical trial: RS for Crohn's disease 2024-2026"
+          ],
+          "common_foods": ["cooled rice", "cooled potatoes", "green banana flour", "raw potato starch", "legumes"]
+        },
+        {
+          "id": "resistant_starch_problematic",
+          "name": "Resistant Starch (Problematic Sources)",
+          "aliases": ["RS1 (whole grains, seeds, legumes with intact structure)"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "RS1 is physically trapped in intact cell structures (whole grains, seeds, legumes) — these are essentially insoluble fiber with obstruction risk post-resection. The resistant starch benefit comes from fermentation, but the physical structure of RS1 sources poses mechanical risks. Unlike RS2/RS3, the delivery vehicle is the problem, not the starch itself.",
+          "citations": [
+            "General IBD dietary guidelines",
+            "Crohn's & Colitis Foundation — Fiber recommendations"
+          ],
+          "common_foods": ["whole grain bread", "whole seeds", "raw legumes", "muesli"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "lectins",
+      "category_name": "Lectins",
+      "description": "Plant proteins that bind carbohydrate structures on cell surfaces. Can increase intestinal permeability and trigger immune responses in susceptible individuals. Proper cooking eliminates most lectin activity.",
+
+      "ingredients": [
+        {
+          "id": "raw_legume_lectins",
+          "name": "Raw/Undercooked Legume Lectins",
+          "aliases": ["phytohaemagglutinin (PHA)", "kidney bean lectin", "concanavalin A"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Raw kidney bean lectins are toxic and cause severe GI distress. Resistant to digestion. Bind to gut epithelial cells, promoting cytokine release and histamine from gastric mast cells. Increase intestinal permeability. HOWEVER: proper high-temperature cooking (boiling 10+ minutes) effectively eliminates lectin activity. Canned beans are safe. Slow cooker at low temperature may NOT reach sufficient temperature to denature lectins.",
+          "citations": [
+            "Healthline — Dietary lectins review",
+            "Caplan Health Institute — Lectins and autoimmune diseases"
+          ],
+          "common_foods": ["raw/undercooked kidney beans", "raw soybeans", "raw lentils (if not boiled properly)"]
+        },
+        {
+          "id": "nightshade_alkaloids",
+          "name": "Nightshade Alkaloids",
+          "aliases": ["solanine", "glycoalkaloids", "alpha-solanine", "alpha-chaconine", "tomatine"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Nightshade vegetables contain alkaloids (solanine, capsaicin, tomatine) with irritant properties. May interact with immune system and exacerbate inflammation in susceptible individuals. Some lectins in nightshades may contribute to leaky gut. HOWEVER: no robust evidence supporting definitive harm for all IBD patients. Response is highly individual. Cooking reduces alkaloid content significantly.",
+          "citations": [
+            "HealthCert — Medical nutrition and nightshades evidence review",
+            "AHA Circ. 2020 — Lectin-containing foods and leaky gut markers",
+            "Gutsy By Nature — Crohn's disease and food additives"
+          ],
+          "common_foods": ["tomatoes", "potatoes", "eggplant", "bell peppers", "hot peppers", "goji berries"]
+        },
+        {
+          "id": "wheat_germ_agglutinin",
+          "name": "Wheat Germ Agglutinin (WGA)",
+          "aliases": ["WGA", "wheat lectin"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Present in wheat germ and whole wheat. Resistant to digestion and cooking. Binds to intestinal epithelial cells, potentially increasing permeability. May compound gluten sensitivity effects. Found in highest concentrations in whole wheat and sprouted wheat products.",
+          "citations": [
+            "Mitchell Holistic Health — Lectins and leaky gut",
+            "Right Nutrition Works — Lectins and leaky gut connection"
+          ],
+          "common_foods": ["whole wheat bread", "wheat germ", "sprouted wheat", "whole grain cereals"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "fodmaps",
+      "category_name": "FODMAP Ingredients (as found on food labels)",
+      "description": "Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols. Rapidly fermented in the colon causing gas, bloating, pain, and osmotic diarrhea. Low-FODMAP diet is evidence-based for IBD symptom management.",
+
+      "ingredients": [
+        {
+          "id": "inulin",
+          "name": "Inulin",
+          "aliases": ["chicory root fiber", "chicory root extract", "chicory root fibre", "chicory inulin", "oligofructose-enriched inulin", "Orafti", "Beneo"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Even very small amounts contribute significantly to FODMAP load — no safe portion exists on low-FODMAP diet. Dried chicory root extract is ~98% inulin. Highly fermentable — causes rapid gas production, bloating, and osmotic diarrhea. Often added to foods marketed as 'high fiber' or 'prebiotic' — misleadingly healthy-sounding for IBD patients. Found in surprising places: herbal teas, digestive enzymes, probiotics.",
+          "citations": [
+            "Monash FODMAP — Inulin and chicory root classification",
+            "The IBS Dietitian — Inulin and FODMAPs ultimate guide",
+            "Spoonful Blog — Top 45 FODMAP ingredients in packaged foods"
+          ],
+          "common_foods": ["high-fiber bars", "protein bars", "low-carb bars", "yogurt", "ice cream", "gluten-free bread", "cereal", "herbal teas (Celestial Seasonings)", "herbal coffee", "probiotics", "digestive enzymes"]
+        },
+        {
+          "id": "fos",
+          "name": "Fructooligosaccharides (FOS)",
+          "aliases": ["FOS", "oligofructose", "fructo-oligosaccharides", "neosugar", "short-chain FOS", "scFOS"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Same as inulin — even small amounts are high FODMAP. No safe threshold on elimination diet. Rapidly fermented producing excess gas and osmotic effect. Often marketed as 'prebiotic fiber' but extremely problematic for IBD.",
+          "citations": [
+            "Monash FODMAP database",
+            "Diet vs Disease — High FODMAP ingredients list"
+          ],
+          "common_foods": ["fiber supplements", "protein bars", "breakfast cereals", "yogurt", "infant formula"]
+        },
+        {
+          "id": "gos",
+          "name": "Galactooligosaccharides (GOS)",
+          "aliases": ["GOS", "galacto-oligosaccharides", "trans-galactooligosaccharides", "TOS"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "High FODMAP with no safe small portion. Naturally found in legumes and some dairy. Rapidly fermented in colon. Causes gas, bloating, and diarrhea in FODMAP-sensitive individuals.",
+          "citations": [
+            "Monash FODMAP database",
+            "Diet vs Disease — High FODMAP ingredients list"
+          ],
+          "common_foods": ["legumes", "lentils", "chickpeas", "some dairy products", "prebiotic supplements"]
+        },
+        {
+          "id": "onion_garlic_powder",
+          "name": "Onion and Garlic Powder/Extract",
+          "aliases": ["onion powder", "garlic powder", "dehydrated onion", "dehydrated garlic", "onion extract", "garlic extract"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Extremely high in fructans (a FODMAP). Concentrated forms (powder, extract) have higher FODMAP load than fresh. Hidden in many savory products under 'natural flavors', 'spices', or 'seasoning'. Garlic-infused oil (where garlic is removed) is low FODMAP since fructans are water-soluble, not fat-soluble.",
+          "citations": [
+            "Monash FODMAP database",
+            "FODMAP Everyday — Deciphering natural flavors on food labels"
+          ],
+          "common_foods": ["soups", "broths", "sauces", "marinades", "spice blends", "dressings", "processed meats", "snack seasonings", "restaurant food"]
+        },
+        {
+          "id": "honey",
+          "name": "Honey",
+          "aliases": ["raw honey", "manuka honey", "honey powder", "honey solids"],
+          "severity_crohns": "YELLOW",
+          "severity_post_resection": "YELLOW",
+          "worse_during_flare": true,
+          "mechanism": "Contains excess fructose (fructose > glucose ratio). High FODMAP in doses >1 tablespoon. Causes fructose malabsorption and osmotic diarrhea in sensitive individuals. Manuka honey may have antibacterial benefits but FODMAP content remains problematic.",
+          "citations": [
+            "Monash FODMAP database"
+          ],
+          "common_foods": ["honey", "honey-sweetened cereals", "granola bars", "tea sweetener", "baked goods", "dressings"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "maltodextrin",
+      "category_name": "Maltodextrin",
+      "description": "A heavily processed starch derivative with strong evidence for gut barrier disruption and promotion of pathogenic bacteria. Found in thousands of processed foods.",
+
+      "ingredients": [
+        {
+          "id": "maltodextrin",
+          "name": "Maltodextrin",
+          "aliases": ["modified cornstarch (sometimes)", "corn syrup solids", "glucose polymer", "dextrin", "resistant maltodextrin", "modified tapioca dextrin"],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "Destroys mucosal barrier: in mice, maltodextrin-fed goblet cells had reduced mucin granule content. 10-week maltodextrin diet induced low-grade intestinal inflammation. Reduces Muc2 (primary mucin) and induces endoplasmic reticulum stress. Alters intestinal bacteria to increase adhesion to epithelial surface — creates ideal environment for Crohn's development (Cleveland Clinic research). Compounds harm of sucralose when combined (as in Splenda).",
+          "citations": [
+            "PMC9479712 — Food additives and GI tract in IBD",
+            "Cleveland Clinic research — Maltodextrin and bacterial adhesion to epithelium",
+            "Dr. Berg / Gutsy By Nature — Maltodextrin and gut barrier",
+            "Rodriguez-Palacios A et al. 2018 — Splenda (sucralose + maltodextrin) and Crohn's"
+          ],
+          "common_foods": ["protein powders", "meal replacements", "salad dressings", "sauces", "candy", "baked goods", "infant formula", "sports drinks", "artificial sweetener packets", "spice blends", "canned soups", "nearly all ultra-processed foods"]
+        }
+      ]
+    },
+
+    {
+      "category_id": "upf_markers",
+      "category_name": "Ultra-Processed Food Markers",
+      "description": "The presence of certain ingredients indicates ultra-processing (NOVA Group 4). UPF intake is associated with 2x increased risk of Crohn's disease. These serve as general red flags on ingredient labels.",
+
+      "ingredients": [
+        {
+          "id": "upf_indicator_ingredients",
+          "name": "Ultra-Processed Food Indicator Ingredients",
+          "aliases": [],
+          "severity_crohns": "RED",
+          "severity_post_resection": "RED",
+          "worse_during_flare": true,
+          "mechanism": "UPF consumption associated with hazard ratio of 2.00 for incident Crohn's disease. UPF constituents (emulsifiers, maltodextrin, excess salt, microparticles) disrupt intestinal barrier function. Higher UPF = higher episodes of active disease and active inflammation in IBD. Marker ingredients indicate a food is ultra-processed and likely contains multiple problematic additives.",
+          "citations": [
+            "MDPI Nutrients 2025 — Ultra-processed foods and IBD review",
+            "PMC8882700 — UPF and risk of Crohn's and UC prospective cohort",
+            "PMC10115229 — UPF and increased risk of Crohn's in UK Biobank (187,154 participants)",
+            "PubMed 38305329 — UPF, disease activity, and inflammation in UC"
+          ],
+          "marker_ingredients": [
+            "hydrogenated oils / partially hydrogenated oils",
+            "protein isolates (soy protein isolate, whey protein isolate)",
+            "inverted sugar / invert sugar syrup",
+            "high-fructose corn syrup",
+            "interesterified fat",
+            "hydrolyzed protein / hydrolyzed vegetable protein",
+            "maltodextrin",
+            "dextrose",
+            "any artificial colors (FD&C)",
+            "any artificial flavors",
+            "any non-nutritive sweeteners",
+            "flavor enhancers (MSG, disodium guanylate, disodium inosinate)",
+            "anti-caking agents",
+            "glazing agents",
+            "bulking agents",
+            "carbonating agents",
+            "sequestrants"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "hidden_ingredient_warnings": [
+    {
+      "label_term": "Natural flavors",
+      "hidden_risk": "Can contain onion, garlic (high FODMAP), MSG/glutamates, dairy derivatives, or any of 100+ chemical compounds. FODMAP status unknown and unverifiable.",
+      "severity": "YELLOW",
+      "advice": "Treat as suspect. Contact manufacturer or avoid if FODMAP-sensitive."
+    },
+    {
+      "label_term": "Spices",
+      "hidden_risk": "Can hide onion powder, garlic powder, chili pepper, or other high-FODMAP/irritant ingredients. Not required to be individually listed.",
+      "severity": "YELLOW",
+      "advice": "Contact manufacturer. 'Spice' is unregulated beyond not containing MSG."
+    },
+    {
+      "label_term": "Flavoring / Artificial flavoring",
+      "hidden_risk": "May contain glutamates, dairy-derived compounds, or allergens not individually listed.",
+      "severity": "YELLOW",
+      "advice": "Treat with caution. Choose products that list specific spices/flavors."
+    },
+    {
+      "label_term": "Modified food starch",
+      "hidden_risk": "May be derived from wheat (gluten). In the US, wheat must be declared, but cross-contamination and mislabeling occur. Also: the modification process may produce maltodextrin-like compounds.",
+      "severity": "YELLOW",
+      "advice": "Choose products specifying the starch source (e.g., 'modified corn starch')."
+    },
+    {
+      "label_term": "Hydrolyzed vegetable protein / Hydrolyzed soy protein",
+      "hidden_risk": "Hidden source of MSG (free glutamate). UPF marker ingredient. May cause GI sensitivity reactions.",
+      "severity": "YELLOW",
+      "advice": "Treat as containing MSG. Indicates ultra-processing."
+    },
+    {
+      "label_term": "Celery powder / Celery juice",
+      "hidden_risk": "Used as 'natural' nitrate/nitrite source in 'uncured' meats. Converts to same nitrites as sodium nitrite. Marketing implies it's healthier but metabolic effect is identical.",
+      "severity": "YELLOW",
+      "advice": "'Uncured' meats with celery powder = functionally identical to cured meats."
+    },
+    {
+      "label_term": "Caramel color",
+      "hidden_risk": "Class III and IV caramel color (E150c, E150d) produced using ammonium compounds. Contains 4-MEI (4-methylimidazole), a potential carcinogen. May also contain gluten if derived from barley malt.",
+      "severity": "YELLOW",
+      "advice": "Avoid in large quantities. Present in most dark sodas."
+    },
+    {
+      "label_term": "Dextrin / Soluble corn fiber / Soluble tapioca fiber",
+      "hidden_risk": "May be resistant maltodextrin — a processed fiber that can cause bloating and gas. Despite marketing as 'fiber', these are synthetically derived and may not provide the benefits of whole-food fiber.",
+      "severity": "YELLOW",
+      "advice": "Treat soluble synthetic fibers with caution. Start with very small amounts."
+    },
+    {
+      "label_term": "Whey / Milk solids / Non-fat milk solids",
+      "hidden_risk": "Contains both lactose and dairy proteins (casein, whey). Even in small amounts as additive, can trigger symptoms in lactose-intolerant post-resection patients.",
+      "severity": "YELLOW",
+      "advice": "Check even non-dairy-seeming foods (bread, crackers, chips, processed meats)."
+    },
+    {
+      "label_term": "Yeast extract / Autolyzed yeast",
+      "hidden_risk": "Natural source of free glutamate (MSG). Can cause GI symptoms. Also a UPF marker.",
+      "severity": "YELLOW",
+      "advice": "Treat as containing MSG."
+    }
+  ],
+
+  "misleading_health_marketing": [
+    {
+      "marketing_claim": "High Fiber!",
+      "why_misleading": "Insoluble fiber can cause bowel obstruction at stricture/anastomosis sites. 'High fiber' products often contain inulin/chicory root (high FODMAP). During flares, high fiber is actively dangerous. Post-resection patients need to carefully manage fiber type and amount.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Sugar-Free / Zero Sugar",
+      "why_misleading": "Typically contains artificial sweeteners (sucralose, acesulfame-K, saccharin) or sugar alcohols (sorbitol, maltitol) — all problematic for Crohn's. Sugar-free does NOT mean IBD-safe. Many 'sugar-free' products combine multiple problematic sweeteners.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Whole Grain / 100% Whole Wheat",
+      "why_misleading": "Contains insoluble fiber (bran), wheat germ agglutinin (lectin), and gluten. Whole grains are harder to digest than refined grains for IBD patients, especially during flares or post-resection. Refined white bread may actually be better tolerated.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Contains Prebiotics / Prebiotic Fiber",
+      "why_misleading": "Prebiotics like inulin, FOS, and GOS are high FODMAP and cause rapid fermentation, gas, bloating, and diarrhea in IBD patients. 'Prebiotic' sounds beneficial but these are among the most problematic ingredients.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Probiotic-Enhanced",
+      "why_misleading": "While probiotics may help some IBD patients, many probiotic products also contain inulin/FOS as prebiotic carrier, plus dairy-based ingredients. The strain, dose, and accompanying ingredients matter enormously.",
+      "risk_level": "MEDIUM"
+    },
+    {
+      "marketing_claim": "Natural / All-Natural",
+      "why_misleading": "FDA does not strictly define 'natural.' Can still contain carrageenan, gums, 'natural flavors' (which may include FODMAP ingredients), and high-FODMAP sweeteners like honey and agave. Natural does not mean IBD-safe.",
+      "risk_level": "MEDIUM"
+    },
+    {
+      "marketing_claim": "Low-Fat / Fat-Free",
+      "why_misleading": "While low-fat may be appropriate post-resection, fat-free products often compensate with added sugar, HFCS, maltodextrin, emulsifiers, and thickeners to replace fat's texture and flavor. The replacements may be worse than moderate fat.",
+      "risk_level": "MEDIUM"
+    },
+    {
+      "marketing_claim": "Gluten-Free",
+      "why_misleading": "Gluten-free products frequently contain emulsifiers (xanthan gum, CMC), inulin/chicory root fiber, and other FODMAP ingredients to replace gluten's binding properties. Being gluten-free does NOT mean IBD-safe or low-FODMAP.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Keto / Low-Carb",
+      "why_misleading": "Often high in fat (problematic post-resection), sugar alcohols (osmotic diarrhea), artificial sweeteners, and inulin/chicory root (to boost fiber claims while keeping carbs low). Triple threat for post-resection Crohn's patients.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Plant-Based / Vegan",
+      "why_misleading": "Plant-based alternatives heavily rely on emulsifiers, gums (carrageenan, gellan gum, xanthan gum), protein isolates, maltodextrin, and 'natural flavors.' May also be high in FODMAPs from beans, onion, garlic.",
+      "risk_level": "MEDIUM"
+    },
+    {
+      "marketing_claim": "Protein-Enriched / High Protein",
+      "why_misleading": "Protein bars and shakes frequently contain maltodextrin, inulin/chicory root, sucralose, sugar alcohols, whey/casein, and emulsifiers. Multiple problematic ingredients concentrated in one product.",
+      "risk_level": "HIGH"
+    },
+    {
+      "marketing_claim": "Uncured / No Nitrates Added",
+      "why_misleading": "Uses celery powder as 'natural' nitrate source. Metabolically identical to conventional cured meats. Marketing implies it's healthier but the biochemistry is the same.",
+      "risk_level": "LOW"
+    },
+    {
+      "marketing_claim": "Organic",
+      "why_misleading": "Organic status does not affect whether a food contains FODMAPs, lectins, oxalates, or fiber types that are problematic for IBD. Organic junk food is still junk food for Crohn's patients.",
+      "risk_level": "LOW"
+    }
+  ],
+
+  "post_resection_special_rules": {
+    "description": "Critical additional rules that apply specifically to patients who have had bowel resection surgery, especially ileal resection.",
+    "rules": [
+      {
+        "rule": "Fat limitation",
+        "detail": "Limit total fat to ~40g/day. Prefer MCT oil/coconut oil (do not require bile acids for absorption). Supplement fat-soluble vitamins A, D, E, K.",
+        "applies_when": "Ileal resection >100cm or documented steatorrhea"
+      },
+      {
+        "rule": "Oxalate restriction",
+        "detail": "Limit high-oxalate foods. Always pair oxalate-containing foods with calcium-rich foods at the same meal. Supplement calcium and magnesium. Monitor for kidney stone symptoms.",
+        "applies_when": "Ileal resection >30cm with fat malabsorption"
+      },
+      {
+        "rule": "Lactose avoidance or limitation",
+        "detail": "Secondary lactose intolerance is near-universal post-resection. Use lactase enzyme supplements or lactose-free products. Hard aged cheeses and butter have minimal lactose.",
+        "applies_when": "Any small bowel resection, especially ileal"
+      },
+      {
+        "rule": "Bile acid binder consideration",
+        "detail": "Cholestyramine for resection <100cm. CAUTION: cholestyramine may worsen steatorrhea in resection >100cm.",
+        "applies_when": "Secretory diarrhea post-resection"
+      },
+      {
+        "rule": "B12 supplementation",
+        "detail": "Terminal ileum is the ONLY site of B12 absorption. Resection of >20cm terminal ileum requires lifelong B12 injections (oral supplementation insufficient).",
+        "applies_when": "Terminal ileum resection >20cm"
+      },
+      {
+        "rule": "Hydration priority",
+        "detail": "Increased fluid losses from diarrhea/steatorrhea. Electrolyte-containing fluids preferred. Avoid hypotonic fluids in large volumes (can worsen net fluid loss). Oral rehydration solutions recommended.",
+        "applies_when": "All post-resection patients"
+      },
+      {
+        "rule": "Stricture-safe eating",
+        "detail": "Avoid all physical obstruction risks: whole nuts/seeds, popcorn, raw vegetable skins, fruit peels, tough fibrous meats. Chew thoroughly. Eat slowly. Anastomosis sites can narrow over time.",
+        "applies_when": "All post-resection patients, permanently"
+      },
+      {
+        "rule": "Small frequent meals",
+        "detail": "Shorter bowel means less absorptive capacity per transit. Small frequent meals (5-6/day) maximize absorption. Large meals overwhelm remaining capacity.",
+        "applies_when": "All post-resection patients"
+      }
+    ]
+  }
+}

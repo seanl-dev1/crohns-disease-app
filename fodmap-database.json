@@ -1,0 +1,3191 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-03-31",
+    "description": "Comprehensive FODMAP food classification database for Crohn's disease management",
+    "primary_sources": [
+      "Monash University FODMAP Research (monashfodmap.com)",
+      "King's College London FODMAP Research",
+      "IBS Diets (ibsdiets.org)",
+      "Varney et al. (2017) - FODMAP content of commonly eaten foods",
+      "Tuck & Barrett (2017) - Fermentable short chain carbohydrate (FODMAP) content of common food",
+      "Cox et al. (2020) - FODMAP diet in IBD randomized trial (Gastroenterology)",
+      "Zhan et al. (2018) - Diet Advice for Crohn's Disease: FODMAP and Beyond (Nutrients)"
+    ],
+    "notes": "Serving sizes based on Monash University guidelines where available. FODMAP ratings use Monash traffic light system: LOW (green), MODERATE (amber), HIGH (red). Crohn's-specific notes added for post-resection and flare considerations.",
+    "fodmap_types_legend": {
+      "fructose": "Excess fructose (monosaccharide) - fructose in excess of glucose",
+      "lactose": "Lactose (disaccharide) - milk sugar",
+      "fructans": "Fructans (oligosaccharide) - chains of fructose molecules, includes inulin and FOS",
+      "GOS": "Galacto-oligosaccharides - found in legumes and some nuts",
+      "sorbitol": "Sugar alcohol polyol - found in stone fruits",
+      "mannitol": "Sugar alcohol polyol - found in mushrooms, cauliflower, watermelon"
+    },
+    "total_foods": 340
+  },
+
+  "foods": {
+    "fruits": [
+      {
+        "name": "Apple (all varieties)",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "High in insoluble fiber (skin). If tolerated post-reintroduction, peel and cook to reduce fiber load."
+      },
+      {
+        "name": "Apricot",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Stone fruit; high sorbitol. Dried apricots are even higher FODMAP."
+      },
+      {
+        "name": "Avocado",
+        "category": "fruit",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["sorbitol"],
+        "safe_serving": "1/8 whole (30g)",
+        "high_fodmap_threshold": ">1/4 whole (>60g)",
+        "crohns_notes": "Excellent healthy fat source for Crohn's patients who often need calorie-dense foods. Very high in sorbitol at larger serves. Good post-resection if tolerated - soft, nutrient-dense."
+      },
+      {
+        "name": "Banana (unripe/firm)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 medium (100g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Excellent for Crohn's. Easy to digest, binding effect helps with diarrhea. Part of the BRAT diet. Ripe bananas become moderate-high FODMAP due to increased fructans."
+      },
+      {
+        "name": "Banana (ripe)",
+        "category": "fruit",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1/3 medium (33g)",
+        "high_fodmap_threshold": ">1 medium (>100g)",
+        "crohns_notes": "As bananas ripen, starch converts to fructans. Stick to firm/slightly green bananas during elimination."
+      },
+      {
+        "name": "Blackberry",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Seeds may irritate inflamed bowel. Avoid during flares."
+      },
+      {
+        "name": "Blueberry",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/4 cup (40g) conservative; up to 125g per Monash 2024 update",
+        "high_fodmap_threshold": ">125g",
+        "crohns_notes": "Excellent choice - anti-inflammatory antioxidants. Low fiber per serving. Monash increased safe serving in recent update."
+      },
+      {
+        "name": "Cantaloupe / Rockmelon",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 cup cubes (120g)",
+        "high_fodmap_threshold": ">120g",
+        "crohns_notes": "Good hydration source. Soft texture, easy to digest."
+      },
+      {
+        "name": "Cherry",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "3 cherries (30g)",
+        "high_fodmap_threshold": ">3 cherries",
+        "crohns_notes": "Very high in sorbitol. Even small amounts may trigger symptoms."
+      },
+      {
+        "name": "Clementine",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 small",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good vitamin C source. Remove membrane/pith if bowel is sensitive."
+      },
+      {
+        "name": "Coconut (fresh flesh)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2/3 cup (60g)",
+        "high_fodmap_threshold": ">60g",
+        "crohns_notes": "Good fat source. Desiccated coconut also low FODMAP."
+      },
+      {
+        "name": "Cranberry (fresh/dried unsweetened)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp dried (15g); 1 cup fresh",
+        "high_fodmap_threshold": ">40g dried",
+        "crohns_notes": "Watch for added sweeteners in dried versions (often contain apple juice or HFCS)."
+      },
+      {
+        "name": "Date",
+        "category": "fruit",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "1 date (no pit)",
+        "high_fodmap_threshold": ">5 dates",
+        "crohns_notes": "Calorie-dense, useful if underweight. High in natural sugars."
+      },
+      {
+        "name": "Dragon fruit / Pitaya",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cubes (140g)",
+        "high_fodmap_threshold": ">140g",
+        "crohns_notes": "Seeds are small but numerous; may irritate strictured bowel."
+      },
+      {
+        "name": "Fig (fresh)",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Very high fructose. Seeds may cause issues with strictures."
+      },
+      {
+        "name": "Grapefruit",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 medium (80g)",
+        "high_fodmap_threshold": ">80g (becomes moderate fructose)",
+        "crohns_notes": "CAUTION: Interacts with many medications including immunosuppressants (azathioprine, cyclosporine). Check with pharmacist."
+      },
+      {
+        "name": "Grape (red and green)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (150g)",
+        "high_fodmap_threshold": ">150g",
+        "crohns_notes": "Skins may be harder to digest. Consider peeling if bowel is sensitive."
+      },
+      {
+        "name": "Guava (ripe)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 whole ripe (140g)",
+        "high_fodmap_threshold": "N/A (ripe). Unripe guava is HIGH FODMAP.",
+        "crohns_notes": "Must be fully ripe. Rich in vitamin C."
+      },
+      {
+        "name": "Honeydew melon",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup cubes (90g)",
+        "high_fodmap_threshold": ">90g (becomes moderate fructose)",
+        "crohns_notes": "Good hydration. Keep to safe serving as fructose rises quickly."
+      },
+      {
+        "name": "Kiwi (green)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 small (150g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Contains actinidin enzyme which aids protein digestion. Natural mild laxative effect - may help Crohn's patients with constipation-predominant symptoms."
+      },
+      {
+        "name": "Lemon / Lime",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Juice: 1/2 cup (125ml); whole: unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Safe flavor enhancer. Can replace garlic/onion flavor in cooking."
+      },
+      {
+        "name": "Lychee",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Very high in polyols."
+      },
+      {
+        "name": "Mandarin / Tangerine",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 medium (90g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Excellent choice. Easy to peel, low fiber."
+      },
+      {
+        "name": "Mango",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "1/5 cup (40g) is low FODMAP",
+        "high_fodmap_threshold": ">45g (moderate); >140g (high)",
+        "crohns_notes": "Can be included at very small serving. Rich in vitamin A."
+      },
+      {
+        "name": "Nectarine",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Stone fruit - high sorbitol."
+      },
+      {
+        "name": "Orange",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 medium (130g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good vitamin C source. Remove pith/membrane if inflamed bowel. Orange juice limited to 100ml."
+      },
+      {
+        "name": "Papaya / Paw paw",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cubes (140g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Contains papain enzyme which aids digestion. Excellent choice for Crohn's patients - soft, easy to digest."
+      },
+      {
+        "name": "Passion fruit",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 small (28g pulp)",
+        "high_fodmap_threshold": ">28g",
+        "crohns_notes": "Seeds are hard; strain if strictures present."
+      },
+      {
+        "name": "Peach",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Stone fruit - high sorbitol."
+      },
+      {
+        "name": "Pear",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Among highest FODMAP fruits. Contains both excess fructose AND sorbitol."
+      },
+      {
+        "name": "Persimmon",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Can form bezoars (phytobezoars) in stomach; extra caution post-surgery."
+      },
+      {
+        "name": "Pineapple (fresh)",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup chunks (140g)",
+        "high_fodmap_threshold": ">140g",
+        "crohns_notes": "Contains bromelain (anti-inflammatory enzyme). Good for Crohn's. Canned in juice also OK at 1/2 cup drained."
+      },
+      {
+        "name": "Plantain",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 medium cooked",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Excellent starchy carb for Crohn's. Cook well. Used in SCD and anti-inflammatory diets."
+      },
+      {
+        "name": "Plum",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["sorbitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "High sorbitol. Prunes (dried plums) are even higher."
+      },
+      {
+        "name": "Pomegranate",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Seeds may cause mechanical obstruction with strictures."
+      },
+      {
+        "name": "Raspberry",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/3 cup (60g)",
+        "high_fodmap_threshold": ">60g (becomes moderate fructose)",
+        "crohns_notes": "Seeds may irritate inflamed bowel. Strain for puree if needed."
+      },
+      {
+        "name": "Rhubarb",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup chopped",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Often requires added sugar to be palatable. Use safe sweeteners."
+      },
+      {
+        "name": "Strawberry",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "10 medium (140g)",
+        "high_fodmap_threshold": ">140g",
+        "crohns_notes": "Good choice. Seeds are tiny and generally well tolerated."
+      },
+      {
+        "name": "Tangelo",
+        "category": "fruit",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 medium",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good citrus option."
+      },
+      {
+        "name": "Watermelon",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "mannitol"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Contains both excess fructose and mannitol. One of the highest FODMAP fruits."
+      },
+      {
+        "name": "Dried fruit (general - raisins, sultanas, currants, dates, prunes)",
+        "category": "fruit",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "fructans", "sorbitol"],
+        "safe_serving": "Raisins: 1 tbsp (13g) is low. Most others avoid.",
+        "high_fodmap_threshold": ">13g raisins; most dried fruits HIGH at any serve",
+        "crohns_notes": "Concentrated sugars and fiber. Generally avoid during flares and post-resection."
+      }
+    ],
+
+    "vegetables": [
+      {
+        "name": "Artichoke (globe)",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Very high fructans. Jerusalem artichoke is even higher."
+      },
+      {
+        "name": "Asparagus",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Tough, fibrous texture. Difficult to digest post-resection."
+      },
+      {
+        "name": "Bean sprouts",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (104g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Low fiber, easy to digest. Good choice."
+      },
+      {
+        "name": "Beetroot (fresh/raw)",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "2 slices (20g) is low",
+        "high_fodmap_threshold": ">4 slices (>40g)",
+        "crohns_notes": "Canned/pickled beetroot is lower FODMAP than fresh. Cooking method matters."
+      },
+      {
+        "name": "Beetroot (canned/pickled)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (45g)",
+        "high_fodmap_threshold": ">60g",
+        "crohns_notes": "FODMAPs leach into canning liquid. Drain well."
+      },
+      {
+        "name": "Bell pepper / Capsicum (green)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup strips (52g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "May cause gas for some. Roasting and peeling improves digestibility."
+      },
+      {
+        "name": "Bell pepper / Capsicum (red)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/3 cup (43g)",
+        "high_fodmap_threshold": ">43g (slightly higher fructose than green)",
+        "crohns_notes": "Slightly higher FODMAP than green pepper. Roast and peel for best tolerance."
+      },
+      {
+        "name": "Bok choy / Pak choi",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup chopped (75g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Excellent choice. Good calcium source (important for Crohn's patients on corticosteroids)."
+      },
+      {
+        "name": "Broccoli (heads/florets)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 cup (75g)",
+        "high_fodmap_threshold": ">75g (fructans increase)",
+        "crohns_notes": "Heads are lower FODMAP than stalks. Cook well to soften fiber. May cause gas even at safe serving."
+      },
+      {
+        "name": "Broccoli (stalks)",
+        "category": "vegetable",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1/3 cup (45g)",
+        "high_fodmap_threshold": ">45g",
+        "crohns_notes": "Higher in fructans than the heads. Peel tough outer layer."
+      },
+      {
+        "name": "Brussels sprouts",
+        "category": "vegetable",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "2 sprouts (40g)",
+        "high_fodmap_threshold": ">4 sprouts",
+        "crohns_notes": "Gas-producing even at low FODMAP serves. May not be tolerated during flares."
+      },
+      {
+        "name": "Butternut squash / Pumpkin",
+        "category": "vegetable",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["GOS"],
+        "safe_serving": "1/4 cup (45g)",
+        "high_fodmap_threshold": ">63g",
+        "crohns_notes": "Cook until very soft. Purees well for easy digestion post-resection."
+      },
+      {
+        "name": "Cabbage (common, red)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 cup (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "May cause gas. Cook well. Savoy cabbage is higher FODMAP - avoid."
+      },
+      {
+        "name": "Carrot",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (1 medium = 75g typical)",
+        "high_fodmap_threshold": "N/A - low FODMAP at all tested servings",
+        "crohns_notes": "Excellent staple. Cook well for easier digestion. Safe during flares when cooked soft."
+      },
+      {
+        "name": "Cauliflower",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["mannitol"],
+        "safe_serving": "1/3 cup (50g) is low FODMAP",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "High in mannitol. Gas-producing. Cauliflower rice may be tolerated at small serving due to smaller pieces cooking more thoroughly."
+      },
+      {
+        "name": "Celeriac / Celery root",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 cup (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "Good potato substitute when cooked into mash."
+      },
+      {
+        "name": "Celery",
+        "category": "vegetable",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["mannitol"],
+        "safe_serving": "<5cm stalk (10g)",
+        "high_fodmap_threshold": ">10g (1/4 stalk)",
+        "crohns_notes": "Very stringy fiber. Avoid if strictures present. Cooking does not significantly reduce mannitol."
+      },
+      {
+        "name": "Chives",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp chopped",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Safe onion/garlic flavor substitute."
+      },
+      {
+        "name": "Corn / Sweet corn",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cob (38g); canned kernels 1/2 cup (75g)",
+        "high_fodmap_threshold": ">1 cob; creamed corn is HIGH FODMAP",
+        "crohns_notes": "Indigestible cellulose hull. May appear undigested in stool - this is normal. Chew well. Avoid with strictures."
+      },
+      {
+        "name": "Cucumber",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Peel if skin causes issues. Good hydration source."
+      },
+      {
+        "name": "Eggplant / Aubergine",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cubes (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "Skin can be tough. Peel for better tolerance."
+      },
+      {
+        "name": "Fennel bulb",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Up to 75g (1/2 cup)",
+        "high_fodmap_threshold": ">75g (fructans increase)",
+        "crohns_notes": "Fennel tea (strong) is high FODMAP. Bulb is OK at safe serving."
+      },
+      {
+        "name": "Garlic",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "AVOID entirely during elimination. Use garlic-infused oil instead.",
+        "high_fodmap_threshold": "Any amount - even 1 clove",
+        "crohns_notes": "Fructans are water-soluble but NOT oil-soluble. Garlic-infused oil is safe because fructans don't transfer to oil. Critical to avoid garlic powder and garlic salt too."
+      },
+      {
+        "name": "Ginger (fresh root)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (1 tsp grated typical)",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Anti-nausea and anti-inflammatory properties. Excellent for Crohn's patients. Helps with medication-induced nausea."
+      },
+      {
+        "name": "Green beans / String beans",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "15 beans (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "Cook until very soft. Remove strings if present."
+      },
+      {
+        "name": "Kale",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup chopped (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "Very high in insoluble fiber raw. MUST cook for Crohn's patients. Raw kale salads not recommended post-resection."
+      },
+      {
+        "name": "Leek (green leaves only)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Green part only, up to 1 cup",
+        "high_fodmap_threshold": "N/A for green part",
+        "crohns_notes": "WHITE/BULB PART IS HIGH FODMAP (fructans). Only use the dark green leaves."
+      },
+      {
+        "name": "Leek (white bulb)",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "AVOID",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "High fructans like onion."
+      },
+      {
+        "name": "Lettuce (all varieties - iceberg, butter, romaine, rocket/arugula)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Iceberg is easiest to digest. Raw salads may be difficult during flares - consider cooked/wilted."
+      },
+      {
+        "name": "Mushroom (button, shiitake, portobello, enoki, etc.)",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["mannitol"],
+        "safe_serving": "Canned champignon: 1/2 cup (75g) is low FODMAP",
+        "high_fodmap_threshold": "Fresh mushrooms: any serving of most varieties",
+        "crohns_notes": "All fresh mushrooms high in mannitol. Canned/drained mushrooms are lower due to mannitol leaching into liquid. Oyster mushroom may be tolerated at small serve (1 cup)."
+      },
+      {
+        "name": "Okra",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "6 pods (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "Mucilaginous texture may soothe gut. Cook well."
+      },
+      {
+        "name": "Olive",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "15 olives (various sizes)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good healthy fat source. Easy to digest."
+      },
+      {
+        "name": "Onion (brown, white, red, shallot)",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "AVOID entirely during elimination. Use onion-infused oil.",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "One of the highest FODMAP foods. Fructans are water-soluble but NOT oil-soluble. Onion-infused oil provides flavor without FODMAPs. Check all processed foods for onion powder."
+      },
+      {
+        "name": "Parsnip",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "High fiber when raw. Cook until very soft for best tolerance."
+      },
+      {
+        "name": "Peas (green/garden)",
+        "category": "vegetable",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "1/4 cup (23g)",
+        "high_fodmap_threshold": ">1/2 cup",
+        "crohns_notes": "Small serving OK. Skins may be hard to digest."
+      },
+      {
+        "name": "Potato (white, all varieties)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (1 medium = 225g typical)",
+        "high_fodmap_threshold": "N/A - low FODMAP at all tested servings",
+        "crohns_notes": "Excellent safe staple for Crohn's. Easy to digest when peeled and cooked. Mashed potatoes are very well tolerated post-resection."
+      },
+      {
+        "name": "Radish",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (2-3 typical)",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Mild peppery flavor. Raw may be hard on inflamed bowel."
+      },
+      {
+        "name": "Scallion / Spring onion (green part only)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Green part only, generous amount",
+        "high_fodmap_threshold": "N/A for green part",
+        "crohns_notes": "WHITE/ROOT PART IS HIGH FODMAP (fructans like onion). Only use the green tops."
+      },
+      {
+        "name": "Snow peas / Mange tout",
+        "category": "vegetable",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "5 pods (15g) is low FODMAP",
+        "high_fodmap_threshold": ">5 pods",
+        "crohns_notes": "Very small safe serving. Sugar snap peas are also high FODMAP."
+      },
+      {
+        "name": "Spinach (baby)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1.5 cups raw (75g); unlimited cooked",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good iron source. Cook to reduce oxalates and improve iron absorption. Important for Crohn's patients who are often iron-deficient."
+      },
+      {
+        "name": "Squash / Zucchini / Courgette",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/3 cup sliced (65g)",
+        "high_fodmap_threshold": ">100g (fructans increase)",
+        "crohns_notes": "Peel for easier digestion. Makes good noodle substitute (zoodles)."
+      },
+      {
+        "name": "Sweet potato / Kumara",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup chunks (75g)",
+        "high_fodmap_threshold": ">100g (becomes moderate, then high in mannitol)",
+        "crohns_notes": "Becomes moderate FODMAP at 100g and high above that. Good nutritional density at safe serving. Mash for best tolerance."
+      },
+      {
+        "name": "Tomato (common, fresh)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 small-medium (65g); cherry: 5 (75g)",
+        "high_fodmap_threshold": ">75g fresh; canned 1/2 cup (100g)",
+        "crohns_notes": "Acidic - may irritate if mouth ulcers or fistulas present. Cooking reduces acidity slightly. Remove seeds/skin if needed."
+      },
+      {
+        "name": "Tomato (canned)",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (100g)",
+        "high_fodmap_threshold": ">100g (fructose increases)",
+        "crohns_notes": "Base for many sauces. Check for added onion/garlic in canned varieties."
+      },
+      {
+        "name": "Tomato paste / Concentrate",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (30g)",
+        "high_fodmap_threshold": ">30g",
+        "crohns_notes": "Concentrated - small amounts pack flavor. Check for garlic/onion in ingredients."
+      },
+      {
+        "name": "Turnip / Swede",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 turnip (75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "Cook until soft. Good mash ingredient."
+      },
+      {
+        "name": "Water chestnut",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup sliced",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Crunchy texture; chew well."
+      },
+      {
+        "name": "Yam",
+        "category": "vegetable",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cubed (150g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good starchy staple. Easy to digest when cooked."
+      }
+    ],
+
+    "grains_and_cereals": [
+      {
+        "name": "Amaranth flour",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving in quantity",
+        "crohns_notes": "Despite being gluten-free, still high FODMAP."
+      },
+      {
+        "name": "Barley",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Contains gluten AND fructans. Avoid."
+      },
+      {
+        "name": "Buckwheat (groats and flour)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cooked (168g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Naturally gluten-free despite the name. Good nutrient profile."
+      },
+      {
+        "name": "Bulgur wheat",
+        "category": "grain",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1/4 cup cooked (44g)",
+        "high_fodmap_threshold": ">1/2 cup cooked",
+        "crohns_notes": "Small serve is OK. Still contains gluten."
+      },
+      {
+        "name": "Corn / Maize (flour, starch, polenta)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Cornflour unlimited; polenta 1 cup cooked (250g)",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Cornflour is a safe thickener. Polenta/grits are excellent soft-texture options."
+      },
+      {
+        "name": "Cornflakes (plain, no HFCS or inulin)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (25g)",
+        "high_fodmap_threshold": ">1 cup",
+        "crohns_notes": "Check ingredient list for chicory root / inulin / FOS which are high FODMAP additives."
+      },
+      {
+        "name": "Couscous",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving in normal amounts",
+        "crohns_notes": "Made from wheat semolina. High fructan."
+      },
+      {
+        "name": "Freekeh",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Wheat-based. High fructans."
+      },
+      {
+        "name": "Millet",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cooked (200g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Gluten-free. Easy to digest when cooked well."
+      },
+      {
+        "name": "Oats (rolled/steel-cut)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup dry (52g) or 1 cup cooked",
+        "high_fodmap_threshold": ">52g dry (fructans increase)",
+        "crohns_notes": "Soluble fiber source - generally well tolerated. Oat porridge is soothing. Avoid flavored varieties with added HFCS or fruit."
+      },
+      {
+        "name": "Pasta (wheat-based)",
+        "category": "grain",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1/2 cup cooked (74g) is low FODMAP",
+        "high_fodmap_threshold": ">1 cup cooked (becomes HIGH)",
+        "crohns_notes": "Small serving is OK during elimination. Cooking and cooling pasta increases resistant starch."
+      },
+      {
+        "name": "Pasta (gluten-free, rice/corn-based)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cooked (145g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Ensure no added legume flour (chickpea pasta is HIGH FODMAP). Rice and corn pasta are safe."
+      },
+      {
+        "name": "Quinoa",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cooked (155g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Complete protein (all essential amino acids). Excellent for Crohn's patients. Rinse before cooking to remove saponins."
+      },
+      {
+        "name": "Rice (white, brown, basmati, jasmine, wild)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (1 cup cooked = 190g typical)",
+        "high_fodmap_threshold": "N/A - low FODMAP at all tested servings",
+        "crohns_notes": "Safest grain for Crohn's. White rice is easiest to digest. Brown rice has more fiber - use during remission. Part of BRAT diet."
+      },
+      {
+        "name": "Rice noodles / Vermicelli",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup cooked (145g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Easy to digest. Good alternative to wheat noodles."
+      },
+      {
+        "name": "Rice cakes / Rice crackers",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "4-6 plain rice cakes",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Check for added onion/garlic flavoring."
+      },
+      {
+        "name": "Rye",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any normal serving",
+        "crohns_notes": "Very high fructan content. Rye bread and rye crispbread are high FODMAP."
+      },
+      {
+        "name": "Sorghum",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup cooked",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Gluten-free ancient grain. Good alternative."
+      },
+      {
+        "name": "Sourdough bread (spelt, traditional long-ferment)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (50g)",
+        "high_fodmap_threshold": ">3 slices",
+        "crohns_notes": "MUST be traditionally fermented (long, slow rise). The fermentation process breaks down fructans. Mass-produced 'sourdough' is NOT the same - check ingredients. True sourdough only has flour, water, salt, starter."
+      },
+      {
+        "name": "Sourdough bread (wheat)",
+        "category": "grain",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "2 slices (100g) if genuinely long-fermented",
+        "high_fodmap_threshold": ">2 slices",
+        "crohns_notes": "Wheat sourdough is lower FODMAP than regular wheat bread but higher than spelt sourdough."
+      },
+      {
+        "name": "Spelt flour (non-sourdough)",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended unless in sourdough form",
+        "high_fodmap_threshold": "Any normal serving of non-fermented spelt",
+        "crohns_notes": "Spelt is only low FODMAP when fermented as sourdough bread."
+      },
+      {
+        "name": "Tapioca / Cassava flour / Starch",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited as thickener",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good thickener and baking ingredient. Easy to digest."
+      },
+      {
+        "name": "Wheat bread (standard white/wholemeal)",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1 slice (24g) is low FODMAP",
+        "high_fodmap_threshold": ">1 slice",
+        "crohns_notes": "One slice is OK during elimination. Standard serving of 2+ slices is high FODMAP."
+      },
+      {
+        "name": "Wheat flour (plain/all-purpose)",
+        "category": "grain",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Use GF alternatives during elimination",
+        "high_fodmap_threshold": ">2 tbsp in a recipe",
+        "crohns_notes": "Small amounts in recipes (e.g., as thickener) may be tolerated."
+      },
+      {
+        "name": "Popcorn (air-popped)",
+        "category": "grain",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 cups popped (16g)",
+        "high_fodmap_threshold": ">7 cups (fructans build up)",
+        "crohns_notes": "Hulls can irritate inflamed bowel. Avoid during flares and with strictures."
+      }
+    ],
+
+    "dairy_and_alternatives": [
+      {
+        "name": "Milk (cow, regular)",
+        "category": "dairy",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": ">1 tbsp",
+        "crohns_notes": "Many Crohn's patients are lactose intolerant. Lactase enzyme supplements can help."
+      },
+      {
+        "name": "Milk (lactose-free cow)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (250ml)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good calcium and protein source. Important for Crohn's patients on corticosteroids (bone density)."
+      },
+      {
+        "name": "Milk (goat)",
+        "category": "dairy",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Still contains lactose despite common misconception."
+      },
+      {
+        "name": "Milk (almond, unsweetened)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (250ml)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Usually fortified with calcium and vitamin D. Good choice."
+      },
+      {
+        "name": "Milk (coconut, canned)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (120ml); light version OK at 3/4 cup",
+        "high_fodmap_threshold": ">120ml full-fat; >180ml light",
+        "crohns_notes": "Good for cooking. Calorie-dense (helpful if underweight)."
+      },
+      {
+        "name": "Milk (coconut, carton/beverage)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (250ml)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Much more dilute than canned. Check for inulin/chicory additives."
+      },
+      {
+        "name": "Milk (oat)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "30ml only (enough for tea/coffee splash)",
+        "high_fodmap_threshold": ">30ml",
+        "crohns_notes": "Very small safe serving. Not suitable as a glass of milk substitute."
+      },
+      {
+        "name": "Milk (rice)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (200ml)",
+        "high_fodmap_threshold": ">200ml",
+        "crohns_notes": "Low protein and nutrient content. Consider calcium-fortified versions."
+      },
+      {
+        "name": "Milk (soy, made from soy PROTEIN/isolate)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (250ml)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "CRITICAL: Must be made from soy PROTEIN ISOLATE, not whole soybeans. Check label. US brands commonly use whole soybeans (HIGH FODMAP)."
+      },
+      {
+        "name": "Milk (soy, made from whole soybeans)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Most US brands are made from whole soybeans. Must check ingredient list for 'soy protein isolate' vs 'whole soybeans' or 'soybeans'."
+      },
+      {
+        "name": "Milk (macadamia)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (250ml)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good alternative. Check for inulin additives."
+      },
+      {
+        "name": "Milk (hemp)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (125ml)",
+        "high_fodmap_threshold": ">125ml",
+        "crohns_notes": "Good omega-3 source."
+      },
+      {
+        "name": "Yogurt (regular cow)",
+        "category": "dairy",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any normal serving",
+        "crohns_notes": "Contains live cultures which may benefit gut microbiome, but lactose is problematic."
+      },
+      {
+        "name": "Yogurt (Greek, plain)",
+        "category": "dairy",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "23g (approximately 1.5 tbsp)",
+        "high_fodmap_threshold": ">23g",
+        "crohns_notes": "Straining removes some lactose. Very small safe serving. Lactose-free Greek yogurt is preferred."
+      },
+      {
+        "name": "Yogurt (lactose-free)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 cup (170g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Excellent choice. Probiotics benefit gut microbiome. Important for Crohn's patients."
+      },
+      {
+        "name": "Yogurt (coconut, plain)",
+        "category": "dairy_alternative",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (125g)",
+        "high_fodmap_threshold": "Check for inulin/chicory fiber additives",
+        "crohns_notes": "Check ingredients carefully. Many brands add inulin/chicory fiber for texture which is high FODMAP."
+      },
+      {
+        "name": "Cheese (hard/aged: Cheddar, Parmesan, Swiss, Gruyere, Gouda)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (40g); Parmesan 1/4 cup grated (20g)",
+        "high_fodmap_threshold": "N/A at normal serving - aging removes nearly all lactose",
+        "crohns_notes": "Aging process removes lactose. Excellent calcium source for Crohn's patients. Important when on corticosteroids."
+      },
+      {
+        "name": "Cheese (Brie, Camembert)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (40g)",
+        "high_fodmap_threshold": ">40g may increase lactose",
+        "crohns_notes": "Soft but aged enough to be low lactose. Good choice."
+      },
+      {
+        "name": "Cheese (Mozzarella)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "40g",
+        "high_fodmap_threshold": ">40g",
+        "crohns_notes": "Semi-soft but low lactose. Fresh mozzarella slightly higher in lactose than aged."
+      },
+      {
+        "name": "Cheese (Feta)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup crumbled (100g)",
+        "high_fodmap_threshold": ">100g",
+        "crohns_notes": "Good flavor at small amounts."
+      },
+      {
+        "name": "Cheese (Haloumi)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (40g)",
+        "high_fodmap_threshold": ">40g",
+        "crohns_notes": "Good protein source."
+      },
+      {
+        "name": "Cheese (Cottage)",
+        "category": "dairy",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "2 tbsp (36g)",
+        "high_fodmap_threshold": ">4 tbsp",
+        "crohns_notes": "Fresh cheese - higher lactose than aged. Small serving only."
+      },
+      {
+        "name": "Cheese (Ricotta)",
+        "category": "dairy",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "2 tbsp (40g)",
+        "high_fodmap_threshold": ">40g",
+        "crohns_notes": "Fresh whey cheese - contains significant lactose. Lactose-free ricotta available."
+      },
+      {
+        "name": "Cheese (Cream cheese)",
+        "category": "dairy",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "2 tbsp (40g)",
+        "high_fodmap_threshold": ">40g",
+        "crohns_notes": "Lactose-free cream cheese is preferred."
+      },
+      {
+        "name": "Butter",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (2 tbsp/28g typical)",
+        "high_fodmap_threshold": "N/A - trace lactose only",
+        "crohns_notes": "Almost pure fat, virtually no lactose. Good calorie source."
+      },
+      {
+        "name": "Ghee / Clarified butter",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (14g)",
+        "high_fodmap_threshold": "N/A - lactose removed during clarification",
+        "crohns_notes": "Zero lactose. Good for cooking at high heat."
+      },
+      {
+        "name": "Cream (heavy/whipping)",
+        "category": "dairy",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "2 tbsp (40ml)",
+        "high_fodmap_threshold": ">60ml",
+        "crohns_notes": "High fat, some lactose. Small amounts in cooking OK."
+      },
+      {
+        "name": "Sour cream",
+        "category": "dairy",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "2 tbsp (40g)",
+        "high_fodmap_threshold": ">2 tbsp",
+        "crohns_notes": "Small serving OK. Lactose-free versions preferred."
+      },
+      {
+        "name": "Ice cream (regular)",
+        "category": "dairy",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any normal serving",
+        "crohns_notes": "High lactose and often contains HFCS. Lactose-free ice cream available."
+      },
+      {
+        "name": "Ice cream (lactose-free)",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (75g)",
+        "high_fodmap_threshold": "Check for chicory fiber/inulin in ingredients",
+        "crohns_notes": "Watch for inulin/chicory root fiber which many brands add."
+      },
+      {
+        "name": "Kefir (regular)",
+        "category": "dairy",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Fermentation reduces some lactose but not enough. Lactose-free kefir is available."
+      },
+      {
+        "name": "Whey protein isolate",
+        "category": "dairy",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 scoop (25g)",
+        "high_fodmap_threshold": "Check for inulin/sweetener additives",
+        "crohns_notes": "ISOLATE only - whey protein CONCENTRATE is high FODMAP (contains lactose). Critical for Crohn's patients needing protein supplementation."
+      },
+      {
+        "name": "Whey protein concentrate",
+        "category": "dairy",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["lactose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Contains significant lactose. Choose isolate instead."
+      }
+    ],
+
+    "proteins": [
+      {
+        "name": "Beef (all cuts, plain)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A - no FODMAPs in plain meat",
+        "crohns_notes": "Good iron and B12 source. Choose tender cuts. Ground beef is easiest to digest. Avoid if marinated with garlic/onion."
+      },
+      {
+        "name": "Chicken (all cuts, plain)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Lean protein, easy to digest. Avoid if marinated/seasoned with garlic/onion."
+      },
+      {
+        "name": "Turkey (plain)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Lean protein. Deli turkey - check for garlic/onion seasoning."
+      },
+      {
+        "name": "Pork (all cuts, plain)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good protein source. Avoid processed pork products with additives."
+      },
+      {
+        "name": "Lamb (all cuts, plain)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good iron source. May be higher in fat depending on cut."
+      },
+      {
+        "name": "Fish (salmon, tuna, cod, haddock, trout, halibut, etc.)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Excellent omega-3 source (especially salmon, sardines, mackerel). Anti-inflammatory. Highly recommended for Crohn's patients."
+      },
+      {
+        "name": "Shellfish (shrimp, crab, lobster, mussels, oysters, scallops)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good zinc source. Canned/tinned varieties also safe."
+      },
+      {
+        "name": "Eggs",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Excellent protein source, easy to digest in most forms. Scrambled and poached are easiest on the gut."
+      },
+      {
+        "name": "Tofu (firm/extra-firm, drained)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2/3 cup cubed (160g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Draining and pressing removes water-soluble FODMAPs. SILKEN tofu is moderate-high FODMAP (more liquid, more GOS). Firm only."
+      },
+      {
+        "name": "Tofu (silken/soft)",
+        "category": "protein",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["GOS"],
+        "safe_serving": "1/4 cup (52g)",
+        "high_fodmap_threshold": ">1/3 cup",
+        "crohns_notes": "Higher in GOS than firm tofu because less pressing/draining."
+      },
+      {
+        "name": "Tempeh",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 cup (100g)",
+        "high_fodmap_threshold": ">100g",
+        "crohns_notes": "Fermentation reduces FODMAPs. Good plant protein source."
+      },
+      {
+        "name": "Deli meats / Cold cuts (plain, no garlic/onion)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A if plain",
+        "crohns_notes": "MUST check ingredients - many contain garlic powder, onion powder, or HFCS. Plain ham, turkey breast, prosciutto are usually safe."
+      },
+      {
+        "name": "Sausage / Chorizo",
+        "category": "protein",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Depends on ingredients",
+        "high_fodmap_threshold": "Varies - check for garlic/onion",
+        "crohns_notes": "Most commercial sausages contain garlic and/or onion. Look for specialty FODMAP-friendly brands or make your own."
+      },
+      {
+        "name": "Lentils (canned and drained)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup canned drained (46-75g)",
+        "high_fodmap_threshold": ">75g",
+        "crohns_notes": "CANNED and DRAINED is critical - nearly 50% less FODMAPs than dried/cooked. FODMAPs leach into canning liquid. Rinse well."
+      },
+      {
+        "name": "Lentils (dried, cooked)",
+        "category": "protein",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "1/4 cup (23g) cooked is low FODMAP",
+        "high_fodmap_threshold": ">1/2 cup cooked",
+        "crohns_notes": "Soak 12-24 hours and discard soaking water to reduce FODMAPs. Boil 30+ minutes. Red lentils are slightly better tolerated than green/brown."
+      },
+      {
+        "name": "Chickpeas (canned and drained)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/4 cup (42g) canned drained",
+        "high_fodmap_threshold": ">1/2 cup",
+        "crohns_notes": "Small serving only. Canned and rinsed reduces GOS. Hummus from canned chickpeas: 2 tbsp is low FODMAP."
+      },
+      {
+        "name": "Chickpeas (dried, cooked)",
+        "category": "protein",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": ">1/4 cup cooked",
+        "crohns_notes": "Very high GOS. Use canned/drained instead."
+      },
+      {
+        "name": "Black beans (canned and drained)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/4 cup (45g)",
+        "high_fodmap_threshold": ">1/2 cup",
+        "crohns_notes": "Small canned/drained serving is OK. Rinse well."
+      },
+      {
+        "name": "Kidney beans / Butter beans / Lima beans",
+        "category": "protein",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any normal serving",
+        "crohns_notes": "Very high GOS. Even canned varieties remain high at normal servings."
+      },
+      {
+        "name": "Baked beans (canned)",
+        "category": "protein",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Sauce often contains onion, garlic, and HFCS in addition to high-GOS beans."
+      },
+      {
+        "name": "Edamame / Soybeans",
+        "category": "protein",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Whole soybeans are high FODMAP. Soy protein isolate products are OK."
+      },
+      {
+        "name": "Split peas",
+        "category": "protein",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "High GOS. Pea soup is typically high FODMAP."
+      },
+      {
+        "name": "Quorn mince (mycoprotein)",
+        "category": "protein",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "100g",
+        "high_fodmap_threshold": ">100g",
+        "crohns_notes": "Check for onion/garlic in seasoned varieties. Plain mince is safe."
+      }
+    ],
+
+    "nuts_and_seeds": [
+      {
+        "name": "Almonds",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "10 nuts (12g)",
+        "high_fodmap_threshold": ">20 nuts (becomes moderate GOS/fructans)",
+        "crohns_notes": "Must chew very well. Almond butter (1 tbsp) is easier to digest. Almond flour in large amounts (>1/4 cup) may be high FODMAP."
+      },
+      {
+        "name": "Almond butter",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (20g)",
+        "high_fodmap_threshold": ">2 tbsp",
+        "crohns_notes": "Easier to digest than whole almonds. Good calorie source."
+      },
+      {
+        "name": "Brazil nuts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "10 nuts (30g)",
+        "high_fodmap_threshold": ">10 nuts",
+        "crohns_notes": "Excellent selenium source. Chew well."
+      },
+      {
+        "name": "Cashews",
+        "category": "nut",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving (even 10 nuts is high)",
+        "crohns_notes": "Among the highest FODMAP nuts. Cashew milk and cashew cheese are also high FODMAP."
+      },
+      {
+        "name": "Chestnuts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "20 nuts (roasted)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Lower in fat than most nuts. Chestnut flour is high FODMAP in large amounts."
+      },
+      {
+        "name": "Hazelnuts / Filberts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "10 nuts (15g)",
+        "high_fodmap_threshold": ">24 nuts",
+        "crohns_notes": "Chew well. Hazelnut spread (Nutella) contains milk - check FODMAP."
+      },
+      {
+        "name": "Macadamia nuts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "20 nuts (40g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Among the safest nuts. High calorie/healthy fat. Good for underweight Crohn's patients."
+      },
+      {
+        "name": "Peanuts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "32 nuts (28g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Technically a legume but low FODMAP. Good protein source."
+      },
+      {
+        "name": "Peanut butter",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (32g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Check for added HFCS or honey. Plain/natural peanut butter is safest."
+      },
+      {
+        "name": "Pecans",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "15 halves (30g)",
+        "high_fodmap_threshold": ">30g",
+        "crohns_notes": "Good omega-3 source. Chew well."
+      },
+      {
+        "name": "Pine nuts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (14g)",
+        "high_fodmap_threshold": ">14g",
+        "crohns_notes": "Good in pesto (garlic-free version)."
+      },
+      {
+        "name": "Pistachios",
+        "category": "nut",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "GOS"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "High FODMAP like cashews. Avoid."
+      },
+      {
+        "name": "Walnuts",
+        "category": "nut",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "10 halves (30g)",
+        "high_fodmap_threshold": ">30g",
+        "crohns_notes": "Excellent omega-3 source. Anti-inflammatory. Good for Crohn's."
+      },
+      {
+        "name": "Chia seeds",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (24g)",
+        "high_fodmap_threshold": ">4 tbsp",
+        "crohns_notes": "High in soluble fiber (gel-forming). Can help with diarrhea. Omega-3 source. Soak before eating for best tolerance."
+      },
+      {
+        "name": "Flaxseed / Linseed",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (12g)",
+        "high_fodmap_threshold": ">2 tbsp",
+        "crohns_notes": "Ground flaxseed is better absorbed. Good omega-3 source. Anti-inflammatory."
+      },
+      {
+        "name": "Hemp seeds",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (20g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Complete protein. Good omega-3/omega-6 ratio. Anti-inflammatory."
+      },
+      {
+        "name": "Poppy seeds",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Used in small amounts. Safe."
+      },
+      {
+        "name": "Pumpkin seeds / Pepitas",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (28g)",
+        "high_fodmap_threshold": ">28g",
+        "crohns_notes": "Good zinc and magnesium source. Important minerals for Crohn's patients."
+      },
+      {
+        "name": "Sesame seeds",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (10g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good calcium source. Tahini (sesame paste) is also low FODMAP at 2 tbsp."
+      },
+      {
+        "name": "Sunflower seeds",
+        "category": "seed",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tsp (7g)",
+        "high_fodmap_threshold": ">2 tbsp",
+        "crohns_notes": "Smaller safe serving than other seeds. Good vitamin E source."
+      }
+    ],
+
+    "condiments_and_sauces": [
+      {
+        "name": "Garlic-infused oil",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A - fructans are water-soluble, NOT oil-soluble",
+        "crohns_notes": "ESSENTIAL for low FODMAP cooking. Provides garlic flavor without fructans. Must not contain garlic pieces - strain thoroughly. Commercial brands available."
+      },
+      {
+        "name": "Soy sauce / Tamari (gluten-free)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (42g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Safe flavor enhancer. GF tamari avoids wheat."
+      },
+      {
+        "name": "Fish sauce",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good umami flavor source. Check for garlic in ingredients."
+      },
+      {
+        "name": "Oyster sauce",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (20g)",
+        "high_fodmap_threshold": ">2 tbsp",
+        "crohns_notes": "Often contains wheat. Choose GF brand if needed."
+      },
+      {
+        "name": "Ketchup / Tomato sauce",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 sachet / 1 tbsp (13-20g)",
+        "high_fodmap_threshold": ">2 tbsp (some brands contain HFCS or onion)",
+        "crohns_notes": "Check for HFCS, onion powder, garlic powder in ingredients."
+      },
+      {
+        "name": "Mustard (yellow/Dijon)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (15g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Safe condiment. Wholegrain mustard also OK."
+      },
+      {
+        "name": "Mayonnaise (no garlic/onion)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (40g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Check ingredients - many brands contain garlic. Homemade is safest."
+      },
+      {
+        "name": "Vinegar (all types: white, apple cider, balsamic, rice wine)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (30ml)",
+        "high_fodmap_threshold": "Balsamic: >2 tbsp may increase fructose",
+        "crohns_notes": "Apple cider vinegar may have probiotic benefits. Balsamic has more sugar - keep to 1-2 tbsp."
+      },
+      {
+        "name": "Maple syrup (pure)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (40g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good honey substitute. Must be pure maple syrup, not maple-flavored (which may contain HFCS)."
+      },
+      {
+        "name": "Honey",
+        "category": "condiment",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving (very high excess fructose)",
+        "crohns_notes": "One of the highest fructose foods. Common in granola bars, cereals, dressings - check labels."
+      },
+      {
+        "name": "BBQ sauce (standard)",
+        "category": "condiment",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "fructans"],
+        "safe_serving": "Not recommended unless certified low FODMAP brand",
+        "high_fodmap_threshold": "Any serving (usually contains onion, garlic, honey/HFCS)",
+        "crohns_notes": "Almost all commercial BBQ sauces are high FODMAP. Specialty low-FODMAP brands exist."
+      },
+      {
+        "name": "Tomato paste / Puree",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (30g)",
+        "high_fodmap_threshold": ">30g",
+        "crohns_notes": "Good base for sauces. Check for onion/garlic."
+      },
+      {
+        "name": "Miso paste",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (12g)",
+        "high_fodmap_threshold": ">3 tbsp",
+        "crohns_notes": "Fermented soy product. Good umami flavor. May have probiotic benefits."
+      },
+      {
+        "name": "Pesto (standard with garlic)",
+        "category": "condiment",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "<1 tbsp may be tolerated",
+        "high_fodmap_threshold": ">1 tbsp",
+        "crohns_notes": "Contains garlic and sometimes cashews. Make homemade with garlic-infused oil instead."
+      },
+      {
+        "name": "Hummus (standard)",
+        "category": "condiment",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["GOS", "fructans"],
+        "safe_serving": "2 tbsp (50g) of canned-chickpea hummus may be low",
+        "high_fodmap_threshold": ">1/4 cup",
+        "crohns_notes": "Often contains garlic. Small serving of homemade (garlic-free, canned chickpeas) may be OK."
+      },
+      {
+        "name": "Sriracha",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tsp (5g)",
+        "high_fodmap_threshold": ">1 tbsp",
+        "crohns_notes": "Contains garlic but in small amounts per tsp. Spicy foods may irritate Crohn's during flares."
+      },
+      {
+        "name": "Worcestershire sauce",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Very small amount (1 tsp)",
+        "high_fodmap_threshold": ">2 tsp",
+        "crohns_notes": "Contains traces of onion/garlic but very dilute at small serving."
+      },
+      {
+        "name": "Tahini (sesame paste)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (30g)",
+        "high_fodmap_threshold": ">30g",
+        "crohns_notes": "Good calcium source. Useful in dressings and sauces."
+      },
+      {
+        "name": "Strawberry / Raspberry jam (no HFCS)",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (40g)",
+        "high_fodmap_threshold": ">40g",
+        "crohns_notes": "Must not contain HFCS, apple juice, or pear juice. Check ingredients."
+      },
+      {
+        "name": "Marmalade",
+        "category": "condiment",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp",
+        "high_fodmap_threshold": ">2 tbsp",
+        "crohns_notes": "Citrus-based. Check for HFCS."
+      },
+      {
+        "name": "Stock cubes / Bouillon (commercial)",
+        "category": "condiment",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Check ingredients - most contain onion/garlic",
+        "high_fodmap_threshold": "Any serving if contains onion/garlic",
+        "crohns_notes": "Make homemade stock with green leek tops, chives, and other low-FODMAP aromatics instead."
+      },
+      {
+        "name": "Salad dressing (commercial)",
+        "category": "condiment",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "fructose"],
+        "safe_serving": "Check ingredients individually",
+        "high_fodmap_threshold": "Most commercial dressings contain onion, garlic, honey, or HFCS",
+        "crohns_notes": "Make your own with olive oil, vinegar/lemon, herbs, salt, pepper."
+      }
+    ],
+
+    "beverages": [
+      {
+        "name": "Water",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Essential. Crohn's patients are at higher risk of dehydration, especially with diarrhea. Aim for 8+ glasses daily."
+      },
+      {
+        "name": "Coffee (black, espresso)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Up to 3 cups (180ml each)",
+        "high_fodmap_threshold": "N/A for FODMAPs, but caffeine is a gut stimulant",
+        "crohns_notes": "Coffee itself is low FODMAP but caffeine stimulates motility. May worsen diarrhea in Crohn's. Limit to 1-2 cups if symptomatic."
+      },
+      {
+        "name": "Tea (black, weak)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup weak brew",
+        "high_fodmap_threshold": "Strong brew increases fructans",
+        "crohns_notes": "Weak brew is key. Strong black tea becomes moderate FODMAP."
+      },
+      {
+        "name": "Tea (green)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Anti-inflammatory polyphenols. Good choice for Crohn's."
+      },
+      {
+        "name": "Tea (peppermint)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup (weak to moderate brew)",
+        "high_fodmap_threshold": "Strong brew may be moderate",
+        "crohns_notes": "Peppermint has antispasmodic properties. Can help with cramping."
+      },
+      {
+        "name": "Tea (chamomile)",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Weak brew only, 1 cup",
+        "high_fodmap_threshold": "Strong brew",
+        "crohns_notes": "Strong chamomile is high FODMAP. Weak brew may be tolerated."
+      },
+      {
+        "name": "Tea (chai, strong)",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Weak chai only",
+        "high_fodmap_threshold": "Strong brew",
+        "crohns_notes": "Contains spices that may irritate. Weak brew tolerated by some."
+      },
+      {
+        "name": "Tea (fennel)",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving of strong brew",
+        "crohns_notes": "Despite fennel bulb being OK, fennel tea concentrates fructans."
+      },
+      {
+        "name": "Tea (ginger, fresh)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 cup",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Excellent for nausea and inflammation. Highly recommended for Crohn's."
+      },
+      {
+        "name": "Orange juice",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1/2 cup (100ml)",
+        "high_fodmap_threshold": ">100ml (fructose increases)",
+        "crohns_notes": "Acidic - may irritate mouth ulcers. Small serving only."
+      },
+      {
+        "name": "Cranberry juice",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3/4 glass (180ml)",
+        "high_fodmap_threshold": ">200ml",
+        "crohns_notes": "Check for added apple/pear juice concentrate which is high FODMAP."
+      },
+      {
+        "name": "Apple juice",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Very high fructose. Used as sweetener in many 'no added sugar' products - check labels."
+      },
+      {
+        "name": "Pear juice",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "sorbitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Like apple juice - very high FODMAP."
+      },
+      {
+        "name": "Mango juice",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Concentrated fructose."
+      },
+      {
+        "name": "Coconut water",
+        "category": "beverage",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["sorbitol"],
+        "safe_serving": "100ml",
+        "high_fodmap_threshold": ">100ml",
+        "crohns_notes": "Good electrolyte source for rehydration but limited serving. Contains sorbitol."
+      },
+      {
+        "name": "Kombucha",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Despite probiotic benefits, high in FODMAPs from fermentation sugars."
+      },
+      {
+        "name": "Beer (standard)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 bottle/can (355ml)",
+        "high_fodmap_threshold": ">1 bottle",
+        "crohns_notes": "Brewing process breaks down fructans from wheat/barley. Carbonation may cause bloating. Alcohol is a gut irritant - use caution during flares."
+      },
+      {
+        "name": "Wine (red, white, sparkling)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 glass (150ml)",
+        "high_fodmap_threshold": ">1 glass (red wine fructose increases)",
+        "crohns_notes": "Dry wines are lower FODMAP than sweet. Sulfites may trigger symptoms in some. Alcohol suppresses immune function - consider with immunomodulators."
+      },
+      {
+        "name": "Wine (sweet/fortified/dessert: port, sherry, ice wine)",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Concentrated sugars. Avoid."
+      },
+      {
+        "name": "Gin",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 shot (45ml)",
+        "high_fodmap_threshold": ">2 shots",
+        "crohns_notes": "Distillation removes FODMAPs. Mix with soda water and lime, not tonic (tonic may contain HFCS)."
+      },
+      {
+        "name": "Vodka",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 shot (45ml)",
+        "high_fodmap_threshold": ">2 shots",
+        "crohns_notes": "Safe spirit. Avoid mixers with HFCS or fruit juices."
+      },
+      {
+        "name": "Whiskey / Whisky",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 shot (45ml)",
+        "high_fodmap_threshold": ">2 shots",
+        "crohns_notes": "Distillation removes FODMAPs from grain mash."
+      },
+      {
+        "name": "Rum",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Only spirit tested high FODMAP. High fructose load."
+      },
+      {
+        "name": "Soda / Soft drinks (with HFCS)",
+        "category": "beverage",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "HFCS is high FODMAP. Carbonation causes bloating."
+      },
+      {
+        "name": "Soda / Soft drinks (with sugar/sucrose, no HFCS)",
+        "category": "beverage",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Limited quantity",
+        "high_fodmap_threshold": "Limit due to carbonation",
+        "crohns_notes": "FODMAPs are fine but carbonation and sugar still problematic. Not recommended for gut health."
+      }
+    ],
+
+    "sweeteners": [
+      {
+        "name": "White sugar / Sucrose",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (12g)",
+        "high_fodmap_threshold": "N/A at normal serving - sucrose is 50/50 glucose/fructose (balanced)",
+        "crohns_notes": "Low FODMAP because glucose and fructose are in equal ratio. Still limit for general health."
+      },
+      {
+        "name": "Brown sugar",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp (12g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Same as white sugar with molasses added."
+      },
+      {
+        "name": "Maple syrup (pure)",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp (40ml)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Best honey alternative. Must be pure, not maple-flavored syrup."
+      },
+      {
+        "name": "Rice malt syrup",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 tbsp",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good low-FODMAP sweetener alternative. Contains glucose, no fructose."
+      },
+      {
+        "name": "Glucose / Dextrose",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (from FODMAP perspective)",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Glucose is well-absorbed. Can actually help fructose absorption when present in equal or greater amounts."
+      },
+      {
+        "name": "Stevia",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (pure stevia)",
+        "high_fodmap_threshold": "N/A - check for added polyols in blends",
+        "crohns_notes": "Check blends - some contain erythritol or other bulking agents. Pure stevia is safe."
+      },
+      {
+        "name": "Aspartame",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Per packet guidelines",
+        "high_fodmap_threshold": "N/A for FODMAPs",
+        "crohns_notes": "Low FODMAP but controversial for gut health in general."
+      },
+      {
+        "name": "Sucralose (Splenda)",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Per packet guidelines",
+        "high_fodmap_threshold": "N/A for FODMAPs - check for added maltodextrin",
+        "crohns_notes": "Some research suggests sucralose may alter gut microbiome. Use cautiously with IBD."
+      },
+      {
+        "name": "Saccharin",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Per packet guidelines",
+        "high_fodmap_threshold": "N/A for FODMAPs",
+        "crohns_notes": "Low FODMAP."
+      },
+      {
+        "name": "Erythritol",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Per guidelines",
+        "high_fodmap_threshold": "N/A - better absorbed than other sugar alcohols",
+        "crohns_notes": "The ONLY low-FODMAP sugar alcohol. Absorbed in small intestine (90%) so doesn't reach colon for fermentation."
+      },
+      {
+        "name": "Honey",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Very high excess fructose. One of the most common FODMAP triggers."
+      },
+      {
+        "name": "Agave nectar / Syrup",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving (90% fructose)",
+        "crohns_notes": "Extremely high fructose despite being marketed as 'natural'. Worse than honey."
+      },
+      {
+        "name": "High fructose corn syrup (HFCS)",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Found in many US processed foods. Check all labels. Major hidden FODMAP source."
+      },
+      {
+        "name": "Sorbitol (E420)",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["sorbitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any added amount",
+        "crohns_notes": "Found in sugar-free gum, mints, diabetic products. Strong osmotic laxative effect."
+      },
+      {
+        "name": "Mannitol (E421)",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["mannitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any added amount",
+        "crohns_notes": "Found in sugar-free products. Osmotic laxative."
+      },
+      {
+        "name": "Xylitol (E967)",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["sorbitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "Common in sugar-free gum and toothpaste. Causes significant GI distress."
+      },
+      {
+        "name": "Maltitol (E965)",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["sorbitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "Common in sugar-free chocolate and candy. Known to cause severe diarrhea."
+      },
+      {
+        "name": "Isomalt (E953)",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["sorbitol", "mannitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "Used in sugar-free hard candy. Contains both sorbitol and mannitol."
+      },
+      {
+        "name": "Inulin / FOS / Chicory root fiber",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "CRITICAL: Added to many 'healthy' products as prebiotic fiber - protein bars, yogurts, ice cream, cereals. Check ALL processed food labels for inulin, chicory root fiber, chicory root extract, FOS, oligofructose."
+      },
+      {
+        "name": "Coconut sugar",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tsp (4g)",
+        "high_fodmap_threshold": ">2 tsp",
+        "crohns_notes": "Small safe serving. Contains inulin at larger amounts."
+      },
+      {
+        "name": "Golden syrup",
+        "category": "sweetener",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tsp (7g)",
+        "high_fodmap_threshold": ">1 tbsp",
+        "crohns_notes": "Small amounts OK."
+      },
+      {
+        "name": "Molasses",
+        "category": "sweetener",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "High fructose."
+      }
+    ],
+
+    "snack_foods": [
+      {
+        "name": "Plain potato chips / Crisps",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 small bag (50g)",
+        "high_fodmap_threshold": "Check for onion/garlic powder in flavored varieties",
+        "crohns_notes": "Plain salted only. Most flavored chips contain onion/garlic powder."
+      },
+      {
+        "name": "Corn chips / Tortilla chips (plain)",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 serving (50g)",
+        "high_fodmap_threshold": "N/A if plain",
+        "crohns_notes": "Plain corn-based. Check for wheat in ingredients."
+      },
+      {
+        "name": "Rice crackers / Rice cakes",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "4-6 crackers",
+        "high_fodmap_threshold": "N/A if plain",
+        "crohns_notes": "Good safe snack base. Check flavored varieties for FODMAP ingredients."
+      },
+      {
+        "name": "Pretzels (wheat)",
+        "category": "snack",
+        "fodmap_rating": "MODERATE",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Small handful",
+        "high_fodmap_threshold": "Large serving",
+        "crohns_notes": "Contains wheat but processing may reduce some fructans. Keep serving small."
+      },
+      {
+        "name": "Dark chocolate (70%+)",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "5 squares (30g)",
+        "high_fodmap_threshold": ">30g (lactose from milk solids in some)",
+        "crohns_notes": "Contains antioxidants. Caffeine content may stimulate bowel. Check for inulin in 'fiber-enriched' versions."
+      },
+      {
+        "name": "Milk chocolate",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "4 squares (20g)",
+        "high_fodmap_threshold": ">20g (lactose increases)",
+        "crohns_notes": "Contains some lactose. Smaller safe serving than dark chocolate."
+      },
+      {
+        "name": "White chocolate",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "3 squares (15g)",
+        "high_fodmap_threshold": ">15g (highest lactose of chocolates)",
+        "crohns_notes": "Most lactose of the three types. Very small serving."
+      },
+      {
+        "name": "Popcorn (plain, air-popped)",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 cups (16g)",
+        "high_fodmap_threshold": ">7 cups",
+        "crohns_notes": "Hulls can irritate bowel. Avoid during flares. Avoid microwave popcorn with butter flavoring."
+      },
+      {
+        "name": "Granola bars / Cereal bars",
+        "category": "snack",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "fructose", "GOS"],
+        "safe_serving": "Not recommended unless certified low FODMAP",
+        "high_fodmap_threshold": "Most contain honey, HFCS, dried fruit, chicory fiber",
+        "crohns_notes": "Almost all commercial bars are high FODMAP. Look for certified low-FODMAP bars."
+      },
+      {
+        "name": "Trail mix (standard)",
+        "category": "snack",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructose", "GOS", "fructans"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Usually contains cashews, pistachios, dried fruit",
+        "crohns_notes": "Make your own with safe nuts (macadamia, peanuts, walnuts) and safe dried fruit (cranberries)."
+      },
+      {
+        "name": "Oatcakes",
+        "category": "snack",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "4 oatcakes",
+        "high_fodmap_threshold": ">4",
+        "crohns_notes": "Good snack base."
+      },
+      {
+        "name": "Sugar-free gum / mints",
+        "category": "snack",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["sorbitol", "mannitol"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "1-2 pieces may trigger",
+        "crohns_notes": "Almost all contain sorbitol, xylitol, or mannitol. Common hidden FODMAP source."
+      }
+    ],
+
+    "bread_and_baked_goods": [
+      {
+        "name": "Sourdough bread (spelt, long-fermented)",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (50g)",
+        "high_fodmap_threshold": ">3 slices",
+        "crohns_notes": "Best bread option. Long fermentation (12-24 hours) breaks down fructans. MUST be genuinely slow-fermented - not commercial 'sourdough flavored'."
+      },
+      {
+        "name": "Sourdough bread (wheat, long-fermented)",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices (100g) if genuinely long-fermented",
+        "high_fodmap_threshold": ">2 slices",
+        "crohns_notes": "Better than regular wheat bread but not as low FODMAP as spelt sourdough."
+      },
+      {
+        "name": "White bread (wheat, standard)",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1 slice (24g) is low FODMAP",
+        "high_fodmap_threshold": ">1 slice",
+        "crohns_notes": "Single slice may be tolerated. Normal 2-slice sandwich is high FODMAP."
+      },
+      {
+        "name": "Whole wheat / Wholemeal bread",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1 slice only",
+        "high_fodmap_threshold": ">1 slice",
+        "crohns_notes": "Higher in fructans AND insoluble fiber than white. Worse choice for Crohn's during flares."
+      },
+      {
+        "name": "Gluten-free bread",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices",
+        "high_fodmap_threshold": "Check for added inulin/chicory fiber",
+        "crohns_notes": "Good option BUT check ingredients. Some GF breads add inulin/chicory root for fiber, making them high FODMAP despite being gluten-free."
+      },
+      {
+        "name": "Rye bread",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any normal serving",
+        "crohns_notes": "Very high fructans. Rye sourdough may be slightly better but still not recommended during elimination."
+      },
+      {
+        "name": "Corn bread",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 piece (check recipe)",
+        "high_fodmap_threshold": "Depends on recipe - check for wheat flour, milk, honey",
+        "crohns_notes": "Homemade with corn flour, safe milk, and safe sweetener is a good option."
+      },
+      {
+        "name": "Rice bread",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 slices",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good safe option. Check for additives."
+      },
+      {
+        "name": "Naan bread",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "lactose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Contains wheat AND often milk/yogurt."
+      },
+      {
+        "name": "Croissant",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans", "lactose"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Wheat flour and butter/milk. High fat may also trigger symptoms."
+      },
+      {
+        "name": "Tortilla (corn)",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2-3 small tortillas",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Check for wheat flour addition. Pure corn tortillas are safe."
+      },
+      {
+        "name": "Tortilla (wheat/flour)",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "1 small only",
+        "high_fodmap_threshold": ">1 standard tortilla",
+        "crohns_notes": "Contains wheat. Use corn tortillas instead."
+      },
+      {
+        "name": "Pita bread (wheat)",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended during elimination",
+        "high_fodmap_threshold": ">1/2 pita",
+        "crohns_notes": "Wheat-based."
+      },
+      {
+        "name": "Pumpernickel bread",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Made from rye. Very high fructans."
+      },
+      {
+        "name": "English muffin (wheat)",
+        "category": "bread",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "Not recommended",
+        "high_fodmap_threshold": "Any serving",
+        "crohns_notes": "Wheat-based."
+      },
+      {
+        "name": "Pancakes / Waffles (GF mix)",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "2 small pancakes",
+        "high_fodmap_threshold": "Check mix ingredients",
+        "crohns_notes": "Use GF flour, lactose-free milk, eggs. Top with maple syrup (not honey) and safe fruits."
+      },
+      {
+        "name": "Rice paper wrappers",
+        "category": "bread",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "4 sheets (32g)",
+        "high_fodmap_threshold": "N/A at normal serving",
+        "crohns_notes": "Good for spring rolls with low-FODMAP fillings."
+      }
+    ],
+
+    "oils_and_fats": [
+      {
+        "name": "Olive oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A - no FODMAPs in pure oils",
+        "crohns_notes": "Anti-inflammatory oleic acid. Extra virgin has most polyphenols. Recommended for Crohn's."
+      },
+      {
+        "name": "Garlic-infused olive oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A - fructans are water-soluble, not oil-soluble",
+        "crohns_notes": "THE key cooking ingredient for low-FODMAP flavor. Ensure no garlic pieces remain in the oil."
+      },
+      {
+        "name": "Coconut oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Contains medium-chain triglycerides (MCTs) which are easily absorbed. Good for Crohn's patients with fat malabsorption."
+      },
+      {
+        "name": "Avocado oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good high-heat cooking oil. Anti-inflammatory."
+      },
+      {
+        "name": "Sesame oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good for Asian-style cooking."
+      },
+      {
+        "name": "Canola / Rapeseed oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good omega-3 to omega-6 ratio."
+      },
+      {
+        "name": "Peanut oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Good for high-heat cooking."
+      },
+      {
+        "name": "Sunflower oil",
+        "category": "oil",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "High in omega-6; balance with omega-3 sources."
+      },
+      {
+        "name": "Butter",
+        "category": "fat",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited (typical: 2 tbsp)",
+        "high_fodmap_threshold": "N/A - trace lactose only",
+        "crohns_notes": "Almost pure fat. Safe. Good calorie source."
+      },
+      {
+        "name": "Ghee / Clarified butter",
+        "category": "fat",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tbsp",
+        "high_fodmap_threshold": "N/A - zero lactose",
+        "crohns_notes": "All milk solids removed. Zero lactose. Good for dairy-sensitive Crohn's patients."
+      },
+      {
+        "name": "Margarine",
+        "category": "fat",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Per normal use",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Check for milk solids and whey in ingredients."
+      },
+      {
+        "name": "Lard",
+        "category": "fat",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Per normal use",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "Pure animal fat. No FODMAPs."
+      }
+    ],
+
+    "herbs_and_spices": [
+      {
+        "name": "Fresh herbs (basil, cilantro, dill, mint, oregano, parsley, rosemary, sage, thyme, tarragon, lemongrass)",
+        "category": "herb",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Unlimited",
+        "high_fodmap_threshold": "N/A",
+        "crohns_notes": "All fresh herbs are low FODMAP and safe. Great for adding flavor without garlic/onion."
+      },
+      {
+        "name": "Dried spices (black pepper, cinnamon, cumin, turmeric, paprika, ginger, cardamom, cloves, nutmeg, saffron, star anise, allspice, coriander seeds, fennel seeds, mustard seeds)",
+        "category": "spice",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Normal recipe quantities",
+        "high_fodmap_threshold": "N/A at normal cooking amounts",
+        "crohns_notes": "All safe. Turmeric and ginger have anti-inflammatory properties - excellent for Crohn's. Chili/cayenne may irritate during flares."
+      },
+      {
+        "name": "Garlic powder / Garlic salt",
+        "category": "spice",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "AVOID",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "Concentrated fructans. Hidden in many spice blends, seasoning mixes, and processed foods."
+      },
+      {
+        "name": "Onion powder / Onion salt",
+        "category": "spice",
+        "fodmap_rating": "HIGH",
+        "fodmap_types": ["fructans"],
+        "safe_serving": "AVOID",
+        "high_fodmap_threshold": "Any amount",
+        "crohns_notes": "Concentrated fructans. Check all spice blends and seasoning packets."
+      },
+      {
+        "name": "Asafoetida (hing) powder",
+        "category": "spice",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "1 tsp",
+        "high_fodmap_threshold": "N/A at normal cooking amounts",
+        "crohns_notes": "Provides onion/garlic-like flavor without FODMAPs. Key ingredient for Indian low-FODMAP cooking."
+      },
+      {
+        "name": "Curry powder (check ingredients)",
+        "category": "spice",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Normal recipe amount if no onion/garlic",
+        "high_fodmap_threshold": "Check for onion/garlic powder in blend",
+        "crohns_notes": "Contains turmeric which is anti-inflammatory. Just verify no onion/garlic in the blend."
+      },
+      {
+        "name": "Five spice powder",
+        "category": "spice",
+        "fodmap_rating": "LOW",
+        "fodmap_types": [],
+        "safe_serving": "Normal recipe amount",
+        "high_fodmap_threshold": "N/A at normal cooking amounts",
+        "crohns_notes": "Traditional Chinese five spice is low FODMAP."
+      }
+    ]
+  },
+
+  "cooking_effects_on_fodmaps": {
+    "description": "How preparation and cooking methods change FODMAP content in foods",
+    "methods": [
+      {
+        "method": "Canning and draining legumes",
+        "effect": "Reduces GOS and fructans by approximately 50%",
+        "details": "FODMAPs are water-soluble and leach into the canning liquid during storage. Draining and rinsing canned legumes removes the FODMAP-rich liquid.",
+        "examples": [
+          "Canned lentils (drained): low FODMAP at 46g vs dried cooked lentils which are high FODMAP",
+          "Canned chickpeas (drained): low FODMAP at 42g (1/4 cup)",
+          "Canned black beans (drained): low FODMAP at 45g"
+        ]
+      },
+      {
+        "method": "Soaking dried legumes (12-24 hours)",
+        "effect": "Partially reduces GOS content",
+        "details": "Soaking and discarding the soaking water removes some water-soluble FODMAPs. Less effective than canning but still beneficial. Always discard soaking water.",
+        "examples": [
+          "Dried lentils soaked 12-24 hours then boiled: lower FODMAP than unsoaked",
+          "Dried chickpeas soaked overnight: reduced GOS"
+        ]
+      },
+      {
+        "method": "Prolonged boiling of legumes",
+        "effect": "Progressively lowers FODMAP content",
+        "details": "Research shows boiling dried red lentils or kidney beans progressively lowers their FODMAP content every 5 minutes up to 30 minutes. Straining after cooking removes additional FODMAPs from the cooking liquid.",
+        "examples": [
+          "Red lentils boiled 30+ minutes and drained: significantly lower FODMAPs",
+          "Kidney beans boiled and drained: reduced GOS"
+        ]
+      },
+      {
+        "method": "Sourdough fermentation of bread",
+        "effect": "Breaks down fructans significantly",
+        "details": "Long, slow fermentation (12-24 hours) by sourdough cultures breaks down fructans in wheat and spelt flour. The lactic acid bacteria consume fructans as food. Mass-produced bread with 'sourdough flavoring' does NOT have reduced fructans.",
+        "examples": [
+          "Spelt sourdough (long-ferment): low FODMAP at 2 slices",
+          "Wheat sourdough (long-ferment): lower FODMAP than regular wheat bread",
+          "Commercial quick-rise 'sourdough': NOT reduced - still high FODMAP"
+        ]
+      },
+      {
+        "method": "Pickling / Vinegar preservation",
+        "effect": "May reduce FODMAPs in some vegetables",
+        "details": "The pickling process can allow FODMAPs to leach into the brine. Pickled vegetables may have lower FODMAP content than fresh.",
+        "examples": [
+          "Pickled beetroot: low FODMAP vs fresh beetroot which is high",
+          "Pickled gherkins: low FODMAP",
+          "Pickled onions (large, well-pickled): may be tolerated in small amounts"
+        ]
+      },
+      {
+        "method": "Infusing oil with garlic/onion",
+        "effect": "Flavor without FODMAPs",
+        "details": "Fructans are water-soluble but NOT oil-soluble. Heating garlic or onion in oil transfers flavor compounds to the oil without transferring fructans. The garlic/onion pieces must be completely removed.",
+        "examples": [
+          "Garlic-infused olive oil: full garlic flavor, zero fructans",
+          "Onion-infused oil: onion flavor without FODMAPs"
+        ]
+      },
+      {
+        "method": "Banana ripening",
+        "effect": "Increases FODMAP content",
+        "details": "As bananas ripen, resistant starch converts to fructans and free sugars. Green/firm bananas are low FODMAP; ripe (spotted) bananas are moderate to high FODMAP.",
+        "examples": [
+          "Firm/slightly green banana: low FODMAP at 1 medium",
+          "Ripe/spotted banana: moderate FODMAP, reduce to 1/3 medium"
+        ]
+      },
+      {
+        "method": "Draining canned vegetables",
+        "effect": "Reduces water-soluble FODMAPs",
+        "details": "Similar to legumes, canned vegetables that sit in liquid will have some FODMAPs leach into the liquid. Draining reduces FODMAP content.",
+        "examples": [
+          "Canned mushrooms (drained): lower mannitol than fresh mushrooms",
+          "Canned beetroot (drained): lower fructans than fresh"
+        ]
+      },
+      {
+        "method": "Freezing",
+        "effect": "No significant change to FODMAP content",
+        "details": "Freezing does not significantly alter FODMAP levels in foods.",
+        "examples": []
+      },
+      {
+        "method": "Drying / Dehydrating fruit",
+        "effect": "CONCENTRATES FODMAPs",
+        "details": "Removing water concentrates sugars including fructose and sorbitol per gram. Dried fruits are almost always higher FODMAP than fresh equivalents.",
+        "examples": [
+          "Fresh pineapple (1 cup): low FODMAP. Dried pineapple: HIGH FODMAP",
+          "Fresh cranberries: low FODMAP. Dried cranberries: limit to 1 tbsp",
+          "Raisins, sultanas, prunes, dried apricots, dried mango: all HIGH FODMAP"
+        ]
+      }
+    ]
+  },
+
+  "fodmap_stacking_rules": {
+    "description": "How combining multiple FODMAP-containing foods in one meal affects total FODMAP load",
+    "key_principles": [
+      {
+        "rule": "Green (low) serves can be safely combined",
+        "explanation": "Monash's cut-off criteria were set conservatively. Multiple green-light serves of different foods can be combined in one meal without triggering symptoms for most people."
+      },
+      {
+        "rule": "Same FODMAP type stacks faster",
+        "explanation": "Combining two foods that are both moderate in the SAME FODMAP type (e.g., two fructose sources) is more likely to push you over your threshold than combining two different types (e.g., one fructose + one GOS source)."
+      },
+      {
+        "rule": "All FODMAP types DO stack together",
+        "explanation": "While same-type stacking is most risky, ALL FODMAP types can contribute to total fermentation load. Even different types (fructose + fructans + GOS) stack together at some level."
+      },
+      {
+        "rule": "Limit moderate (amber) foods to one per meal",
+        "explanation": "As a practical guideline, include no more than one moderate-FODMAP food per meal. Spacing meals 2-3 hours apart allows the gut to process before the next FODMAP load."
+      },
+      {
+        "rule": "Meal spacing matters",
+        "explanation": "Leave 2-3 hours between meals and snacks. This prevents FODMAPs from one meal combining with the next in the gut. FODMAPs from a meal typically reach the colon within 2-4 hours."
+      },
+      {
+        "rule": "Individual tolerance varies greatly",
+        "explanation": "There are no universal stacking thresholds. Personal tolerance depends on gut bacteria composition, transit time, visceral sensitivity, and overall gut health. Crohn's patients typically have lower tolerance than IBS patients."
+      }
+    ],
+    "practical_examples": {
+      "safe_combination": "Sourdough bread (fructans: green) + cheddar cheese (lactose: green) + strawberries (fructose: green) + butter (no FODMAPs) = safe meal. All green serves from different FODMAP types.",
+      "risky_combination": "Honeydew melon (fructose: green at 90g) + mango (fructose: green at 40g) + orange juice (fructose: green at 100ml) = potentially problematic. Three fructose sources stacking.",
+      "unsafe_combination": "Avocado 1/4 (sorbitol: moderate) + sweet potato 100g (mannitol: moderate) + broccoli heads 100g (fructans: moderate) = likely high FODMAP meal. Three moderate serves in one sitting."
+    },
+    "crohns_specific_note": "Crohn's patients, especially those with active disease or post-resection, typically have LOWER FODMAP tolerance thresholds than IBS patients. Be more conservative with stacking during flares. Start with smaller portions and single-FODMAP-type meals during elimination phase."
+  },
+
+  "three_phase_fodmap_approach": {
+    "phase_1_elimination": {
+      "name": "Elimination Phase",
+      "duration": "2-6 weeks (not longer)",
+      "description": "Strictly reduce all high-FODMAP foods to determine if FODMAPs are causing symptoms. Replace high-FODMAP foods with low-FODMAP alternatives.",
+      "key_points": [
+        "This is NOT a forever diet - it is a diagnostic tool",
+        "Work with a FODMAP-trained dietitian (essential for Crohn's patients who already risk malnutrition)",
+        "Eat only green-light (low) FODMAP serves",
+        "If symptoms improve significantly (typically 50-80% improvement), FODMAPs are likely a trigger",
+        "If no improvement after 6 weeks, FODMAPs are likely not the primary issue",
+        "Continue all IBD medications as prescribed - FODMAP diet does NOT replace medical treatment"
+      ],
+      "crohns_specific": "Crohn's patients should only attempt elimination while in remission or near-remission. During active flares, focus on medical management first. The restrictive nature risks worsening malnutrition if not supervised."
+    },
+    "phase_2_reintroduction": {
+      "name": "Reintroduction (Challenge) Phase",
+      "duration": "6-8 weeks",
+      "description": "Systematically test each FODMAP subgroup to identify which specific types trigger YOUR symptoms and at what dose.",
+      "protocol": [
+        {
+          "step": 1,
+          "instruction": "Choose one FODMAP subgroup to test (e.g., fructose)",
+          "note": "Keep background diet low FODMAP throughout"
+        },
+        {
+          "step": 2,
+          "instruction": "Day 1: small serve of test food (e.g., 1/2 tsp honey for fructose)",
+          "note": "Monitor symptoms for 24 hours"
+        },
+        {
+          "step": 3,
+          "instruction": "Day 2: medium serve of test food (e.g., 1 tsp honey)",
+          "note": "Monitor symptoms"
+        },
+        {
+          "step": 4,
+          "instruction": "Day 3: large/normal serve of test food (e.g., 1 tbsp honey)",
+          "note": "Monitor symptoms"
+        },
+        {
+          "step": 5,
+          "instruction": "Days 4-6: washout period - return to strict low FODMAP",
+          "note": "Allow gut to reset before next challenge"
+        },
+        {
+          "step": 6,
+          "instruction": "Repeat with next FODMAP subgroup",
+          "note": "Test all 6 subgroups: fructose, lactose, fructans, GOS, sorbitol, mannitol"
+        }
+      ],
+      "challenge_foods_by_type": {
+        "fructose": "Honey (1-3 tsp) or mango (increasing portions)",
+        "lactose": "Regular milk (increasing from 1/4 cup to 1 cup)",
+        "fructans_grains": "Wheat bread (increasing from 1 to 2 slices)",
+        "fructans_vegetables": "Garlic (1/4 to 1 clove) or onion (increasing portions)",
+        "GOS": "Chickpeas or lentils (increasing portions)",
+        "sorbitol": "Avocado (increasing from 1/8 to 1/2) or peach",
+        "mannitol": "Mushrooms (increasing from 2 to 8) or cauliflower"
+      },
+      "crohns_specific": "Crohn's patients may need slower reintroduction with smaller increments. Keep a detailed symptom diary. Distinguish between FODMAP reactions (gas, bloating, diarrhea within 2-6 hours) and Crohn's flare symptoms (bloody stool, fever, sustained pain)."
+    },
+    "phase_3_personalization": {
+      "name": "Personalization (Modified FODMAP) Phase",
+      "duration": "Ongoing / Lifetime",
+      "description": "Establish your individualized long-term diet based on reintroduction results. Only restrict the specific FODMAPs that triggered symptoms, at the doses that triggered them.",
+      "key_points": [
+        "Liberalize diet as much as tolerated - more variety = better gut health",
+        "You may tolerate some high-FODMAP foods at certain portions",
+        "FODMAP tolerance can change over time - retest every 3-6 months",
+        "Stress, illness, menstruation, and sleep can temporarily lower tolerance",
+        "Aim for maximum dietary diversity to support microbiome health",
+        "The goal is the LEAST restrictive diet that controls symptoms"
+      ],
+      "crohns_specific": "FODMAP tolerance may decrease during Crohn's flares and increase during remission. Re-evaluate triggers when disease state changes. Monitor nutritional status regularly - vitamin D, B12, iron, folate, calcium, and zinc are commonly deficient in Crohn's."
+    }
+  },
+
+  "common_fodmap_mistakes": [
+    {
+      "mistake": "Treating low FODMAP as a permanent diet",
+      "explanation": "The elimination phase should last 2-6 weeks only. Long-term strict restriction reduces beneficial gut bacteria (especially bifidobacteria) and risks nutritional deficiencies.",
+      "correction": "Always progress to reintroduction and personalization phases. The goal is the LEAST restrictive diet."
+    },
+    {
+      "mistake": "Confusing gluten-free with low FODMAP",
+      "explanation": "Gluten-free products are not automatically low FODMAP. Many GF products contain inulin, chicory root fiber, honey, apple juice, or other high-FODMAP ingredients. Conversely, small amounts of wheat (1 slice bread) may be tolerated on low FODMAP.",
+      "correction": "Always check the FULL ingredient list, not just 'gluten-free' label."
+    },
+    {
+      "mistake": "Ignoring serving sizes",
+      "explanation": "Many foods are low FODMAP at one serving size but high at another. For example, sweet potato is low at 75g but high at 150g. Eating 'low FODMAP' foods in large portions defeats the purpose.",
+      "correction": "Weigh foods during elimination phase. Use a food scale. Follow Monash app serving sizes precisely."
+    },
+    {
+      "mistake": "Not checking processed food ingredients",
+      "explanation": "Garlic powder, onion powder, honey, HFCS, inulin, and chicory root fiber hide in many processed foods: stock cubes, sauces, dressings, protein bars, cereals, flavored chips, marinades.",
+      "correction": "Read EVERY ingredient label during elimination. Cook from scratch when possible."
+    },
+    {
+      "mistake": "Ignoring FODMAP stacking",
+      "explanation": "Eating multiple moderate-FODMAP foods in one meal, or multiple servings of low-FODMAP foods from the same FODMAP group, can push total intake above tolerance threshold.",
+      "correction": "Limit to one moderate-FODMAP food per meal. Space meals 2-3 hours apart. Vary FODMAP types across meals."
+    },
+    {
+      "mistake": "Avoiding ALL dairy instead of just high-lactose dairy",
+      "explanation": "Hard/aged cheeses (cheddar, parmesan, Swiss) and butter are virtually lactose-free. Cutting all dairy eliminates key calcium sources unnecessarily.",
+      "correction": "Include aged cheeses and lactose-free dairy products. Only avoid high-lactose items (milk, yogurt, soft cheese, ice cream) unless using lactose-free versions."
+    },
+    {
+      "mistake": "Not distinguishing between onion/garlic bulb and infused oil",
+      "explanation": "People avoid all garlic/onion flavor when only the fructan-containing solid matters. Fructans are water-soluble but NOT oil-soluble, so garlic/onion-infused oils are safe.",
+      "correction": "Use garlic-infused oil and onion-infused oil freely. Also safe: green tops of spring onions/leeks, chives, asafoetida."
+    },
+    {
+      "mistake": "Eating canned legumes without draining and rinsing",
+      "explanation": "The canning liquid contains leached FODMAPs. Eating legumes with their liquid delivers a much higher FODMAP dose.",
+      "correction": "Always drain and rinse canned legumes thoroughly before use."
+    },
+    {
+      "mistake": "Assuming natural/organic means low FODMAP",
+      "explanation": "Honey is natural but very high FODMAP. Agave is organic but 90% fructose. Many 'health foods' (granola, kombucha, dried fruit, protein bars with chicory) are high FODMAP.",
+      "correction": "FODMAP content has nothing to do with whether a food is natural, organic, or 'healthy'."
+    },
+    {
+      "mistake": "Following the diet without professional support",
+      "explanation": "Self-directed FODMAP elimination risks over-restriction, nutritional deficiency, incorrect reintroduction, and psychological food anxiety. Especially dangerous for Crohn's patients who already risk malnutrition.",
+      "correction": "Work with a FODMAP-trained dietitian, especially if you have IBD. Many offer telehealth consultations."
+    },
+    {
+      "mistake": "Not re-testing trigger foods periodically",
+      "explanation": "FODMAP tolerance changes over time based on stress, gut bacteria changes, disease activity, and other factors. What triggered symptoms 6 months ago may be tolerated now.",
+      "correction": "Re-challenge trigger foods every 3-6 months. Tolerance often improves once the gut has time to heal."
+    },
+    {
+      "mistake": "Using outdated FODMAP lists",
+      "explanation": "Monash University continuously tests and updates their database. Foods previously rated high may now be low at certain servings, and vice versa. For example, blueberry serving size was increased from 40g to 125g in recent updates.",
+      "correction": "Use the Monash FODMAP app (regularly updated) rather than static printouts or old blog posts."
+    }
+  ],
+
+  "crohns_disease_specific_considerations": {
+    "general_notes": [
+      "The low-FODMAP diet was developed for IBS, not IBD. It manages SYMPTOMS (bloating, gas, diarrhea) but does NOT reduce inflammation.",
+      "50-70% of IBD patients have concurrent IBS-like symptoms that may respond to FODMAP reduction.",
+      "NEVER use FODMAP diet as a substitute for prescribed IBD medications (biologics, immunomodulators, etc.).",
+      "Crohn's patients are at higher risk of nutritional deficiencies - monitor B12, iron, folate, vitamin D, calcium, zinc, and magnesium.",
+      "The restrictive nature of FODMAP elimination can worsen already-existing malnutrition in Crohn's patients.",
+      "Work with BOTH a gastroenterologist AND a FODMAP-trained dietitian."
+    ],
+    "post_resection_considerations": [
+      "After bowel resection, absorptive surface area is reduced. Prioritize nutrient-dense foods even within FODMAP constraints.",
+      "Bile acid malabsorption is common after ileal resection - may cause diarrhea independent of FODMAPs.",
+      "Short bowel syndrome risk: if significant bowel removed, dietary management is more complex than FODMAP alone.",
+      "Insoluble fiber tolerance is often reduced post-resection. Cook vegetables well, peel fruits, avoid raw salads initially.",
+      "Fat malabsorption may occur - MCT oil (coconut oil) is more easily absorbed than long-chain fats.",
+      "B12 absorption occurs in the terminal ileum - if resected, B12 injections may be needed regardless of diet.",
+      "Gradually increase fiber as healing progresses. Start with soluble fiber (oats, peeled cooked vegetables) before insoluble."
+    ],
+    "flare_vs_remission_diet": {
+      "during_flare": [
+        "Focus on medical management first, diet second",
+        "Low residue/low fiber foods: white rice, peeled potatoes, eggs, plain chicken, bananas, white bread (even if high FODMAP - caloric intake may take priority)",
+        "Avoid raw vegetables, seeds, nuts, popcorn, corn, dried fruit",
+        "Small, frequent meals rather than large meals",
+        "Stay hydrated - electrolyte drinks if diarrhea is severe",
+        "Consider liquid nutrition supplements if eating is difficult"
+      ],
+      "during_remission": [
+        "Gradually expand diet variety",
+        "FODMAP elimination/reintroduction can be attempted",
+        "Slowly increase fiber intake",
+        "Introduce anti-inflammatory foods: omega-3 rich fish, turmeric, ginger, olive oil",
+        "Rebuild gut microbiome diversity through varied diet"
+      ]
+    },
+    "foods_especially_beneficial_for_crohns": [
+      {
+        "food": "Salmon / fatty fish",
+        "reason": "Omega-3 fatty acids reduce inflammation. Anti-inflammatory effect well-documented in IBD research."
+      },
+      {
+        "food": "Bone broth (homemade, no onion/garlic)",
+        "reason": "Easy to digest, nutrient-dense, may support gut lining repair. Use green leek tops and chives for flavor."
+      },
+      {
+        "food": "Ginger",
+        "reason": "Anti-inflammatory and anti-nausea properties. Helps with medication side effects."
+      },
+      {
+        "food": "Turmeric (with black pepper)",
+        "reason": "Curcumin has demonstrated anti-inflammatory effects in IBD studies. Black pepper increases absorption 2000%."
+      },
+      {
+        "food": "Firm banana",
+        "reason": "Easy to digest, potassium-rich, binding effect for diarrhea, low FODMAP."
+      },
+      {
+        "food": "Cooked carrots and potatoes",
+        "reason": "Safe, easy to digest, good calorie and nutrient density when peeled and well-cooked."
+      },
+      {
+        "food": "Oat porridge",
+        "reason": "Soluble fiber soothes gut. Easy to digest. Good vehicle for adding calories (butter, maple syrup)."
+      },
+      {
+        "food": "Lactose-free yogurt",
+        "reason": "Probiotics support beneficial gut bacteria. Protein and calcium source."
+      },
+      {
+        "food": "Eggs",
+        "reason": "Complete protein, easy to digest, versatile preparation methods."
+      },
+      {
+        "food": "Olive oil (extra virgin)",
+        "reason": "Anti-inflammatory polyphenols. Calorie-dense for patients who need to gain weight."
+      }
+    ],
+    "medication_diet_interactions": [
+      "Corticosteroids: Increase need for calcium and vitamin D. Prioritize hard cheese, lactose-free dairy, fortified plant milks.",
+      "Methotrexate: Increases folate need. Eat folate-rich foods: spinach (cooked), oranges, eggs.",
+      "Azathioprine/6-MP: Grapefruit may interact. Avoid or check with pharmacist.",
+      "Biologics (Humira, Remicade, etc.): No specific FODMAP interactions, but ensure adequate nutrition to support immune function.",
+      "Sulfasalazine: May reduce folate absorption. Supplement as directed.",
+      "Iron supplements: Take with vitamin C (orange juice at safe FODMAP serving) for better absorption. Avoid taking with calcium-rich foods."
+    ]
+  }
+}

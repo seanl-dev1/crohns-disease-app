@@ -1,0 +1,1538 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-31",
+    "total_recipes": 105,
+    "disclaimer": "These recipes are designed for Crohn's disease patients. Always consult your healthcare provider or dietitian before making dietary changes.",
+    "notes": "All recipes tagged by recovery phase, dietary restrictions, and key nutrients. Phase safety indicates minimum recovery phase where recipe is appropriate."
+  },
+  "recipes": [
+    {
+      "id": "flare_001",
+      "name": "Plain White Rice Bowl",
+      "description": "Simple, easy-to-digest white rice. The safest staple during a flare.",
+      "meal_type": "lunch",
+      "prep_time_minutes": 2,
+      "cook_time_minutes": 20,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "white rice", "amount": "1 cup", "notes": "long grain or jasmine", "substitution": "white basmati rice" },
+        { "item": "water", "amount": "2 cups", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "optional", "substitution": "" }
+      ],
+      "instructions": [
+        "Rinse rice under cold water until water runs clear.",
+        "Combine rice, water, and salt in a pot. Bring to boil.",
+        "Reduce heat to low, cover, and simmer 18 minutes.",
+        "Remove from heat, keep covered 5 minutes. Fluff with fork."
+      ],
+      "nutrition_per_serving": { "calories": 205, "protein_g": 4, "fat_g": 0.5, "carbs_g": 45, "fiber_g": 0.6, "sugar_g": 0, "sodium_mg": 150 },
+      "key_nutrients": [],
+      "crohns_notes": "White rice is one of the most universally tolerated foods during a Crohn's flare. Low residue, low fiber, easy to digest.",
+      "post_resection_notes": "Safe at all stages post-resection. Low fat content means no bile acid concerns."
+    },
+    {
+      "id": "flare_002",
+      "name": "Simple Chicken and Rice",
+      "description": "Tender poached chicken breast over white rice. Gentle protein and carbs.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 25,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "2 (6 oz each)", "notes": "boneless, skinless", "substitution": "turkey breast" },
+        { "item": "white rice", "amount": "1 cup", "notes": "", "substitution": "" },
+        { "item": "water or low-sodium chicken broth", "amount": "3 cups", "notes": "check broth for onion/garlic if low-FODMAP", "substitution": "bone broth" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Bring 2 cups broth/water to a gentle simmer in a pot.",
+        "Add chicken breasts, cover, and poach on low heat for 20-25 minutes until internal temp reaches 165°F.",
+        "While chicken cooks, prepare rice with remaining 1 cup liquid + 1 cup water.",
+        "Remove chicken, let rest 5 minutes, then slice or shred.",
+        "Serve chicken over rice."
+      ],
+      "nutrition_per_serving": { "calories": 385, "protein_g": 40, "fat_g": 3.5, "carbs_g": 45, "fiber_g": 0.6, "sugar_g": 0, "sodium_mg": 350 },
+      "key_nutrients": ["B12", "protein", "zinc"],
+      "crohns_notes": "Poaching keeps chicken tender and easy to digest — much gentler than grilling or frying. Avoid adding spices during a flare.",
+      "post_resection_notes": "Excellent post-resection meal. Low fat, high protein for healing. B12 from chicken supports ileal resection patients."
+    },
+    {
+      "id": "flare_003",
+      "name": "Banana Oatmeal",
+      "description": "Creamy oatmeal with ripe mashed banana. Gentle soluble fiber and natural sweetness.",
+      "meal_type": "breakfast",
+      "prep_time_minutes": 2,
+      "cook_time_minutes": 5,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-residue"],
+      "ingredients": [
+        { "item": "quick oats", "amount": "1/2 cup", "notes": "use certified gluten-free if needed", "substitution": "cream of rice" },
+        { "item": "water", "amount": "1 cup", "notes": "", "substitution": "lactose-free milk" },
+        { "item": "ripe banana", "amount": "1 medium", "notes": "must be ripe (yellow with brown spots)", "substitution": "" },
+        { "item": "salt", "amount": "pinch", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Combine oats and water in a pot. Bring to a simmer.",
+        "Cook 3-5 minutes, stirring occasionally, until creamy.",
+        "Mash banana and stir into oatmeal.",
+        "Add pinch of salt. Serve warm."
+      ],
+      "nutrition_per_serving": { "calories": 255, "protein_g": 6, "fat_g": 3, "carbs_g": 52, "fiber_g": 4.5, "sugar_g": 14, "sodium_mg": 75 },
+      "key_nutrients": ["potassium", "magnesium"],
+      "crohns_notes": "Oats are soluble fiber — generally well tolerated. Ripe banana is low-FODMAP at 1 medium. Unripe/green banana is high in resistant starch and may cause issues.",
+      "post_resection_notes": "Good source of soluble fiber for stool consistency. Keep to 1/2 cup oats to stay in safe fiber range early post-resection."
+    },
+    {
+      "id": "flare_004",
+      "name": "Scrambled Eggs",
+      "description": "Soft, creamy scrambled eggs. Quick protein that's easy on the gut.",
+      "meal_type": "breakfast",
+      "prep_time_minutes": 2,
+      "cook_time_minutes": 5,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "gluten-free", "low-fiber", "high-protein", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "eggs", "amount": "3 large", "notes": "", "substitution": "" },
+        { "item": "butter", "amount": "1 tsp", "notes": "low-FODMAP in small amounts", "substitution": "olive oil" },
+        { "item": "salt", "amount": "pinch", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Crack eggs into a bowl, whisk until uniform.",
+        "Melt butter in nonstick pan over medium-low heat.",
+        "Pour in eggs, stir gently with spatula as they set.",
+        "Remove from heat while still slightly wet — they'll finish cooking from residual heat.",
+        "Season with salt."
+      ],
+      "nutrition_per_serving": { "calories": 255, "protein_g": 19, "fat_g": 19, "carbs_g": 1.5, "fiber_g": 0, "sugar_g": 1, "sodium_mg": 290 },
+      "key_nutrients": ["B12", "vitamin D", "protein", "selenium", "zinc"],
+      "crohns_notes": "Eggs are one of the most tolerated protein sources for Crohn's patients. Cook soft/scrambled rather than fried for easier digestion.",
+      "post_resection_notes": "Excellent B12 and vitamin D source. Fat is moderate — if bile acid diarrhea is an issue, use 2 eggs instead of 3 or cook with spray oil."
+    },
+    {
+      "id": "flare_005",
+      "name": "Applesauce",
+      "description": "Homemade smooth applesauce. Gentle, soothing, pectin-rich.",
+      "meal_type": "snack",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 20,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "apples", "amount": "4 medium", "notes": "peeled and cored — skins removed", "substitution": "" },
+        { "item": "water", "amount": "1/2 cup", "notes": "", "substitution": "" },
+        { "item": "cinnamon", "amount": "1/4 tsp", "notes": "optional — skip during severe flare", "substitution": "" }
+      ],
+      "instructions": [
+        "Peel, core, and chop apples into small chunks.",
+        "Place in pot with water. Bring to a boil.",
+        "Reduce heat, cover, simmer 15-20 minutes until very soft.",
+        "Mash with a fork or blend until smooth.",
+        "Stir in cinnamon if using. Serve warm or chilled."
+      ],
+      "nutrition_per_serving": { "calories": 72, "protein_g": 0.5, "fat_g": 0, "carbs_g": 19, "fiber_g": 1.5, "sugar_g": 14, "sodium_mg": 0 },
+      "key_nutrients": ["vitamin C", "potassium"],
+      "crohns_notes": "Cooked, peeled apples are well tolerated. Pectin (soluble fiber) can help firm loose stools. Keep to 1/2 cup serving to stay low-FODMAP.",
+      "post_resection_notes": "Safe post-resection. Pectin may help manage loose stools common after resection."
+    },
+    {
+      "id": "flare_006",
+      "name": "White Toast with Smooth Peanut Butter",
+      "description": "Simple toast with a thin layer of smooth peanut butter. Quick energy and protein.",
+      "meal_type": "snack",
+      "prep_time_minutes": 3,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["dairy-free", "low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "white bread", "amount": "2 slices", "notes": "sourdough is also good — lower FODMAP than regular wheat", "substitution": "gluten-free white bread" },
+        { "item": "smooth peanut butter", "amount": "1 tbsp", "notes": "smooth only — no chunky. Check label for no added sugar alcohols", "substitution": "smooth almond butter (limit 1 tbsp for low-FODMAP)" }
+      ],
+      "instructions": [
+        "Toast bread to desired level.",
+        "Spread thin layer of smooth peanut butter.",
+        "Cut in half if easier to eat in small bites."
+      ],
+      "nutrition_per_serving": { "calories": 235, "protein_g": 9, "fat_g": 9, "carbs_g": 30, "fiber_g": 1.5, "sugar_g": 4, "sodium_mg": 310 },
+      "key_nutrients": ["protein", "magnesium"],
+      "crohns_notes": "Smooth peanut butter at 2 tbsp is low-FODMAP. Stick to 1 tbsp if cautious. White bread is low residue — choose over whole wheat during flares.",
+      "post_resection_notes": "Keep peanut butter to 1 tbsp to limit fat if bile acid malabsorption is an issue."
+    },
+    {
+      "id": "flare_007",
+      "name": "Chicken Bone Broth",
+      "description": "Rich, healing bone broth. Sip throughout the day for hydration and nutrients.",
+      "meal_type": "soup",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 240,
+      "servings": 8,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue", "anti-inflammatory", "low-oxalate"],
+      "ingredients": [
+        { "item": "chicken carcass or bones", "amount": "1 whole carcass", "notes": "from a rotisserie chicken works great", "substitution": "beef bones" },
+        { "item": "water", "amount": "10 cups", "notes": "", "substitution": "" },
+        { "item": "apple cider vinegar", "amount": "2 tbsp", "notes": "helps extract minerals from bones", "substitution": "lemon juice" },
+        { "item": "salt", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "carrots", "amount": "2 medium, peeled", "notes": "remove before serving — just for flavor", "substitution": "" }
+      ],
+      "instructions": [
+        "Place bones in a large pot. Add water and vinegar.",
+        "Add carrots and salt.",
+        "Bring to a boil, then reduce to a very low simmer.",
+        "Simmer 4-6 hours (or 2 hours in pressure cooker).",
+        "Strain through fine mesh strainer. Discard solids.",
+        "Cool and refrigerate. Skim fat layer off top before reheating.",
+        "Store in fridge 5 days or freeze in portions."
+      ],
+      "nutrition_per_serving": { "calories": 40, "protein_g": 6, "fat_g": 1, "carbs_g": 1, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 300 },
+      "key_nutrients": ["protein", "calcium", "magnesium", "potassium", "zinc"],
+      "crohns_notes": "Bone broth provides easily absorbed minerals and amino acids (glutamine, glycine, proline) that may support gut lining repair. Skim fat off top for low-fat version.",
+      "post_resection_notes": "Excellent for hydration and electrolyte replacement post-resection. Skim fat off top to prevent bile acid-related diarrhea."
+    },
+    {
+      "id": "flare_008",
+      "name": "Mashed Potatoes",
+      "description": "Smooth, creamy mashed potatoes. Comfort food that's easy to digest.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 20,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["gluten-free", "low-fiber", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "russet potatoes", "amount": "4 medium", "notes": "peeled", "substitution": "Yukon gold potatoes" },
+        { "item": "butter", "amount": "2 tbsp", "notes": "", "substitution": "olive oil for dairy-free" },
+        { "item": "lactose-free milk", "amount": "1/4 cup", "notes": "warm", "substitution": "oat milk or rice milk" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Peel potatoes and cut into 1-inch chunks.",
+        "Boil in salted water until fork-tender, about 15-20 minutes.",
+        "Drain well. Return to pot.",
+        "Add butter and warm milk. Mash until smooth.",
+        "Season with salt. Do not over-mix or they'll get gluey."
+      ],
+      "nutrition_per_serving": { "calories": 195, "protein_g": 4, "fat_g": 6, "carbs_g": 32, "fiber_g": 2, "sugar_g": 2, "sodium_mg": 320 },
+      "key_nutrients": ["potassium", "vitamin C"],
+      "crohns_notes": "Peeled, well-cooked potatoes are low residue and well tolerated. Using lactose-free milk avoids dairy issues. Potatoes are a good potassium source.",
+      "post_resection_notes": "Good for electrolyte replenishment (potassium). Moderate fat — reduce butter if bile acid diarrhea is active."
+    },
+    {
+      "id": "flare_009",
+      "name": "Baked Salmon with White Rice",
+      "description": "Simple baked salmon fillet over rice. Omega-3 rich, anti-inflammatory protein.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 15,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fiber", "high-protein", "anti-inflammatory", "low-residue"],
+      "ingredients": [
+        { "item": "salmon fillets", "amount": "2 (5 oz each)", "notes": "skin-on or skinless", "substitution": "cod or tilapia for lower fat" },
+        { "item": "olive oil", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "lemon juice", "amount": "1 tbsp", "notes": "optional", "substitution": "" },
+        { "item": "white rice", "amount": "1 cup", "notes": "cooked per package directions", "substitution": "" }
+      ],
+      "instructions": [
+        "Preheat oven to 400°F.",
+        "Place salmon on lined baking sheet. Brush with olive oil, season with salt.",
+        "Bake 12-15 minutes until salmon flakes easily.",
+        "Squeeze lemon juice over top if desired.",
+        "Serve over white rice."
+      ],
+      "nutrition_per_serving": { "calories": 440, "protein_g": 35, "fat_g": 14, "carbs_g": 45, "fiber_g": 0.6, "sugar_g": 0, "sodium_mg": 350 },
+      "key_nutrients": ["omega-3", "B12", "vitamin D", "protein", "selenium"],
+      "crohns_notes": "Salmon is one of the best anti-inflammatory proteins for Crohn's due to omega-3 fatty acids. Baking is gentler than frying.",
+      "post_resection_notes": "Fat is moderate at 14g — if bile acid diarrhea is active, switch to cod or tilapia (2-3g fat) instead. Excellent B12 source for ileal resection patients."
+    },
+    {
+      "id": "flare_010",
+      "name": "Oral Rehydration Solution",
+      "description": "Homemade electrolyte drink for dehydration during flares or post-surgery.",
+      "meal_type": "smoothie",
+      "prep_time_minutes": 3,
+      "cook_time_minutes": 0,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "water", "amount": "1 liter", "notes": "filtered or bottled", "substitution": "" },
+        { "item": "sugar", "amount": "6 tsp", "notes": "regular white sugar — needed for sodium-glucose co-transport", "substitution": "" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "table salt", "substitution": "" },
+        { "item": "lemon juice", "amount": "2 tbsp", "notes": "optional for flavor", "substitution": "lime juice" }
+      ],
+      "instructions": [
+        "Add sugar and salt to water. Stir until fully dissolved.",
+        "Add lemon juice if desired.",
+        "Sip throughout the day — do not chug.",
+        "Keep refrigerated. Make fresh daily."
+      ],
+      "nutrition_per_serving": { "calories": 25, "protein_g": 0, "fat_g": 0, "carbs_g": 6, "fiber_g": 0, "sugar_g": 6, "sodium_mg": 290 },
+      "key_nutrients": ["sodium", "potassium"],
+      "crohns_notes": "Based on WHO ORS formula. The sugar-salt ratio is critical — sugar enables sodium absorption via co-transport mechanism. Plain water alone can actually worsen dehydration in severe diarrhea.",
+      "post_resection_notes": "Essential post-resection, especially with shortened bowel. Sip between meals, not during meals, to slow transit time."
+    },
+    {
+      "id": "flare_011",
+      "name": "Turkey and Rice Soup",
+      "description": "Clear, soothing soup with tender turkey and soft rice.",
+      "meal_type": "soup",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 30,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue"],
+      "ingredients": [
+        { "item": "ground turkey (lean)", "amount": "1 lb", "notes": "93% lean or higher", "substitution": "ground chicken" },
+        { "item": "white rice", "amount": "1/2 cup", "notes": "uncooked", "substitution": "" },
+        { "item": "carrots", "amount": "2 medium", "notes": "peeled and diced small", "substitution": "" },
+        { "item": "low-sodium chicken broth", "amount": "6 cups", "notes": "check for onion/garlic — use FODMAP-safe brand", "substitution": "homemade bone broth" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "dried thyme", "amount": "1/2 tsp", "notes": "optional", "substitution": "" }
+      ],
+      "instructions": [
+        "Brown turkey in a large pot over medium heat, breaking into small pieces.",
+        "Add broth, carrots, rice, salt, and thyme.",
+        "Bring to a boil, then reduce to a simmer.",
+        "Cook 20-25 minutes until rice and carrots are very soft.",
+        "Taste and adjust salt."
+      ],
+      "nutrition_per_serving": { "calories": 260, "protein_g": 28, "fat_g": 5, "carbs_g": 25, "fiber_g": 1.5, "sugar_g": 3, "sodium_mg": 420 },
+      "key_nutrients": ["protein", "B12", "zinc", "vitamin A"],
+      "crohns_notes": "Soup is easier to digest than solid meals. Well-cooked carrots are low residue and provide vitamin A. The broth helps with hydration.",
+      "post_resection_notes": "Ideal post-resection meal — low fat, high protein, good hydration, soft texture. Carrots provide vitamin A (fat-soluble vitamin that may be depleted)."
+    },
+    {
+      "id": "flare_012",
+      "name": "Banana Smoothie",
+      "description": "Simple 3-ingredient smoothie. Creamy, filling, and gentle.",
+      "meal_type": "smoothie",
+      "prep_time_minutes": 3,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["gluten-free", "low-fiber", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "ripe banana", "amount": "1 medium", "notes": "frozen works great for thickness", "substitution": "" },
+        { "item": "lactose-free yogurt", "amount": "1/2 cup", "notes": "plain, no added sweeteners", "substitution": "coconut yogurt for dairy-free" },
+        { "item": "lactose-free milk", "amount": "1/2 cup", "notes": "", "substitution": "rice milk or oat milk" }
+      ],
+      "instructions": [
+        "Add all ingredients to blender.",
+        "Blend until smooth.",
+        "Pour and serve immediately."
+      ],
+      "nutrition_per_serving": { "calories": 210, "protein_g": 8, "fat_g": 3, "carbs_g": 40, "fiber_g": 3, "sugar_g": 25, "sodium_mg": 95 },
+      "key_nutrients": ["potassium", "calcium", "protein"],
+      "crohns_notes": "Smoothies are easier to digest than whole foods during a flare. Ripe banana is low-FODMAP. Lactose-free dairy avoids common trigger.",
+      "post_resection_notes": "Good for calorie intake when appetite is poor post-surgery. Low fat. Calcium from yogurt is important after resection."
+    },
+    {
+      "id": "lowres_001",
+      "name": "Herb-Baked Chicken Thighs",
+      "description": "Juicy baked chicken thighs with dried herbs. More flavorful than breast, still easy to digest.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 35,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fiber", "high-protein", "low-residue"],
+      "ingredients": [
+        { "item": "chicken thighs", "amount": "8 (bone-in, skin-on)", "notes": "remove skin after cooking to reduce fat if needed", "substitution": "chicken drumsticks" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "dried oregano", "amount": "1 tsp", "notes": "", "substitution": "dried basil" },
+        { "item": "dried thyme", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "3/4 tsp", "notes": "", "substitution": "" },
+        { "item": "paprika", "amount": "1/2 tsp", "notes": "not hot/spicy paprika", "substitution": "" }
+      ],
+      "instructions": [
+        "Preheat oven to 425°F.",
+        "Pat chicken dry. Rub with olive oil.",
+        "Mix herbs, salt, and paprika. Sprinkle over chicken.",
+        "Place on baking sheet. Bake 30-35 minutes until internal temp 175°F.",
+        "Rest 5 minutes before serving."
+      ],
+      "nutrition_per_serving": { "calories": 320, "protein_g": 36, "fat_g": 18, "carbs_g": 0, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 480 },
+      "key_nutrients": ["B12", "iron", "zinc", "protein", "selenium"],
+      "crohns_notes": "Dark meat chicken has more iron and zinc than breast. Dried herbs are generally well tolerated. Remove skin to cut fat by ~40%.",
+      "post_resection_notes": "Remove skin to reduce fat if bile acid diarrhea is active. Excellent iron and B12 content for resection patients."
+    },
+    {
+      "id": "lowres_002",
+      "name": "Pasta with Garlic-Infused Oil",
+      "description": "Simple pasta with FODMAP-safe garlic flavor. No actual garlic pieces.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 15,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "white pasta", "amount": "8 oz", "notes": "penne, spaghetti, or any shape", "substitution": "gluten-free pasta (rice-based)" },
+        { "item": "garlic-infused olive oil", "amount": "2 tbsp", "notes": "FODMAPs are water-soluble, not fat-soluble — the oil has garlic flavor without the FODMAPs", "substitution": "plain olive oil + pinch of asafoetida" },
+        { "item": "parmesan cheese", "amount": "2 tbsp grated", "notes": "aged parmesan is low-FODMAP (lactose is consumed during aging)", "substitution": "nutritional yeast for dairy-free" },
+        { "item": "salt", "amount": "to taste", "notes": "", "substitution": "" },
+        { "item": "fresh basil", "amount": "a few leaves", "notes": "optional", "substitution": "" }
+      ],
+      "instructions": [
+        "Cook pasta in salted boiling water per package directions.",
+        "Drain, reserving 1/4 cup pasta water.",
+        "Toss pasta with garlic-infused oil and a splash of pasta water.",
+        "Top with parmesan and basil.",
+        "Season with salt."
+      ],
+      "nutrition_per_serving": { "calories": 420, "protein_g": 14, "fat_g": 16, "carbs_g": 56, "fiber_g": 2, "sugar_g": 2, "sodium_mg": 280 },
+      "key_nutrients": ["iron", "B12"],
+      "crohns_notes": "Garlic-infused oil is a game-changer for low-FODMAP cooking — you get garlic flavor without the fructans that cause gas and bloating. Never use actual garlic pieces.",
+      "post_resection_notes": "Moderate fat from olive oil. Enriched pasta provides iron and B vitamins. Good calorie-dense option for weight maintenance."
+    },
+    {
+      "id": "lowres_003",
+      "name": "Tuna Salad Lettuce Wraps",
+      "description": "Light tuna salad wrapped in butter lettuce. High protein, low residue.",
+      "meal_type": "lunch",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 0,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "gluten-free", "low-fiber", "high-protein", "low-oxalate"],
+      "ingredients": [
+        { "item": "canned tuna", "amount": "2 cans (5 oz each)", "notes": "in water, drained", "substitution": "canned chicken" },
+        { "item": "mayonnaise", "amount": "2 tbsp", "notes": "check for garlic/onion in ingredients", "substitution": "plain Greek yogurt (lactose-free)" },
+        { "item": "celery", "amount": "1 stalk", "notes": "finely diced — low-FODMAP at this amount", "substitution": "skip if in flare" },
+        { "item": "lemon juice", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "salt and pepper", "amount": "to taste", "notes": "", "substitution": "" },
+        { "item": "butter lettuce leaves", "amount": "6-8 leaves", "notes": "as wraps", "substitution": "white bread for low-residue version" }
+      ],
+      "instructions": [
+        "Drain tuna and place in a bowl.",
+        "Add mayo, celery, lemon juice, salt and pepper.",
+        "Mix well, breaking up tuna chunks.",
+        "Spoon into lettuce leaves and wrap."
+      ],
+      "nutrition_per_serving": { "calories": 280, "protein_g": 36, "fat_g": 13, "carbs_g": 2, "fiber_g": 0.5, "sugar_g": 1, "sodium_mg": 520 },
+      "key_nutrients": ["B12", "omega-3", "protein", "selenium"],
+      "crohns_notes": "Canned tuna is a convenient protein source rich in B12 and omega-3. Butter lettuce is one of the most gentle greens for Crohn's patients.",
+      "post_resection_notes": "Good B12 source for ileal resection. Moderate fat — use light mayo if bile acid diarrhea is present."
+    },
+    {
+      "id": "lowres_004",
+      "name": "Steamed White Fish with Zucchini",
+      "description": "Delicate steamed fish with soft zucchini. Very low fat, very gentle.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 12,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue", "anti-inflammatory", "low-oxalate"],
+      "ingredients": [
+        { "item": "cod fillets", "amount": "2 (6 oz each)", "notes": "", "substitution": "tilapia, sole, or haddock" },
+        { "item": "zucchini", "amount": "1 medium", "notes": "peeled and sliced into rounds", "substitution": "peeled cucumber (raw) or skip" },
+        { "item": "lemon juice", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "olive oil", "amount": "1 tsp", "notes": "drizzle after cooking", "substitution": "" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "fresh dill", "amount": "1 tsp", "notes": "optional", "substitution": "" }
+      ],
+      "instructions": [
+        "Set up steamer basket over simmering water.",
+        "Place zucchini slices in steamer first. Steam 3 minutes.",
+        "Add fish on top. Season with salt.",
+        "Cover and steam 8-10 minutes until fish flakes easily.",
+        "Transfer to plate. Drizzle with olive oil and lemon juice.",
+        "Garnish with dill if using."
+      ],
+      "nutrition_per_serving": { "calories": 175, "protein_g": 32, "fat_g": 3.5, "carbs_g": 4, "fiber_g": 1, "sugar_g": 2, "sodium_mg": 330 },
+      "key_nutrients": ["B12", "protein", "selenium", "omega-3", "potassium"],
+      "crohns_notes": "White fish is one of the lowest-fat protein options. Steaming preserves nutrients without adding oil. Peeled zucchini is very well tolerated — one of the first vegetables to reintroduce.",
+      "post_resection_notes": "Ideal post-resection protein — extremely low fat (3.5g) means zero bile acid concern. High B12. Peeled zucchini is safe early post-resection."
+    },
+    {
+      "id": "lowres_005",
+      "name": "Sweet Potato Mash",
+      "description": "Smooth mashed sweet potato. Nutrient-dense comfort food.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 20,
+      "servings": 3,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["gluten-free", "low-fodmap", "low-fat", "low-oxalate"],
+      "ingredients": [
+        { "item": "sweet potato", "amount": "2 medium", "notes": "peeled and cubed — low-FODMAP at 1/2 cup serving", "substitution": "butternut squash" },
+        { "item": "butter", "amount": "1 tbsp", "notes": "", "substitution": "olive oil" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "cinnamon", "amount": "1/4 tsp", "notes": "optional", "substitution": "nutmeg" }
+      ],
+      "instructions": [
+        "Peel and cube sweet potatoes.",
+        "Boil in water until very tender, about 15-20 minutes.",
+        "Drain. Add butter, salt, and cinnamon.",
+        "Mash until smooth."
+      ],
+      "nutrition_per_serving": { "calories": 140, "protein_g": 2, "fat_g": 4, "carbs_g": 25, "fiber_g": 3.5, "sugar_g": 5, "sodium_mg": 240 },
+      "key_nutrients": ["vitamin A", "potassium", "vitamin C"],
+      "crohns_notes": "Sweet potato is rich in vitamin A (beta-carotene) which is important for gut lining health. Keep serving to 1/2 cup to stay low-FODMAP. Mashing makes it easier to digest than baked.",
+      "post_resection_notes": "Excellent vitamin A source — this fat-soluble vitamin is often depleted post-resection. Mash with a small amount of fat (butter) to aid absorption."
+    },
+    {
+      "id": "remission_001",
+      "name": "Mediterranean Chicken Bowl",
+      "description": "Grilled chicken with roasted vegetables, olives, and feta over rice. Anti-inflammatory and satisfying.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "servings": 2,
+      "difficulty": "medium",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["gluten-free", "high-protein", "anti-inflammatory"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "2 (6 oz each)", "notes": "", "substitution": "chicken thighs" },
+        { "item": "zucchini", "amount": "1 medium", "notes": "sliced", "substitution": "" },
+        { "item": "bell pepper", "amount": "1 medium", "notes": "red or yellow — seeded", "substitution": "skip if not tolerated" },
+        { "item": "olive oil", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "dried oregano", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "kalamata olives", "amount": "10", "notes": "pitted", "substitution": "" },
+        { "item": "feta cheese", "amount": "2 tbsp crumbled", "notes": "low-FODMAP in small amounts", "substitution": "skip for dairy-free" },
+        { "item": "lemon juice", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "white rice", "amount": "1 cup cooked", "notes": "", "substitution": "quinoa if tolerated" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Preheat oven to 425°F.",
+        "Toss zucchini and bell pepper with 1 tbsp olive oil, oregano, and salt. Spread on baking sheet.",
+        "Season chicken with remaining olive oil and salt. Place on same sheet.",
+        "Roast 20-25 minutes until chicken is cooked through and veggies are tender.",
+        "Slice chicken. Serve over rice with roasted vegetables.",
+        "Top with olives, feta, and lemon juice."
+      ],
+      "nutrition_per_serving": { "calories": 510, "protein_g": 42, "fat_g": 20, "carbs_g": 38, "fiber_g": 3, "sugar_g": 4, "sodium_mg": 620 },
+      "key_nutrients": ["B12", "protein", "vitamin C", "iron", "omega-3"],
+      "crohns_notes": "Mediterranean diet has the strongest evidence for anti-inflammatory benefits in Crohn's. Olive oil, olives, and vegetables are the foundation. Only attempt during stable remission.",
+      "post_resection_notes": "Fat is moderate at 20g — split into smaller portions if bile acid diarrhea is active. Peel zucchini and deseed pepper if still in early reintroduction."
+    },
+    {
+      "id": "remission_002",
+      "name": "Ginger-Turmeric Rice with Chicken",
+      "description": "Anti-inflammatory spiced rice bowl. Ginger and turmeric are natural soothers.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 25,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fiber", "high-protein", "anti-inflammatory"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "2 (6 oz each)", "notes": "cubed", "substitution": "firm tofu" },
+        { "item": "white rice", "amount": "1 cup", "notes": "", "substitution": "basmati rice" },
+        { "item": "fresh ginger", "amount": "1 tbsp grated", "notes": "low-FODMAP, anti-nausea", "substitution": "1/2 tsp ground ginger" },
+        { "item": "turmeric powder", "amount": "1 tsp", "notes": "anti-inflammatory — curcumin", "substitution": "fresh turmeric, 1 inch grated" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "coconut oil" },
+        { "item": "carrots", "amount": "1 medium", "notes": "peeled, diced small", "substitution": "" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "black pepper", "amount": "pinch", "notes": "enhances curcumin absorption by 2000%", "substitution": "" }
+      ],
+      "instructions": [
+        "Cook rice with turmeric and a pinch of salt per package directions.",
+        "Heat olive oil in a pan over medium heat.",
+        "Add ginger, cook 30 seconds until fragrant.",
+        "Add chicken cubes and carrots. Cook 8-10 minutes until chicken is done.",
+        "Season with salt and pepper.",
+        "Serve chicken and carrots over turmeric rice."
+      ],
+      "nutrition_per_serving": { "calories": 460, "protein_g": 40, "fat_g": 10, "carbs_g": 50, "fiber_g": 2, "sugar_g": 3, "sodium_mg": 380 },
+      "key_nutrients": ["B12", "vitamin A", "protein", "iron"],
+      "crohns_notes": "Turmeric (curcumin) has evidence for reducing intestinal inflammation in IBD. Black pepper increases curcumin absorption by 2000%. Ginger is a natural anti-nausea agent.",
+      "post_resection_notes": "Low fat, high protein — ideal post-resection. Turmeric's anti-inflammatory properties may help at the surgical site. Carrots provide vitamin A."
+    },
+    {
+      "id": "remission_003",
+      "name": "Egg Fried Rice",
+      "description": "Quick fried rice with eggs and vegetables. A satisfying one-pan meal.",
+      "meal_type": "lunch",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 10,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "low-fiber", "high-protein"],
+      "ingredients": [
+        { "item": "cooked white rice", "amount": "2 cups", "notes": "day-old rice works best — drier", "substitution": "" },
+        { "item": "eggs", "amount": "3 large", "notes": "beaten", "substitution": "" },
+        { "item": "carrots", "amount": "1 medium", "notes": "peeled, finely diced", "substitution": "" },
+        { "item": "green onion (green parts only)", "amount": "2 stalks", "notes": "green parts are low-FODMAP — white parts are high", "substitution": "chives" },
+        { "item": "soy sauce", "amount": "1 tbsp", "notes": "use tamari for gluten-free", "substitution": "coconut aminos" },
+        { "item": "sesame oil", "amount": "1 tsp", "notes": "for flavor — just a drizzle", "substitution": "olive oil" },
+        { "item": "vegetable oil", "amount": "1 tbsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Heat vegetable oil in a large pan or wok over high heat.",
+        "Add carrots, stir-fry 2 minutes.",
+        "Push carrots to one side, pour beaten eggs into empty side. Scramble until just set.",
+        "Add cold rice. Stir-fry 3-4 minutes, breaking up any clumps.",
+        "Add soy sauce, toss to combine.",
+        "Remove from heat. Drizzle sesame oil, top with green onion tops."
+      ],
+      "nutrition_per_serving": { "calories": 380, "protein_g": 15, "fat_g": 14, "carbs_g": 48, "fiber_g": 1.5, "sugar_g": 3, "sodium_mg": 480 },
+      "key_nutrients": ["B12", "protein", "vitamin A", "selenium"],
+      "crohns_notes": "Green parts of green onions are FODMAP-safe — only the white bulb contains fructans. This is a great trick for adding onion-like flavor. Well-cooked carrots are safe.",
+      "post_resection_notes": "Moderate fat — manageable for most post-resection patients. Good B12 from eggs."
+    },
+    {
+      "id": "remission_004",
+      "name": "Lemon Herb Baked Cod",
+      "description": "Light, flaky cod with herbs and lemon. Extremely low fat, high protein.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 15,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "anti-inflammatory", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "cod fillets", "amount": "2 (6 oz each)", "notes": "", "substitution": "haddock, sole, or halibut" },
+        { "item": "lemon", "amount": "1", "notes": "sliced into rounds", "substitution": "" },
+        { "item": "fresh parsley", "amount": "2 tbsp chopped", "notes": "", "substitution": "fresh dill" },
+        { "item": "olive oil", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Preheat oven to 400°F.",
+        "Place cod on lined baking sheet. Brush with olive oil.",
+        "Season with salt. Lay lemon slices on top.",
+        "Bake 12-15 minutes until fish flakes easily.",
+        "Garnish with fresh parsley."
+      ],
+      "nutrition_per_serving": { "calories": 155, "protein_g": 31, "fat_g": 3, "carbs_g": 1, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 340 },
+      "key_nutrients": ["B12", "protein", "selenium", "omega-3"],
+      "crohns_notes": "Cod has only 1g fat per 3 oz serving — one of the leanest proteins available. Perfect when you need protein without fat-related symptoms.",
+      "post_resection_notes": "Best protein choice for bile acid malabsorption patients. Virtually no fat to worry about."
+    },
+    {
+      "id": "remission_005",
+      "name": "Butternut Squash Soup",
+      "description": "Creamy, velvety squash soup. Naturally sweet, packed with vitamin A.",
+      "meal_type": "soup",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 30,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "anti-inflammatory", "low-oxalate"],
+      "ingredients": [
+        { "item": "butternut squash", "amount": "1 medium (about 2 lbs)", "notes": "peeled, seeded, cubed — low-FODMAP at 1/3 cup", "substitution": "kabocha squash" },
+        { "item": "carrots", "amount": "2 medium", "notes": "peeled, chopped", "substitution": "" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "fresh ginger", "amount": "1 tsp grated", "notes": "anti-inflammatory", "substitution": "1/4 tsp ground ginger" },
+        { "item": "low-sodium vegetable broth", "amount": "4 cups", "notes": "check for onion/garlic", "substitution": "water + salt" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "nutmeg", "amount": "1/4 tsp", "notes": "", "substitution": "cinnamon" }
+      ],
+      "instructions": [
+        "Heat olive oil in a large pot over medium heat.",
+        "Add squash, carrots, and ginger. Cook 3 minutes.",
+        "Add broth. Bring to a boil, then simmer 25 minutes until very soft.",
+        "Blend with immersion blender until smooth.",
+        "Season with salt and nutmeg.",
+        "Serve warm. Can freeze in portions for up to 3 months."
+      ],
+      "nutrition_per_serving": { "calories": 130, "protein_g": 2, "fat_g": 4, "carbs_g": 24, "fiber_g": 4, "sugar_g": 5, "sodium_mg": 360 },
+      "key_nutrients": ["vitamin A", "vitamin C", "potassium"],
+      "crohns_notes": "Butternut squash is extremely rich in beta-carotene (vitamin A). Blending makes fiber content easier to digest. Keep serving to 1/3 cup squash per serving for strict low-FODMAP.",
+      "post_resection_notes": "Excellent source of vitamin A (fat-soluble — the olive oil helps absorption). The smooth, blended texture is ideal post-resection."
+    },
+    {
+      "id": "remission_006",
+      "name": "Turkey Meatballs in Tomato Sauce",
+      "description": "Tender turkey meatballs in a gentle tomato sauce. Kid-friendly, crowd-pleasing.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "servings": 4,
+      "difficulty": "medium",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["gluten-free", "low-fiber", "high-protein"],
+      "ingredients": [
+        { "item": "ground turkey", "amount": "1 lb", "notes": "93% lean", "substitution": "ground chicken" },
+        { "item": "egg", "amount": "1 large", "notes": "binder", "substitution": "" },
+        { "item": "gluten-free breadcrumbs", "amount": "1/4 cup", "notes": "", "substitution": "oat flour" },
+        { "item": "dried basil", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "dried oregano", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "canned crushed tomatoes", "amount": "1 can (28 oz)", "notes": "no onion/garlic added — check label", "substitution": "passata" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Mix turkey, egg, breadcrumbs, basil, oregano, and salt. Form into 16 small meatballs.",
+        "Heat olive oil in a large pan over medium heat.",
+        "Brown meatballs on all sides, about 5 minutes.",
+        "Pour crushed tomatoes over meatballs.",
+        "Simmer covered 20 minutes until meatballs are cooked through.",
+        "Serve over white rice or gluten-free pasta."
+      ],
+      "nutrition_per_serving": { "calories": 270, "protein_g": 28, "fat_g": 10, "carbs_g": 14, "fiber_g": 3, "sugar_g": 7, "sodium_mg": 520 },
+      "key_nutrients": ["B12", "iron", "zinc", "protein", "vitamin C"],
+      "crohns_notes": "Small meatballs are easier to digest than a large piece of meat. Tomato sauce is generally well tolerated in remission — some patients need to avoid during flare due to acidity.",
+      "post_resection_notes": "Good protein and iron. Moderate fat. Tomato sauce provides vitamin C which aids iron absorption."
+    },
+    {
+      "id": "remission_007",
+      "name": "Peanut Butter Banana Overnight Oats",
+      "description": "No-cook breakfast you prep the night before. Grab and go.",
+      "meal_type": "breakfast",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["dairy-free", "high-protein"],
+      "ingredients": [
+        { "item": "rolled oats", "amount": "1/2 cup", "notes": "certified GF if needed", "substitution": "" },
+        { "item": "lactose-free milk", "amount": "1/2 cup", "notes": "", "substitution": "oat milk" },
+        { "item": "smooth peanut butter", "amount": "1 tbsp", "notes": "", "substitution": "sunflower seed butter" },
+        { "item": "ripe banana", "amount": "1/2 medium", "notes": "sliced", "substitution": "" },
+        { "item": "chia seeds", "amount": "1 tsp", "notes": "small amount for omega-3 — skip if stricture risk", "substitution": "skip entirely" },
+        { "item": "maple syrup", "amount": "1 tsp", "notes": "maple syrup is low-FODMAP", "substitution": "" }
+      ],
+      "instructions": [
+        "Combine oats, milk, peanut butter, chia seeds, and maple syrup in a jar.",
+        "Stir well. Top with banana slices.",
+        "Cover and refrigerate overnight (or at least 4 hours).",
+        "Eat cold or microwave 1-2 minutes."
+      ],
+      "nutrition_per_serving": { "calories": 365, "protein_g": 13, "fat_g": 13, "carbs_g": 52, "fiber_g": 7, "sugar_g": 16, "sodium_mg": 120 },
+      "key_nutrients": ["magnesium", "protein", "omega-3", "potassium"],
+      "crohns_notes": "Overnight oats are softer than cooked oats — some patients find them easier to digest. The fiber is mostly soluble. Only for remission — too high fiber for flare.",
+      "post_resection_notes": "Higher fiber (7g) — only appropriate once fully past reintroduction phase. Skip chia seeds if any stricture concern at anastomosis site."
+    },
+    {
+      "id": "remission_008",
+      "name": "Chicken Stir-Fry with Rice Noodles",
+      "description": "Quick stir-fry with tender chicken and soft vegetables over rice noodles.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 12,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "high-protein"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "2 (6 oz each)", "notes": "sliced thin", "substitution": "shrimp" },
+        { "item": "rice noodles", "amount": "6 oz", "notes": "gluten-free", "substitution": "rice vermicelli" },
+        { "item": "zucchini", "amount": "1 medium", "notes": "sliced", "substitution": "bok choy" },
+        { "item": "bell pepper", "amount": "1 medium", "notes": "sliced", "substitution": "carrots" },
+        { "item": "garlic-infused oil", "amount": "1 tbsp", "notes": "FODMAP-safe garlic flavor", "substitution": "plain olive oil" },
+        { "item": "soy sauce", "amount": "2 tbsp", "notes": "", "substitution": "tamari for GF" },
+        { "item": "fresh ginger", "amount": "1 tsp grated", "notes": "", "substitution": "" },
+        { "item": "sesame oil", "amount": "1 tsp", "notes": "finishing drizzle", "substitution": "" }
+      ],
+      "instructions": [
+        "Cook rice noodles per package directions. Drain.",
+        "Heat garlic-infused oil in wok or large pan over high heat.",
+        "Add chicken, stir-fry 4-5 minutes until browned.",
+        "Add ginger, zucchini, bell pepper. Stir-fry 3-4 minutes until crisp-tender.",
+        "Add soy sauce and noodles. Toss to combine.",
+        "Drizzle sesame oil. Serve immediately."
+      ],
+      "nutrition_per_serving": { "calories": 480, "protein_g": 42, "fat_g": 12, "carbs_g": 50, "fiber_g": 2.5, "sugar_g": 4, "sodium_mg": 680 },
+      "key_nutrients": ["B12", "protein", "vitamin C", "iron"],
+      "crohns_notes": "Rice noodles are gluten-free and very easy to digest. Garlic-infused oil gives great flavor without FODMAP triggers. Cook vegetables until soft, not crunchy.",
+      "post_resection_notes": "Cook vegetables very well — avoid al dente. Fat is moderate. Good protein for healing."
+    },
+    {
+      "id": "remission_009",
+      "name": "Greek-Style Chicken Salad",
+      "description": "Chopped chicken salad with cucumber, olives, and feta. Refreshing and satisfying.",
+      "meal_type": "lunch",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 0,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["gluten-free", "high-protein", "anti-inflammatory"],
+      "ingredients": [
+        { "item": "cooked chicken breast", "amount": "2 cups chopped", "notes": "rotisserie chicken works", "substitution": "" },
+        { "item": "cucumber", "amount": "1 medium", "notes": "peeled and diced", "substitution": "" },
+        { "item": "cherry tomatoes", "amount": "1/2 cup", "notes": "halved", "substitution": "skip during flare" },
+        { "item": "kalamata olives", "amount": "8", "notes": "pitted, halved", "substitution": "" },
+        { "item": "feta cheese", "amount": "2 tbsp crumbled", "notes": "low-FODMAP in small amounts", "substitution": "" },
+        { "item": "olive oil", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "lemon juice", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "dried oregano", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Combine chicken, cucumber, tomatoes, olives, and feta in a bowl.",
+        "Whisk olive oil, lemon juice, oregano, and salt.",
+        "Toss salad with dressing.",
+        "Serve over rice or with gluten-free pita."
+      ],
+      "nutrition_per_serving": { "calories": 380, "protein_g": 38, "fat_g": 22, "carbs_g": 6, "fiber_g": 1.5, "sugar_g": 3, "sodium_mg": 520 },
+      "key_nutrients": ["B12", "protein", "vitamin C", "calcium"],
+      "crohns_notes": "Mediterranean ingredients (olive oil, olives) are anti-inflammatory. Peeled cucumber is very well tolerated. Only for stable remission due to raw vegetables.",
+      "post_resection_notes": "Higher fat (22g) — eat as a half portion if bile acid diarrhea is active, or reduce olive oil."
+    },
+    {
+      "id": "remission_010",
+      "name": "Teriyaki Salmon Rice Bowl",
+      "description": "Glazed salmon over rice with steamed vegetables. Restaurant-quality at home.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["dairy-free", "high-protein", "anti-inflammatory"],
+      "ingredients": [
+        { "item": "salmon fillets", "amount": "2 (5 oz each)", "notes": "", "substitution": "chicken breast" },
+        { "item": "soy sauce", "amount": "2 tbsp", "notes": "", "substitution": "tamari or coconut aminos" },
+        { "item": "maple syrup", "amount": "1 tbsp", "notes": "low-FODMAP sweetener", "substitution": "brown sugar" },
+        { "item": "fresh ginger", "amount": "1 tsp grated", "notes": "", "substitution": "" },
+        { "item": "rice vinegar", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "white rice", "amount": "1 cup cooked", "notes": "", "substitution": "" },
+        { "item": "steamed broccoli", "amount": "1 cup", "notes": "well cooked — heads only, not stems for lower FODMAP", "substitution": "steamed green beans" },
+        { "item": "sesame seeds", "amount": "1 tsp", "notes": "garnish — skip if stricture risk", "substitution": "" }
+      ],
+      "instructions": [
+        "Mix soy sauce, maple syrup, ginger, and rice vinegar for teriyaki glaze.",
+        "Heat a pan over medium-high heat. Brush pan with oil.",
+        "Cook salmon skin-side up 4 minutes. Flip.",
+        "Pour teriyaki glaze over salmon. Cook 4-5 more minutes, spooning glaze over.",
+        "Steam broccoli until very tender (5-7 minutes).",
+        "Serve salmon over rice with broccoli. Drizzle remaining glaze. Top with sesame seeds."
+      ],
+      "nutrition_per_serving": { "calories": 470, "protein_g": 35, "fat_g": 14, "carbs_g": 50, "fiber_g": 2, "sugar_g": 8, "sodium_mg": 650 },
+      "key_nutrients": ["omega-3", "B12", "vitamin D", "protein", "selenium"],
+      "crohns_notes": "Homemade teriyaki avoids hidden garlic/onion found in bottled sauces. Broccoli heads are lower FODMAP than stems — cook very soft. Maple syrup is FODMAP-safe unlike honey.",
+      "post_resection_notes": "Great omega-3 and B12 content. Cook broccoli very well. Skip sesame seeds if anastomosis stricture risk."
+    },
+    {
+      "id": "smoothie_001",
+      "name": "Protein Recovery Smoothie",
+      "description": "High-protein smoothie for post-surgery recovery or low appetite days.",
+      "meal_type": "smoothie",
+      "prep_time_minutes": 3,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["gluten-free", "low-fiber", "high-protein", "low-residue"],
+      "ingredients": [
+        { "item": "lactose-free milk", "amount": "1 cup", "notes": "", "substitution": "rice milk" },
+        { "item": "ripe banana", "amount": "1 medium", "notes": "frozen for thickness", "substitution": "" },
+        { "item": "whey protein isolate", "amount": "1 scoop", "notes": "isolate has almost no lactose — check label for sugar alcohols", "substitution": "rice protein or pea protein" },
+        { "item": "smooth peanut butter", "amount": "1 tbsp", "notes": "", "substitution": "skip for lower fat" }
+      ],
+      "instructions": [
+        "Add all ingredients to blender.",
+        "Blend until smooth.",
+        "Drink slowly — sipping is better than chugging for absorption."
+      ],
+      "nutrition_per_serving": { "calories": 380, "protein_g": 32, "fat_g": 10, "carbs_g": 42, "fiber_g": 3, "sugar_g": 22, "sodium_mg": 200 },
+      "key_nutrients": ["protein", "potassium", "calcium", "B12"],
+      "crohns_notes": "Whey protein isolate is generally well tolerated even by lactose-intolerant patients — the lactose is removed during processing. Check label to confirm <1g lactose per scoop.",
+      "post_resection_notes": "Excellent for maintaining protein intake when appetite is poor post-surgery. Liquid nutrition absorbs more easily with shortened bowel."
+    },
+    {
+      "id": "smoothie_002",
+      "name": "Anti-Inflammatory Berry Smoothie",
+      "description": "Blueberry and spinach smoothie with anti-inflammatory ginger. Nutrient powerhouse.",
+      "meal_type": "smoothie",
+      "prep_time_minutes": 3,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["dairy-free", "gluten-free", "anti-inflammatory"],
+      "ingredients": [
+        { "item": "blueberries", "amount": "1/2 cup", "notes": "frozen — low-FODMAP at this serving size", "substitution": "strawberries (1/2 cup)" },
+        { "item": "baby spinach", "amount": "1 cup", "notes": "mild flavor blends in — high oxalate, so limit if kidney stone history", "substitution": "skip for low-oxalate" },
+        { "item": "ripe banana", "amount": "1/2 medium", "notes": "frozen", "substitution": "" },
+        { "item": "fresh ginger", "amount": "1/2 inch piece", "notes": "anti-inflammatory, anti-nausea", "substitution": "" },
+        { "item": "oat milk", "amount": "1 cup", "notes": "check for no added inulin/chicory", "substitution": "rice milk" },
+        { "item": "turmeric powder", "amount": "1/4 tsp", "notes": "anti-inflammatory", "substitution": "" }
+      ],
+      "instructions": [
+        "Add all ingredients to blender.",
+        "Blend on high until completely smooth.",
+        "Serve immediately."
+      ],
+      "nutrition_per_serving": { "calories": 195, "protein_g": 4, "fat_g": 3, "carbs_g": 42, "fiber_g": 5, "sugar_g": 22, "sodium_mg": 110 },
+      "key_nutrients": ["vitamin C", "vitamin A", "iron", "potassium", "omega-3"],
+      "crohns_notes": "Blueberries are rich in anthocyanins with anti-inflammatory properties. Blending spinach breaks down fiber, making it easier to digest than eating raw. Only for stable remission.",
+      "post_resection_notes": "Caution with spinach if you have kidney stone history post-resection (high oxalate). Otherwise, a great way to get iron and vitamin A."
+    },
+    {
+      "id": "smoothie_003",
+      "name": "Ginger Peach Smoothie",
+      "description": "Soothing peach and ginger smoothie. Great when nausea is present.",
+      "meal_type": "smoothie",
+      "prep_time_minutes": 3,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "canned peaches", "amount": "1/2 cup", "notes": "in juice, drained — canned is lower FODMAP than fresh", "substitution": "canned pears" },
+        { "item": "fresh ginger", "amount": "1/2 inch piece", "notes": "anti-nausea", "substitution": "1/4 tsp ground ginger" },
+        { "item": "rice milk", "amount": "1 cup", "notes": "very gentle, low-allergen", "substitution": "oat milk" },
+        { "item": "honey", "amount": "1 tsp", "notes": "optional — honey is HIGH FODMAP in large amounts, keep to 1 tsp max", "substitution": "maple syrup (FODMAP-safe)" }
+      ],
+      "instructions": [
+        "Add all ingredients to blender.",
+        "Blend until smooth.",
+        "Serve immediately. Sip slowly for nausea."
+      ],
+      "nutrition_per_serving": { "calories": 145, "protein_g": 1, "fat_g": 2, "carbs_g": 32, "fiber_g": 1.5, "sugar_g": 24, "sodium_mg": 80 },
+      "key_nutrients": ["vitamin C", "potassium"],
+      "crohns_notes": "Ginger is one of the best natural anti-nausea remedies. Canned peaches are lower FODMAP than fresh because excess fructose leaches into the syrup/juice. Always drain.",
+      "post_resection_notes": "Very low fat, gentle on the system. Good for days when solid food feels like too much."
+    },
+    {
+      "id": "soup_001",
+      "name": "Carrot Ginger Soup",
+      "description": "Silky smooth carrot soup with warming ginger. Vitamin A powerhouse.",
+      "meal_type": "soup",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 25,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "anti-inflammatory", "low-oxalate"],
+      "ingredients": [
+        { "item": "carrots", "amount": "6 medium", "notes": "peeled and chopped", "substitution": "" },
+        { "item": "fresh ginger", "amount": "1 inch piece", "notes": "peeled", "substitution": "" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "low-sodium vegetable broth", "amount": "4 cups", "notes": "check label — no onion/garlic", "substitution": "chicken bone broth" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "coconut cream", "amount": "2 tbsp", "notes": "optional — for richness", "substitution": "skip for lower fat" }
+      ],
+      "instructions": [
+        "Heat olive oil in pot. Add carrots and ginger, cook 3 minutes.",
+        "Add broth and salt. Bring to boil, simmer 20-25 minutes until carrots are very soft.",
+        "Blend until silky smooth with immersion blender.",
+        "Stir in coconut cream if using.",
+        "Taste and adjust salt."
+      ],
+      "nutrition_per_serving": { "calories": 95, "protein_g": 1, "fat_g": 5, "carbs_g": 12, "fiber_g": 3, "sugar_g": 6, "sodium_mg": 380 },
+      "key_nutrients": ["vitamin A", "vitamin C", "potassium"],
+      "crohns_notes": "Carrots are one of the richest sources of beta-carotene (vitamin A). Blending eliminates fiber concerns. Ginger is anti-inflammatory and anti-nausea.",
+      "post_resection_notes": "Outstanding vitamin A source — critical post-resection as this fat-soluble vitamin is often depleted. The small amount of olive oil aids absorption."
+    },
+    {
+      "id": "soup_002",
+      "name": "Chicken Noodle Soup",
+      "description": "Classic comfort chicken noodle soup. Healing, hydrating, homey.",
+      "meal_type": "soup",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 25,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["dairy-free", "low-fat", "low-fiber", "high-protein", "low-residue"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "1 lb", "notes": "", "substitution": "rotisserie chicken, shredded" },
+        { "item": "small pasta", "amount": "1 cup", "notes": "egg noodles, orzo, or small shells", "substitution": "rice noodles for GF" },
+        { "item": "carrots", "amount": "2 medium", "notes": "peeled, diced small", "substitution": "" },
+        { "item": "celery", "amount": "1 stalk", "notes": "diced small — low-FODMAP at 1 stalk", "substitution": "skip" },
+        { "item": "low-sodium chicken broth", "amount": "8 cups", "notes": "check label for garlic/onion", "substitution": "bone broth" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "dried thyme", "amount": "1/2 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Heat olive oil in a large pot. Add carrots and celery, cook 3 minutes.",
+        "Add broth and thyme. Bring to a boil.",
+        "Add chicken breasts. Simmer 15 minutes until cooked through.",
+        "Remove chicken, shred with two forks.",
+        "Add pasta to broth. Cook per package directions.",
+        "Return shredded chicken to pot. Season with salt.",
+        "Serve hot."
+      ],
+      "nutrition_per_serving": { "calories": 280, "protein_g": 30, "fat_g": 6, "carbs_g": 26, "fiber_g": 2, "sugar_g": 3, "sodium_mg": 480 },
+      "key_nutrients": ["B12", "protein", "vitamin A", "zinc"],
+      "crohns_notes": "The classic sick-day soup. Broth provides hydration and electrolytes. Small pasta and well-cooked vegetables keep it low residue. Comforting during flares.",
+      "post_resection_notes": "Excellent post-resection meal — hydrating broth, easily digestible protein, low fat. Cook vegetables until very soft."
+    },
+    {
+      "id": "soup_003",
+      "name": "Potato Leek Soup (FODMAP-Safe Version)",
+      "description": "Creamy potato soup using only the green parts of leeks for FODMAP safety.",
+      "meal_type": "soup",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 25,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "gluten-free", "low-fiber"],
+      "ingredients": [
+        { "item": "leeks (green parts only)", "amount": "2 leeks", "notes": "ONLY the dark green tops — white parts are HIGH FODMAP", "substitution": "chives" },
+        { "item": "potatoes", "amount": "4 medium", "notes": "peeled and cubed", "substitution": "" },
+        { "item": "butter", "amount": "1 tbsp", "notes": "", "substitution": "olive oil for dairy-free" },
+        { "item": "low-sodium chicken broth", "amount": "4 cups", "notes": "", "substitution": "vegetable broth" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "black pepper", "amount": "1/4 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Slice green parts of leeks. Wash thoroughly (leeks trap dirt).",
+        "Melt butter in pot. Sauté leek greens 3 minutes.",
+        "Add potatoes and broth. Bring to boil.",
+        "Simmer 20 minutes until potatoes are very tender.",
+        "Blend until smooth. Season with salt and pepper.",
+        "For chunkier version, blend only half and stir back in."
+      ],
+      "nutrition_per_serving": { "calories": 185, "protein_g": 4, "fat_g": 4, "carbs_g": 34, "fiber_g": 3, "sugar_g": 3, "sodium_mg": 400 },
+      "key_nutrients": ["potassium", "vitamin C", "vitamin K"],
+      "crohns_notes": "Classic potato leek soup adapted for low-FODMAP. The green parts of leeks have the flavor without the fructans concentrated in the white bulb. Great hack for onion-family flavor.",
+      "post_resection_notes": "Smooth texture is ideal post-resection. Good potassium source. Low fat."
+    },
+    {
+      "id": "snack_001",
+      "name": "Rice Cakes with Peanut Butter and Banana",
+      "description": "Crunchy rice cake topped with smooth PB and banana slices. Quick energy.",
+      "meal_type": "snack",
+      "prep_time_minutes": 2,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fiber"],
+      "ingredients": [
+        { "item": "plain rice cakes", "amount": "2", "notes": "check label — no added flavoring with garlic/onion", "substitution": "corn thins" },
+        { "item": "smooth peanut butter", "amount": "1 tbsp", "notes": "", "substitution": "sunflower seed butter" },
+        { "item": "ripe banana", "amount": "1/2 medium", "notes": "sliced", "substitution": "" }
+      ],
+      "instructions": [
+        "Spread peanut butter on rice cakes.",
+        "Top with banana slices."
+      ],
+      "nutrition_per_serving": { "calories": 230, "protein_g": 7, "fat_g": 9, "carbs_g": 33, "fiber_g": 2.5, "sugar_g": 10, "sodium_mg": 110 },
+      "key_nutrients": ["potassium", "magnesium", "protein"],
+      "crohns_notes": "Quick, portable snack. Rice cakes are very low residue. Peanut butter at 1 tbsp is low-FODMAP.",
+      "post_resection_notes": "Good snack between meals — small, frequent eating is better post-resection than 3 big meals."
+    },
+    {
+      "id": "snack_002",
+      "name": "Hard-Boiled Eggs",
+      "description": "Simple, portable protein. Make a batch for the week.",
+      "meal_type": "snack",
+      "prep_time_minutes": 1,
+      "cook_time_minutes": 12,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fiber", "high-protein", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "eggs", "amount": "4 large", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "pinch", "notes": "for serving", "substitution": "" }
+      ],
+      "instructions": [
+        "Place eggs in pot. Cover with cold water by 1 inch.",
+        "Bring to a rolling boil.",
+        "Remove from heat, cover, let sit 12 minutes.",
+        "Transfer to ice water bath for 5 minutes.",
+        "Peel and season with salt. Store unpeeled in fridge up to 7 days."
+      ],
+      "nutrition_per_serving": { "calories": 155, "protein_g": 13, "fat_g": 10, "carbs_g": 1, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 190 },
+      "key_nutrients": ["B12", "vitamin D", "protein", "selenium", "zinc"],
+      "crohns_notes": "Eggs are consistently one of the best-tolerated protein sources for Crohn's patients. Batch cook on Sunday for the whole week.",
+      "post_resection_notes": "Great B12 and vitamin D source. Portable for snacking between meals — important for the small, frequent eating pattern recommended post-resection."
+    },
+    {
+      "id": "snack_003",
+      "name": "Lactose-Free Yogurt with Maple Drizzle",
+      "description": "Creamy yogurt with a touch of maple sweetness. Probiotics and protein.",
+      "meal_type": "snack",
+      "prep_time_minutes": 1,
+      "cook_time_minutes": 0,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["gluten-free", "low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "lactose-free yogurt", "amount": "3/4 cup", "notes": "plain, not flavored — check for inulin/chicory in ingredients", "substitution": "coconut yogurt" },
+        { "item": "maple syrup", "amount": "1 tsp", "notes": "low-FODMAP sweetener", "substitution": "" }
+      ],
+      "instructions": [
+        "Spoon yogurt into bowl.",
+        "Drizzle with maple syrup.",
+        "Eat slowly."
+      ],
+      "nutrition_per_serving": { "calories": 130, "protein_g": 10, "fat_g": 3, "carbs_g": 16, "fiber_g": 0, "sugar_g": 13, "sodium_mg": 100 },
+      "key_nutrients": ["calcium", "protein", "probiotics"],
+      "crohns_notes": "Lactose-free yogurt still contains live cultures (probiotics). Many Crohn's patients tolerate this even during flares. Always check ingredient list for added inulin or chicory root — many yogurts add these as 'prebiotics' which are high FODMAP.",
+      "post_resection_notes": "Important calcium source post-resection. Probiotics may help gut health. Easy to eat when appetite is low."
+    },
+    {
+      "id": "snack_004",
+      "name": "Homemade Protein Bites",
+      "description": "No-bake energy bites with oats, peanut butter, and maple syrup. Make a batch for the week.",
+      "meal_type": "snack",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 0,
+      "servings": 12,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["dairy-free", "high-protein"],
+      "ingredients": [
+        { "item": "rolled oats", "amount": "1 cup", "notes": "GF if needed", "substitution": "" },
+        { "item": "smooth peanut butter", "amount": "1/2 cup", "notes": "", "substitution": "sunflower seed butter" },
+        { "item": "maple syrup", "amount": "3 tbsp", "notes": "", "substitution": "" },
+        { "item": "whey protein isolate", "amount": "1/4 cup", "notes": "optional — for extra protein", "substitution": "skip" },
+        { "item": "salt", "amount": "pinch", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Mix all ingredients in a bowl until combined.",
+        "If too dry, add a splash of milk. If too wet, add more oats.",
+        "Roll into 12 balls (about 1 tbsp each).",
+        "Place on lined plate/sheet. Refrigerate 30 minutes.",
+        "Store in airtight container in fridge for up to 1 week."
+      ],
+      "nutrition_per_serving": { "calories": 95, "protein_g": 5, "fat_g": 5, "carbs_g": 9, "fiber_g": 1, "sugar_g": 3, "sodium_mg": 45 },
+      "key_nutrients": ["protein", "magnesium", "iron"],
+      "crohns_notes": "Small, calorie-dense bites are great for snacking between meals. Keep to 1-2 at a time. Only for remission — oats + peanut butter may be too much fiber during a flare.",
+      "post_resection_notes": "Good for maintaining calorie intake between smaller meals. Low fat per bite. Avoid if stricture risk — oats can clump."
+    },
+    {
+      "id": "highpro_001",
+      "name": "Turkey Burger Patties (No Bun)",
+      "description": "Lean turkey burgers seasoned with herbs. High protein, low fat.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 12,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-oxalate"],
+      "ingredients": [
+        { "item": "ground turkey", "amount": "1 lb", "notes": "93% lean or higher", "substitution": "ground chicken" },
+        { "item": "dried oregano", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "dried basil", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "olive oil", "amount": "1 tsp", "notes": "for cooking", "substitution": "" }
+      ],
+      "instructions": [
+        "Mix turkey with oregano, basil, and salt.",
+        "Form into 4 patties about 1/2 inch thick.",
+        "Heat olive oil in a pan over medium heat.",
+        "Cook patties 5-6 minutes per side until internal temp reaches 165°F.",
+        "Serve with mashed potatoes, rice, or in a lettuce wrap."
+      ],
+      "nutrition_per_serving": { "calories": 170, "protein_g": 22, "fat_g": 8, "carbs_g": 0, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 350 },
+      "key_nutrients": ["B12", "zinc", "iron", "protein", "selenium"],
+      "crohns_notes": "Bunless burgers avoid gluten and excess fiber. Lean turkey is one of the gentlest meats. Pair with a tolerated carb for a complete meal.",
+      "post_resection_notes": "Excellent high-protein, moderate-fat option. Rich in zinc and B12 which are commonly depleted post-resection."
+    },
+    {
+      "id": "highpro_002",
+      "name": "Tofu Scramble",
+      "description": "Plant-based protein scramble with turmeric. Looks like eggs, packed with nutrients.",
+      "meal_type": "breakfast",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 10,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "high-protein", "anti-inflammatory"],
+      "ingredients": [
+        { "item": "firm tofu", "amount": "14 oz block", "notes": "drained and pressed — firm tofu is low-FODMAP", "substitution": "" },
+        { "item": "turmeric powder", "amount": "1/2 tsp", "notes": "for color and anti-inflammatory benefit", "substitution": "" },
+        { "item": "garlic-infused olive oil", "amount": "1 tbsp", "notes": "", "substitution": "plain olive oil" },
+        { "item": "baby spinach", "amount": "1 cup", "notes": "wilts down — high oxalate so limit if kidney stone history", "substitution": "skip or use bok choy" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "black pepper", "amount": "pinch", "notes": "", "substitution": "" },
+        { "item": "nutritional yeast", "amount": "1 tbsp", "notes": "optional — adds cheesy flavor and B12", "substitution": "" }
+      ],
+      "instructions": [
+        "Drain tofu, wrap in clean towel, press to remove excess water.",
+        "Heat garlic-infused oil in a nonstick pan over medium heat.",
+        "Crumble tofu into pan with your hands.",
+        "Add turmeric, salt, and pepper. Stir to coat.",
+        "Cook 5-7 minutes, stirring occasionally.",
+        "Add spinach, cook 2 more minutes until wilted.",
+        "Top with nutritional yeast if using."
+      ],
+      "nutrition_per_serving": { "calories": 210, "protein_g": 18, "fat_g": 13, "carbs_g": 6, "fiber_g": 2, "sugar_g": 1, "sodium_mg": 310 },
+      "key_nutrients": ["protein", "iron", "calcium", "B12"],
+      "crohns_notes": "Firm tofu is low-FODMAP (silken tofu is higher FODMAP). Nutritional yeast is fortified with B12 — great for plant-based patients. Only attempt during stable remission due to spinach.",
+      "post_resection_notes": "Good calcium source (tofu is calcium-set). Skip spinach if kidney stone history post-ileal resection. Nutritional yeast provides B12."
+    },
+    {
+      "id": "highpro_003",
+      "name": "Shrimp and Rice",
+      "description": "Quick sautéed shrimp over white rice with lemon. Fast, high-protein, very low fat.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 8,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "shrimp", "amount": "1 lb", "notes": "peeled, deveined", "substitution": "scallops" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "garlic-infused oil for more flavor" },
+        { "item": "lemon juice", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "fresh parsley", "amount": "2 tbsp chopped", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "white rice", "amount": "1 cup cooked", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Pat shrimp dry with paper towels.",
+        "Heat olive oil in a pan over medium-high heat.",
+        "Add shrimp in a single layer. Cook 2-3 minutes per side until pink.",
+        "Squeeze lemon juice over shrimp. Season with salt.",
+        "Serve over rice, garnished with parsley."
+      ],
+      "nutrition_per_serving": { "calories": 340, "protein_g": 36, "fat_g": 8, "carbs_g": 30, "fiber_g": 0.5, "sugar_g": 0, "sodium_mg": 420 },
+      "key_nutrients": ["B12", "protein", "selenium", "zinc", "iron", "omega-3"],
+      "crohns_notes": "Shrimp is very low fat and cooks in minutes. Excellent B12 source. Some patients react to shellfish — introduce carefully.",
+      "post_resection_notes": "One of the best post-resection proteins — extremely lean, high B12, high selenium. Low fat means no bile acid concerns."
+    },
+    {
+      "id": "b12_001",
+      "name": "Beef and Vegetable Stew (Low-Residue)",
+      "description": "Tender beef stew with well-cooked carrots and potatoes. B12 and iron rich.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 90,
+      "servings": 6,
+      "difficulty": "medium",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["dairy-free", "gluten-free", "high-protein", "low-oxalate"],
+      "ingredients": [
+        { "item": "beef stew meat", "amount": "1.5 lbs", "notes": "chuck, cut into 1-inch cubes", "substitution": "" },
+        { "item": "potatoes", "amount": "3 medium", "notes": "peeled, cubed", "substitution": "" },
+        { "item": "carrots", "amount": "3 medium", "notes": "peeled, sliced", "substitution": "" },
+        { "item": "low-sodium beef broth", "amount": "4 cups", "notes": "", "substitution": "" },
+        { "item": "tomato paste", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "dried thyme", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "3/4 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Pat beef dry. Season with salt.",
+        "Heat olive oil in a large pot over medium-high. Brown beef in batches, 3-4 minutes. Set aside.",
+        "Add broth to pot, scraping up browned bits.",
+        "Return beef. Add tomato paste and thyme. Bring to a boil.",
+        "Reduce to low simmer, cover. Cook 1 hour.",
+        "Add potatoes and carrots. Cook 30 more minutes until everything is very tender.",
+        "Season to taste."
+      ],
+      "nutrition_per_serving": { "calories": 320, "protein_g": 32, "fat_g": 10, "carbs_g": 24, "fiber_g": 3, "sugar_g": 4, "sodium_mg": 480 },
+      "key_nutrients": ["B12", "iron", "zinc", "protein", "vitamin A", "potassium"],
+      "crohns_notes": "Beef is the richest food source of B12 and heme iron (best absorbed form). Long, slow cooking makes the meat very tender and easy to digest. Only for stable remission.",
+      "post_resection_notes": "Top B12 food source — critical for ileal resection patients. Heme iron from beef absorbs better than plant iron. Cook until meat is fall-apart tender."
+    },
+    {
+      "id": "iron_001",
+      "name": "Pan-Seared Chicken Livers",
+      "description": "Quick-cooked chicken livers. The single richest food source of iron and B12.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 10,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fiber", "high-protein"],
+      "ingredients": [
+        { "item": "chicken livers", "amount": "8 oz", "notes": "trimmed of any green spots", "substitution": "" },
+        { "item": "butter", "amount": "1 tbsp", "notes": "", "substitution": "olive oil" },
+        { "item": "fresh thyme", "amount": "1 tsp", "notes": "", "substitution": "dried thyme 1/2 tsp" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "lemon juice", "amount": "1 tbsp", "notes": "cuts richness", "substitution": "" }
+      ],
+      "instructions": [
+        "Pat livers dry. Season with salt.",
+        "Melt butter in pan over medium-high heat.",
+        "Add livers. Cook 3-4 minutes per side until browned outside but still slightly pink inside.",
+        "Add thyme in last minute.",
+        "Squeeze lemon over. Serve immediately.",
+        "Pair with white rice or mashed potatoes."
+      ],
+      "nutrition_per_serving": { "calories": 195, "protein_g": 22, "fat_g": 10, "carbs_g": 1, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 340 },
+      "key_nutrients": ["B12", "iron", "vitamin A", "folate", "zinc", "protein"],
+      "crohns_notes": "3 oz of chicken liver provides 280% daily B12 and 65% daily iron. If you can tolerate it, eating liver once a week can significantly help prevent deficiencies. Not for everyone — strong flavor.",
+      "post_resection_notes": "The most nutrient-dense food for post-resection patients. Incredibly rich in B12, iron, vitamin A, and folate — all nutrients depleted by resection. Even once every 2 weeks makes a difference."
+    },
+    {
+      "id": "lowfat_001",
+      "name": "Steamed Tilapia with Lemon and Dill",
+      "description": "Ultra-lean white fish with herbs. Under 2g of fat per serving.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 10,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "tilapia fillets", "amount": "2 (6 oz each)", "notes": "", "substitution": "sole or flounder" },
+        { "item": "lemon", "amount": "1", "notes": "sliced", "substitution": "" },
+        { "item": "fresh dill", "amount": "2 sprigs", "notes": "", "substitution": "dried dill 1/2 tsp" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Set up steamer basket over simmering water.",
+        "Season fish with salt. Place lemon slices and dill on top.",
+        "Steam 8-10 minutes until fish flakes easily.",
+        "Serve immediately."
+      ],
+      "nutrition_per_serving": { "calories": 145, "protein_g": 30, "fat_g": 2, "carbs_g": 0, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 320 },
+      "key_nutrients": ["B12", "protein", "selenium"],
+      "crohns_notes": "Tilapia has only 2g fat per serving — one of the leanest proteins available. Perfect when you need maximum protein with minimum digestive burden.",
+      "post_resection_notes": "Best choice for severe bile acid malabsorption. Almost no fat means zero bile acid concern. Pair with white rice for a complete meal."
+    },
+    {
+      "id": "meal_prep_001",
+      "name": "Batch Chicken and Rice Meal Prep",
+      "description": "Make 5 lunches in one session. Simple, reliable, always ready.",
+      "meal_type": "lunch",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 30,
+      "servings": 5,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "high-protein", "low-residue"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "2.5 lbs", "notes": "", "substitution": "chicken thighs (remove skin)" },
+        { "item": "white rice", "amount": "2.5 cups dry", "notes": "", "substitution": "" },
+        { "item": "olive oil", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "dried oregano", "amount": "2 tsp", "notes": "", "substitution": "" },
+        { "item": "paprika", "amount": "1 tsp", "notes": "not hot", "substitution": "" },
+        { "item": "salt", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "carrots", "amount": "5 medium", "notes": "peeled, sliced, steamed", "substitution": "green beans" }
+      ],
+      "instructions": [
+        "Preheat oven to 400°F.",
+        "Season chicken with olive oil, oregano, paprika, and salt.",
+        "Bake 25-30 minutes until internal temp 165°F.",
+        "While chicken bakes, cook rice per package directions.",
+        "Steam carrots until tender.",
+        "Let chicken rest 5 minutes, then slice.",
+        "Divide into 5 meal prep containers: chicken + rice + carrots.",
+        "Refrigerate up to 5 days. Reheat in microwave."
+      ],
+      "nutrition_per_serving": { "calories": 420, "protein_g": 42, "fat_g": 8, "carbs_g": 45, "fiber_g": 2, "sugar_g": 3, "sodium_mg": 480 },
+      "key_nutrients": ["B12", "protein", "vitamin A", "zinc"],
+      "crohns_notes": "Meal prep is a game-changer for Crohn's patients — when you're exhausted, a healthy meal is already ready. No decision fatigue, no temptation to eat something risky.",
+      "post_resection_notes": "Perfect post-resection meal prep. Low fat, high protein, well-cooked vegetables. Having meals ready prevents resorting to processed foods when energy is low."
+    },
+    {
+      "id": "breakfast_001",
+      "name": "French Toast (Low-FODMAP)",
+      "description": "Classic French toast made FODMAP-safe. A weekend treat.",
+      "meal_type": "breakfast",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 10,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "sourdough bread", "amount": "4 slices", "notes": "sourdough fermentation reduces FODMAPs in wheat", "substitution": "white bread or GF bread" },
+        { "item": "eggs", "amount": "2 large", "notes": "", "substitution": "" },
+        { "item": "lactose-free milk", "amount": "1/4 cup", "notes": "", "substitution": "oat milk" },
+        { "item": "cinnamon", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "vanilla extract", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "butter", "amount": "1 tbsp", "notes": "for cooking", "substitution": "" },
+        { "item": "maple syrup", "amount": "2 tbsp", "notes": "low-FODMAP sweetener", "substitution": "" }
+      ],
+      "instructions": [
+        "Whisk eggs, milk, cinnamon, and vanilla in a shallow dish.",
+        "Melt butter in a nonstick pan over medium heat.",
+        "Dip each bread slice in egg mixture, coating both sides.",
+        "Cook 2-3 minutes per side until golden.",
+        "Serve with maple syrup and sliced banana if desired."
+      ],
+      "nutrition_per_serving": { "calories": 350, "protein_g": 14, "fat_g": 12, "carbs_g": 46, "fiber_g": 1.5, "sugar_g": 16, "sodium_mg": 420 },
+      "key_nutrients": ["B12", "protein", "calcium"],
+      "crohns_notes": "Sourdough bread is lower FODMAP than regular wheat bread because the fermentation process breaks down fructans. This is a great trick for enjoying bread on low-FODMAP.",
+      "post_resection_notes": "Moderate fat — adjust butter amount if needed. Good calorie-dense breakfast for maintaining weight post-resection."
+    },
+    {
+      "id": "breakfast_002",
+      "name": "Cream of Rice with Cinnamon",
+      "description": "Smooth, warm cereal that's extremely gentle. The safest breakfast during a flare.",
+      "meal_type": "breakfast",
+      "prep_time_minutes": 1,
+      "cook_time_minutes": 5,
+      "servings": 1,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": true, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": true },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "low-fat", "low-fiber", "low-residue", "low-oxalate"],
+      "ingredients": [
+        { "item": "cream of rice cereal", "amount": "3 tbsp dry", "notes": "", "substitution": "" },
+        { "item": "water", "amount": "1 cup", "notes": "", "substitution": "lactose-free milk" },
+        { "item": "cinnamon", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "maple syrup", "amount": "1 tsp", "notes": "optional", "substitution": "sugar" },
+        { "item": "salt", "amount": "pinch", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Bring water to a boil in a small pot.",
+        "Slowly stir in cream of rice.",
+        "Reduce heat to low. Cook 1-2 minutes, stirring constantly.",
+        "Remove from heat. Stir in cinnamon, maple syrup, and salt."
+      ],
+      "nutrition_per_serving": { "calories": 125, "protein_g": 2, "fat_g": 0, "carbs_g": 28, "fiber_g": 0.2, "sugar_g": 4, "sodium_mg": 75 },
+      "key_nutrients": ["iron"],
+      "crohns_notes": "Cream of rice has virtually zero fiber — it's one of the gentlest foods you can eat during a severe flare. Many hospitals serve this post-surgery.",
+      "post_resection_notes": "Perfect for early post-surgery days when transitioning from liquids to soft foods. Essentially predigested carbohydrates."
+    },
+    {
+      "id": "dinner_001",
+      "name": "One-Pot Chicken and Potato Bake",
+      "description": "Everything on one sheet pan. Minimal cleanup when energy is low.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 35,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "dairy-free", "gluten-free", "high-protein"],
+      "ingredients": [
+        { "item": "chicken drumsticks", "amount": "8", "notes": "", "substitution": "chicken thighs" },
+        { "item": "baby potatoes", "amount": "1 lb", "notes": "halved", "substitution": "sweet potatoes" },
+        { "item": "carrots", "amount": "3 medium", "notes": "peeled, cut into chunks", "substitution": "" },
+        { "item": "olive oil", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "dried rosemary", "amount": "1 tsp", "notes": "", "substitution": "dried thyme" },
+        { "item": "paprika", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "3/4 tsp", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Preheat oven to 425°F.",
+        "Toss potatoes and carrots with 1 tbsp olive oil and half the seasonings on a sheet pan.",
+        "Season chicken with remaining oil and seasonings. Nestle among vegetables.",
+        "Bake 35-40 minutes until chicken reaches 175°F and vegetables are tender.",
+        "Let rest 5 minutes before serving."
+      ],
+      "nutrition_per_serving": { "calories": 380, "protein_g": 32, "fat_g": 14, "carbs_g": 28, "fiber_g": 3.5, "sugar_g": 4, "sodium_mg": 520 },
+      "key_nutrients": ["B12", "iron", "protein", "vitamin A", "potassium"],
+      "crohns_notes": "One-pan meals are perfect for low-energy days — minimal prep, minimal cleanup. Drumsticks are more forgiving than breast (harder to overcook).",
+      "post_resection_notes": "Remove chicken skin to reduce fat if bile acid diarrhea is active. Well-cooked root vegetables are easily digestible."
+    },
+    {
+      "id": "dinner_002",
+      "name": "Risotto with Parmesan",
+      "description": "Creamy, comforting risotto. The slow stirring is meditative, the result is delicious.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 25,
+      "servings": 4,
+      "difficulty": "medium",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fodmap", "gluten-free", "low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "arborio rice", "amount": "1.5 cups", "notes": "", "substitution": "" },
+        { "item": "low-sodium chicken broth", "amount": "4 cups", "notes": "warm — keep simmering in separate pot", "substitution": "" },
+        { "item": "parmesan cheese", "amount": "1/2 cup grated", "notes": "aged parmesan is naturally low-FODMAP", "substitution": "" },
+        { "item": "butter", "amount": "2 tbsp", "notes": "", "substitution": "olive oil" },
+        { "item": "garlic-infused olive oil", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "salt", "amount": "1/2 tsp", "notes": "", "substitution": "" },
+        { "item": "white wine", "amount": "1/4 cup", "notes": "optional — alcohol cooks off", "substitution": "skip or use extra broth" }
+      ],
+      "instructions": [
+        "Keep broth warm in a separate pot over low heat.",
+        "Heat garlic-infused oil and 1 tbsp butter in a wide pan over medium heat.",
+        "Add rice. Toast 2 minutes, stirring until edges are translucent.",
+        "Add wine if using. Stir until absorbed.",
+        "Add warm broth one ladle at a time, stirring frequently. Wait until each addition is mostly absorbed before adding the next.",
+        "Continue for 18-20 minutes until rice is creamy and al dente.",
+        "Remove from heat. Stir in remaining butter and parmesan.",
+        "Season with salt. Serve immediately."
+      ],
+      "nutrition_per_serving": { "calories": 380, "protein_g": 12, "fat_g": 12, "carbs_g": 52, "fiber_g": 1, "sugar_g": 1, "sodium_mg": 480 },
+      "key_nutrients": ["calcium", "protein"],
+      "crohns_notes": "Risotto is essentially a porridge of rice — very easy to digest. Parmesan is aged and naturally low in lactose. Garlic-infused oil adds flavor without FODMAP triggers.",
+      "post_resection_notes": "Low fiber, easy to digest. Parmesan provides calcium. Moderate fat — reduce butter if needed."
+    },
+    {
+      "id": "dinner_003",
+      "name": "Miso-Glazed Chicken",
+      "description": "Umami-rich miso chicken. Simple but tastes restaurant-quality.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 20,
+      "servings": 2,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": false, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["dairy-free", "low-fiber", "high-protein"],
+      "ingredients": [
+        { "item": "chicken breast", "amount": "2 (6 oz each)", "notes": "", "substitution": "salmon fillets" },
+        { "item": "white miso paste", "amount": "2 tbsp", "notes": "white/shiro miso is milder — check for added garlic", "substitution": "" },
+        { "item": "maple syrup", "amount": "1 tbsp", "notes": "", "substitution": "" },
+        { "item": "rice vinegar", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "sesame oil", "amount": "1 tsp", "notes": "", "substitution": "" },
+        { "item": "white rice", "amount": "1 cup cooked", "notes": "", "substitution": "" }
+      ],
+      "instructions": [
+        "Mix miso, maple syrup, rice vinegar, and sesame oil into a glaze.",
+        "Spread half the glaze on chicken breasts.",
+        "Preheat broiler. Place chicken on lined baking sheet.",
+        "Broil 6-8 minutes per side, brushing with remaining glaze when you flip.",
+        "Let rest 5 minutes. Slice and serve over rice."
+      ],
+      "nutrition_per_serving": { "calories": 400, "protein_g": 42, "fat_g": 8, "carbs_g": 38, "fiber_g": 1, "sugar_g": 9, "sodium_mg": 680 },
+      "key_nutrients": ["B12", "protein", "zinc"],
+      "crohns_notes": "Miso is fermented soybean paste — a natural probiotic. White miso is milder and usually better tolerated than red miso. Rich umami flavor without needing garlic or onion.",
+      "post_resection_notes": "Low fat. Fermented foods like miso may support gut microbiome recovery post-surgery. Higher sodium — good for electrolyte replacement but watch if on low-sodium diet."
+    },
+    {
+      "id": "comfort_001",
+      "name": "Mac and Cheese (Crohn's-Safe Version)",
+      "description": "Creamy mac and cheese made with lactose-free milk and aged cheddar. Comfort food you can actually eat.",
+      "meal_type": "dinner",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 15,
+      "servings": 4,
+      "difficulty": "easy",
+      "phase_safe": { "phase_2_full_liquids": false, "phase_3_low_residue": true, "phase_4_reintroduction": true, "phase_5_maintenance": true, "during_flare": false },
+      "dietary_tags": ["low-fiber", "low-residue"],
+      "ingredients": [
+        { "item": "elbow macaroni", "amount": "8 oz", "notes": "", "substitution": "gluten-free pasta" },
+        { "item": "aged cheddar cheese", "amount": "1.5 cups shredded", "notes": "aged > 6 months — very low lactose", "substitution": "aged Gruyère" },
+        { "item": "lactose-free milk", "amount": "1 cup", "notes": "", "substitution": "oat milk" },
+        { "item": "butter", "amount": "2 tbsp", "notes": "", "substitution": "" },
+        { "item": "flour", "amount": "2 tbsp", "notes": "for roux", "substitution": "cornstarch for GF (1 tbsp)" },
+        { "item": "salt", "amount": "1/4 tsp", "notes": "", "substitution": "" },
+        { "item": "mustard powder", "amount": "1/4 tsp", "notes": "optional — enhances cheese flavor", "substitution": "" }
+      ],
+      "instructions": [
+        "Cook pasta per package directions. Drain.",
+        "In the same pot, melt butter over medium heat.",
+        "Whisk in flour. Cook 1 minute.",
+        "Slowly whisk in milk. Stir until thickened, about 3 minutes.",
+        "Remove from heat. Stir in cheese, salt, and mustard powder until melted and smooth.",
+        "Add pasta back to pot. Stir to coat."
+      ],
+      "nutrition_per_serving": { "calories": 420, "protein_g": 20, "fat_g": 18, "carbs_g": 44, "fiber_g": 1.5, "sugar_g": 3, "sodium_mg": 420 },
+      "key_nutrients": ["calcium", "B12", "protein"],
+      "crohns_notes": "The secret: aged cheddar is naturally very low in lactose because bacteria consume the lactose during aging. Combined with lactose-free milk, this is genuinely safe for most lactose-intolerant patients.",
+      "post_resection_notes": "Higher fat (18g) — eat a smaller portion if bile acid diarrhea is active. Excellent calcium source which is critical post-resection."
+    }
+  ]
+}

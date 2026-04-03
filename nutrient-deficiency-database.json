@@ -1,0 +1,1504 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-03-31",
+    "description": "Nutrient deficiency tracking database for Crohn's disease patients, with emphasis on post-bowel-resection monitoring",
+    "disclaimer": "This data is for informational purposes within a health management app. It does not replace professional medical advice. All supplement doses and lab interpretations should be discussed with a gastroenterologist or registered dietitian.",
+    "sources": [
+      "NIH Office of Dietary Supplements Fact Sheets (2024-2025)",
+      "ESPEN Practical Guideline: Clinical Nutrition in IBD (Bischoff et al., Clin Nutr 2020;39:632-653)",
+      "ACG Clinical Guideline: Management of Crohn's Disease in Adults (Lichtenstein et al., Am J Gastroenterol 2018;113:481-517)",
+      "Crohn's & Colitis Foundation Supplementation and Diet Resources",
+      "AGA Clinical Practice Update on Micronutrient Deficiencies in IBD (Defined et al., Gastroenterology 2023;164:1105-1117)",
+      "Weisshof R, Chermesh I. Micronutrient deficiencies in inflammatory bowel disease. Curr Opin Clin Nutr Metab Care 2015;18:576-581",
+      "Hwang C, Ross V, Mahadevan U. Micronutrient deficiencies in inflammatory bowel disease. Inflamm Bowel Dis 2012;18:1961-1981",
+      "Lomer MCE. The role of diet and nutrition in the management of Crohn's disease. Proc Nutr Soc 2024;83:60-72",
+      "Defined et al. Short Bowel Syndrome and Intestinal Failure. Nat Rev Dis Primers 2022;8:35"
+    ]
+  },
+  "nutrients": [
+    {
+      "id": "vitamin_b12",
+      "nutrient_name": "Vitamin B12 (Cobalamin)",
+      "why_crohns_patients_need_monitoring": "Vitamin B12 is exclusively absorbed in the terminal ileum via intrinsic factor receptors. Crohn's disease most commonly affects the terminal ileum, and chronic inflammation damages the specialized absorptive cells (enterocytes) responsible for B12 uptake. Even without surgery, active ileal disease can cause severe B12 malabsorption. Deficiency develops insidiously because the liver stores 2-5 years' worth of B12.",
+      "why_resection_makes_it_worse": "Surgical removal of the terminal ileum eliminates the only site in the body capable of active B12 absorption. Resections of more than 60 cm of terminal ileum virtually guarantee permanent B12 malabsorption requiring lifelong supplementation. Even resections of 20-60 cm significantly impair absorption. Passive diffusion accounts for only about 1% of oral B12 absorption, making oral supplementation unreliable after ileal resection.",
+      "which_resection_type_affects_it": "ileal",
+      "deficiency_symptoms": [
+        "Fatigue and weakness",
+        "Megaloblastic anemia (large, immature red blood cells)",
+        "Numbness and tingling in hands and feet (peripheral neuropathy)",
+        "Difficulty walking and balance problems",
+        "Cognitive changes: memory loss, confusion, difficulty concentrating",
+        "Glossitis (swollen, inflamed tongue)",
+        "Mood changes: depression, irritability",
+        "Heart palpitations",
+        "Shortness of breath",
+        "Pale or jaundiced skin",
+        "Vision disturbances",
+        "Subacute combined degeneration of the spinal cord (severe, irreversible)"
+      ],
+      "deficiency_prevalence_in_crohns": "22-33% of Crohn's patients overall; up to 48% in patients with ileal disease or prior ileal resection",
+      "recommended_daily_intake": {
+        "general_adult": "2.4 mcg/day",
+        "crohns_patient": "100-500 mcg/day oral or 1000 mcg/month intramuscular, depending on disease location",
+        "post_resection": "1000 mcg intramuscular every 1-3 months (lifelong if >60 cm ileum resected); high-dose oral (1000-2000 mcg/day) may work for minor resections via passive diffusion"
+      },
+      "best_food_sources": [
+        {"food": "Beef liver (cooked)", "amount_per_serving": "70.7 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": false, "notes": "Very high in B12 but organ meats can be hard to digest during flares; try when in remission"},
+        {"food": "Clams (cooked)", "amount_per_serving": "84.1 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": false, "notes": "Shellfish can irritate the gut; avoid during active disease"},
+        {"food": "Salmon (cooked)", "amount_per_serving": "4.8 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Well-tolerated when baked or poached; good source of omega-3s as well"},
+        {"food": "Tuna (canned in water)", "amount_per_serving": "2.5 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Soft texture, easy to digest"},
+        {"food": "Nutritional yeast (fortified)", "amount_per_serving": "8.3 mcg", "serving_size": "2 tbsp", "crohns_safe": true, "notes": "Good plant-based option; check individual tolerance"},
+        {"food": "Eggs (whole, cooked)", "amount_per_serving": "1.1 mcg", "serving_size": "2 large eggs", "crohns_safe": true, "notes": "Well-tolerated by most Crohn's patients; scrambled is easiest to digest"},
+        {"food": "Fortified plant milk", "amount_per_serving": "1.2 mcg", "serving_size": "1 cup (240 mL)", "crohns_safe": true, "notes": "Check that it's fortified; almond or oat milk usually tolerated"},
+        {"food": "Greek yogurt (low-fat)", "amount_per_serving": "1.3 mcg", "serving_size": "6 oz (170 g)", "crohns_safe": true, "notes": "Probiotics may offer additional gut benefit; avoid if lactose intolerant"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Methylcobalamin or hydroxocobalamin (intramuscular injection for post-resection patients)",
+        "why_this_form": "Methylcobalamin is the bioactive coenzyme form, requiring no conversion. Hydroxocobalamin has longer tissue retention than cyanocobalamin. After ileal resection, intramuscular injection bypasses the destroyed absorption site entirely.",
+        "forms_to_avoid": "Cyanocobalamin is acceptable but less efficient; requires conversion and releases trace cyanide. Sublingual forms are unreliable after ileal resection.",
+        "typical_dose": "1000 mcg/day oral (methylcobalamin) or 1000 mcg IM monthly",
+        "post_resection_dose": "1000 mcg IM injection every 1-3 months (standard); some protocols use 1000 mcg IM weekly for 4 weeks to replete, then monthly. High-dose oral (2000 mcg/day) may suffice for minor resections (<20 cm) via passive diffusion (~1% absorbed).",
+        "take_with_food": false,
+        "absorption_tips": "Injections are the gold standard after ileal resection. If using oral supplements, take on an empty stomach for best passive absorption. Sublingual may offer slight advantage over swallowed tablets. Avoid taking with high-dose vitamin C (>500 mg) which may degrade B12.",
+        "interactions": [
+          "Metformin reduces B12 absorption by 10-30%",
+          "Proton pump inhibitors (PPIs) and H2 blockers reduce B12 release from food",
+          "Colchicine impairs B12 absorption",
+          "Nitrous oxide inactivates B12 stores (relevant for anesthesia)"
+        ],
+        "when_oral_wont_work": "Resection of >60 cm of terminal ileum, active severe ileal disease, documented malabsorption despite high-dose oral therapy, or serum B12 remains low after 3 months of oral supplementation."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Vitamin B12 (cobalamin)",
+        "normal_range": "200-900 pg/mL (148-664 pmol/L)",
+        "deficient_threshold": "<200 pg/mL (<148 pmol/L)",
+        "severely_deficient_threshold": "<150 pg/mL (<111 pmol/L)",
+        "unit": "pg/mL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 3 months",
+        "testing_frequency_ongoing": "Every 6-12 months; also check methylmalonic acid (MMA) and homocysteine as functional markers when B12 is borderline (200-400 pg/mL)",
+        "notes": "Serum B12 alone can be misleading. MMA >0.4 umol/L and homocysteine >15 umol/L suggest functional deficiency even with normal serum B12. Holotranscobalamin (active B12) is a more sensitive early marker if available."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Methotrexate", "effect": "Both B12 and folate metabolism are affected; methotrexate is a folate antagonist but B12 status should be adequate for proper folate cycling", "recommendation": "Monitor B12 and folate together; supplement both as needed"},
+        {"medication": "Sulfasalazine", "effect": "Impairs folate absorption; may mask B12 deficiency if folate is supplemented without checking B12", "recommendation": "Always check B12 before starting folate supplementation"},
+        {"medication": "Proton pump inhibitors (PPIs)", "effect": "Reduce gastric acid needed to release B12 from food proteins", "recommendation": "Use supplemental B12 (not food-bound) or injections"},
+        {"medication": "Azathioprine/6-MP", "effect": "Indirectly related; adequate B12 and folate needed for proper DNA synthesis and to avoid compounding myelosuppression", "recommendation": "Ensure B12 is replete before and during therapy"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Sudden onset of numbness, tingling, or weakness in extremities",
+        "Difficulty walking or unexplained falls",
+        "Significant cognitive decline or confusion",
+        "Severe anemia symptoms: chest pain, rapid heartbeat, extreme fatigue",
+        "Vision changes or optic neuropathy"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Battat R et al. Vitamin B12 deficiency in inflammatory bowel disease. Aliment Pharmacol Ther 2014;40:1250-1259",
+        "NIH Office of Dietary Supplements. Vitamin B12 Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Headstrom PD et al. Prevalence of and risk factors for vitamin B12 deficiency in Crohn's disease. Inflamm Bowel Dis 2008;14:217-223",
+        "ACG Clinical Guideline: Management of Crohn's Disease in Adults. Am J Gastroenterol 2018;113:481-517"
+      ]
+    },
+    {
+      "id": "vitamin_d",
+      "nutrient_name": "Vitamin D (D2 and D3)",
+      "why_crohns_patients_need_monitoring": "Vitamin D is a fat-soluble vitamin requiring bile salts and intact intestinal mucosa for absorption. Crohn's disease causes fat malabsorption through mucosal damage, bile salt depletion (especially with ileal disease), and reduced dietary intake during flares. Vitamin D also plays an immunomodulatory role—deficiency is associated with increased Crohn's flare risk, higher disease activity, and greater need for surgery. It helps maintain intestinal barrier integrity.",
+      "why_resection_makes_it_worse": "Ileal resection disrupts bile salt reabsorption (enterohepatic circulation), leading to bile salt deficiency and fat malabsorption, which directly impairs fat-soluble vitamin absorption including vitamin D. Extensive small bowel resection reduces the absorptive surface area. Post-resection patients also tend to avoid fatty foods (which are the primary dietary sources of vitamin D) due to steatorrhea.",
+      "which_resection_type_affects_it": "ileal",
+      "deficiency_symptoms": [
+        "Bone pain and muscle weakness",
+        "Fatigue and general malaise",
+        "Increased fracture risk (osteoporosis/osteopenia)",
+        "Muscle cramps and spasms",
+        "Depression and mood changes",
+        "Impaired wound healing",
+        "Frequent infections due to impaired immunity",
+        "Joint pain",
+        "Hair loss (severe deficiency)"
+      ],
+      "deficiency_prevalence_in_crohns": "35-75% of Crohn's patients; prevalence increases with ileal disease, resection history, and northern latitudes",
+      "recommended_daily_intake": {
+        "general_adult": "600-800 IU/day (15-20 mcg/day)",
+        "crohns_patient": "1000-4000 IU/day; target serum 25(OH)D of 30-50 ng/mL",
+        "post_resection": "2000-5000 IU/day or higher with monitoring; some patients require 50,000 IU weekly for repletion. Dose guided by serum levels."
+      },
+      "best_food_sources": [
+        {"food": "Salmon (wild-caught, cooked)", "amount_per_serving": "570 IU", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Baked or poached salmon is generally well-tolerated; excellent combined D3 and omega-3 source"},
+        {"food": "Sardines (canned in oil)", "amount_per_serving": "164 IU", "serving_size": "2 sardines", "crohns_safe": true, "notes": "Soft bones provide calcium too; drain oil if fat is poorly tolerated"},
+        {"food": "Egg yolks", "amount_per_serving": "44 IU per yolk", "serving_size": "1 large egg", "crohns_safe": true, "notes": "Easy to digest scrambled or soft-boiled"},
+        {"food": "Fortified orange juice", "amount_per_serving": "100 IU", "serving_size": "8 oz (240 mL)", "crohns_safe": false, "notes": "Citrus may trigger symptoms in some patients; try calcium-fortified variety if tolerated"},
+        {"food": "Fortified milk or plant milk", "amount_per_serving": "100-120 IU", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Oat milk or lactose-free milk if dairy intolerant"},
+        {"food": "Cod liver oil", "amount_per_serving": "1360 IU", "serving_size": "1 tbsp", "crohns_safe": true, "notes": "Very concentrated; also provides vitamin A and omega-3s. Start with small dose to assess tolerance"},
+        {"food": "Mushrooms (UV-exposed)", "amount_per_serving": "366 IU", "serving_size": "0.5 cup (70 g)", "crohns_safe": true, "notes": "Provides D2 (ergocalciferol); cook thoroughly for better digestibility"},
+        {"food": "Fortified cereal", "amount_per_serving": "80 IU", "serving_size": "1 cup", "crohns_safe": false, "notes": "High fiber cereals may worsen symptoms; choose low-fiber fortified options if tolerated"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Cholecalciferol (Vitamin D3) in oil-based softgel or liquid drops",
+        "why_this_form": "D3 (cholecalciferol) raises and maintains serum 25(OH)D levels more effectively than D2 (ergocalciferol). Oil-based delivery improves absorption of this fat-soluble vitamin, especially critical in patients with fat malabsorption.",
+        "forms_to_avoid": "Dry tablet forms are poorly absorbed in fat malabsorption states. D2 (ergocalciferol) is less potent and shorter-acting than D3, though 50,000 IU D2 capsules remain useful for repletion protocols.",
+        "typical_dose": "1000-2000 IU/day maintenance; 50,000 IU weekly for 8-12 weeks for repletion",
+        "post_resection_dose": "2000-5000 IU/day maintenance; repletion may require 50,000 IU 2-3 times per week for 8-12 weeks. Some patients with extensive resection need 10,000 IU/day. Always dose to serum level.",
+        "take_with_food": true,
+        "absorption_tips": "Take with the largest meal of the day containing some fat (even a small amount helps). Medium-chain triglyceride (MCT) oil can improve absorption in fat-malabsorption states. Water-miscible (micellized) vitamin D preparations are available for severe malabsorption. Sunlight exposure (10-15 min midday) provides supplementary D3 synthesis but is unreliable.",
+        "interactions": [
+          "Cholestyramine (bile acid sequestrant) significantly reduces vitamin D absorption—separate by 4+ hours",
+          "Corticosteroids impair calcium absorption and increase vitamin D catabolism",
+          "Orlistat reduces fat-soluble vitamin absorption",
+          "Phenytoin, carbamazepine, and phenobarbital increase vitamin D catabolism",
+          "Thiazide diuretics combined with vitamin D can cause hypercalcemia"
+        ],
+        "when_oral_wont_work": "Severe fat malabsorption with steatorrhea despite water-miscible preparations, serum 25(OH)D remains <20 ng/mL after 3 months of high-dose oral therapy, or short bowel syndrome. Intramuscular vitamin D (300,000 IU stoss therapy) or UV light therapy may be considered."
+      },
+      "lab_monitoring": {
+        "test_name": "25-Hydroxyvitamin D [25(OH)D]",
+        "normal_range": "30-80 ng/mL (75-200 nmol/L)",
+        "deficient_threshold": "<20 ng/mL (<50 nmol/L)",
+        "severely_deficient_threshold": "<10 ng/mL (<25 nmol/L)",
+        "unit": "ng/mL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 3 months until stable in target range",
+        "testing_frequency_ongoing": "Every 6 months; more frequently during dose adjustments or seasonal changes",
+        "notes": "Target 30-50 ng/mL for Crohn's patients based on immunomodulatory benefit data. Check calcium and PTH simultaneously. 1,25-dihydroxyvitamin D is not useful for screening (tightly regulated, often normal even in deficiency). Recheck 3 months after dose changes."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids (prednisone, budesonide)", "effect": "Accelerate vitamin D catabolism and impair intestinal calcium absorption; increase osteoporosis risk", "recommendation": "Supplement vitamin D 2000-4000 IU/day and calcium during steroid use; obtain baseline DEXA scan if prolonged steroid course expected"},
+        {"medication": "Cholestyramine", "effect": "Binds bile salts and fat-soluble vitamins in the gut lumen", "recommendation": "Take vitamin D at least 4 hours before or after cholestyramine"},
+        {"medication": "Infliximab / Adalimumab / Biologics", "effect": "Some evidence that adequate vitamin D enhances biologic response; deficiency may reduce efficacy", "recommendation": "Optimize vitamin D levels before and during biologic therapy"},
+        {"medication": "Azathioprine / 6-MP", "effect": "No direct interaction, but these increase skin cancer risk; less sun exposure means less vitamin D synthesis", "recommendation": "Supplement vitamin D to compensate for necessary sun avoidance"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Severe bone pain with stress fractures",
+        "Tetany or severe muscle spasms (suggests concurrent calcium deficiency)",
+        "Serum 25(OH)D <10 ng/mL with elevated PTH (secondary hyperparathyroidism)",
+        "Symptoms of hypercalcemia during supplementation: nausea, excessive thirst, confusion, kidney pain"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Ananthakrishnan AN et al. Higher predicted vitamin D status is associated with reduced risk of Crohn's disease. Gastroenterology 2012;142:482-489",
+        "NIH Office of Dietary Supplements. Vitamin D Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Jorgensen SP et al. Clinical trial: vitamin D3 treatment in Crohn's disease. Aliment Pharmacol Ther 2010;32:377-383",
+        "ACG Clinical Guideline: Management of Crohn's Disease in Adults. Am J Gastroenterol 2018;113:481-517"
+      ]
+    },
+    {
+      "id": "vitamin_a",
+      "nutrient_name": "Vitamin A (Retinol / Beta-Carotene)",
+      "why_crohns_patients_need_monitoring": "Vitamin A is a fat-soluble vitamin essential for immune function, gut epithelial integrity, and mucosal healing. Crohn's patients have impaired fat absorption, reduced dietary intake (avoidance of fruits and vegetables during flares), and increased utilization during active inflammation. Vitamin A deficiency impairs intestinal barrier function and mucosal repair, creating a cycle of worsening disease.",
+      "why_resection_makes_it_worse": "Ileal resection disrupts bile salt recycling, causing fat malabsorption and consequently poor absorption of all fat-soluble vitamins including vitamin A. Reduced small bowel surface area further limits absorption. Patients with extensive resection and steatorrhea are at highest risk.",
+      "which_resection_type_affects_it": "ileal",
+      "deficiency_symptoms": [
+        "Night blindness (earliest clinical sign)",
+        "Dry eyes (xerophthalmia)",
+        "Dry, rough skin",
+        "Impaired wound healing",
+        "Increased susceptibility to infections",
+        "Follicular hyperkeratosis (bumpy skin)",
+        "Impaired mucosal regeneration in the gut",
+        "Anemia (contributes to iron metabolism)",
+        "Growth impairment in younger patients"
+      ],
+      "deficiency_prevalence_in_crohns": "16-35% of Crohn's patients; higher in those with active disease, ileal involvement, or history of resection",
+      "recommended_daily_intake": {
+        "general_adult": "900 mcg RAE (men), 700 mcg RAE (women) — equivalent to 3000 IU / 2333 IU",
+        "crohns_patient": "900-1500 mcg RAE/day; monitor levels and adjust",
+        "post_resection": "1500-3000 mcg RAE/day with monitoring; water-miscible forms for severe malabsorption"
+      },
+      "best_food_sources": [
+        {"food": "Sweet potato (baked)", "amount_per_serving": "1403 mcg RAE", "serving_size": "1 medium", "crohns_safe": true, "notes": "Excellent source; well-tolerated when baked and mashed. Remove skin if fibrous foods are problematic."},
+        {"food": "Carrots (cooked)", "amount_per_serving": "665 mcg RAE", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Cooking improves beta-carotene bioavailability; well-tolerated when soft-cooked"},
+        {"food": "Butternut squash (cooked)", "amount_per_serving": "572 mcg RAE", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Soft, easy to digest; puree for best tolerance"},
+        {"food": "Spinach (cooked)", "amount_per_serving": "472 mcg RAE", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "High oxalate content; may worsen symptoms in some patients. Well-cooked and pureed is better tolerated."},
+        {"food": "Cantaloupe", "amount_per_serving": "186 mcg RAE", "serving_size": "0.5 cup diced", "crohns_safe": true, "notes": "Soft fruit; generally well-tolerated in remission"},
+        {"food": "Eggs (whole)", "amount_per_serving": "80 mcg RAE", "serving_size": "1 large", "crohns_safe": true, "notes": "Contains preformed retinol; easy to digest"},
+        {"food": "Cod liver oil", "amount_per_serving": "1350 mcg RAE", "serving_size": "1 tsp", "crohns_safe": true, "notes": "Very concentrated; also provides vitamin D. Be cautious of vitamin A toxicity with high doses."}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Retinyl palmitate (preformed vitamin A) in water-miscible or micellized form for malabsorption patients; beta-carotene as a safer alternative for maintenance",
+        "why_this_form": "Preformed vitamin A (retinyl palmitate) does not require conversion and is more reliably absorbed. Water-miscible preparations bypass the need for bile salt-dependent absorption. Beta-carotene is safer (no toxicity risk) but conversion to retinol is variable and less efficient.",
+        "forms_to_avoid": "High-dose preformed vitamin A (>10,000 IU/day) without medical supervision due to hepatotoxicity risk. Avoid in pregnancy (teratogenic above 10,000 IU/day).",
+        "typical_dose": "5000-10,000 IU/day (1500-3000 mcg RAE) for deficiency repletion; 2500-5000 IU/day maintenance",
+        "post_resection_dose": "5000-10,000 IU/day with serum monitoring every 3-6 months; water-miscible form preferred. Adjust based on serum retinol levels.",
+        "take_with_food": true,
+        "absorption_tips": "Take with a meal containing fat. MCT oil can improve absorption. Water-miscible (ADEK) preparations are designed for fat malabsorption. Zinc is required for retinol-binding protein synthesis—ensure zinc is also adequate.",
+        "interactions": [
+          "Cholestyramine reduces vitamin A absorption—separate by 4+ hours",
+          "Orlistat reduces fat-soluble vitamin absorption",
+          "Retinoids (isotretinoin, acitretin) combined with vitamin A supplements risk hypervitaminosis A",
+          "Excessive alcohol intake increases hepatotoxicity risk of vitamin A",
+          "Warfarin: high-dose vitamin A may potentiate anticoagulant effect"
+        ],
+        "when_oral_wont_work": "Severe steatorrhea unresponsive to water-miscible forms, short bowel syndrome with very limited absorptive capacity. Intramuscular vitamin A (100,000 IU) can be used for acute repletion under medical supervision."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Retinol (Vitamin A)",
+        "normal_range": "30-65 mcg/dL (1.05-2.27 umol/L)",
+        "deficient_threshold": "<20 mcg/dL (<0.70 umol/L)",
+        "severely_deficient_threshold": "<10 mcg/dL (<0.35 umol/L)",
+        "unit": "mcg/dL",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Every 3-6 months",
+        "testing_frequency_ongoing": "Annually; more frequently if on high-dose supplementation to avoid toxicity",
+        "notes": "Serum retinol is maintained by liver stores and only drops when stores are severely depleted—a low level indicates significant deficiency. Retinol-binding protein (RBP) is affected by inflammation and protein status. Check CRP simultaneously to interpret levels in context of inflammation."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "May reduce vitamin A absorption and increase catabolism", "recommendation": "Monitor levels during prolonged steroid courses"},
+        {"medication": "Cholestyramine", "effect": "Binds fat-soluble vitamins in the gut", "recommendation": "Separate dosing by 4+ hours; use water-miscible vitamin A"},
+        {"medication": "Methotrexate", "effect": "Both are hepatotoxic; combined effect on liver", "recommendation": "Monitor liver function and vitamin A levels; avoid excessive supplementation"},
+        {"medication": "Azathioprine / 6-MP", "effect": "Both hepatotoxic; vitamin A excess compounds liver risk", "recommendation": "Keep supplementation within recommended range; monitor LFTs"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Night blindness or significant vision changes",
+        "Severe dry eyes with corneal damage (keratomalacia)",
+        "Signs of vitamin A toxicity: severe headache, nausea, blurred vision, peeling skin, bone pain",
+        "Jaundice or liver enzyme elevation during supplementation"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Soares-Mota M et al. High prevalence of vitamin A deficiency in Crohn's disease patients. World J Gastroenterol 2015;21:1197-1203",
+        "NIH Office of Dietary Supplements. Vitamin A Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Hwang C et al. Micronutrient deficiencies in inflammatory bowel disease. Inflamm Bowel Dis 2012;18:1961-1981"
+      ]
+    },
+    {
+      "id": "vitamin_e",
+      "nutrient_name": "Vitamin E (Alpha-Tocopherol)",
+      "why_crohns_patients_need_monitoring": "Vitamin E is a fat-soluble antioxidant that protects cell membranes from oxidative damage. Crohn's patients have increased oxidative stress from chronic inflammation and reduced antioxidant capacity. Fat malabsorption impairs vitamin E uptake, and dietary restrictions further limit intake.",
+      "why_resection_makes_it_worse": "Ileal resection causes bile salt deficiency and fat malabsorption, reducing vitamin E absorption. Vitamin E requires bile salts for micelle formation and absorption in the small intestine. Extensive resection shortens transit time and reduces absorptive surface.",
+      "which_resection_type_affects_it": "ileal",
+      "deficiency_symptoms": [
+        "Peripheral neuropathy (numbness, tingling)",
+        "Muscle weakness",
+        "Ataxia (coordination problems)",
+        "Impaired immune function",
+        "Retinopathy (vision problems)",
+        "Hemolytic anemia (in severe deficiency)",
+        "Cognitive decline",
+        "Increased susceptibility to oxidative damage"
+      ],
+      "deficiency_prevalence_in_crohns": "10-20% of Crohn's patients; less commonly measured but likely underdiagnosed",
+      "recommended_daily_intake": {
+        "general_adult": "15 mg (22.4 IU) alpha-tocopherol/day",
+        "crohns_patient": "15-30 mg/day; higher during active disease due to increased oxidative stress",
+        "post_resection": "30-60 mg/day with monitoring; water-miscible form for severe malabsorption"
+      },
+      "best_food_sources": [
+        {"food": "Sunflower seeds", "amount_per_serving": "7.4 mg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Seeds can be problematic during flares; try sunflower seed butter instead"},
+        {"food": "Almonds", "amount_per_serving": "7.3 mg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Hard to digest whole; almond butter is better tolerated"},
+        {"food": "Almond butter", "amount_per_serving": "3.9 mg", "serving_size": "1 tbsp", "crohns_safe": true, "notes": "Smooth nut butter is usually well-tolerated; good source"},
+        {"food": "Avocado", "amount_per_serving": "2.7 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Soft, nutrient-dense; generally well-tolerated"},
+        {"food": "Olive oil", "amount_per_serving": "1.9 mg", "serving_size": "1 tbsp", "crohns_safe": true, "notes": "Anti-inflammatory; well-tolerated as cooking oil or dressing"},
+        {"food": "Spinach (cooked)", "amount_per_serving": "1.9 mg", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "High oxalate; cook thoroughly and consume in moderation"},
+        {"food": "Butternut squash (cooked)", "amount_per_serving": "1.3 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Soft, easy to digest when cooked"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "d-alpha-tocopherol (natural form) in water-miscible or micellized preparation",
+        "why_this_form": "Natural d-alpha-tocopherol has approximately twice the bioactivity of synthetic dl-alpha-tocopherol. Water-miscible forms bypass bile salt-dependent absorption.",
+        "forms_to_avoid": "dl-alpha-tocopherol (synthetic—less bioactive). High-dose vitamin E (>400 IU/day) may increase all-cause mortality and bleeding risk.",
+        "typical_dose": "200-400 IU/day natural d-alpha-tocopherol for deficiency",
+        "post_resection_dose": "400-800 IU/day water-miscible form during repletion; 200-400 IU/day maintenance. Monitor serum levels.",
+        "take_with_food": true,
+        "absorption_tips": "Take with a fat-containing meal. Water-miscible (ADEK) combination supplements are efficient for fat malabsorption. Vitamin C enhances vitamin E regeneration. Avoid simultaneous high-dose iron (competes for absorption).",
+        "interactions": [
+          "Anticoagulants (warfarin): vitamin E may increase bleeding risk at doses >400 IU/day",
+          "Cholestyramine reduces vitamin E absorption",
+          "Orlistat reduces fat-soluble vitamin absorption",
+          "High-dose vitamin E may impair vitamin K-dependent clotting factors",
+          "Statins: some evidence of reduced antioxidant effect, clinical significance unclear"
+        ],
+        "when_oral_wont_work": "Severe steatorrhea unresponsive to water-miscible preparations, short bowel syndrome. Intramuscular vitamin E is available but rarely needed."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Alpha-Tocopherol",
+        "normal_range": "5.5-17 mg/L (12-40 umol/L)",
+        "deficient_threshold": "<5.0 mg/L (<12 umol/L)",
+        "severely_deficient_threshold": "<3.0 mg/L (<7 umol/L)",
+        "unit": "mg/L",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Every 6 months",
+        "testing_frequency_ongoing": "Annually",
+        "notes": "Serum vitamin E should be interpreted in relation to total lipids (alpha-tocopherol:lipid ratio) because levels are affected by lipid status. Ratio of <0.8 mg/g total lipids indicates deficiency even if absolute level appears normal."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "Increase oxidative stress; may increase vitamin E utilization", "recommendation": "Consider supplementation during prolonged steroid courses"},
+        {"medication": "Cholestyramine", "effect": "Reduces fat-soluble vitamin absorption", "recommendation": "Separate dosing by 4+ hours"},
+        {"medication": "Azathioprine / 6-MP", "effect": "No direct interaction; antioxidant support may be beneficial", "recommendation": "Standard supplementation appropriate"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Progressive peripheral neuropathy",
+        "Sudden loss of coordination or balance",
+        "Unexplained easy bruising or bleeding (may indicate interaction with anticoagulant effect)",
+        "Hemolytic anemia symptoms: fatigue, jaundice, dark urine"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Fabisiak N et al. Fat-soluble vitamin deficiencies and inflammatory bowel disease. J Clin Med 2017;6:89",
+        "NIH Office of Dietary Supplements. Vitamin E Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Alkhouri RH et al. Vitamin and mineral status in patients with inflammatory bowel disease. J Pediatr Gastroenterol Nutr 2013;56:89-92"
+      ]
+    },
+    {
+      "id": "vitamin_k",
+      "nutrient_name": "Vitamin K (K1 Phylloquinone / K2 Menaquinone)",
+      "why_crohns_patients_need_monitoring": "Vitamin K is essential for blood clotting (coagulation factors II, VII, IX, X) and bone metabolism (osteocalcin activation). Crohn's patients are at risk due to fat malabsorption, dietary restrictions limiting green vegetable intake, antibiotic use disrupting gut bacteria that synthesize vitamin K2, and reduced bile salt availability.",
+      "why_resection_makes_it_worse": "Ileal resection causes bile salt depletion and fat malabsorption, impairing vitamin K1 absorption. Colonic resection eliminates a major site of vitamin K2 production by colonic bacteria. Antibiotic courses (common post-surgery) further deplete K2-producing gut flora.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Easy bruising",
+        "Prolonged bleeding from cuts or wounds",
+        "Bleeding gums",
+        "Nosebleeds",
+        "Heavy menstrual periods",
+        "Blood in urine or stool",
+        "Reduced bone density (long-term)",
+        "Increased fracture risk"
+      ],
+      "deficiency_prevalence_in_crohns": "20-50% have subclinical deficiency based on undercarboxylated osteocalcin or PIVKA-II; overt deficiency less common (~5-10%)",
+      "recommended_daily_intake": {
+        "general_adult": "120 mcg/day (men), 90 mcg/day (women) — Adequate Intake",
+        "crohns_patient": "120-250 mcg/day; combination of K1 and K2",
+        "post_resection": "250-500 mcg/day or higher; monitor coagulation parameters"
+      },
+      "best_food_sources": [
+        {"food": "Kale (cooked)", "amount_per_serving": "531 mcg K1", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "Very high in K1 but difficult to digest raw; well-cooked and pureed may be tolerated in remission"},
+        {"food": "Spinach (cooked)", "amount_per_serving": "444 mcg K1", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "Cook thoroughly; high oxalate—limit if kidney stone risk. Puree for best tolerance."},
+        {"food": "Broccoli (cooked)", "amount_per_serving": "110 mcg K1", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Well-cooked florets (no stems) are usually tolerated in remission"},
+        {"food": "Brussels sprouts (cooked)", "amount_per_serving": "109 mcg K1", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "Gas-producing; may cause cramping. Avoid during flares."},
+        {"food": "Natto (fermented soybeans)", "amount_per_serving": "1000+ mcg K2", "serving_size": "3.5 oz (100 g)", "crohns_safe": false, "notes": "Richest food source of K2 (MK-7) but fermented soy may not be tolerated by all patients"},
+        {"food": "Olive oil", "amount_per_serving": "8.1 mcg K1", "serving_size": "1 tbsp", "crohns_safe": true, "notes": "Modest source but consumed regularly; well-tolerated"},
+        {"food": "Chicken", "amount_per_serving": "13 mcg K2", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Contains K2 (MK-4 form); well-tolerated when cooked tender"},
+        {"food": "Hard cheese (Gouda)", "amount_per_serving": "75 mcg K2", "serving_size": "1 oz (28 g)", "crohns_safe": true, "notes": "Contains K2 (MK-7/MK-9) from bacterial fermentation; generally well-tolerated in small amounts"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Vitamin K2 as MK-7 (menaquinone-7) for bone health; K1 (phylloquinone) for coagulation support; combination supplements available",
+        "why_this_form": "MK-7 has the longest half-life (72 hours vs 1-2 hours for K1), providing sustained levels. K1 is most important for coagulation. A combination of K1 + K2 (MK-7) covers both bone and coagulation needs.",
+        "forms_to_avoid": "Menadione (synthetic vitamin K3) is no longer recommended due to toxicity concerns.",
+        "typical_dose": "100-200 mcg K2 (MK-7)/day + 500 mcg K1/day for deficiency",
+        "post_resection_dose": "200-500 mcg K2 (MK-7)/day; K1 5-10 mg/day if coagulopathy present. Water-miscible form preferred.",
+        "take_with_food": true,
+        "absorption_tips": "Take with a fat-containing meal (fat-soluble). Combination ADEK water-miscible supplements address all fat-soluble vitamins simultaneously. Vitamin D enhances vitamin K's bone benefits. Probiotics may help restore K2-producing gut flora.",
+        "interactions": [
+          "Warfarin: vitamin K DIRECTLY ANTAGONIZES warfarin—dose must be consistent; consult anticoagulation clinic before supplementing",
+          "Antibiotics (especially broad-spectrum) deplete vitamin K2-producing gut bacteria",
+          "Cholestyramine reduces vitamin K absorption",
+          "Orlistat reduces fat-soluble vitamin absorption",
+          "High-dose vitamin A or E may interfere with vitamin K absorption"
+        ],
+        "when_oral_wont_work": "Active bleeding with elevated INR requires IV vitamin K (phytonadione 10 mg slow IV). Severe malabsorption may require intramuscular K1 (10 mg weekly)."
+      },
+      "lab_monitoring": {
+        "test_name": "Prothrombin Time (PT) / INR; also Undercarboxylated Osteocalcin (ucOC) or PIVKA-II for subclinical deficiency",
+        "normal_range": "PT: 11-13.5 seconds; INR: 0.8-1.1; ucOC not widely standardized",
+        "deficient_threshold": "PT >14 seconds or INR >1.2 without anticoagulation",
+        "severely_deficient_threshold": "INR >1.5 with bleeding symptoms",
+        "unit": "seconds (PT) / ratio (INR)",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 3 months; PT/INR with routine labs",
+        "testing_frequency_ongoing": "Every 6-12 months; more frequently if on anticoagulants",
+        "notes": "PT/INR only detects overt deficiency (coagulation affected). Undercarboxylated osteocalcin (ucOC) and PIVKA-II (proteins induced by vitamin K absence) are more sensitive markers of subclinical deficiency but not widely available. Serum phylloquinone can be measured but is affected by recent intake."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Antibiotics (metronidazole, ciprofloxacin)", "effect": "Destroy K2-producing intestinal bacteria", "recommendation": "Supplement vitamin K during and for 2 weeks after antibiotic courses"},
+        {"medication": "Corticosteroids", "effect": "Contribute to osteoporosis; vitamin K deficiency compounds bone loss", "recommendation": "Co-supplement vitamin K2 with vitamin D and calcium during steroid use"},
+        {"medication": "Cholestyramine", "effect": "Binds fat-soluble vitamins", "recommendation": "Separate by 4+ hours; use water-miscible vitamin K"},
+        {"medication": "Warfarin (if prescribed for VTE)", "effect": "Direct antagonism—vitamin K reverses warfarin effect", "recommendation": "Maintain consistent daily vitamin K intake; do NOT supplement without anticoagulation clinic guidance"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Unexplained or excessive bleeding or bruising",
+        "Blood in stool (which may also indicate Crohn's flare—distinguish from vitamin K deficiency)",
+        "Bleeding that does not stop with pressure",
+        "Petechiae (small red spots under skin)",
+        "INR >2.0 without anticoagulant therapy"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Nakajima S et al. Association of vitamin K deficiency with bone metabolism and clinical disease activity in inflammatory bowel disease. Nutrition 2011;27:1023-1028",
+        "NIH Office of Dietary Supplements. Vitamin K Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Schoon EJ et al. Low serum and bone vitamin K status in patients with longstanding Crohn's disease. Gut 2001;48:473-477"
+      ]
+    },
+    {
+      "id": "iron",
+      "nutrient_name": "Iron (and Ferritin)",
+      "why_crohns_patients_need_monitoring": "Iron deficiency is the single most common nutritional deficiency in Crohn's disease. It results from chronic intestinal blood loss (even microscopic), impaired duodenal/jejunal absorption due to inflammation, reduced dietary intake (meat avoidance, appetite loss), and hepcidin upregulation during inflammation that blocks iron absorption and mobilization from stores. Iron deficiency anemia significantly impacts quality of life.",
+      "why_resection_makes_it_worse": "Iron is primarily absorbed in the duodenum and proximal jejunum. While these segments are less commonly resected, ileocecal resection can cause secondary duodenal inflammation or bacterial overgrowth affecting iron absorption. Anastomotic ulceration at the surgical site is a common source of chronic blood loss. Reduced transit time post-resection limits absorption time.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Fatigue and weakness (most common complaint)",
+        "Pallor",
+        "Shortness of breath on exertion",
+        "Rapid heartbeat / palpitations",
+        "Dizziness or lightheadedness",
+        "Cold hands and feet",
+        "Brittle nails and spooning (koilonychia)",
+        "Hair loss",
+        "Restless legs syndrome",
+        "Pica (craving non-food items like ice)",
+        "Difficulty concentrating",
+        "Headaches",
+        "Sore or swollen tongue"
+      ],
+      "deficiency_prevalence_in_crohns": "36-76% of Crohn's patients; iron deficiency anemia present in 30-50%",
+      "recommended_daily_intake": {
+        "general_adult": "8 mg/day (men), 18 mg/day (premenopausal women)",
+        "crohns_patient": "Guided by ferritin and hemoglobin; oral iron 50-200 mg elemental iron/day or IV iron if oral intolerant",
+        "post_resection": "IV iron preferred post-resection due to poor oral absorption and GI side effects; dose calculated by Ganzoni formula based on hemoglobin deficit"
+      },
+      "best_food_sources": [
+        {"food": "Beef (lean, cooked)", "amount_per_serving": "2.6 mg (heme iron)", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Heme iron is 2-3x better absorbed than non-heme; choose lean cuts, cook tender"},
+        {"food": "Chicken liver (cooked)", "amount_per_serving": "11.0 mg", "serving_size": "3 oz (85 g)", "crohns_safe": false, "notes": "Extremely iron-rich but organ meats can be difficult to digest"},
+        {"food": "Turkey (dark meat, cooked)", "amount_per_serving": "2.0 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Good heme iron source; tender when slow-cooked"},
+        {"food": "Canned tuna", "amount_per_serving": "1.4 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Easy to prepare; soft texture"},
+        {"food": "Fortified breakfast cereal", "amount_per_serving": "18 mg", "serving_size": "1 cup", "crohns_safe": false, "notes": "Non-heme iron; high fiber versions may be problematic. Choose low-fiber varieties."},
+        {"food": "Lentils (cooked)", "amount_per_serving": "3.3 mg (non-heme)", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "Gas-producing legume; poorly tolerated during active disease. Well-cooked and pureed may be tried in remission."},
+        {"food": "White beans (canned)", "amount_per_serving": "3.9 mg", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "Non-heme iron; legumes often cause gas and bloating in Crohn's patients"},
+        {"food": "Tofu (firm)", "amount_per_serving": "3.4 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Non-heme iron; generally well-tolerated; pair with vitamin C source for better absorption"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "IV iron (ferric carboxymaltose or iron sucrose) for active Crohn's or post-resection. Oral: ferrous bisglycinate (chelated iron) if oral route used.",
+        "why_this_form": "IV iron bypasses the inflamed GI tract entirely, achieves faster repletion, and avoids GI side effects. Ferric carboxymaltose allows high single-dose infusions (up to 1000 mg). Oral ferrous bisglycinate (chelated) causes fewer GI side effects than ferrous sulfate and is better tolerated in IBD patients.",
+        "forms_to_avoid": "Ferrous sulfate causes significant GI side effects (nausea, constipation, diarrhea, cramping) and can worsen Crohn's inflammation by increasing oxidative stress in the gut lumen. Ferrous fumarate has similar issues. Avoid polysaccharide iron complex (poor absorption).",
+        "typical_dose": "Oral: 50-100 mg elemental iron every other day (emerging evidence that alternate-day dosing improves fractional absorption). IV: dose calculated by Ganzoni formula.",
+        "post_resection_dose": "IV iron strongly preferred: Ferric carboxymaltose 500-1000 mg IV over 15 min, repeat as needed based on calculation. If oral: ferrous bisglycinate 25-50 mg elemental iron every other day.",
+        "take_with_food": false,
+        "absorption_tips": "Oral iron absorbed best on empty stomach with vitamin C (250 mg). Take 2 hours apart from calcium, antacids, PPIs, dairy, coffee, and tea. Every-other-day dosing may be superior to daily (hepcidin rebound effect). Avoid concurrent zinc supplement (separate by 2 hours). IV iron has no food interactions.",
+        "interactions": [
+          "PPIs and H2 blockers reduce gastric acid needed for iron solubility and absorption",
+          "Calcium supplements reduce iron absorption by 50-60% if taken together",
+          "Tetracycline and quinolone antibiotics chelate iron—separate by 2+ hours",
+          "Zinc competes with iron for absorption—separate by 2 hours",
+          "Levothyroxine absorption reduced by iron—separate by 4 hours",
+          "Antacids (aluminum, magnesium) reduce iron absorption"
+        ],
+        "when_oral_wont_work": "Hemoglobin <10 g/dL, ferritin <30 ng/mL with active inflammation, intolerance to oral iron, inadequate response after 4 weeks oral therapy, need for rapid repletion (pre-surgery), or concurrent erythropoietin therapy. ECCO/ESPEN guidelines recommend IV iron as first-line for active IBD."
+      },
+      "lab_monitoring": {
+        "test_name": "Complete panel: Ferritin, Serum Iron, TIBC, Transferrin Saturation (TSAT), CBC with reticulocyte count, CRP",
+        "normal_range": "Ferritin: 30-300 ng/mL (general) but >100 ng/mL target in active IBD due to inflammation; TSAT: 20-50%; Hemoglobin: 12-16 g/dL (women), 13.5-17.5 g/dL (men)",
+        "deficient_threshold": "Ferritin <30 ng/mL in remission or <100 ng/mL with active inflammation (CRP elevated); TSAT <20%",
+        "severely_deficient_threshold": "Ferritin <15 ng/mL; Hemoglobin <10 g/dL",
+        "unit": "ng/mL (ferritin); g/dL (hemoglobin); % (TSAT)",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Every 3 months (CBC, ferritin, CRP minimum)",
+        "testing_frequency_ongoing": "Every 6-12 months in remission; every 3 months during active disease. ECCO recommends at minimum annually for all IBD patients.",
+        "notes": "Ferritin is an acute phase reactant—elevated during inflammation even with iron deficiency. Always check CRP simultaneously. In active inflammation, ferritin <100 ng/mL suggests iron deficiency. TSAT <20% is a reliable marker regardless of inflammation. Soluble transferrin receptor (sTfR) is not affected by inflammation and can help distinguish iron deficiency from anemia of chronic disease."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Proton pump inhibitors", "effect": "Reduce gastric acid needed for non-heme iron absorption by 50-65%", "recommendation": "Use IV iron or take oral iron with vitamin C; consider H2 blocker instead of PPI if possible"},
+        {"medication": "Sulfasalazine", "effect": "May impair folate-dependent red blood cell production, compounding anemia", "recommendation": "Monitor both iron and folate; supplement both as needed"},
+        {"medication": "Methotrexate", "effect": "Folate antagonist; can compound anemia from iron deficiency", "recommendation": "Ensure adequate iron and folate; prescribed folate supplementation standard with methotrexate"},
+        {"medication": "Anti-TNF biologics (infliximab, adalimumab)", "effect": "By reducing inflammation, biologics lower hepcidin and may improve iron absorption", "recommendation": "Recheck iron studies 3-6 months after starting biologic; oral iron may become effective"},
+        {"medication": "Corticosteroids", "effect": "Can mask anemia symptoms through mood/energy effects; may cause GI bleeding with long-term use", "recommendation": "Monitor CBC regularly during steroid tapers"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Hemoglobin <7 g/dL (may require transfusion)",
+        "Chest pain or severe shortness of breath with anemia",
+        "Rapid heart rate (>120 bpm) at rest",
+        "Signs of GI bleeding: melena (black tarry stool), hematochezia (bright red blood), or significant drop in hemoglobin",
+        "Dizziness or syncope (fainting)"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Dignass AU et al. European consensus on the diagnosis and management of iron deficiency and anaemia in inflammatory bowel diseases. J Crohns Colitis 2015;9:211-222",
+        "NIH Office of Dietary Supplements. Iron Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Stoffel NU et al. Iron absorption from oral iron supplements given on consecutive versus alternate days. Lancet Haematol 2017;4:e524-e533",
+        "Kulnigg S, Gasche C. Systematic review: managing anaemia in Crohn's disease. Aliment Pharmacol Ther 2006;24:1507-1523"
+      ]
+    },
+    {
+      "id": "calcium",
+      "nutrient_name": "Calcium",
+      "why_crohns_patients_need_monitoring": "Calcium deficiency in Crohn's is multifactorial: lactose intolerance leads to dairy avoidance (most common dietary calcium source), vitamin D deficiency impairs calcium absorption, corticosteroid use increases urinary calcium loss and reduces intestinal absorption, and chronic inflammation itself impairs calcium homeostasis. Crohn's patients have significantly elevated osteoporosis and fracture risk.",
+      "why_resection_makes_it_worse": "Calcium is absorbed throughout the small intestine but primarily in the duodenum and proximal jejunum (vitamin D-dependent active transport) and throughout the rest of the small intestine (passive paracellular absorption). Resection reduces absorptive surface area. Ileal resection causes bile salt malabsorption leading to fat malabsorption, which causes calcium to bind to unabsorbed fatty acids (forming calcium soaps) rather than being absorbed. This also increases oxalate absorption (kidney stone risk).",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Muscle cramps and spasms",
+        "Numbness and tingling in fingers and toes",
+        "Osteopenia and osteoporosis (bone loss)",
+        "Increased fracture risk",
+        "Dental problems",
+        "Fatigue",
+        "Abnormal heart rhythm (severe deficiency)",
+        "Tetany (severe muscle spasm, medical emergency)",
+        "Chvostek sign (facial twitching when nerve tapped)",
+        "Trousseau sign (carpopedal spasm with blood pressure cuff)"
+      ],
+      "deficiency_prevalence_in_crohns": "13-40% have low calcium intake; osteopenia in 30-50% and osteoporosis in 15-30% of Crohn's patients",
+      "recommended_daily_intake": {
+        "general_adult": "1000 mg/day (19-50 years); 1200 mg/day (51+)",
+        "crohns_patient": "1000-1500 mg/day from diet and supplements combined",
+        "post_resection": "1500-2000 mg/day in divided doses; ensure adequate vitamin D for absorption"
+      },
+      "best_food_sources": [
+        {"food": "Greek yogurt (low-fat)", "amount_per_serving": "230 mg", "serving_size": "6 oz (170 g)", "crohns_safe": true, "notes": "Usually tolerated even with mild lactose intolerance due to bacterial cultures; good protein source too"},
+        {"food": "Lactose-free milk", "amount_per_serving": "300 mg", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Same calcium as regular milk without lactose issues"},
+        {"food": "Fortified almond milk", "amount_per_serving": "449 mg", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Often higher calcium than cow's milk; shake well as calcium settles"},
+        {"food": "Cheddar cheese", "amount_per_serving": "200 mg", "serving_size": "1 oz (28 g)", "crohns_safe": true, "notes": "Naturally low in lactose; aged cheeses are generally well-tolerated"},
+        {"food": "Canned salmon (with bones)", "amount_per_serving": "181 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Soft bones are the calcium source; also provides vitamin D and omega-3s"},
+        {"food": "Tofu (calcium-set)", "amount_per_serving": "253 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Check label for calcium sulfate in ingredients; soft tofu well-tolerated"},
+        {"food": "Fortified orange juice", "amount_per_serving": "349 mg", "serving_size": "8 oz (240 mL)", "crohns_safe": false, "notes": "Citrus may irritate; try small amounts to test tolerance"},
+        {"food": "Bok choy (cooked)", "amount_per_serving": "79 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Low oxalate green vegetable; calcium is highly bioavailable (~50% absorbed vs 32% from milk)"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Calcium citrate",
+        "why_this_form": "Calcium citrate does not require stomach acid for absorption (critical for patients on PPIs), is better absorbed in divided doses, and causes less constipation and GI upset than calcium carbonate. It can be taken with or without food.",
+        "forms_to_avoid": "Calcium carbonate requires stomach acid (ineffective with PPIs), causes more constipation and bloating, and must be taken with food. Coral calcium and oyster shell calcium may contain lead.",
+        "typical_dose": "500-600 mg elemental calcium per dose, 2-3 times daily (body absorbs max ~500 mg at once)",
+        "post_resection_dose": "500-600 mg calcium citrate 3 times daily (1500-1800 mg total); always co-administer with vitamin D (2000-4000 IU). Adjust based on serum calcium, 25(OH)D, and DEXA results.",
+        "take_with_food": false,
+        "absorption_tips": "Divide doses (max 500-600 mg per dose for optimal absorption). Calcium citrate can be taken without food. Ensure adequate vitamin D. Avoid taking with iron supplements (separate by 2 hours). Avoid taking with high-oxalate foods. Magnesium supports calcium metabolism—ensure adequate intake.",
+        "interactions": [
+          "Iron supplements: calcium reduces iron absorption by 50-60%—separate by 2+ hours",
+          "Levothyroxine: calcium reduces absorption—separate by 4 hours",
+          "Tetracycline and quinolone antibiotics: calcium chelates these—separate by 2+ hours",
+          "Bisphosphonates: calcium reduces absorption—separate by 30-60 minutes",
+          "Thiazide diuretics: reduce urinary calcium excretion, may cause hypercalcemia with supplementation",
+          "Corticosteroids: calcium supplementation essential to counteract steroid-induced bone loss"
+        ],
+        "when_oral_wont_work": "IV calcium gluconate for acute symptomatic hypocalcemia (tetany, seizures, cardiac arrhythmia). Oral calcium is adequate for chronic supplementation in most patients; if serum calcium remains low despite high-dose oral calcium + vitamin D, evaluate for hypoparathyroidism."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Calcium (total and ionized/corrected), 25(OH)D, PTH, DEXA scan",
+        "normal_range": "Total calcium: 8.5-10.5 mg/dL; Ionized calcium: 4.5-5.3 mg/dL; Albumin-corrected calcium if albumin low",
+        "deficient_threshold": "Total calcium <8.5 mg/dL (corrected for albumin); Ionized <4.5 mg/dL",
+        "severely_deficient_threshold": "Total calcium <7.0 mg/dL (medical emergency risk)",
+        "unit": "mg/dL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 3 months; baseline DEXA scan recommended",
+        "testing_frequency_ongoing": "Every 6-12 months for serum calcium; DEXA every 2 years if on steroids or if osteopenia/osteoporosis present; 24-hour urine calcium annually if on high-dose supplementation",
+        "notes": "Always correct calcium for albumin: Corrected Ca = measured Ca + 0.8 x (4.0 - albumin). Ionized calcium is more accurate. Check PTH simultaneously—elevated PTH with low/normal calcium suggests secondary hyperparathyroidism from vitamin D deficiency. 24-hour urine calcium helps monitor for excess supplementation and kidney stone risk."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "Reduce intestinal calcium absorption, increase renal calcium excretion, accelerate bone loss", "recommendation": "Supplement calcium 1000-1500 mg/day + vitamin D during any steroid course >3 months; consider bisphosphonate for prolonged steroid use"},
+        {"medication": "Proton pump inhibitors", "effect": "Reduce calcium carbonate absorption (less effect on calcium citrate); long-term use associated with increased fracture risk", "recommendation": "Use calcium citrate form; ensure adequate vitamin D"},
+        {"medication": "Cholestyramine", "effect": "May bind calcium in the gut", "recommendation": "Separate dosing by 4+ hours"},
+        {"medication": "Infliximab / Anti-TNF agents", "effect": "By controlling inflammation, may improve calcium absorption and bone metabolism", "recommendation": "Continue calcium supplementation; reassess DEXA after sustained remission"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Tetany: severe muscle spasms, particularly hands and feet (carpopedal spasm)",
+        "Laryngospasm (throat tightness, difficulty breathing)",
+        "Seizures",
+        "Cardiac arrhythmia (QT prolongation on EKG)",
+        "Confusion or altered mental status",
+        "Kidney stone symptoms: flank pain, blood in urine (possible excess supplementation)"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Bernstein CN et al. AGA technical review on osteoporosis in gastrointestinal diseases. Gastroenterology 2003;124:795-841",
+        "NIH Office of Dietary Supplements. Calcium Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "ACG Clinical Guideline: Management of Crohn's Disease in Adults. Am J Gastroenterol 2018;113:481-517",
+        "Lichtenstein GR. Comprehensive review: antiresorptive therapies for bone loss in IBD. Inflamm Bowel Dis 2013;19:1587-1598"
+      ]
+    },
+    {
+      "id": "zinc",
+      "nutrient_name": "Zinc",
+      "why_crohns_patients_need_monitoring": "Zinc is essential for immune function, wound healing, taste perception, and intestinal epithelial integrity. Crohn's patients lose zinc through diarrhea and intestinal output, have impaired absorption from inflamed mucosa, and have increased zinc demand for tissue repair and immune function. Zinc deficiency impairs intestinal permeability and can worsen Crohn's disease activity.",
+      "why_resection_makes_it_worse": "Zinc is absorbed primarily in the duodenum and jejunum. Resection of these segments directly impairs absorption. Even ileal/ileocecal resection increases diarrhea and fecal output, leading to excessive zinc losses. High-output stomas or fistulae compound the problem. Post-resection patients with rapid transit have less contact time for absorption.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Impaired taste and smell (dysgeusia, hyposmia)",
+        "Poor appetite",
+        "Delayed wound healing",
+        "Hair loss (alopecia)",
+        "Skin rashes, especially around mouth and extremities (acrodermatitis)",
+        "Diarrhea (zinc deficiency itself causes diarrhea—vicious cycle)",
+        "Impaired immunity and frequent infections",
+        "Night blindness (zinc needed for vitamin A metabolism)",
+        "Depression and irritability",
+        "White spots on fingernails"
+      ],
+      "deficiency_prevalence_in_crohns": "25-65% of Crohn's patients; higher during active disease, diarrhea, and post-resection",
+      "recommended_daily_intake": {
+        "general_adult": "11 mg/day (men), 8 mg/day (women)",
+        "crohns_patient": "15-25 mg/day; more during active diarrhea",
+        "post_resection": "25-40 mg/day; replace additional 12-17 mg per liter of intestinal output for high-output states"
+      },
+      "best_food_sources": [
+        {"food": "Beef (lean, cooked)", "amount_per_serving": "5.3 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Best bioavailable zinc source; choose lean, tender cuts"},
+        {"food": "Chicken (dark meat, cooked)", "amount_per_serving": "2.4 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Well-tolerated; dark meat has more zinc than white"},
+        {"food": "Pork (cooked)", "amount_per_serving": "2.9 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Tender pork loin or tenderloin well-tolerated"},
+        {"food": "Pumpkin seeds", "amount_per_serving": "2.2 mg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Seeds can worsen symptoms; try pumpkin seed butter or finely ground"},
+        {"food": "Greek yogurt", "amount_per_serving": "1.5 mg", "serving_size": "6 oz (170 g)", "crohns_safe": true, "notes": "Good combined zinc and calcium source"},
+        {"food": "Eggs (cooked)", "amount_per_serving": "1.3 mg", "serving_size": "2 large eggs", "crohns_safe": true, "notes": "Easy to digest in most preparations"},
+        {"food": "Crab (cooked)", "amount_per_serving": "6.5 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Excellent source; ensure thoroughly cooked"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Zinc picolinate or zinc bisglycinate (chelated forms)",
+        "why_this_form": "Chelated zinc forms (picolinate, bisglycinate) have superior absorption compared to inorganic forms and cause significantly less GI upset. Zinc picolinate shows the highest bioavailability in studies.",
+        "forms_to_avoid": "Zinc sulfate causes nausea and GI upset in many Crohn's patients. Zinc oxide has the lowest bioavailability.",
+        "typical_dose": "25-50 mg elemental zinc/day for repletion; 15-25 mg/day maintenance",
+        "post_resection_dose": "40-50 mg elemental zinc/day during repletion; add 12-17 mg per liter of intestinal output for ileostomy or high-output fistula. Maintenance 25-40 mg/day.",
+        "take_with_food": true,
+        "absorption_tips": "Take with protein-containing food (amino acids enhance zinc absorption). Avoid taking with high-phytate foods (whole grains, legumes) which bind zinc. Separate from iron and calcium supplements by 2 hours. Supplementing zinc long-term (>25 mg/day for >6 months) requires copper co-supplementation (2 mg copper per 25 mg zinc) to prevent copper depletion.",
+        "interactions": [
+          "Iron supplements compete for absorption—separate by 2 hours",
+          "Calcium supplements reduce zinc absorption—separate by 2 hours",
+          "Penicillamine (chelator) binds zinc—separate by 2+ hours",
+          "Tetracycline and quinolone antibiotics chelated by zinc—separate by 2+ hours",
+          "High-dose zinc depletes copper—always co-supplement copper",
+          "Thiazide diuretics increase urinary zinc excretion"
+        ],
+        "when_oral_wont_work": "Severe malabsorption with persistent low serum zinc despite oral supplementation, short bowel syndrome with high-output stoma, or parenteral nutrition patients. IV zinc can be added to PN solutions (2.5-5 mg/day standard; 12-17 mg per liter GI fluid lost)."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum/Plasma Zinc",
+        "normal_range": "60-120 mcg/dL (9.2-18.4 umol/L)",
+        "deficient_threshold": "<60 mcg/dL (<9.2 umol/L)",
+        "severely_deficient_threshold": "<40 mcg/dL (<6.1 umol/L)",
+        "unit": "mcg/dL",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Every 3 months",
+        "testing_frequency_ongoing": "Every 6-12 months; more frequently during active diarrhea",
+        "notes": "Serum zinc is a poor marker of body stores—it drops during inflammation (negative acute phase reactant) and has diurnal variation (highest in morning fasting). Always check fasting AM sample with concurrent CRP and albumin. Alkaline phosphatase is a zinc-dependent enzyme; low ALP may suggest zinc deficiency. Hair and nail zinc can supplement but are not standardized."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "Increase urinary zinc excretion", "recommendation": "Supplement zinc 25 mg/day during steroid courses"},
+        {"medication": "Azathioprine / 6-MP", "effect": "Adequate zinc needed for immune function; deficiency may alter drug metabolism", "recommendation": "Monitor zinc levels; supplement if deficient"},
+        {"medication": "Anti-TNF biologics", "effect": "By reducing inflammation and diarrhea, may improve zinc status", "recommendation": "Recheck zinc 3-6 months after starting biologic; adjust supplementation"},
+        {"medication": "Sulfasalazine", "effect": "May impair zinc absorption", "recommendation": "Separate dosing; monitor zinc levels"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Severe acrodermatitis (peeling, weeping skin rash around mouth, hands, feet, perineum)",
+        "Significant unexplained hair loss",
+        "Wounds that refuse to heal post-surgery",
+        "Severe taste distortion causing inability to eat adequately",
+        "Signs of copper deficiency during zinc supplementation: anemia, neutropenia, neuropathy"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Siva S et al. Zinc deficiency is associated with poor clinical outcomes in patients with inflammatory bowel disease. Inflamm Bowel Dis 2017;23:152-157",
+        "NIH Office of Dietary Supplements. Zinc Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Sturniolo GC et al. Zinc supplementation tightens leaky gut in Crohn's disease. Inflamm Bowel Dis 2001;7:94-98"
+      ]
+    },
+    {
+      "id": "magnesium",
+      "nutrient_name": "Magnesium",
+      "why_crohns_patients_need_monitoring": "Magnesium is involved in >300 enzymatic reactions, including energy production, muscle function, nerve transmission, and bone formation. Crohn's patients lose magnesium through chronic diarrhea (the primary cause), have impaired absorption from inflamed mucosa, and may have reduced intake due to dietary restrictions. Medications like PPIs further deplete magnesium.",
+      "why_resection_makes_it_worse": "Magnesium is absorbed throughout the small intestine and colon. Resection of any significant bowel length reduces absorptive surface area. Ileal resection increases diarrhea and intestinal transit speed, reducing magnesium absorption time. High-output ileostomy causes dramatic magnesium losses. Colonic resection eliminates a secondary absorption site.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Muscle cramps and spasms (especially legs at night)",
+        "Tremor and twitching",
+        "Numbness and tingling",
+        "Fatigue and weakness",
+        "Nausea and vomiting",
+        "Loss of appetite",
+        "Irregular heartbeat (arrhythmia)",
+        "Seizures (severe deficiency)",
+        "Personality changes: anxiety, agitation",
+        "Insomnia",
+        "Worsening of potassium and calcium deficiency (magnesium needed for their regulation)"
+      ],
+      "deficiency_prevalence_in_crohns": "20-45% of Crohn's patients; up to 80% in those with high-output stomas or extensive resection",
+      "recommended_daily_intake": {
+        "general_adult": "400-420 mg/day (men), 310-320 mg/day (women)",
+        "crohns_patient": "400-600 mg/day",
+        "post_resection": "600-1000 mg/day in divided doses; higher for high-output states. IV supplementation may be needed."
+      },
+      "best_food_sources": [
+        {"food": "Pumpkin seeds", "amount_per_serving": "156 mg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Seeds can cause issues; try pumpkin seed butter"},
+        {"food": "Almonds", "amount_per_serving": "80 mg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Hard to digest whole; smooth almond butter is alternative"},
+        {"food": "Spinach (cooked)", "amount_per_serving": "78 mg", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "High oxalate; cook thoroughly. May worsen kidney stone risk post-resection."},
+        {"food": "Banana", "amount_per_serving": "32 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Well-tolerated; also provides potassium. Part of BRAT diet for flares."},
+        {"food": "Avocado", "amount_per_serving": "58 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Nutrient-dense and soft; well-tolerated by most"},
+        {"food": "Salmon (cooked)", "amount_per_serving": "26 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Also provides omega-3s and vitamin D"},
+        {"food": "White rice (cooked)", "amount_per_serving": "19 mg", "serving_size": "1 cup", "crohns_safe": true, "notes": "Modest source but consumed frequently; very well-tolerated"},
+        {"food": "Dark chocolate (70%+)", "amount_per_serving": "64 mg", "serving_size": "1 oz (28 g)", "crohns_safe": true, "notes": "Small amount as treat; check individual tolerance"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Magnesium glycinate (bisglycinate) or magnesium taurate",
+        "why_this_form": "Magnesium glycinate is highly bioavailable and causes the least diarrhea of any oral form—critical for Crohn's patients already prone to diarrhea. Magnesium taurate is similarly gentle and may benefit cardiac health. Both are chelated forms with superior absorption.",
+        "forms_to_avoid": "Magnesium oxide (only 4% absorbed, causes osmotic diarrhea). Magnesium citrate (causes diarrhea—used as laxative). Magnesium sulfate (Epsom salts—strong laxative effect).",
+        "typical_dose": "200-400 mg elemental magnesium/day in divided doses (magnesium glycinate)",
+        "post_resection_dose": "400-600 mg elemental magnesium/day in 2-3 divided doses (glycinate form). High-output states may need 800-1000 mg/day or IV supplementation. Slow-release forms may improve tolerance.",
+        "take_with_food": true,
+        "absorption_tips": "Divide doses throughout the day (take 200 mg 2-3 times). Take with food to reduce GI effects. Vitamin B6 may enhance magnesium absorption. Avoid high-oxalate and high-phytate foods with supplement. If diarrhea worsens with any oral form, IV magnesium infusion (1-2 g MgSO4) can be used periodically.",
+        "interactions": [
+          "PPIs reduce magnesium absorption significantly with long-term use (FDA black box warning for hypomagnesemia)",
+          "Loop and thiazide diuretics increase urinary magnesium excretion",
+          "Tetracycline and quinolone antibiotics chelated by magnesium—separate by 2+ hours",
+          "Bisphosphonates: magnesium reduces absorption—separate by 2+ hours",
+          "Aminoglycosides increase renal magnesium wasting",
+          "Calcineurin inhibitors (tacrolimus, cyclosporine) increase renal magnesium wasting"
+        ],
+        "when_oral_wont_work": "Persistent hypomagnesemia despite high-dose oral supplementation, high-output stoma or fistula, short bowel syndrome, severe diarrhea, or symptomatic hypomagnesemia (arrhythmia, seizures). IV magnesium sulfate 1-2 g over 1 hour, repeated as needed. Some patients need weekly IV magnesium infusions."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Magnesium; RBC Magnesium for better tissue estimate; 24-hour urine magnesium for renal wasting",
+        "normal_range": "Serum: 1.7-2.2 mg/dL (0.70-0.91 mmol/L); RBC Magnesium: 4.2-6.8 mg/dL",
+        "deficient_threshold": "Serum <1.7 mg/dL (<0.70 mmol/L)",
+        "severely_deficient_threshold": "Serum <1.2 mg/dL (<0.49 mmol/L) — risk of cardiac arrhythmia",
+        "unit": "mg/dL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 3 months",
+        "testing_frequency_ongoing": "Every 6 months; more frequently with high-output stoma or diuretic use",
+        "notes": "Serum magnesium is a poor indicator of total body magnesium (only 1% of body magnesium is in blood). Can be normal despite significant tissue depletion. RBC magnesium is more reflective of intracellular stores. 24-hour urine magnesium <24 mg/day with low serum magnesium suggests GI loss rather than renal wasting. Always check concurrent potassium and calcium—hypomagnesemia makes hypokalemia and hypocalcemia refractory to treatment."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Proton pump inhibitors (PPIs)", "effect": "FDA-warned association with hypomagnesemia with long-term use (>1 year); mechanism involves reduced active intestinal absorption", "recommendation": "Monitor magnesium every 6 months on long-term PPIs; supplement proactively"},
+        {"medication": "Corticosteroids", "effect": "Increase urinary magnesium excretion", "recommendation": "Monitor and supplement during steroid courses"},
+        {"medication": "Anti-TNF biologics", "effect": "By reducing diarrhea and inflammation, may improve magnesium status", "recommendation": "Recheck levels after disease stabilization on biologics"},
+        {"medication": "Loperamide (anti-diarrheal)", "effect": "By reducing stool output, helps retain magnesium", "recommendation": "May use adjunctively to reduce magnesium losses in high-output states"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Cardiac arrhythmia or palpitations (especially with EKG changes: prolonged QT, torsades de pointes)",
+        "Seizures",
+        "Severe muscle cramps with tetany",
+        "Persistent vomiting preventing oral intake",
+        "Concurrent severe hypokalemia or hypocalcemia unresponsive to supplementation (suggests underlying magnesium deficiency)"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Galland L. Magnesium and inflammatory bowel disease. Magnes Bull 1988;2:78-83",
+        "NIH Office of Dietary Supplements. Magnesium Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "FDA Drug Safety Communication: Low magnesium levels can be associated with long-term use of PPIs. 2011, updated 2013.",
+        "Kruis W et al. Magnesium in Crohn's disease. J Clin Gastroenterol 1985;7:21-24"
+      ]
+    },
+    {
+      "id": "folate",
+      "nutrient_name": "Folate / Folic Acid (Vitamin B9)",
+      "why_crohns_patients_need_monitoring": "Folate is essential for DNA synthesis, cell division, and red blood cell production. Crohn's patients are at risk due to proximal small bowel inflammation (where folate is absorbed), reduced dietary intake of green vegetables during flares, and medication effects—sulfasalazine directly inhibits folate absorption and methotrexate is a folate antagonist. Folate deficiency causes megaloblastic anemia and elevates homocysteine (cardiovascular risk).",
+      "why_resection_makes_it_worse": "Folate is absorbed primarily in the proximal jejunum. While this segment is less commonly resected, any reduction in small bowel length reduces folate absorption capacity. Rapid transit post-resection shortens contact time. Jejunal resection directly impairs folate absorption. Bacterial overgrowth (common post-resection) can consume dietary folate.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Megaloblastic anemia (fatigue, weakness, pallor)",
+        "Glossitis (sore, swollen tongue)",
+        "Mouth ulcers",
+        "Diarrhea (folate deficiency itself causes malabsorption—vicious cycle)",
+        "Irritability and forgetfulness",
+        "Elevated homocysteine (cardiovascular risk)",
+        "Neural tube defects in pregnancy (critical for women of childbearing age)",
+        "Poor growth of mucosal lining (impairs gut healing)",
+        "Headaches"
+      ],
+      "deficiency_prevalence_in_crohns": "20-40% of Crohn's patients; up to 54% in those on sulfasalazine",
+      "recommended_daily_intake": {
+        "general_adult": "400 mcg DFE/day; 600 mcg DFE in pregnancy",
+        "crohns_patient": "800-1000 mcg/day; 1 mg/day mandatory if on sulfasalazine or methotrexate",
+        "post_resection": "1000-2000 mcg/day; higher if on folate-depleting medications"
+      },
+      "best_food_sources": [
+        {"food": "Beef liver (cooked)", "amount_per_serving": "215 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": false, "notes": "Highest natural source but organ meats may be hard to digest"},
+        {"food": "Spinach (cooked)", "amount_per_serving": "131 mcg", "serving_size": "0.5 cup", "crohns_safe": false, "notes": "Cook thoroughly; may not be well-tolerated during flares"},
+        {"food": "Asparagus (cooked)", "amount_per_serving": "134 mcg", "serving_size": "0.5 cup (6 spears)", "crohns_safe": true, "notes": "Well-cooked tips are usually tolerated; avoid fibrous stalks"},
+        {"food": "Avocado", "amount_per_serving": "59 mcg", "serving_size": "0.5 medium", "crohns_safe": true, "notes": "Soft, nutrient-dense, and generally well-tolerated"},
+        {"food": "Fortified white rice", "amount_per_serving": "90-120 mcg", "serving_size": "1 cup cooked", "crohns_safe": true, "notes": "Fortification makes this an easy, well-tolerated source"},
+        {"food": "Fortified bread/pasta", "amount_per_serving": "60-100 mcg", "serving_size": "1 slice / 1 cup", "crohns_safe": true, "notes": "White bread and pasta are well-tolerated; check labels for folic acid fortification"},
+        {"food": "Eggs", "amount_per_serving": "44 mcg", "serving_size": "2 large", "crohns_safe": true, "notes": "Easy to digest; consistent moderate source"},
+        {"food": "Orange", "amount_per_serving": "39 mcg", "serving_size": "1 medium", "crohns_safe": false, "notes": "Citrus may trigger symptoms; juice may be better tolerated than whole fruit"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "L-methylfolate (5-MTHF) — the active, bioavailable form",
+        "why_this_form": "L-methylfolate does not require enzymatic conversion by MTHFR (up to 40% of population has reduced MTHFR activity). It is directly usable, crosses the blood-brain barrier, and does not mask B12 deficiency the way high-dose folic acid can (though this is debated). It bypasses any absorption-conversion bottleneck.",
+        "forms_to_avoid": "High-dose folic acid (>1 mg) without checking B12 first—can mask B12 deficiency and allow neurological damage to progress. Unmetabolized folic acid from synthetic supplementation may have health concerns at high doses.",
+        "typical_dose": "1 mg L-methylfolate/day or 1 mg folic acid/day",
+        "post_resection_dose": "1-5 mg L-methylfolate/day depending on degree of malabsorption and medication use. Always co-monitor B12.",
+        "take_with_food": false,
+        "absorption_tips": "Can be taken with or without food. If on methotrexate, take folate on non-methotrexate days (some protocols use leucovorin/folinic acid instead). Always ensure B12 is adequate before starting high-dose folate supplementation.",
+        "interactions": [
+          "Sulfasalazine competitively inhibits folate absorption—always co-supplement",
+          "Methotrexate is a direct folate antagonist—folate or folinic acid supplementation is standard of care",
+          "Phenytoin, carbamazepine, valproate increase folate metabolism and reduce levels",
+          "Trimethoprim (antibiotic) is a weak folate antagonist",
+          "Cholestyramine may reduce folate absorption",
+          "High-dose folic acid may mask B12 deficiency—always check B12"
+        ],
+        "when_oral_wont_work": "Severe jejunal disease or resection with documented malabsorption despite oral supplementation. IV or IM folinic acid (leucovorin) 5-15 mg can be used. Parenteral folate is available for PN patients."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Folate and RBC Folate (RBC folate reflects longer-term status); also Homocysteine",
+        "normal_range": "Serum folate: >3 ng/mL (>7 nmol/L); RBC folate: >140 ng/mL (>317 nmol/L)",
+        "deficient_threshold": "Serum folate <3 ng/mL; RBC folate <140 ng/mL",
+        "severely_deficient_threshold": "Serum folate <2 ng/mL; megaloblastic changes on blood smear",
+        "unit": "ng/mL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 3-6 months",
+        "testing_frequency_ongoing": "Every 6-12 months; more frequently if on sulfasalazine or methotrexate",
+        "notes": "RBC folate is more reliable than serum folate (which reflects recent intake). Elevated homocysteine (>15 umol/L) with normal/low folate suggests functional deficiency. Always check B12 simultaneously—macrocytic anemia can be from either or both. MCV >100 fL on CBC should prompt B12 and folate check."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Sulfasalazine", "effect": "Competitive inhibition of folate absorption via PCFT transporter; dose-dependent effect", "recommendation": "Mandatory folate supplementation 1 mg/day minimum; 2 mg/day for higher sulfasalazine doses"},
+        {"medication": "Methotrexate", "effect": "Direct folate antagonist (mechanism of action); causes folate depletion", "recommendation": "Standard of care: folic acid 1 mg/day (not on MTX day) or leucovorin 5-15 mg 24h after MTX. Reduces MTX side effects without reducing efficacy."},
+        {"medication": "Azathioprine / 6-MP", "effect": "Both require adequate folate for DNA synthesis; deficiency may increase bone marrow suppression risk", "recommendation": "Ensure folate adequacy before and during therapy"},
+        {"medication": "Corticosteroids", "effect": "May reduce folate absorption slightly", "recommendation": "Monitor folate levels during prolonged steroid courses"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Severe anemia symptoms: chest pain, severe fatigue, shortness of breath with MCV >110 fL",
+        "Pancytopenia (all cell lines low) suggesting severe bone marrow effects",
+        "Neurological symptoms that might indicate masked B12 deficiency being treated as folate deficiency",
+        "Pregnancy with low folate levels (neural tube defect risk)"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Bermejo F et al. Should we monitor vitamin B12 and folate levels in Crohn's disease patients? Scand J Gastroenterol 2013;48:1272-1277",
+        "NIH Office of Dietary Supplements. Folate Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Lashner BA et al. Effect of folate supplementation on the incidence of dysplasia and cancer in chronic ulcerative colitis. Gastroenterology 1997;112:29-32"
+      ]
+    },
+    {
+      "id": "selenium",
+      "nutrient_name": "Selenium",
+      "why_crohns_patients_need_monitoring": "Selenium is a critical antioxidant (as selenoproteins including glutathione peroxidase) and supports thyroid function and immune regulation. Crohn's patients have increased oxidative stress consuming selenium stores, malabsorption from inflamed mucosa, and dietary restrictions limiting intake. Low selenium is associated with more severe IBD outcomes.",
+      "why_resection_makes_it_worse": "Selenium is absorbed primarily in the duodenum and proximal jejunum. Resection of any small bowel length reduces absorptive capacity. Increased diarrhea and intestinal output post-resection lead to excess selenium losses. Short bowel syndrome patients are at highest risk.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Fatigue and weakness",
+        "Impaired immune function and frequent infections",
+        "Cognitive decline and brain fog",
+        "Thyroid dysfunction (selenium needed for T4 to T3 conversion)",
+        "Hair loss and nail changes (white nail beds)",
+        "Muscle weakness and myalgia",
+        "Cardiomyopathy (Keshan disease—severe, rare)",
+        "Increased oxidative damage and cancer risk (long-term)",
+        "Male infertility"
+      ],
+      "deficiency_prevalence_in_crohns": "20-35% of Crohn's patients; up to 50% in those with active disease or significant resection",
+      "recommended_daily_intake": {
+        "general_adult": "55 mcg/day",
+        "crohns_patient": "55-100 mcg/day",
+        "post_resection": "100-200 mcg/day with monitoring to avoid toxicity"
+      },
+      "best_food_sources": [
+        {"food": "Brazil nuts", "amount_per_serving": "544 mcg", "serving_size": "1 oz (6-8 nuts)", "crohns_safe": false, "notes": "Extremely concentrated—1-2 nuts per day is sufficient. Nuts may not be tolerated; try finely ground."},
+        {"food": "Tuna (yellowfin, cooked)", "amount_per_serving": "92 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Excellent source; canned or fresh both well-tolerated"},
+        {"food": "Chicken (cooked)", "amount_per_serving": "22 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Reliable moderate source; well-tolerated"},
+        {"food": "Eggs", "amount_per_serving": "15 mcg", "serving_size": "1 large", "crohns_safe": true, "notes": "Easy to digest; consistent source"},
+        {"food": "Turkey (cooked)", "amount_per_serving": "31 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Good source; tender preparations well-tolerated"},
+        {"food": "Cottage cheese", "amount_per_serving": "20 mcg", "serving_size": "1 cup", "crohns_safe": true, "notes": "Soft dairy; usually well-tolerated; also provides protein"},
+        {"food": "White rice (enriched, cooked)", "amount_per_serving": "12 mcg", "serving_size": "1 cup", "crohns_safe": true, "notes": "Staple food; well-tolerated"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Selenomethionine or selenium-enriched yeast",
+        "why_this_form": "Selenomethionine is the organic form with highest bioavailability (~90% absorbed) and can be incorporated into body proteins. Selenium-enriched yeast provides multiple organic selenium forms similar to food sources.",
+        "forms_to_avoid": "Sodium selenite (inorganic form) has lower bioavailability and can be pro-oxidant at high doses. Avoid exceeding 400 mcg/day total (upper limit).",
+        "typical_dose": "100-200 mcg/day selenomethionine for deficiency repletion; 55-100 mcg/day maintenance",
+        "post_resection_dose": "200 mcg/day selenomethionine during repletion; 100-200 mcg/day maintenance. Monitor serum levels to stay below 400 mcg/day total intake.",
+        "take_with_food": true,
+        "absorption_tips": "Take with food for best tolerance. Vitamin C may enhance absorption when taken together. Avoid taking with high-dose zinc (may compete). Selenium has a narrow therapeutic window—toxicity (selenosis) occurs above 400 mcg/day.",
+        "interactions": [
+          "High-dose vitamin C (>1000 mg) may reduce selenite absorption (not selenomethionine)",
+          "Cisplatin and other chemotherapy agents deplete selenium",
+          "Statins: some evidence of interaction, clinical significance unclear",
+          "Selenium may enhance anticoagulant effects—monitor if on warfarin"
+        ],
+        "when_oral_wont_work": "Short bowel syndrome, severe malabsorption with persistent low serum selenium. IV selenium (selenious acid) can be added to parenteral nutrition (60-100 mcg/day)."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum/Plasma Selenium; Glutathione Peroxidase (GPx) activity as functional marker",
+        "normal_range": "70-150 ng/mL (0.89-1.90 umol/L)",
+        "deficient_threshold": "<70 ng/mL (<0.89 umol/L)",
+        "severely_deficient_threshold": "<40 ng/mL (<0.51 umol/L)",
+        "unit": "ng/mL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 6 months",
+        "testing_frequency_ongoing": "Annually; more frequently if supplementing high doses (toxicity monitoring)",
+        "notes": "Serum selenium reflects recent intake; erythrocyte selenium or selenoprotein P better reflects long-term status. GPx activity plateaus when selenium is adequate (around 100 ng/mL). Signs of toxicity (selenosis) at >400 mcg/day: garlic breath, hair loss, nail changes, nausea, fatigue, irritability."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "Increase oxidative stress, potentially increasing selenium utilization", "recommendation": "Consider supplementation during prolonged steroid courses"},
+        {"medication": "Azathioprine / 6-MP", "effect": "Both increase oxidative stress; adequate selenium supports antioxidant defense", "recommendation": "Monitor and supplement if deficient"},
+        {"medication": "Anti-TNF biologics", "effect": "By reducing inflammation, may reduce selenium consumption", "recommendation": "Recheck levels after inflammatory markers normalize"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Signs of selenosis (toxicity): garlic-like breath odor, metallic taste, hair loss, brittle nails, GI symptoms, peripheral neuropathy",
+        "Cardiomyopathy symptoms: chest pain, shortness of breath, leg swelling (rare, severe deficiency)",
+        "Severe muscle pain and weakness",
+        "Thyroid dysfunction symptoms despite normal thyroid tests (check selenium before adjusting thyroid meds)"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Geerling BJ et al. Comprehensive nutritional status in patients with long-standing Crohn disease. Am J Clin Nutr 1998;67:919-926",
+        "NIH Office of Dietary Supplements. Selenium Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Stedman JD, Spyrou NM. Selenium in the blood and tissues of IBD patients. Biol Trace Elem Res 1997;58:9-21"
+      ]
+    },
+    {
+      "id": "potassium",
+      "nutrient_name": "Potassium",
+      "why_crohns_patients_need_monitoring": "Potassium is critical for muscle contraction, nerve function, fluid balance, and cardiac rhythm. Crohn's patients lose potassium through chronic diarrhea (the major cause), vomiting, fistula output, and medication effects (corticosteroids increase renal potassium excretion). Hypokalemia can be dangerous and is common during flares.",
+      "why_resection_makes_it_worse": "Potassium is absorbed throughout the GI tract, with significant absorption in the small intestine and colon. Resection reduces absorptive surface and often increases diarrhea. Ileostomy output is high in potassium—patients with high-output ileostomy are at particular risk. Colonic resection eliminates a major potassium absorption site.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Muscle weakness and cramps",
+        "Constipation or ileus (reduced gut motility)",
+        "Fatigue",
+        "Heart palpitations and arrhythmia",
+        "Increased blood pressure",
+        "Tingling and numbness",
+        "Nausea",
+        "Excessive thirst and frequent urination",
+        "Respiratory muscle weakness (severe)",
+        "Cardiac arrest (severe, life-threatening)"
+      ],
+      "deficiency_prevalence_in_crohns": "6-20% have clinically significant hypokalemia; subclinical depletion likely much higher, especially during flares",
+      "recommended_daily_intake": {
+        "general_adult": "2600 mg/day (women), 3400 mg/day (men) — Adequate Intake",
+        "crohns_patient": "3400-4700 mg/day depending on GI losses",
+        "post_resection": "4000-5000+ mg/day; guided by serum levels and output volume. IV replacement for severe depletion."
+      },
+      "best_food_sources": [
+        {"food": "Banana", "amount_per_serving": "422 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Classic potassium source; well-tolerated, part of BRAT diet"},
+        {"food": "Potato (baked, with skin)", "amount_per_serving": "926 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Excellent source; remove skin if fiber is problematic. Mashed potatoes also good."},
+        {"food": "Sweet potato (baked)", "amount_per_serving": "541 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Mash or puree for best tolerance"},
+        {"food": "Avocado", "amount_per_serving": "487 mg", "serving_size": "0.5 medium", "crohns_safe": true, "notes": "Nutrient-dense; also provides magnesium and healthy fats"},
+        {"food": "Salmon (cooked)", "amount_per_serving": "326 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Also provides omega-3s, vitamin D, and selenium"},
+        {"food": "White rice (cooked)", "amount_per_serving": "55 mg", "serving_size": "1 cup", "crohns_safe": true, "notes": "Modest amount but consumed frequently"},
+        {"food": "Coconut water", "amount_per_serving": "600 mg", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Natural electrolyte drink; well-tolerated by most. Also provides some sodium."},
+        {"food": "Chicken breast (cooked)", "amount_per_serving": "220 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Reliable moderate source; well-tolerated"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Potassium chloride (KCl) extended-release tablets or oral solution for acute repletion; potassium gluconate or citrate for maintenance",
+        "why_this_form": "Potassium chloride is the standard for repletion as it addresses concurrent chloride losses from diarrhea. Extended-release forms reduce GI irritation. Potassium citrate may benefit patients with metabolic acidosis (common post-resection).",
+        "forms_to_avoid": "Immediate-release potassium tablets can cause GI ulceration—always use wax-matrix extended-release or liquid form. Avoid high-dose potassium in patients with renal impairment.",
+        "typical_dose": "20-40 mEq/day (750-1500 mg elemental potassium) for mild depletion; divided doses",
+        "post_resection_dose": "40-80 mEq/day (1500-3000 mg) in divided doses for moderate depletion. Severe: IV potassium 10-20 mEq/hour (max 40 mEq/hour in monitored setting). Replace magnesium first if both are low (hypokalemia is refractory to treatment without adequate magnesium).",
+        "take_with_food": true,
+        "absorption_tips": "Take with food and a full glass of water to reduce GI irritation. Extended-release tablets should not be crushed. Liquid forms are fastest absorbed. Oral rehydration solutions (ORS) provide potassium in balanced electrolyte form. Replace magnesium simultaneously if both are depleted.",
+        "interactions": [
+          "ACE inhibitors and ARBs reduce potassium excretion—risk of hyperkalemia with supplementation",
+          "Potassium-sparing diuretics (spironolactone, amiloride) reduce potassium excretion—risk of hyperkalemia",
+          "Loop diuretics (furosemide) and thiazides increase potassium loss—may need increased supplementation",
+          "Corticosteroids increase potassium loss",
+          "NSAIDs can increase potassium retention—monitor",
+          "Digoxin: hypokalemia increases digoxin toxicity risk"
+        ],
+        "when_oral_wont_work": "Serum potassium <2.5 mEq/L, symptomatic hypokalemia (arrhythmia, severe weakness), inability to take oral, or refractory hypokalemia. IV potassium chloride via central line (max 40 mEq/hour with cardiac monitoring). Always correct hypomagnesemia simultaneously."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Potassium (part of basic metabolic panel/BMP)",
+        "normal_range": "3.5-5.0 mEq/L (mmol/L)",
+        "deficient_threshold": "<3.5 mEq/L (hypokalemia)",
+        "severely_deficient_threshold": "<2.5 mEq/L (severe hypokalemia—cardiac arrest risk)",
+        "unit": "mEq/L",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Every 1-3 months; more frequently during active diarrhea or high-output states",
+        "testing_frequency_ongoing": "Every 3-6 months; with every BMP. Increase frequency during flares, steroid use, or diuretic therapy",
+        "notes": "Serum potassium can be falsely elevated by hemolysis during blood draw (check for hemolysis flags). Total body potassium can be depleted even with normal serum levels. EKG changes: flattened T waves, U waves, ST depression (hypokalemia). Always check magnesium with potassium—hypokalemia may be refractory until hypomagnesemia is corrected."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids (prednisone)", "effect": "Mineralocorticoid activity causes renal potassium wasting", "recommendation": "Monitor potassium regularly during steroid use; supplement as needed. Budesonide has less mineralocorticoid effect."},
+        {"medication": "Loperamide", "effect": "By reducing diarrhea, helps retain potassium", "recommendation": "Use as prescribed to reduce GI potassium losses"},
+        {"medication": "Antibiotics (amphotericin B, aminoglycosides)", "effect": "Can cause renal potassium and magnesium wasting", "recommendation": "Monitor electrolytes closely during antibiotic courses"},
+        {"medication": "Infliximab / Anti-TNF agents", "effect": "By controlling disease, reduce diarrheal potassium losses", "recommendation": "Reassess potassium needs after disease stabilization"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Serum potassium <2.5 mEq/L (medical emergency)",
+        "Cardiac arrhythmia or irregular heartbeat",
+        "Severe muscle weakness, especially respiratory muscles",
+        "Paralysis or inability to move limbs",
+        "EKG changes: prominent U waves, ST depression, wide QRS",
+        "Concurrent severe hypomagnesemia"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Weisshof R, Chermesh I. Micronutrient deficiencies in inflammatory bowel disease. Curr Opin Clin Nutr Metab Care 2015;18:576-581",
+        "NIH Office of Dietary Supplements. Potassium Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Baker ML et al. Electrolyte disorders in patients with short bowel syndrome. Nutrition 2011;27:900-908"
+      ]
+    },
+    {
+      "id": "sodium",
+      "nutrient_name": "Sodium",
+      "why_crohns_patients_need_monitoring": "Unlike the general population where sodium excess is the concern, Crohn's patients—especially those with ileostomy or significant diarrhea—are at risk of sodium depletion. Sodium is lost in large quantities through diarrhea and intestinal output. Hyponatremia causes dehydration, hypotension, and can be life-threatening. Post-resection patients must often deliberately increase sodium intake.",
+      "why_resection_makes_it_worse": "The colon is the major site of sodium and water reabsorption. Ileocecal or colonic resection eliminates this absorptive capacity, resulting in sodium-rich ileostomy output (typically 80-130 mEq/L sodium). High-output ileostomy can lose 1-2 liters/day, representing massive sodium losses. Even with intact colon, ileal resection increases diarrhea and sodium losses.",
+      "which_resection_type_affects_it": "ileocecal",
+      "deficiency_symptoms": [
+        "Dehydration (despite adequate fluid intake if sodium is not replaced)",
+        "Dizziness and lightheadedness when standing (orthostatic hypotension)",
+        "Headache",
+        "Nausea and vomiting",
+        "Fatigue and lethargy",
+        "Muscle cramps",
+        "Confusion and disorientation (severe)",
+        "Concentrated dark urine and reduced urine output",
+        "Seizures (severe hyponatremia)"
+      ],
+      "deficiency_prevalence_in_crohns": "10-30% of Crohn's patients during flares; up to 50-80% in those with high-output ileostomy if not properly managed",
+      "recommended_daily_intake": {
+        "general_adult": "<2300 mg/day (general public guideline to limit intake)",
+        "crohns_patient": "Individualized; may need 3000-5000 mg/day during active diarrhea",
+        "post_resection": "Ileostomy patients may need 4000-8000 mg/day or more to match output losses. Guided by urine sodium (should be >20 mEq/L)."
+      },
+      "best_food_sources": [
+        {"food": "Oral rehydration solution (ORS)", "amount_per_serving": "460-690 mg sodium", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "WHO-formula or commercial ORS (e.g., Drip Drop, Trioral) specifically designed for sodium replacement with glucose for co-transport absorption"},
+        {"food": "Chicken broth / Bone broth", "amount_per_serving": "860 mg", "serving_size": "1 cup (240 mL)", "crohns_safe": true, "notes": "Warm, soothing, and well-tolerated. Excellent for flares. Provides sodium and some other electrolytes."},
+        {"food": "Saltine crackers", "amount_per_serving": "230 mg", "serving_size": "5 crackers", "crohns_safe": true, "notes": "Low residue; good for nausea"},
+        {"food": "Pretzels", "amount_per_serving": "385 mg", "serving_size": "1 oz (28 g)", "crohns_safe": true, "notes": "Simple carb with sodium; well-tolerated snack"},
+        {"food": "Canned soup", "amount_per_serving": "700-1100 mg", "serving_size": "1 cup", "crohns_safe": true, "notes": "Choose low-fiber, broth-based soups during flares"},
+        {"food": "Table salt (added to food)", "amount_per_serving": "2300 mg", "serving_size": "1 tsp", "crohns_safe": true, "notes": "Liberal salt use is appropriate for high-output patients; counterintuitive to general health messaging"},
+        {"food": "Cottage cheese", "amount_per_serving": "411 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Also provides protein, calcium, and selenium"},
+        {"food": "Electrolyte drinks (not hypotonic sports drinks)", "amount_per_serving": "300-500 mg", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Choose high-sodium formulas; avoid hypotonic drinks (Gatorade etc.) which can worsen ileostomy output via osmotic effect"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Oral rehydration solution (glucose-sodium co-transport solution) or sodium chloride tablets/capsules",
+        "why_this_form": "ORS uses glucose-sodium co-transport (SGLT1) to maximize sodium absorption even with reduced bowel length. This mechanism remains functional in the remaining small bowel. Salt tablets provide concentrated sodium when ORS volume is not tolerated.",
+        "forms_to_avoid": "Hypotonic fluids (plain water, Gatorade, tea, juice) can actually worsen ileostomy output and sodium depletion by osmotic effect. Diet should include sodium, not just free water.",
+        "typical_dose": "Individualized based on output: 1-2 liters of ORS/day for high-output ileostomy; sodium chloride tablets 1-2 g 2-4 times daily",
+        "post_resection_dose": "Match losses: measure ileostomy output and replace sodium proportionally. Typical ileostomy sodium concentration is 90-120 mEq/L. For 1L output, replace approximately 2-3 g sodium. ORS is the most efficient vehicle.",
+        "take_with_food": true,
+        "absorption_tips": "Sip ORS throughout the day rather than large boluses. Glucose is essential for sodium co-transport—plain salt water is much less effective. St. Mark's solution (homemade ORS: 6 tsp sugar + 1 tsp salt per liter water) is a cost-effective option. Restrict hypotonic fluids to 500 mL/day if ileostomy output is high. Loperamide before meals can reduce output.",
+        "interactions": [
+          "Loperamide: helps reduce sodium and fluid losses from ileostomy—often co-prescribed",
+          "Codeine phosphate: reduces intestinal secretion and transit, helping sodium retention",
+          "ACE inhibitors/ARBs: may worsen hypotension in sodium-depleted patients",
+          "Diuretics: exacerbate sodium and fluid losses—use with extreme caution post-resection",
+          "PPIs: may reduce gastric sodium absorption"
+        ],
+        "when_oral_wont_work": "Severe dehydration with hyponatremia <125 mEq/L, altered mental status, hemodynamic instability. IV normal saline (0.9% NaCl) or Ringer's lactate for acute repletion. Some high-output ileostomy patients require scheduled IV saline infusions (e.g., 1L IV NS 2-3 times per week at home)."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Sodium (part of BMP); Urine Sodium (spot or 24-hour); Stool/Ostomy output volume",
+        "normal_range": "Serum sodium: 136-145 mEq/L; Urine sodium: >20 mEq/L indicates adequate sodium status",
+        "deficient_threshold": "Serum sodium <136 mEq/L (hyponatremia); Urine sodium <20 mEq/L (body is sodium-avid, indicating depletion)",
+        "severely_deficient_threshold": "Serum sodium <125 mEq/L (severe hyponatremia—seizure and brain edema risk)",
+        "unit": "mEq/L",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Weekly for first month post-ileostomy creation, then every 2-4 weeks until stable, then every 3 months",
+        "testing_frequency_ongoing": "Every 3-6 months; more frequently during illness, flares, hot weather, or medication changes. Teach patients to monitor urine color and output volume.",
+        "notes": "Urine sodium is a better indicator of sodium balance than serum sodium (serum is tightly regulated until depletion is severe). Urine sodium <20 mEq/L = the kidneys are desperately conserving sodium, indicating total body depletion even if serum sodium is still normal. Track ileostomy output volume daily—>1.5L/day warrants action."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids (prednisone)", "effect": "Mineralocorticoid effect causes sodium retention but potassium wasting; may mask sodium depletion initially", "recommendation": "Monitor both sodium and potassium during steroid use"},
+        {"medication": "Loperamide", "effect": "First-line medication to reduce ileostomy output and sodium losses", "recommendation": "Often prescribed 2-4 mg before meals and at bedtime for high-output ileostomy"},
+        {"medication": "Codeine phosphate", "effect": "Reduces intestinal secretion and transit speed", "recommendation": "Second-line to loperamide for persistent high output"},
+        {"medication": "Octreotide", "effect": "Reduces intestinal secretion in refractory high-output states", "recommendation": "Used in refractory cases; monitor electrolytes closely"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Serum sodium <125 mEq/L",
+        "Confusion, seizures, or altered consciousness",
+        "Severe orthostatic hypotension (dizziness/fainting on standing)",
+        "Ileostomy output >2 liters/day",
+        "Urine output <400 mL/day (oliguria) with concentrated dark urine",
+        "Rapid overcorrection of hyponatremia (>10-12 mEq/L in 24 hours) risks osmotic demyelination syndrome"
+      ],
+      "evidence_level": "strong",
+      "citations": [
+        "Nightingale J, Woodward JM. Guidelines for management of patients with a short bowel. Gut 2006;55(suppl 4):iv1-iv12",
+        "NIH Office of Dietary Supplements. Sodium information integrated in dietary guidelines.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Baker ML et al. Management of the short bowel syndrome. Expert Rev Gastroenterol Hepatol 2011;5:645-651",
+        "Nightingale JM. Management of patients with a high output stoma. World J Gastroenterol 2022;28:1610-1623"
+      ]
+    },
+    {
+      "id": "omega3",
+      "nutrient_name": "Omega-3 Fatty Acids (EPA/DHA)",
+      "why_crohns_patients_need_monitoring": "Omega-3 fatty acids (EPA and DHA) have potent anti-inflammatory properties through production of resolvins and protectins, suppression of pro-inflammatory cytokines (TNF-alpha, IL-6), and modulation of NF-kB signaling. Crohn's patients typically have an unfavorable omega-6 to omega-3 ratio due to Western diet patterns. While not a traditional 'deficiency' nutrient, omega-3 status affects inflammatory tone and may influence disease activity.",
+      "why_resection_makes_it_worse": "Long-chain fatty acid absorption requires bile salts, pancreatic lipase, and intact small bowel mucosa. Ileal resection disrupts bile salt recycling, causing fat malabsorption that affects all long-chain fatty acids including EPA/DHA. Patients may also avoid fatty fish and oily foods due to steatorrhea, further reducing intake.",
+      "which_resection_type_affects_it": "ileal",
+      "deficiency_symptoms": [
+        "Dry skin and eczema-like rashes",
+        "Dry eyes",
+        "Joint stiffness and pain",
+        "Poor wound healing",
+        "Difficulty concentrating and brain fog",
+        "Depression and mood instability",
+        "Increased inflammatory markers",
+        "Hair that is dry, brittle, or falling out",
+        "Frequent colds and infections"
+      ],
+      "deficiency_prevalence_in_crohns": "Suboptimal omega-3 levels found in 50-70% of Crohn's patients based on omega-3 index testing; overtly deficient in 20-30%",
+      "recommended_daily_intake": {
+        "general_adult": "250-500 mg combined EPA + DHA/day (no official RDA; Adequate Intake for ALA is 1.1-1.6 g/day)",
+        "crohns_patient": "1000-2000 mg combined EPA + DHA/day for anti-inflammatory benefit",
+        "post_resection": "2000-3000 mg EPA + DHA/day; triglyceride form for better absorption in fat malabsorption; consider enteric-coated"
+      },
+      "best_food_sources": [
+        {"food": "Salmon (wild-caught, cooked)", "amount_per_serving": "1200-2400 mg EPA+DHA", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Gold standard; baked or poached salmon 2-3 times per week is ideal"},
+        {"food": "Sardines (canned)", "amount_per_serving": "835 mg EPA+DHA", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Also provides calcium (bones), vitamin D, and selenium"},
+        {"food": "Mackerel (cooked)", "amount_per_serving": "1020 mg EPA+DHA", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Very high in omega-3s; choose Atlantic mackerel (lower mercury than king mackerel)"},
+        {"food": "Tuna (canned light)", "amount_per_serving": "230 mg EPA+DHA", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Moderate source; lower mercury than albacore"},
+        {"food": "Trout (cooked)", "amount_per_serving": "1000 mg EPA+DHA", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Excellent source; generally well-tolerated baked"},
+        {"food": "Chia seeds (ground)", "amount_per_serving": "5000 mg ALA", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Provides ALA (precursor) not EPA/DHA directly; conversion is only 5-10%. Seeds may worsen GI symptoms."},
+        {"food": "Walnuts (chopped)", "amount_per_serving": "2570 mg ALA", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "ALA source; nuts may be poorly tolerated. Try walnut butter."},
+        {"food": "Cod liver oil", "amount_per_serving": "890 mg EPA+DHA", "serving_size": "1 tsp", "crohns_safe": true, "notes": "Also provides vitamins A and D; liquid form well-absorbed"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Triglyceride (TG) form fish oil or re-esterified triglyceride (rTG); alternatively, algal oil (vegan DHA+EPA)",
+        "why_this_form": "Triglyceride form has 70% better absorption than ethyl ester (EE) form. This is critical in fat malabsorption states. Re-esterified TG combines high concentration with TG bioavailability. Algal oil provides DHA+EPA without fish, useful for those who cannot tolerate fish oil.",
+        "forms_to_avoid": "Ethyl ester form (most cheap fish oils) has poor absorption, especially in patients with impaired bile salt function. Cod liver oil in high doses may provide excessive vitamin A.",
+        "typical_dose": "1000-2000 mg EPA+DHA per day (not total fish oil—check label for actual EPA+DHA content)",
+        "post_resection_dose": "2000-3000 mg EPA+DHA/day in triglyceride form; consider emulsified liquid fish oil for better absorption. Split into 2-3 doses with meals. Enteric-coated may reduce fishy reflux.",
+        "take_with_food": true,
+        "absorption_tips": "Always take with a fat-containing meal. Emulsified (liquid) fish oil absorbs 3x better than capsules in malabsorption. MCT oil can be combined to improve absorption. Store fish oil in refrigerator to reduce oxidation and fishy taste. Enteric-coated capsules reduce reflux but may delay absorption.",
+        "interactions": [
+          "Anticoagulants (warfarin, DOACs): omega-3 >3 g/day may increase bleeding risk—monitor INR",
+          "Antiplatelet agents (aspirin, clopidogrel): additive bleeding risk at high omega-3 doses",
+          "Orlistat reduces omega-3 absorption",
+          "Immunosuppressants: theoretical enhanced immune modulation—clinical significance unclear"
+        ],
+        "when_oral_wont_work": "Severe fat malabsorption with steatorrhea despite triglyceride-form and emulsified supplements. IV lipid emulsions containing omega-3 (Omegaven, SMOFlipid) can be used in parenteral nutrition patients."
+      },
+      "lab_monitoring": {
+        "test_name": "Omega-3 Index (EPA+DHA as % of red blood cell membrane fatty acids); also EPA:Arachidonic Acid ratio",
+        "normal_range": "Omega-3 Index: 8-12% (optimal zone for anti-inflammatory benefit)",
+        "deficient_threshold": "<4% (high risk zone)",
+        "severely_deficient_threshold": "<2% (very high inflammatory risk)",
+        "unit": "% of RBC fatty acids",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Baseline and at 6 months to assess supplementation response",
+        "testing_frequency_ongoing": "Annually if supplementing; more of a lifestyle optimization marker than critical lab",
+        "notes": "Omega-3 Index is the most validated marker, measured as a dried blood spot test (finger prick kits available). Not routinely covered by insurance. The goal of 8-12% is based on cardiovascular and anti-inflammatory data. Most Western populations average 4-5%. IBD patients may benefit from higher targets."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Anti-TNF biologics (infliximab, adalimumab)", "effect": "Omega-3s may complement anti-TNF therapy by providing additional anti-inflammatory pathways (resolvin production)", "recommendation": "Consider as adjunctive anti-inflammatory support"},
+        {"medication": "Corticosteroids", "effect": "Both are anti-inflammatory; omega-3s may enable lower steroid doses (theoretical)", "recommendation": "Continue omega-3s during steroid courses; not a steroid replacement"},
+        {"medication": "Azathioprine / 6-MP", "effect": "No significant interaction", "recommendation": "Safe to combine; may support immune modulation"},
+        {"medication": "Cholestyramine", "effect": "May reduce omega-3 absorption", "recommendation": "Take fish oil 4+ hours before cholestyramine"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Easy bruising or prolonged bleeding while on high-dose omega-3 + anticoagulants",
+        "Fishy body odor or taste (may indicate oxidized/rancid supplement—replace)",
+        "New GI symptoms (diarrhea, cramping) from fish oil—may need to reduce dose or switch form",
+        "Allergic reaction to fish-derived supplements (switch to algal oil)"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Feagan BG et al. Omega-3 free fatty acids for the maintenance of remission in Crohn disease: the EPIC Randomized Controlled Trials. JAMA 2008;299:1690-1697",
+        "NIH Office of Dietary Supplements. Omega-3 Fatty Acids Fact Sheet for Health Professionals. Updated 2024.",
+        "Calder PC. Omega-3 fatty acids and inflammatory processes: from molecules to man. Biochem Soc Trans 2017;45:1105-1115",
+        "Turner D et al. Omega 3 fatty acids (fish oil) for maintenance of remission in Crohn's disease. Cochrane Database Syst Rev 2011;(11):CD006320"
+      ]
+    },
+    {
+      "id": "vitamin_c",
+      "nutrient_name": "Vitamin C (Ascorbic Acid)",
+      "why_crohns_patients_need_monitoring": "Vitamin C is essential for collagen synthesis (wound healing), immune function, and is a powerful antioxidant. It also enhances non-heme iron absorption—critical for iron-deficient Crohn's patients. Crohn's patients are at risk due to reduced fruit/vegetable intake during flares, increased oxidative stress consuming vitamin C reserves, and malabsorption from inflamed mucosa.",
+      "why_resection_makes_it_worse": "Vitamin C is absorbed primarily in the distal small intestine (ileum and jejunum). Resection of these segments reduces absorption. Post-surgical healing demands increased vitamin C for collagen synthesis. High-output states lead to excessive losses. Rapid transit reduces absorption time.",
+      "which_resection_type_affects_it": "ileal",
+      "deficiency_symptoms": [
+        "Fatigue and weakness",
+        "Impaired wound healing (critical post-surgery)",
+        "Bleeding gums",
+        "Easy bruising",
+        "Dry, rough, scaly skin",
+        "Joint pain",
+        "Frequent infections",
+        "Anemia (due to impaired iron absorption)",
+        "Corkscrew hairs and perifollicular hemorrhages",
+        "Scurvy (severe): loose teeth, hemorrhage, bone pain"
+      ],
+      "deficiency_prevalence_in_crohns": "15-30% of Crohn's patients have suboptimal levels; overt deficiency less common (~5%) but underdiagnosed",
+      "recommended_daily_intake": {
+        "general_adult": "90 mg/day (men), 75 mg/day (women); smokers add 35 mg",
+        "crohns_patient": "200-500 mg/day",
+        "post_resection": "500-1000 mg/day in divided doses; higher during wound healing period"
+      },
+      "best_food_sources": [
+        {"food": "Red bell pepper (cooked)", "amount_per_serving": "117 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Roasted and peeled peppers are usually well-tolerated; higher vitamin C than oranges"},
+        {"food": "Strawberries", "amount_per_serving": "49 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Well-tolerated by most; avoid if seeds are problematic (puree)"},
+        {"food": "Broccoli (cooked)", "amount_per_serving": "51 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Well-cooked florets usually tolerated in remission"},
+        {"food": "Kiwi", "amount_per_serving": "64 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Remove skin; seeds rarely problematic. Very high vitamin C."},
+        {"food": "Orange (whole)", "amount_per_serving": "70 mg", "serving_size": "1 medium", "crohns_safe": false, "notes": "Citrus acidity may worsen symptoms in some patients; try in remission"},
+        {"food": "Potato (baked)", "amount_per_serving": "17 mg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Modest but reliable source since potatoes are frequently consumed and well-tolerated"},
+        {"food": "Cantaloupe", "amount_per_serving": "29 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Soft melon; well-tolerated; also provides vitamin A"},
+        {"food": "Tomato sauce (cooked)", "amount_per_serving": "22 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Cooking reduces acidity; some patients tolerate cooked tomato better than raw"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Buffered vitamin C (calcium ascorbate or sodium ascorbate) or liposomal vitamin C",
+        "why_this_form": "Buffered forms are less acidic and gentler on the GI tract—important for Crohn's patients with sensitive mucosa. Liposomal vitamin C has enhanced absorption and bypasses some intestinal transport limitations.",
+        "forms_to_avoid": "Pure ascorbic acid in high doses (>500 mg) can cause diarrhea and stomach upset. Chewable vitamin C tablets can erode tooth enamel. Avoid >2000 mg/day (increases oxalate kidney stone risk, especially problematic post-ileal resection).",
+        "typical_dose": "250-500 mg buffered vitamin C 1-2 times daily",
+        "post_resection_dose": "500 mg buffered vitamin C 2 times daily (1000 mg total); higher during wound healing (up to 2000 mg/day for 4-6 weeks post-surgery). Reduce to 500 mg/day maintenance. Monitor urinary oxalate if ileal resection (increased kidney stone risk).",
+        "take_with_food": false,
+        "absorption_tips": "Split doses (absorption efficiency decreases above ~200 mg per dose). Take with iron supplements to enhance iron absorption by 2-3 fold. Avoid high-dose vitamin C >2000 mg/day long-term due to oxalate kidney stone risk (especially after ileal resection where oxalate absorption increases). Vitamin C is water-soluble—excess is excreted renally.",
+        "interactions": [
+          "Enhances non-heme iron absorption (beneficial interaction—take together)",
+          "High-dose vitamin C may increase aluminum absorption from antacids",
+          "May reduce vitamin B12 levels if taken simultaneously—separate by 2 hours",
+          "High-dose vitamin C may interfere with certain lab tests (glucose, occult blood)",
+          "Increases oxalate excretion—risk of calcium oxalate kidney stones, especially post-ileal resection",
+          "May reduce effectiveness of some chemotherapy drugs"
+        ],
+        "when_oral_wont_work": "Severe malabsorption or short bowel syndrome. IV vitamin C (ascorbic acid injection) can be used: 200-500 mg IV daily during acute deficiency or post-surgical healing. Parenteral nutrition should include vitamin C (200 mg/day standard PN multivitamin)."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum/Plasma Ascorbic Acid (Vitamin C)",
+        "normal_range": "0.4-2.0 mg/dL (23-114 umol/L)",
+        "deficient_threshold": "<0.2 mg/dL (<11 umol/L)",
+        "severely_deficient_threshold": "<0.1 mg/dL (<6 umol/L) — scurvy risk",
+        "unit": "mg/dL",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Baseline and at 6 months",
+        "testing_frequency_ongoing": "Annually or as clinically indicated; not routinely monitored in many practices",
+        "notes": "Vitamin C levels are rarely checked in routine clinical practice but should be if deficiency symptoms present. Levels drop rapidly during acute illness/inflammation (consumed as antioxidant). Leukocyte (buffy coat) vitamin C is a better marker of tissue stores but is labor-intensive and rarely available."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "Increase vitamin C utilization and urinary excretion", "recommendation": "Supplement during prolonged steroid courses"},
+        {"medication": "Sulfasalazine", "effect": "May reduce vitamin C levels", "recommendation": "Monitor and supplement as needed"},
+        {"medication": "Iron supplements", "effect": "Vitamin C enhances non-heme iron absorption by 2-3 fold", "recommendation": "Take 250 mg vitamin C with oral iron supplement (beneficial interaction)"},
+        {"medication": "Anti-TNF biologics", "effect": "No significant interaction", "recommendation": "Continue vitamin C supplementation as part of antioxidant support"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Symptoms of scurvy: spontaneous hemorrhage, loose teeth, painful swollen gums, bone pain",
+        "Wounds that fail to heal or dehisce post-surgery",
+        "Perifollicular hemorrhages (tiny hemorrhages around hair follicles)",
+        "Signs of kidney stones during high-dose supplementation: flank pain, hematuria (especially post-ileal resection)"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Parian A et al. Vitamins and minerals in inflammatory bowel disease. Gastroenterol Clin North Am 2021;50:315-335",
+        "NIH Office of Dietary Supplements. Vitamin C Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Hwang C et al. Micronutrient deficiencies in inflammatory bowel disease. Inflamm Bowel Dis 2012;18:1961-1981"
+      ]
+    },
+    {
+      "id": "copper",
+      "nutrient_name": "Copper",
+      "why_crohns_patients_need_monitoring": "Copper is essential for iron metabolism (ceruloplasmin), connective tissue formation, immune function, and neurological health. Crohn's patients are at risk from malabsorption, and critically, from zinc supplementation (which is common in Crohn's management)—zinc and copper compete for absorption via the same transporter (DMT-1). Copper deficiency can mimic B12 deficiency neurologically.",
+      "why_resection_makes_it_worse": "Copper is absorbed primarily in the stomach and duodenum. While these segments are rarely resected in Crohn's, increased intestinal transit, diarrhea, and high-output states increase copper losses. The main post-resection risk is iatrogenic copper depletion from zinc supplementation prescribed to replace zinc losses.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Anemia (microcytic, normocytic, or macrocytic) unresponsive to iron supplementation",
+        "Neutropenia (low white blood cells—increased infection risk)",
+        "Peripheral neuropathy (mimics B12 deficiency)",
+        "Myelopathy (spinal cord degeneration)",
+        "Osteoporosis",
+        "Fatigue",
+        "Skin depigmentation and premature graying of hair",
+        "Impaired wound healing",
+        "Increased susceptibility to infections"
+      ],
+      "deficiency_prevalence_in_crohns": "5-15% overall; significantly higher (up to 30%) in those taking zinc supplements without copper co-supplementation",
+      "recommended_daily_intake": {
+        "general_adult": "900 mcg (0.9 mg)/day",
+        "crohns_patient": "1-2 mg/day, especially if supplementing zinc",
+        "post_resection": "2-3 mg/day if on zinc supplementation; monitor levels"
+      },
+      "best_food_sources": [
+        {"food": "Beef liver (cooked)", "amount_per_serving": "12400 mcg (12.4 mg)", "serving_size": "3 oz (85 g)", "crohns_safe": false, "notes": "Extremely copper-rich; may be hard to digest"},
+        {"food": "Dark chocolate (70-85%)", "amount_per_serving": "501 mcg", "serving_size": "1 oz (28 g)", "crohns_safe": true, "notes": "Moderate source; small amounts usually tolerated"},
+        {"food": "Cashews", "amount_per_serving": "622 mcg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Nuts may be problematic; cashew butter is better tolerated"},
+        {"food": "Sunflower seeds", "amount_per_serving": "519 mcg", "serving_size": "1 oz (28 g)", "crohns_safe": false, "notes": "Seeds can irritate; try sunflower seed butter"},
+        {"food": "Crab (cooked)", "amount_per_serving": "585 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Well-tolerated shellfish; also provides zinc"},
+        {"food": "Mushrooms (shiitake, cooked)", "amount_per_serving": "650 mcg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Cook thoroughly; generally well-tolerated"},
+        {"food": "Potatoes (cooked)", "amount_per_serving": "300 mcg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Modest source; well-tolerated staple food"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Copper bisglycinate (chelated) or copper gluconate",
+        "why_this_form": "Chelated copper (bisglycinate) has higher bioavailability and causes less GI irritation than inorganic forms. Copper gluconate is widely available and generally well-tolerated.",
+        "forms_to_avoid": "Copper sulfate can cause GI upset. Avoid copper supplementation without established need—copper excess is hepatotoxic (Wilson disease-like presentation).",
+        "typical_dose": "2 mg/day when supplementing zinc >25 mg/day (standard ratio: 1 mg copper per 15 mg zinc)",
+        "post_resection_dose": "2-3 mg/day if on zinc supplementation; monitor serum copper and ceruloplasmin every 6 months. Adjust based on levels.",
+        "take_with_food": true,
+        "absorption_tips": "Separate from zinc supplements by at least 2 hours (they compete for the same transporter). Take with food to reduce GI upset. Vitamin C in moderate doses may enhance copper absorption, but high-dose vitamin C (>1500 mg) may reduce copper absorption. Avoid taking with antacids.",
+        "interactions": [
+          "Zinc supplements competitively inhibit copper absorption (most important interaction)",
+          "High-dose vitamin C (>1500 mg) may reduce copper absorption",
+          "Antacids reduce copper absorption",
+          "Penicillamine chelates copper (used in Wilson disease—contraindicated in copper deficiency)",
+          "Iron supplements may compete for absorption at high doses"
+        ],
+        "when_oral_wont_work": "Severe malabsorption or short bowel syndrome. IV copper (copper chloride) can be added to parenteral nutrition (0.3-0.5 mg/day standard; up to 1.5 mg/day for repletion)."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Copper and Ceruloplasmin",
+        "normal_range": "Serum copper: 70-140 mcg/dL (11-22 umol/L); Ceruloplasmin: 20-35 mg/dL",
+        "deficient_threshold": "Serum copper <70 mcg/dL; Ceruloplasmin <20 mg/dL",
+        "severely_deficient_threshold": "Serum copper <50 mcg/dL with hematologic or neurologic manifestations",
+        "unit": "mcg/dL",
+        "fasting_required": false,
+        "testing_frequency_first_year_post_surgery": "Baseline, then every 6 months if on zinc supplementation",
+        "testing_frequency_ongoing": "Every 6-12 months if on zinc supplements; annually otherwise",
+        "notes": "Ceruloplasmin is an acute phase reactant—can be elevated during inflammation, masking copper depletion. Check concurrent CRP. Free (non-ceruloplasmin-bound) copper can be calculated but is complex. 24-hour urine copper helps assess total body status. If unexplained anemia or neutropenia develops while on zinc, check copper immediately."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Zinc supplements (prescribed for Crohn's)", "effect": "Most important interaction: zinc induces intestinal metallothionein which binds copper and prevents its absorption", "recommendation": "ALWAYS co-supplement copper when zinc >25 mg/day. Ratio of 1 mg copper per 15 mg zinc. Separate doses by 2 hours."},
+        {"medication": "PPIs", "effect": "May reduce copper absorption by raising gastric pH", "recommendation": "Monitor copper levels in long-term PPI users"},
+        {"medication": "Azathioprine / 6-MP", "effect": "Copper deficiency can cause pancytopenia mimicking drug-induced bone marrow suppression", "recommendation": "Check copper before attributing cytopenias solely to medication"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Unexplained anemia unresponsive to iron supplementation",
+        "Neutropenia (ANC <1500) while on zinc supplements—check copper immediately",
+        "Neurological symptoms (neuropathy, myelopathy) mimicking B12 deficiency but with normal B12",
+        "Pancytopenia of unclear cause"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Myint ZW et al. Copper deficiency anemia: review article. Ann Hematol 2018;97:1527-1534",
+        "NIH Office of Dietary Supplements. Copper Fact Sheet for Health Professionals. Updated 2024.",
+        "Duncan A et al. Quantitative data on the magnitude of the systemic inflammatory response and its effect on micronutrient status based on plasma measurements. Am J Clin Nutr 2012;95:64-71",
+        "Willis MS et al. Zinc-induced copper deficiency. Am J Clin Pathol 2005;123:125-131"
+      ]
+    },
+    {
+      "id": "chromium",
+      "nutrient_name": "Chromium",
+      "why_crohns_patients_need_monitoring": "Chromium enhances insulin signaling and is involved in glucose and lipid metabolism. While overt deficiency is rare, Crohn's patients with malabsorption, extensive bowel disease, or on parenteral nutrition may develop deficiency. Chromium deficiency can cause glucose intolerance and insulin resistance, relevant because corticosteroid-treated Crohn's patients already face glucose dysregulation.",
+      "why_resection_makes_it_worse": "Chromium is absorbed throughout the small intestine, primarily in the jejunum. Resection reduces absorptive surface area. Increased intestinal transit and diarrhea increase losses. Patients on parenteral nutrition without adequate chromium supplementation are at highest risk.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Glucose intolerance and elevated blood sugar",
+        "Insulin resistance",
+        "Increased cholesterol and triglycerides",
+        "Weight loss",
+        "Peripheral neuropathy (rare, mainly in PN patients)",
+        "Fatigue",
+        "Confusion (severe deficiency)"
+      ],
+      "deficiency_prevalence_in_crohns": "Unknown; rarely measured. Likely 5-10% clinically significant deficiency; subclinical depletion may be more common in extensive disease or PN patients",
+      "recommended_daily_intake": {
+        "general_adult": "25-35 mcg/day (Adequate Intake)",
+        "crohns_patient": "35-50 mcg/day",
+        "post_resection": "50-100 mcg/day; higher if glucose intolerance develops or if on PN without chromium"
+      },
+      "best_food_sources": [
+        {"food": "Broccoli (cooked)", "amount_per_serving": "11 mcg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Best dietary source; cook florets thoroughly for digestibility"},
+        {"food": "Grape juice", "amount_per_serving": "8 mcg", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Well-tolerated; also provides antioxidants"},
+        {"food": "Beef (cooked)", "amount_per_serving": "2 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Modest source; lean beef well-tolerated"},
+        {"food": "Turkey breast (cooked)", "amount_per_serving": "2 mcg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Easy to digest"},
+        {"food": "English muffin (whole wheat)", "amount_per_serving": "4 mcg", "serving_size": "1 muffin", "crohns_safe": false, "notes": "Whole wheat may cause issues; white bread alternative has less chromium"},
+        {"food": "Potato (with skin)", "amount_per_serving": "3 mcg", "serving_size": "1 medium", "crohns_safe": true, "notes": "Remove skin if needed; still provides some chromium"},
+        {"food": "Egg", "amount_per_serving": "0.5-1 mcg", "serving_size": "1 large", "crohns_safe": true, "notes": "Modest contributor; frequently consumed"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Chromium picolinate",
+        "why_this_form": "Chromium picolinate is the most studied form with the best bioavailability. Picolinic acid chelation enhances intestinal absorption.",
+        "forms_to_avoid": "Chromium chloride has very low absorption (<2%). Avoid chromium nicotinate in high doses.",
+        "typical_dose": "200-400 mcg chromium picolinate/day for deficiency",
+        "post_resection_dose": "200-500 mcg/day if deficient or glucose intolerant. For PN patients, 10-15 mcg/day IV.",
+        "take_with_food": true,
+        "absorption_tips": "Vitamin C may enhance chromium absorption. Antacids and PPIs may reduce absorption. High iron intake may compete with chromium absorption. Phytates reduce absorption.",
+        "interactions": [
+          "Insulin and oral hypoglycemics: chromium may enhance their effects—monitor blood glucose",
+          "Corticosteroids: compound glucose intolerance; chromium supplementation may partially offset steroid-induced hyperglycemia",
+          "NSAIDs may increase chromium absorption",
+          "Antacids reduce chromium absorption",
+          "Iron supplements may compete for absorption"
+        ],
+        "when_oral_wont_work": "PN patients require IV chromium (chromic chloride) 10-15 mcg/day added to PN solution. Rarely needed outside PN context."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum/Plasma Chromium (not widely standardized); Glucose and HbA1c as functional markers",
+        "normal_range": "Serum chromium: 0.05-0.50 mcg/L (variable by lab); no well-established reference range",
+        "deficient_threshold": "No well-established threshold; functional deficiency suggested by unexplained glucose intolerance in at-risk patients",
+        "severely_deficient_threshold": "Not established; clinical diagnosis based on glucose intolerance responding to chromium supplementation",
+        "unit": "mcg/L",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Not routinely tested; check if unexplained glucose intolerance develops",
+        "testing_frequency_ongoing": "Monitor glucose/HbA1c; test chromium only if clinical suspicion of deficiency",
+        "notes": "Serum chromium is a poor marker of body stores and is not well-standardized across laboratories. The most practical approach is to monitor fasting glucose and HbA1c, and consider a trial of chromium supplementation if unexplained glucose intolerance develops in a malnourished Crohn's patient. Contamination in blood draws is common (stainless steel needles contain chromium)."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Corticosteroids", "effect": "Steroids cause hyperglycemia; chromium deficiency exacerbates this", "recommendation": "Consider chromium supplementation (200 mcg/day) during prolonged steroid courses, especially if glucose rises"},
+        {"medication": "PPIs", "effect": "May reduce chromium absorption", "recommendation": "Separate dosing if supplementing chromium"},
+        {"medication": "Metformin (if prescribed for steroid-induced diabetes)", "effect": "Chromium may enhance metformin effect on glucose", "recommendation": "Monitor blood glucose more frequently if combining"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "New-onset hyperglycemia in a malnourished Crohn's patient (consider chromium deficiency alongside steroid-induced diabetes)",
+        "Peripheral neuropathy of unclear cause in a PN patient (check chromium among other micronutrients)",
+        "Occupational chromium exposure toxicity signs: kidney damage, lung irritation (different from supplementation)"
+      ],
+      "evidence_level": "emerging",
+      "citations": [
+        "NIH Office of Dietary Supplements. Chromium Fact Sheet for Health Professionals. Updated 2024.",
+        "Anderson RA. Chromium and polyphenols from cinnamon improve insulin sensitivity. Proc Nutr Soc 2008;67:48-53",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "Jeejeebhoy KN. Clinical nutrition: 6. Management of nutritional problems of patients with Crohn's disease. CMAJ 2002;166:913-918"
+      ]
+    },
+    {
+      "id": "phosphorus",
+      "nutrient_name": "Phosphorus",
+      "why_crohns_patients_need_monitoring": "Phosphorus is critical for bone mineralization, energy metabolism (ATP), acid-base balance, and cell signaling. Crohn's patients are at risk from malabsorption, vitamin D deficiency (which impairs phosphorus absorption), chronic use of aluminum-containing antacids (which bind phosphorus), and refeeding syndrome risk when resuming nutrition after prolonged fasting or severe malnutrition.",
+      "why_resection_makes_it_worse": "Phosphorus is absorbed throughout the small intestine, with the most active absorption in the duodenum and jejunum (vitamin D-dependent). Resection reduces absorptive surface area. Vitamin D deficiency from ileal resection compounds the problem by reducing active phosphorus absorption. Refeeding syndrome risk is highest in post-surgical patients who have been NPO (nothing by mouth) or severely malnourished.",
+      "which_resection_type_affects_it": "any",
+      "deficiency_symptoms": [
+        "Muscle weakness (including respiratory muscles)",
+        "Bone pain and osteomalacia",
+        "Fatigue and malaise",
+        "Loss of appetite",
+        "Numbness and tingling",
+        "Confusion and irritability",
+        "Hemolytic anemia (severe deficiency)",
+        "Rhabdomyolysis (severe deficiency)",
+        "Respiratory failure (severe—diaphragm weakness)",
+        "Heart failure (severe refeeding syndrome)"
+      ],
+      "deficiency_prevalence_in_crohns": "5-15% have low serum phosphorus; refeeding hypophosphatemia risk in 15-30% of malnourished IBD patients requiring nutritional support",
+      "recommended_daily_intake": {
+        "general_adult": "700 mg/day",
+        "crohns_patient": "700-1200 mg/day depending on absorption and medication use",
+        "post_resection": "1000-1500 mg/day; critical monitoring during refeeding"
+      },
+      "best_food_sources": [
+        {"food": "Chicken breast (cooked)", "amount_per_serving": "196 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Well-tolerated protein source; consistent phosphorus"},
+        {"food": "Salmon (cooked)", "amount_per_serving": "214 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Also provides omega-3s, vitamin D, selenium"},
+        {"food": "Greek yogurt", "amount_per_serving": "230 mg", "serving_size": "6 oz (170 g)", "crohns_safe": true, "notes": "Also provides calcium and protein"},
+        {"food": "Egg", "amount_per_serving": "86 mg", "serving_size": "1 large", "crohns_safe": true, "notes": "Easy to digest; reliable source"},
+        {"food": "Turkey (cooked)", "amount_per_serving": "173 mg", "serving_size": "3 oz (85 g)", "crohns_safe": true, "notes": "Lean, easy to digest"},
+        {"food": "Milk (1%)", "amount_per_serving": "232 mg", "serving_size": "8 oz (240 mL)", "crohns_safe": true, "notes": "Use lactose-free if needed; fortified plant milks also contain phosphorus"},
+        {"food": "Cottage cheese", "amount_per_serving": "151 mg", "serving_size": "0.5 cup", "crohns_safe": true, "notes": "Soft, well-tolerated; provides protein and calcium too"},
+        {"food": "White rice (enriched)", "amount_per_serving": "68 mg", "serving_size": "1 cup cooked", "crohns_safe": true, "notes": "Modest source; well-tolerated staple"}
+      ],
+      "supplement_guidance": {
+        "preferred_form": "Sodium phosphate or potassium phosphate (Neutra-Phos) for oral repletion",
+        "why_this_form": "Inorganic phosphate salts provide highly bioavailable phosphorus. Combination sodium-potassium phosphate (Neutra-Phos) provides phosphorus without excessive sodium or potassium load. Phosphorus is well-absorbed orally in most situations.",
+        "forms_to_avoid": "Avoid phosphorus-containing enemas or bowel preps (risk of severe hyperphosphatemia). Calcium phosphate is poorly absorbed.",
+        "typical_dose": "500-1000 mg elemental phosphorus/day in divided doses for mild deficiency",
+        "post_resection_dose": "1000-1500 mg/day in divided doses for moderate deficiency. Severe or refeeding hypophosphatemia: IV potassium phosphate or sodium phosphate (0.08-0.64 mmol/kg over 6-12 hours depending on severity). Critical to monitor during refeeding.",
+        "take_with_food": true,
+        "absorption_tips": "Take with meals for best tolerance. Vitamin D enhances phosphorus absorption. Avoid taking with aluminum-containing antacids (they bind phosphorus). Calcium supplements can bind phosphorus—separate by 2 hours if using high doses of both. Phosphorus absorption is reduced by phytates.",
+        "interactions": [
+          "Aluminum-containing antacids bind phosphorus in the gut—major cause of depletion in Crohn's patients using antacids",
+          "Calcium supplements can reduce phosphorus absorption at high doses",
+          "Sucralfate contains aluminum—reduces phosphorus absorption",
+          "Vitamin D enhances phosphorus absorption (beneficial interaction)",
+          "Insulin drives phosphorus into cells—relevant in refeeding syndrome",
+          "Corticosteroids may affect phosphorus metabolism"
+        ],
+        "when_oral_wont_work": "Severe hypophosphatemia (<1.5 mg/dL), symptomatic hypophosphatemia (weakness, respiratory compromise, confusion), refeeding syndrome, or inability to tolerate oral intake. IV phosphate (potassium phosphate or sodium phosphate) with cardiac monitoring. Replace over 6-12 hours to avoid rapid shifts."
+      },
+      "lab_monitoring": {
+        "test_name": "Serum Phosphorus (Phosphate); also check calcium, magnesium, vitamin D, and PTH",
+        "normal_range": "2.5-4.5 mg/dL (0.81-1.45 mmol/L)",
+        "deficient_threshold": "<2.5 mg/dL (<0.81 mmol/L)",
+        "severely_deficient_threshold": "<1.5 mg/dL (<0.48 mmol/L) — risk of respiratory failure and rhabdomyolysis",
+        "unit": "mg/dL",
+        "fasting_required": true,
+        "testing_frequency_first_year_post_surgery": "Every 3 months; DAILY during nutritional repletion in malnourished patients (refeeding protocol)",
+        "testing_frequency_ongoing": "Every 6-12 months; more frequently during nutritional rehabilitation or flares",
+        "notes": "Phosphorus shifts into cells with insulin release (after eating carbohydrates) and can drop dramatically during refeeding in malnourished patients. ALWAYS check phosphorus before initiating TPN or aggressive enteral feeding in malnourished Crohn's patients. Refeeding protocol: start feeds at 10-15 kcal/kg/day, supplement thiamine and phosphorus prophylactically, and advance slowly. Serum phosphorus is a poor indicator of total body phosphorus (most is in bone)."
+      },
+      "interactions_with_crohns_medications": [
+        {"medication": "Aluminum-containing antacids (Maalox, Mylanta)", "effect": "Bind dietary and supplemental phosphorus, causing significant depletion with chronic use", "recommendation": "Avoid aluminum-containing antacids in Crohn's patients; use calcium carbonate or PPIs instead"},
+        {"medication": "Corticosteroids", "effect": "May increase urinary phosphorus excretion; also increase catabolism", "recommendation": "Monitor phosphorus during prolonged steroid courses"},
+        {"medication": "Sucralfate", "effect": "Contains aluminum; binds phosphorus", "recommendation": "Avoid long-term use; monitor phosphorus if used"},
+        {"medication": "Parenteral nutrition", "effect": "Refeeding syndrome risk with phosphorus depletion; inadequate phosphorus in PN solution", "recommendation": "Check phosphorus daily when initiating PN; supplement 20-40 mmol/day in PN; increase for refeeding"}
+      ],
+      "warning_signs_need_immediate_attention": [
+        "Serum phosphorus <1.5 mg/dL (severe hypophosphatemia)",
+        "Respiratory muscle weakness or difficulty breathing during refeeding",
+        "Confusion or altered mental status in a malnourished patient receiving nutrition",
+        "Rhabdomyolysis: muscle pain, weakness, dark urine (myoglobinuria)",
+        "Heart failure symptoms during refeeding: rapid heartbeat, fluid retention, shortness of breath",
+        "Any rapid decline in phosphorus after starting enteral or parenteral nutrition"
+      ],
+      "evidence_level": "moderate",
+      "citations": [
+        "Crook MA et al. The importance of the refeeding syndrome. Nutrition 2001;17:632-637",
+        "NIH Office of Dietary Supplements. Phosphorus Fact Sheet for Health Professionals. Updated 2024.",
+        "ESPEN Practical Guideline: Clinical Nutrition in IBD. Clin Nutr 2020;39:632-653",
+        "NICE Guideline NG24. Nutrition support for adults: oral nutrition support, enteral tube feeding and parenteral nutrition. Updated 2023.",
+        "Weisshof R, Chermesh I. Micronutrient deficiencies in inflammatory bowel disease. Curr Opin Clin Nutr Metab Care 2015;18:576-581"
+      ]
+    }
+  ]
+}
