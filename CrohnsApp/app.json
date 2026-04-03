@@ -38,7 +38,7 @@
       "bundler": "metro"
     },
     "experiments": {
-      "baseUrl": "/crohns-disease-app"
+      "baseUrl": ""
     }
   }
 }
