@@ -1,0 +1,38 @@
+# Dependencies
+CrohnsApp/node_modules/
+
+# Expo
+CrohnsApp/.expo/
+CrohnsApp/dist/
+CrohnsApp/web-build/
+CrohnsApp/expo-env.d.ts
+
+# Native builds
+CrohnsApp/.kotlin/
+CrohnsApp/*.orig.*
+CrohnsApp/*.jks
+CrohnsApp/*.p8
+CrohnsApp/*.p12
+CrohnsApp/*.key
+CrohnsApp/*.mobileprovision
+CrohnsApp/ios/
+CrohnsApp/android/
+
+# Metro
+CrohnsApp/.metro-health-check*
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env*.local
+*.pem
+
+# TypeScript
+*.tsbuildinfo
