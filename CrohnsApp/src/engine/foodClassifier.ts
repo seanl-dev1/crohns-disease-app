@@ -38,6 +38,7 @@ export interface ClassificationResult {
   overallRating: Rating;
   productName: string;
   brand: string;
+  imageUrl?: string;
   ingredients: string[];
   dimensions: {
     triggerIngredients: DimensionResult;
@@ -111,6 +112,7 @@ export function classifyFood(
   brand: string,
   userContext: UserContext,
   servingSizeG: number = 100, // default to 100g if unknown
+  imageUrl?: string,
 ): ClassificationResult {
   const ingredients = parseIngredients(ingredientsText);
   const servingFactor = servingSizeG / 100;
@@ -163,6 +165,7 @@ export function classifyFood(
     overallRating,
     productName,
     brand,
+    imageUrl,
     ingredients,
     dimensions: {
       triggerIngredients,

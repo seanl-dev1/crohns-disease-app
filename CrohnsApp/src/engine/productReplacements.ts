@@ -25,60 +25,105 @@ export interface ProductCategory {
 }
 
 /**
- * Keywords that map to product categories.
- * Checked against product name + ingredients.
+ * Category matchers — ONLY matched against product name.
+ * More specific matchers come first so they take priority.
+ * Never match on ingredients (too many false positives).
  */
-const CATEGORY_MATCHERS: { keywords: string[]; category: string }[] = [
-  // Beverages
-  { keywords: ['soda', 'cola', 'pepsi', 'coke', 'sprite', 'fanta', 'mountain dew', 'dr pepper', 'carbonated', 'soft drink'], category: 'soda' },
-  { keywords: ['energy drink', 'red bull', 'monster', 'rockstar', 'bang', 'celsius'], category: 'energy_drink' },
-  { keywords: ['juice', 'fruit punch', 'lemonade', 'fruit drink'], category: 'juice' },
-  { keywords: ['coffee', 'latte', 'cappuccino', 'espresso', 'cold brew'], category: 'coffee' },
+interface CategoryMatcher {
+  keywords: string[];
+  category: string;
+  /** If set, won't match if product name contains any of these */
+  excludeIf?: string[];
+}
 
-  // Snacks
-  { keywords: ['chip', 'crisp', 'dorito', 'cheeto', 'lay\'s', 'pringles', 'frito', 'tortilla chip'], category: 'chips' },
+const CATEGORY_MATCHERS: CategoryMatcher[] = [
+  // === Meat / Protein (specific first) ===
+  { keywords: ['pulled pork', 'pork roast', 'pork shoulder', 'pork loin', 'canned pork'], category: 'fatty_meat' },
+  { keywords: ['beef stew', 'corned beef', 'beef brisket', 'pot roast', 'roast beef'], category: 'fatty_meat' },
+  { keywords: ['rib', 'ribs', 'spare rib'], category: 'fatty_meat', excludeIf: ['crackers'] },
+  { keywords: ['hot dog', 'frankfurter', 'sausage', 'bratwurst', 'kielbasa'], category: 'processed_meat' },
+  { keywords: ['bacon', 'salami', 'pepperoni', 'bologna', 'deli meat', 'lunch meat', 'spam'], category: 'processed_meat' },
+  { keywords: ['fried chicken', 'chicken nugget', 'chicken tender', 'chicken finger', 'chicken strip'], category: 'fried_food' },
+  { keywords: ['burger', 'hamburger', 'cheeseburger'], category: 'burger' },
+
+  // === Canned / Prepared Meals ===
+  { keywords: ['canned chili', 'chili con carne', 'chili with'], category: 'canned_meal' },
+  { keywords: ['canned soup', 'cream of', 'condensed soup'], category: 'canned_soup' },
+  { keywords: ['frozen dinner', 'tv dinner', 'hungry man', 'lean cuisine', 'stouffer'], category: 'frozen_dinner' },
+  { keywords: ['ramen', 'instant noodle', 'cup noodle'], category: 'instant_noodle' },
+  { keywords: ['pizza', 'frozen pizza'], category: 'pizza' },
+
+  // === Fried Foods ===
+  { keywords: ['french fries', 'fries', 'tater tot', 'onion ring'], category: 'fried_food' },
+
+  // === Beverages (specific names to avoid false positives) ===
+  { keywords: ['soda', 'cola', 'pepsi', 'coke', 'sprite', 'fanta', 'mountain dew', 'dr pepper', 'soft drink'], category: 'soda' },
+  { keywords: ['energy drink', 'red bull', 'monster energy', 'rockstar', 'bang energy', 'celsius'], category: 'energy_drink' },
+  { keywords: ['fruit juice', 'orange juice', 'apple juice', 'grape juice', 'cranberry juice', 'fruit punch', 'lemonade', 'fruit drink'], category: 'juice', excludeIf: ['pork', 'beef', 'chicken', 'meat', 'pulled'] },
+  { keywords: ['coffee', 'latte', 'cappuccino', 'espresso', 'cold brew'], category: 'coffee', excludeIf: ['cake', 'ice cream', 'candy'] },
+
+  // === Snacks ===
+  { keywords: ['potato chip', 'tortilla chip', 'dorito', 'cheeto', 'lay\'s', 'pringles', 'frito', 'corn chip'], category: 'chips' },
   { keywords: ['candy', 'skittles', 'starburst', 'gummy', 'sour patch', 'twizzler', 'licorice', 'jolly rancher'], category: 'candy' },
   { keywords: ['chocolate bar', 'snickers', 'twix', 'kit kat', 'reese', 'milky way', 'butterfinger', 'm&m'], category: 'chocolate_bar' },
-  { keywords: ['cookie', 'oreo', 'biscuit', 'wafer'], category: 'cookies' },
+  { keywords: ['cookie', 'oreo', 'biscuit', 'wafer'], category: 'cookies', excludeIf: ['protein', 'fiber'] },
   { keywords: ['cracker', 'pretzel', 'goldfish'], category: 'crackers' },
   { keywords: ['popcorn', 'kettle corn'], category: 'popcorn' },
 
-  // Dairy
-  { keywords: ['ice cream', 'gelato', 'frozen dessert', 'frozen yogurt', 'fro yo'], category: 'ice_cream' },
-  { keywords: ['milk', 'whole milk', '2% milk', 'skim milk', 'chocolate milk'], category: 'milk' },
+  // === Dairy ===
+  { keywords: ['ice cream', 'gelato', 'frozen dessert', 'frozen yogurt'], category: 'ice_cream' },
+  { keywords: ['whole milk', '2% milk', 'skim milk', 'chocolate milk'], category: 'milk' },
   { keywords: ['yogurt', 'yoghurt'], category: 'yogurt' },
-  { keywords: ['cheese', 'cheddar', 'mozzarella', 'american cheese', 'cheese spread'], category: 'cheese' },
+  { keywords: ['cheese spread', 'cheese dip', 'nacho cheese', 'processed cheese'], category: 'cheese' },
 
-  // Meals/Prepared
-  { keywords: ['pizza', 'frozen pizza'], category: 'pizza' },
-  { keywords: ['hot dog', 'frankfurter', 'sausage', 'bratwurst', 'kielbasa'], category: 'processed_meat' },
-  { keywords: ['bacon', 'salami', 'pepperoni', 'bologna', 'deli meat', 'lunch meat'], category: 'processed_meat' },
-  { keywords: ['burger', 'hamburger', 'cheeseburger'], category: 'burger' },
-  { keywords: ['ramen', 'instant noodle', 'cup noodle'], category: 'instant_noodle' },
-  { keywords: ['fried chicken', 'chicken nugget', 'chicken tender', 'chicken finger', 'chicken strip'], category: 'fried_food' },
-  { keywords: ['french fries', 'fries', 'tater tot', 'onion ring'], category: 'fried_food' },
-  { keywords: ['frozen dinner', 'tv dinner', 'hungry man', 'lean cuisine', 'stouffer'], category: 'frozen_dinner' },
-
-  // Breakfast
+  // === Breakfast ===
   { keywords: ['cereal', 'froot loops', 'lucky charms', 'cocoa puffs', 'frosted flakes', 'cap\'n crunch'], category: 'sugary_cereal' },
   { keywords: ['pastry', 'pop tart', 'toaster strudel', 'danish', 'croissant', 'donut', 'doughnut', 'muffin'], category: 'pastry' },
   { keywords: ['pancake mix', 'waffle mix', 'pancake syrup'], category: 'pancake' },
 
-  // Bread/Grain
-  { keywords: ['white bread', 'wheat bread', 'whole wheat bread', 'bread'], category: 'bread' },
-  { keywords: ['pasta', 'spaghetti', 'penne', 'macaroni', 'fettuccine', 'linguine', 'noodle'], category: 'pasta' },
+  // === Bread/Grain ===
+  { keywords: ['white bread', 'wheat bread', 'whole wheat bread'], category: 'bread' },
+  { keywords: ['pasta', 'spaghetti', 'penne', 'macaroni', 'fettuccine', 'linguine'], category: 'pasta', excludeIf: ['sauce'] },
 
-  // Condiments/Sauces
-  { keywords: ['hot sauce', 'sriracha', 'tabasco', 'buffalo sauce', 'salsa'], category: 'hot_sauce' },
+  // === Condiments/Sauces ===
+  { keywords: ['hot sauce', 'sriracha', 'tabasco', 'buffalo sauce'], category: 'hot_sauce' },
   { keywords: ['ketchup', 'bbq sauce', 'barbecue sauce', 'teriyaki'], category: 'sugary_sauce' },
 
-  // Alcohol
-  { keywords: ['beer', 'ale', 'lager', 'ipa', 'stout'], category: 'beer' },
-  { keywords: ['wine', 'champagne', 'prosecco'], category: 'wine' },
-  { keywords: ['vodka', 'whiskey', 'rum', 'tequila', 'gin', 'liquor', 'spirits'], category: 'liquor' },
+  // === Alcohol ===
+  { keywords: ['beer', 'ale', 'lager', 'ipa', 'stout'], category: 'beer', excludeIf: ['batter', 'bread'] },
+  { keywords: ['wine', 'champagne', 'prosecco'], category: 'wine', excludeIf: ['vinegar', 'sauce'] },
+  { keywords: ['vodka', 'whiskey', 'rum', 'tequila', 'gin', 'liquor'], category: 'liquor' },
 ];
 
 const PRODUCT_REPLACEMENTS: Record<string, ProductCategory> = {
+  fatty_meat: {
+    category: 'fatty_meat',
+    label: 'Instead of high-fat meats, try',
+    replacements: [
+      { name: 'Canned chicken breast in water', why: 'Much lower fat, easy protein, gentle on the gut', findsAt: 'Canned meat aisle' },
+      { name: 'Grilled or baked chicken breast', why: 'Lean protein without the heavy fat that triggers bile acid diarrhea', findsAt: 'Deli or meat section' },
+      { name: 'Canned salmon or tuna in water', why: 'Lean + omega-3 anti-inflammatory fats that actually help Crohn\'s', findsAt: 'Canned fish aisle' },
+      { name: 'Sliced turkey breast', why: 'Very lean, easy to digest, great protein source', findsAt: 'Deli counter' },
+    ],
+  },
+  canned_meal: {
+    category: 'canned_meal',
+    label: 'Instead of canned meals, try',
+    replacements: [
+      { name: 'Homemade chicken + rice bowl', why: 'Same convenience when batch-prepped, zero preservatives or triggers' },
+      { name: 'Canned chicken breast + instant rice', why: 'Just as easy to prepare, way fewer additives and sodium' },
+      { name: 'Bone broth with rice and shredded chicken', why: 'Gut-healing collagen + easy-to-digest carbs + clean protein' },
+    ],
+  },
+  canned_soup: {
+    category: 'canned_soup',
+    label: 'Instead of canned soup, try',
+    replacements: [
+      { name: 'Homemade bone broth soup', why: 'Collagen supports gut lining repair, you control the sodium', findsAt: 'Make at home or buy bone broth' },
+      { name: 'Low-sodium chicken noodle (Amy\'s or similar)', why: 'Cleaner ingredients, less sodium, often organic', findsAt: 'Health food aisle' },
+      { name: 'Miso soup', why: 'Probiotic benefits from fermented soy, gentle and soothing', findsAt: 'Asian food aisle' },
+    ],
+  },
   soda: {
     category: 'soda',
     label: 'Instead of soda, try',
@@ -341,19 +386,23 @@ const PRODUCT_REPLACEMENTS: Record<string, ProductCategory> = {
 };
 
 /**
- * Detect the product category from its name and ingredients.
+ * Detect the product category from its name ONLY.
+ * Does NOT match on ingredients to avoid false positives
+ * (e.g., "pulled pork in juices" matching "juice" category).
  */
 function detectCategory(
   productName: string,
-  ingredients: string[]
 ): string | null {
-  const searchText = [productName, ...ingredients]
-    .join(' ')
-    .toLowerCase();
+  const nameLower = productName.toLowerCase();
 
   for (const matcher of CATEGORY_MATCHERS) {
+    // Check exclusions first
+    if (matcher.excludeIf?.some((ex) => nameLower.includes(ex))) {
+      continue;
+    }
+
     for (const keyword of matcher.keywords) {
-      if (searchText.includes(keyword)) {
+      if (nameLower.includes(keyword)) {
         return matcher.category;
       }
     }
@@ -368,9 +417,8 @@ function detectCategory(
  */
 export function getProductReplacements(
   productName: string,
-  ingredients: string[],
 ): ProductCategory | null {
-  const category = detectCategory(productName, ingredients);
+  const category = detectCategory(productName);
   if (!category) return null;
   return PRODUCT_REPLACEMENTS[category] ?? null;
 }

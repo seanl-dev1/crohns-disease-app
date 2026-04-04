@@ -18,6 +18,7 @@ import {
   ActivityIndicator,
   ScrollView,
   Alert,
+  Image,
 } from 'react-native';
 import { CameraView, useCameraPermissions, type BarcodeScanningResult } from 'expo-camera';
 import { Ionicons } from '@expo/vector-icons';
@@ -68,7 +69,8 @@ export default function ScanScreen() {
           hasResection: user.hasResection,
           monthsSinceResection: undefined,
         },
-        product.serving_quantity || 100
+        product.serving_quantity || 100,
+        product.image_url
       );
 
       setState({ phase: 'results', result: classification });
@@ -278,7 +280,7 @@ function ResultsView({
   // Get product-level replacements for RED/YELLOW items
   const productReplacements =
     result.overallRating !== 'GREEN'
-      ? getProductReplacements(result.productName, result.ingredients)
+      ? getProductReplacements(result.productName)
       : null;
 
   return (
@@ -293,19 +295,29 @@ function ResultsView({
           { backgroundColor: ratingBgColors[result.overallRating] },
         ]}
       >
-        <Ionicons
-          name={ratingIcons[result.overallRating] as any}
-          size={48}
-          color={ratingColors[result.overallRating]}
-        />
-        <Text
-          style={[
-            resultStyles.ratingLabel,
-            { color: ratingColors[result.overallRating] },
-          ]}
-        >
-          {ratingLabels[result.overallRating]}
-        </Text>
+        {result.imageUrl ? (
+          <Image
+            source={{ uri: result.imageUrl }}
+            style={resultStyles.productImage}
+            resizeMode="contain"
+          />
+        ) : (
+          <Ionicons
+            name={ratingIcons[result.overallRating] as any}
+            size={48}
+            color={ratingColors[result.overallRating]}
+          />
+        )}
+        <View style={[resultStyles.ratingBadge, { backgroundColor: ratingColors[result.overallRating] }]}>
+          <Ionicons
+            name={ratingIcons[result.overallRating] as any}
+            size={16}
+            color="#FFFFFF"
+          />
+          <Text style={resultStyles.ratingBadgeText}>
+            {ratingLabels[result.overallRating]}
+          </Text>
+        </View>
         <Text style={[resultStyles.productName, { color: c.text }]}>
           {result.productName}
         </Text>
@@ -511,10 +523,26 @@ const resultStyles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: spacing.lg,
   },
-  ratingLabel: {
-    fontSize: sizing.fontXl,
+  productImage: {
+    width: 120,
+    height: 120,
+    borderRadius: sizing.radiusMedium,
+    marginBottom: spacing.sm,
+  },
+  ratingBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    borderRadius: sizing.radiusRound,
+    marginTop: spacing.xs,
+    marginBottom: spacing.xs,
+  },
+  ratingBadgeText: {
+    color: '#FFFFFF',
+    fontSize: sizing.fontSm,
     fontWeight: '700',
-    marginTop: spacing.sm,
   },
   productName: {
     fontSize: sizing.fontLg,
