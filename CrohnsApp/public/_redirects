@@ -1,1 +1,6 @@
-/*    /index.html   200
+# Serve static assets directly (JS, CSS, WASM, images, etc.)
+/_expo/*    /_expo/:splat    200
+/assets/*   /assets/:splat   200
+
+# SPA fallback — everything else goes to index.html
+/*          /index.html      200
