@@ -24,7 +24,7 @@ jobs:
         working-directory: CrohnsApp
         run: |
           npx expo export -p web
-          sed -i 's/<script src="\(.*\)" defer><\/script>/<script src="\1" type="module"><\/script>/g' dist/index.html
+          sed -i 's/ defer>/ type="module">/g' dist/index.html
 
       - name: Deploy to Netlify
         working-directory: CrohnsApp
