@@ -6,6 +6,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useThemeColors, spacing, sizing } from '../../src/theme';
+import { useAuth } from '../../src/contexts/AuthContext';
 
 interface MenuItemProps {
   icon: string;
@@ -41,6 +42,7 @@ function MenuItem({ icon, label, subtitle, onPress, themeColors: c }: MenuItemPr
 
 export default function MoreScreen() {
   const c = useThemeColors();
+  const { signOut, user } = useAuth();
 
   return (
     <ScrollView style={[styles.container, { backgroundColor: c.background }]}>
@@ -104,6 +106,35 @@ export default function MoreScreen() {
           onPress={() => {}}
           themeColors={c}
         />
+      </View>
+
+      <View style={[styles.section, { backgroundColor: c.card, borderColor: c.border }]}>
+        {user && (
+          <View style={[styles.menuItem, { borderBottomColor: c.divider }]}>
+            <View style={[styles.menuIcon, { backgroundColor: c.safeBackground }]}>
+              <Ionicons name="person-circle" size={22} color={c.safe} />
+            </View>
+            <View style={styles.menuText}>
+              <Text style={[styles.menuLabel, { color: c.text }]}>Signed In</Text>
+              <Text style={[styles.menuSubtitle, { color: c.textSecondary }]}>
+                {user.email}
+              </Text>
+            </View>
+          </View>
+        )}
+        <TouchableOpacity
+          style={[styles.menuItem, { borderBottomColor: c.divider }]}
+          onPress={signOut}
+          accessibilityLabel="Sign out"
+          accessibilityRole="button"
+        >
+          <View style={[styles.menuIcon, { backgroundColor: c.dangerBackground }]}>
+            <Ionicons name="log-out-outline" size={22} color={c.danger} />
+          </View>
+          <View style={styles.menuText}>
+            <Text style={[styles.menuLabel, { color: c.danger }]}>Sign Out</Text>
+          </View>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.disclaimer}>

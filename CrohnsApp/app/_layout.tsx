@@ -1,18 +1,25 @@
 /**
  * Root layout — wraps the entire app.
- * Initializes database and handles loading state.
+ * Initializes database, auth, and handles loading state.
  */
 
 import { useEffect } from 'react';
-import { Stack } from 'expo-router';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useColorScheme } from 'react-native';
+import { useColorScheme, ActivityIndicator, View } from 'react-native';
 import { getDatabase } from '../src/db/database';
 import { useAppStore } from '../src/store/useAppStore';
+import { AuthProvider, useAuth } from '../src/contexts/AuthContext';
+import { colors } from '../src/theme/colors';
+import { performSync } from '../src/services/syncService';
 
-export default function RootLayout() {
-  const scheme = useColorScheme();
+function RootNavigator() {
+  const scheme = useColorScheme() ?? 'light';
+  const theme = colors[scheme];
   const setLoading = useAppStore((s) => s.setLoading);
+  const { session, isLoading: authLoading } = useAuth();
+  const router = useRouter();
+  const segments = useSegments();
 
   useEffect(() => {
     async function init() {
@@ -27,10 +34,39 @@ export default function RootLayout() {
     init();
   }, []);
 
+  // Redirect based on auth state + trigger sync on sign-in
+  useEffect(() => {
+    if (authLoading) return;
+
+    const onAuthScreen = segments[0] === 'auth';
+
+    if (!session && !onAuthScreen) {
+      router.replace('/auth');
+    } else if (session && onAuthScreen) {
+      router.replace('/');
+    }
+
+    // Sync data when user is signed in
+    if (session?.user?.id) {
+      performSync(session.user.id).catch((err) =>
+        console.warn('Background sync failed:', err)
+      );
+    }
+  }, [session, authLoading, segments]);
+
+  if (authLoading) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: theme.background }}>
+        <ActivityIndicator size="large" color={theme.primary} />
+      </View>
+    );
+  }
+
   return (
     <>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="auth" options={{ animation: 'fade' }} />
         <Stack.Screen name="(tabs)" />
         <Stack.Screen
           name="scan"
@@ -76,5 +112,13 @@ export default function RootLayout() {
         />
       </Stack>
     </>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <AuthProvider>
+      <RootNavigator />
+    </AuthProvider>
   );
 }

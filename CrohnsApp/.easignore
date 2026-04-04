@@ -1,0 +1,22 @@
+# EAS Build ignore — keep uploads lean
+.claude/
+.git/
+node_modules/
+.expo/
+dist/
+web-build/
+*.md
+specs/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.DS_Store
+*.pem
+.env*.local
+*.tsbuildinfo
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.metro-health-check*

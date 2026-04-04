@@ -26,12 +26,21 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.crohnsapp.app",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "INTERNET",
+        "VIBRATE",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -39,6 +48,13 @@
     },
     "experiments": {
       "baseUrl": ""
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "038cc841-4f87-4a30-a0c9-867726dbeab9"
+      }
+    },
+    "owner": "seanleblanc"
   }
 }

@@ -1,0 +1,21 @@
+# EAS Build ignore — exclude non-app files from upload
+.claude/
+CrohnsApp/.claude/
+.git/
+.netlify/
+specs/
+*.md
+*.json
+!CrohnsApp/**
+
+# Already in .gitignore but belt-and-suspenders
+CrohnsApp/node_modules/
+CrohnsApp/.expo/
+CrohnsApp/dist/
+CrohnsApp/web-build/
+CrohnsApp/ios/
+CrohnsApp/android/
+.DS_Store
+Thumbs.db
+*.pem
+.env*.local
