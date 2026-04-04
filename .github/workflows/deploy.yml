@@ -25,10 +25,8 @@ jobs:
         run: npx expo export -p web
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3
-        with:
-          publish-dir: CrohnsApp/dist
-          production-deploy: true
+        working-directory: CrohnsApp
+        run: npx netlify deploy --dir=dist --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
