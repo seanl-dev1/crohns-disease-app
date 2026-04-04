@@ -15,6 +15,7 @@
 
 import { parseIngredients } from './ingredientParser';
 import { lookupTrigger, type TriggerIngredient, type Severity } from './triggerDatabase';
+import { getReplacements, type Replacement } from './replacementDatabase';
 
 // --- Types ---
 
@@ -30,6 +31,7 @@ export interface Flag {
   title: string;
   detail: string;
   category?: string;
+  replacements?: Replacement[];
 }
 
 export interface ClassificationResult {
@@ -199,6 +201,8 @@ function scoreTriggerIngredients(
         ? 'RED'
         : severity;
 
+    const replacements = getReplacements(trigger.id);
+
     if (effectiveSeverity === 'RED') {
       hasRed = true;
       flags.push({
@@ -206,6 +210,7 @@ function scoreTriggerIngredients(
         title: `🔴 ${trigger.name}`,
         detail: trigger.mechanism,
         category: trigger.category,
+        ...(replacements.length > 0 && { replacements }),
       });
     } else if (effectiveSeverity === 'YELLOW') {
       yellowCount++;
@@ -214,6 +219,7 @@ function scoreTriggerIngredients(
         title: `🟡 ${trigger.name}`,
         detail: trigger.mechanism,
         category: trigger.category,
+        ...(replacements.length > 0 && { replacements }),
       });
     }
   }

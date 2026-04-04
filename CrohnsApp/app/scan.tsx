@@ -417,6 +417,23 @@ function FlagCard({
           {flag.category}
         </Text>
       )}
+      {flag.replacements && flag.replacements.length > 0 && (
+        <View style={resultStyles.replacementsContainer}>
+          <Text style={[resultStyles.replacementsTitle, { color: c.safe }]}>
+            Try instead:
+          </Text>
+          {flag.replacements.map((r, idx) => (
+            <View key={idx} style={[resultStyles.replacementRow, { borderColor: c.border }]}>
+              <Text style={[resultStyles.replacementName, { color: c.text }]}>
+                {r.name}
+              </Text>
+              <Text style={[resultStyles.replacementWhy, { color: c.textTertiary }]}>
+                {r.why}
+              </Text>
+            </View>
+          ))}
+        </View>
+      )}
     </View>
   );
 }
@@ -474,6 +491,32 @@ const resultStyles = StyleSheet.create({
   flagCategory: {
     fontSize: sizing.fontXs,
     marginTop: 4,
+  },
+  replacementsContainer: {
+    marginTop: spacing.sm,
+    paddingTop: spacing.sm,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: 'rgba(0,0,0,0.1)',
+  },
+  replacementsTitle: {
+    fontSize: sizing.fontSm,
+    fontWeight: '600',
+    marginBottom: 6,
+  },
+  replacementRow: {
+    paddingVertical: 4,
+    paddingLeft: spacing.sm,
+    marginBottom: 4,
+    borderLeftWidth: 2,
+  },
+  replacementName: {
+    fontSize: sizing.fontSm,
+    fontWeight: '600',
+  },
+  replacementWhy: {
+    fontSize: sizing.fontXs,
+    marginTop: 1,
+    lineHeight: 16,
   },
   ingredientsList: {
     fontSize: sizing.fontSm,
