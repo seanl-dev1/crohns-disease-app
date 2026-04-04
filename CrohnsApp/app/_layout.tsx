@@ -34,15 +34,27 @@ function RootNavigator() {
     init();
   }, []);
 
-  // Redirect based on auth state + trigger sync on sign-in
+  const onboardingComplete = useAppStore((s) => s.user.onboardingComplete);
+
+  // Redirect based on auth state, onboarding, + trigger sync
   useEffect(() => {
     if (authLoading) return;
 
     const onAuthScreen = segments[0] === 'auth';
+    const onOnboarding = segments[0] === 'onboarding';
 
     if (!session && !onAuthScreen) {
       router.replace('/auth');
     } else if (session && onAuthScreen) {
+      // Signed in — go to onboarding or dashboard
+      if (!onboardingComplete) {
+        router.replace('/onboarding');
+      } else {
+        router.replace('/');
+      }
+    } else if (session && !onboardingComplete && !onOnboarding) {
+      router.replace('/onboarding');
+    } else if (session && onboardingComplete && onOnboarding) {
       router.replace('/');
     }
 
@@ -52,7 +64,7 @@ function RootNavigator() {
         console.warn('Background sync failed:', err)
       );
     }
-  }, [session, authLoading, segments]);
+  }, [session, authLoading, segments, onboardingComplete]);
 
   if (authLoading) {
     return (
@@ -67,6 +79,7 @@ function RootNavigator() {
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="auth" options={{ animation: 'fade' }} />
+        <Stack.Screen name="onboarding" options={{ animation: 'fade', gestureEnabled: false }} />
         <Stack.Screen name="(tabs)" />
         <Stack.Screen
           name="scan"
