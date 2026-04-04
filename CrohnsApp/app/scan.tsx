@@ -26,6 +26,7 @@ import { useThemeColors, spacing, sizing, type ThemeColors } from '../src/theme'
 import { useAppStore } from '../src/store/useAppStore';
 import { lookupBarcode } from '../src/services/openFoodFacts';
 import { classifyFood, type ClassificationResult, type Rating, type Flag } from '../src/engine/foodClassifier';
+import { getProductReplacements, type ProductCategory } from '../src/engine/productReplacements';
 
 type ScanState =
   | { phase: 'scanning' }
@@ -244,6 +245,8 @@ function ResultsView({
   onGoBack: () => void;
   themeColors: ThemeColors;
 }) {
+  const [showReplacements, setShowReplacements] = useState(false);
+
   const ratingColors: Record<Rating, string> = {
     GREEN: c.safe,
     YELLOW: c.caution,
@@ -271,6 +274,12 @@ function ResultsView({
   const dangers = result.allFlags.filter((f) => f.type === 'danger');
   const warnings = result.allFlags.filter((f) => f.type === 'warning');
   const positives = result.allFlags.filter((f) => f.type === 'positive');
+
+  // Get product-level replacements for RED/YELLOW items
+  const productReplacements =
+    result.overallRating !== 'GREEN'
+      ? getProductReplacements(result.productName, result.ingredients)
+      : null;
 
   return (
     <ScrollView
@@ -309,6 +318,63 @@ function ResultsView({
           {result.summary}
         </Text>
       </View>
+
+      {/* Safer Alternatives — shown immediately for RED/YELLOW */}
+      {productReplacements && !showReplacements && (
+        <TouchableOpacity
+          style={[resultStyles.replacementCta, { backgroundColor: c.safe, }]}
+          onPress={() => setShowReplacements(true)}
+          activeOpacity={0.8}
+          accessibilityLabel="See safer alternatives"
+          accessibilityRole="button"
+        >
+          <Ionicons name="swap-horizontal" size={24} color="#FFFFFF" />
+          <View style={{ flex: 1 }}>
+            <Text style={resultStyles.replacementCtaTitle}>
+              Want a safer alternative?
+            </Text>
+            <Text style={resultStyles.replacementCtaSubtitle}>
+              Tap to see Crohn's-friendly replacements
+            </Text>
+          </View>
+          <Ionicons name="chevron-forward" size={20} color="#FFFFFF" />
+        </TouchableOpacity>
+      )}
+
+      {productReplacements && showReplacements && (
+        <View style={[resultStyles.replacementSection, { backgroundColor: c.safeBackground, borderColor: c.safe }]}>
+          <View style={resultStyles.replacementHeader}>
+            <Ionicons name="swap-horizontal" size={22} color={c.safe} />
+            <Text style={[resultStyles.replacementSectionTitle, { color: c.safe }]}>
+              {productReplacements.label}
+            </Text>
+          </View>
+          {productReplacements.replacements.map((r, idx) => (
+            <View
+              key={idx}
+              style={[
+                resultStyles.productReplacementCard,
+                { backgroundColor: c.card, borderColor: c.border },
+              ]}
+            >
+              <View style={resultStyles.productReplacementTop}>
+                <Ionicons name="checkmark-circle" size={20} color={c.safe} />
+                <Text style={[resultStyles.productReplacementName, { color: c.text }]}>
+                  {r.name}
+                </Text>
+              </View>
+              <Text style={[resultStyles.productReplacementWhy, { color: c.textSecondary }]}>
+                {r.why}
+              </Text>
+              {r.findsAt && (
+                <Text style={[resultStyles.productReplacementFinds, { color: c.textTertiary }]}>
+                  Find it: {r.findsAt}
+                </Text>
+              )}
+            </View>
+          ))}
+        </View>
+      )}
 
       {/* Danger Flags */}
       {dangers.length > 0 && (
@@ -521,6 +587,69 @@ const resultStyles = StyleSheet.create({
   ingredientsList: {
     fontSize: sizing.fontSm,
     lineHeight: 20,
+  },
+  replacementCta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: spacing.md,
+    borderRadius: sizing.radiusLarge,
+    marginBottom: spacing.lg,
+    gap: spacing.md,
+    minHeight: sizing.tapTargetLarge,
+  },
+  replacementCtaTitle: {
+    color: '#FFFFFF',
+    fontSize: sizing.fontBase,
+    fontWeight: '700',
+  },
+  replacementCtaSubtitle: {
+    color: 'rgba(255,255,255,0.85)',
+    fontSize: sizing.fontSm,
+    marginTop: 2,
+  },
+  replacementSection: {
+    borderRadius: sizing.radiusLarge,
+    borderWidth: 1,
+    padding: spacing.md,
+    marginBottom: spacing.lg,
+  },
+  replacementHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    marginBottom: spacing.md,
+  },
+  replacementSectionTitle: {
+    fontSize: sizing.fontBase,
+    fontWeight: '700',
+  },
+  productReplacementCard: {
+    borderRadius: sizing.radiusMedium,
+    borderWidth: 1,
+    padding: spacing.md,
+    marginBottom: spacing.sm,
+  },
+  productReplacementTop: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
+  productReplacementName: {
+    fontSize: sizing.fontBase,
+    fontWeight: '600',
+    flex: 1,
+  },
+  productReplacementWhy: {
+    fontSize: sizing.fontSm,
+    marginTop: 4,
+    marginLeft: 28,
+    lineHeight: 20,
+  },
+  productReplacementFinds: {
+    fontSize: sizing.fontXs,
+    marginTop: 4,
+    marginLeft: 28,
+    fontStyle: 'italic',
   },
   actions: {
     gap: spacing.md,
