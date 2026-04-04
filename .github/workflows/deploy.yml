@@ -22,7 +22,9 @@ jobs:
 
       - name: Build web export
         working-directory: CrohnsApp
-        run: npx expo export -p web
+        run: |
+          npx expo export -p web
+          sed -i 's/<script src="\(.*\)" defer><\/script>/<script src="\1" type="module"><\/script>/g' dist/index.html
 
       - name: Deploy to Netlify
         working-directory: CrohnsApp
