@@ -39,3 +39,7 @@ Thumbs.db
 
 # Local Netlify folder
 .netlify
+
+# Claude Code per-session artifacts
+.claude/
+CrohnsApp/.claude/
