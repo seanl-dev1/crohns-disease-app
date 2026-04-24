@@ -9,7 +9,7 @@ export interface KnowledgeArticle {
   title: string;
   subtitle: string;
   icon: string;
-  category: 'basics' | 'treatment' | 'nutrition' | 'lifestyle' | 'advanced';
+  category: 'basics' | 'treatment' | 'nutrition' | 'lifestyle' | 'complementary' | 'advanced';
   readTime: string;
   sections: ArticleSection[];
   disclaimer: string;
@@ -26,6 +26,7 @@ export const ARTICLE_CATEGORIES = {
   treatment: { label: 'Treatment & Meds', icon: 'medkit-outline' },
   nutrition: { label: 'Diet & Nutrition', icon: 'nutrition-outline' },
   lifestyle: { label: 'Daily Life', icon: 'sunny-outline' },
+  complementary: { label: 'Natural & Complementary', icon: 'leaf-outline' },
   advanced: { label: 'Going Deeper', icon: 'flask-outline' },
 } as const;
 
@@ -455,6 +456,62 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         heading: 'How to Evaluate New Research',
         body: 'Not every headline means a breakthrough:\n\n1. Where was it published? Peer-reviewed journals are more reliable.\n2. How many patients? 10 is interesting, 1,000 is meaningful.\n3. Was it randomized and controlled? Gold standard.\n4. Was it in humans? "Cured in mice" is very different.\n5. Who funded it?',
+      },
+    ],
+  },
+  {
+    id: 16,
+    title: 'Cannabis and Crohn\'s Disease',
+    subtitle: 'THC, CBD, what the research actually shows, and how to talk to your doctor',
+    icon: 'leaf-outline',
+    category: 'complementary',
+    readTime: '9 min',
+    disclaimer: 'Cannabis is a drug with real effects and real risks. This information is for education only. Cannabis is federally illegal in the US (Schedule I as of 2026), and state medical programs vary. Always talk to your gastroenterologist before starting any cannabinoid, and never stop a prescribed medication on your own.',
+    citation: 'Based on Naftali et al. 2013 (PMID 23648372), 2017 (PMID 28349233), 2021 (PMID 33858011); Irving et al. 2018 (PMID 29538683); Kafil et al. Cochrane 2018 (PMID 30407616); Storr et al. 2014 (PMID 24407485); and endocannabinoid system research from D\'Argenio 2006 and Wright 2005. See knowledge/22-cannabis-and-crohns.md for full citations.',
+    sections: [
+      {
+        heading: 'The Honest Bottom Line',
+        body: 'The research on cannabis for Crohn\'s is mixed, and the honest summary is this:\n\n• Cannabis can make you FEEL better — less pain, less nausea, better appetite, better sleep. This part is real.\n\n• Cannabis has NOT been shown to reduce the underlying inflammation of Crohn\'s in any rigorous clinical trial. CRP, fecal calprotectin, and endoscopic scores haven\'t consistently improved.\n\n• The difference between "feeling better" and "disease getting better" matters. You can feel fine while inflammation is still damaging your bowel. Cannabis is NOT a substitute for your actual Crohn\'s treatment.\n\nUsed thoughtfully alongside real treatment, it may help quality of life. Used as a replacement for medication, it can let damage progress silently.',
+      },
+      {
+        heading: 'What Cannabis Actually Is',
+        body: 'Cannabis contains over 100 compounds called cannabinoids. The two you hear about most:\n\n• THC (tetrahydrocannabinol) — the compound that makes you feel "high." It affects pain, nausea, appetite, sleep, and mood. It can also cause anxiety, paranoia, and impairment.\n\n• CBD (cannabidiol) — doesn\'t make you high. It\'s being studied for anxiety, sleep, seizures, and inflammation. Available over-the-counter in many places as hemp-derived CBD (under 0.3% THC).\n\nThere are also minor cannabinoids (CBG, CBN) and terpenes (aromatic compounds) that contribute to the overall effect.\n\nProducts come in many forms: smoked or vaporized flower, edibles, tinctures, oils, capsules, topicals.',
+      },
+      {
+        heading: 'What the Research Shows — Clinical Response vs. Remission',
+        body: 'The Israeli researcher Timna Naftali has run the most important trials:\n\n• 2013 trial: 21 Crohn\'s patients got THC-rich cannabis or placebo for 8 weeks. 10 of 11 on cannabis had clinical response (CDAI dropped >100) vs 4 of 10 on placebo. Patients FELT dramatically better. BUT the formal remission target (CDAI under 150) was not statistically reached.\n\n• 2017 trial (CBD-only): Low-dose CBD oil in Crohn\'s patients. This trial was NEGATIVE. No significant difference from placebo. This was a key finding — CBD alone, at the dose tested, didn\'t work.\n\n• 2021 trial: Oral cannabis oil for 8 weeks. Patients reported feeling better, quality of life improved. Endoscopic healing did NOT improve.\n\nThe pattern across trials: symptoms improve; inflammation markers don\'t consistently change.',
+      },
+      {
+        heading: 'Why It Might Help Symptoms (The Endocannabinoid System)',
+        body: 'Your body has its own cannabinoid system — called the endocannabinoid system (ECS). You have CB1 and CB2 receptors all over your gut: in the nerve plexus that controls motility, in the immune cells of the intestinal wall, in the enteric nervous system.\n\nThis system helps regulate:\n• Gut motility (how fast food moves through)\n• Pain signaling from the intestines\n• Immune response and inflammation\n• Nausea reflex\n\nThat\'s why plant cannabinoids can affect Crohn\'s symptoms — they\'re essentially turning dials on a system your body already uses. The question is whether that dial-turning also reduces the underlying disease, and so far the evidence says mostly no.',
+      },
+      {
+        heading: 'Cannabis Hyperemesis Syndrome — A Red Flag to Know',
+        body: 'Important and often missed: cannabis hyperemesis syndrome (CHS) can look exactly like a Crohn\'s flare.\n\nCHS develops in some long-term heavy cannabis users. Symptoms:\n• Severe cyclical vomiting\n• Abdominal pain\n• Nausea that doesn\'t respond to anti-nausea medications\n• Relief from hot showers (the telltale sign)\n\nPatients with Crohn\'s who also use cannabis regularly need to know this can happen. If you\'re vomiting uncontrollably and your Crohn\'s treatment seems to have stopped working, cannabis-induced CHS is on the differential diagnosis — not just a flare.\n\nTreatment is stopping cannabis. Not easy, but symptoms resolve within days to weeks.',
+      },
+      {
+        heading: 'Drug Interactions — Important if You\'re on Crohn\'s Medications',
+        body: 'Both THC and CBD are processed by the same liver enzymes that break down many Crohn\'s medications. This matters:\n\n• CBD can raise blood levels of tofacitinib (Xeljanz) and upadacitinib (Rinvoq) — the JAK inhibitors.\n\n• CBD has documented interactions with cyclosporine, tacrolimus, and warfarin — levels can rise significantly.\n\n• Methotrexate: unclear interaction; both are processed by overlapping pathways.\n\n• Biologics (Humira, Remicade, Stelara, Skyrizi, Entyvio): no major metabolic interaction documented — they don\'t go through the same liver pathway.\n\n• Corticosteroids (prednisone): no direct interaction, but prednisone + THC together can worsen mood/cognitive effects.\n\nBottom line: tell your GI about cannabis use. Don\'t assume it\'s harmless because it\'s "natural."',
+      },
+      {
+        heading: 'When Cannabis Is NOT Appropriate',
+        body: 'Cannabis is not right for everyone, and in some cases it can cause harm:\n\n• If you have a history of psychosis, schizophrenia, or strong family history of either — THC can trigger or worsen these conditions.\n\n• During pregnancy or breastfeeding — clearly contraindicated.\n\n• If you have severe cardiovascular disease — THC can trigger tachycardia and increase cardiac events.\n\n• If you have an active cannabis use disorder or are in recovery from substance use.\n\n• If you\'re a driver, pilot, or in a safety-sensitive profession — impairment matters.\n\n• Adolescents and young adults (under 25) — developing brain concerns, higher risk of persistent cognitive effects.\n\n• If you\'re using it to avoid conventional Crohn\'s treatment. This is the most dangerous scenario — inflammation damage is silent.',
+      },
+      {
+        heading: 'How People Actually Use It',
+        body: 'The research-backed options in rough order of evidence:\n\n• Oral oil or capsules (slow onset 1-2 hours, lasts 6-8 hours) — the Naftali trials used this route. More predictable dosing.\n\n• Vaporized flower (fast onset, 2-3 hours duration) — avoids combustion toxins. Common for breakthrough symptoms.\n\n• Smoked flower — fastest onset but introduces tar and combustion toxins. Not recommended if you have any lung issues.\n\n• Edibles — delayed and long-lasting, harder to dose precisely. Easy to take too much.\n\n• Topicals — for joint pain (extraintestinal arthritis). Minimal systemic absorption.\n\nStart low, go slow. Typical starting dose if using CBD: 10-15 mg/day. THC: 2.5 mg (microdose). Titrate up over 1-2 weeks if tolerated.',
+      },
+      {
+        heading: 'Legal Landscape (US, 2026)',
+        body: 'This is complicated and changing:\n\n• Federal law: cannabis is still Schedule I (illegal) as of 2026. The DEA\'s rescheduling process has been ongoing; status uncertain.\n\n• State medical cannabis: most US states have some form of medical program. Qualifying conditions vary — many states include IBD or Crohn\'s specifically.\n\n• Recreational legalization: about 24 states have adult-use recreational programs.\n\n• Hemp-derived CBD: legal federally under the 2018 Farm Bill if under 0.3% THC. Available in most stores.\n\n• Workplace: many employers still drug-test. Even medical cards don\'t always protect employment. Federal employees are almost universally prohibited.\n\n• Driving: impaired driving laws apply regardless of state legality.\n\nCheck your specific state\'s rules before acting.',
+      },
+      {
+        heading: 'Questions to Ask Your Doctor',
+        body: 'Take these to your next GI appointment:\n\n1. "Does cannabis interact with my current medications?" — especially if you\'re on JAK inhibitors or immunosuppressants.\n\n2. "I want to use this for sleep/pain/nausea — do you see concerns?" — frame it around specific symptoms, not as "I want to treat my Crohn\'s with it."\n\n3. "Would you be willing to document my cannabis use in my chart?" — avoids surprises during hospitalizations or surgery.\n\n4. "Do you want me to monitor anything differently?" — liver enzymes if using CBD long-term, for example.\n\n5. "Are there any signs that should make me stop?" — vomiting pattern, mood changes, cognitive concerns.\n\nSome GIs are comfortable with this conversation, some aren\'t. If yours isn\'t, that\'s information — consider finding one who will engage honestly.',
+      },
+      {
+        heading: 'The Bottom Line',
+        body: 'Cannabis is a real tool with real benefits and real risks for people with Crohn\'s.\n\nWhat we can say: It reliably helps many patients FEEL better — pain, nausea, appetite, sleep.\n\nWhat we can\'t say: That it treats Crohn\'s disease itself. Current evidence says symptoms get better while inflammation may not.\n\nThe smart use: alongside your real Crohn\'s treatment, in communication with your doctor, with awareness of drug interactions, and with honest self-monitoring.\n\nThe dangerous use: as a substitute for medication, without telling your GI, at high daily doses that risk CHS or dependency.\n\nYou\'re an adult making choices about your body. Make them informed.',
       },
     ],
   },
