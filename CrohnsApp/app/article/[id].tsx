@@ -17,6 +17,7 @@ import { useThemeColors, spacing, sizing } from '../../src/theme';
 import { useAppStore } from '../../src/store/useAppStore';
 import { knowledgeArticles } from '../../src/data/knowledgeArticles';
 import { HeritageArticle } from '../../src/screens/heritage/HeritageArticle';
+import { getThemeImpl } from '../../src/themes/registry';
 
 export default function ArticleScreen() {
   const c = useThemeColors();
@@ -50,16 +51,19 @@ export default function ArticleScreen() {
   const nextArticle =
     currentIndex < knowledgeArticles.length - 1 ? knowledgeArticles[currentIndex + 1] : null;
 
-  // Heritage preset → render the apothecary edition.
-  if (themePreset === 'heritage-apothecary') {
+  // Any registered theme with an Article component renders its version.
+  const themeImpl = getThemeImpl(themePreset);
+  if (themeImpl?.Article) {
+    const ArticleView = themeImpl.Article;
     return (
-      <HeritageArticle
+      <ArticleView
         article={article}
+        articleId={article.id}
         libraryIndex={currentIndex}
         prev={prevArticle}
         next={nextArticle}
         onBack={() => router.back()}
-        onGoTo={(goId) =>
+        onGoTo={(goId: number) =>
           router.replace({ pathname: '/article/[id]', params: { id: goId } })
         }
       />

@@ -35,6 +35,22 @@ import {
   Oswald_500Medium,
   Oswald_600SemiBold,
 } from '@expo-google-fonts/oswald';
+import {
+  InstrumentSerif_400Regular,
+  InstrumentSerif_400Regular_Italic,
+} from '@expo-google-fonts/instrument-serif';
+import {
+  Inter_400Regular,
+  Inter_500Medium,
+  Inter_600SemiBold,
+  Inter_700Bold,
+} from '@expo-google-fonts/inter';
+import {
+  Fraunces_400Regular,
+  Fraunces_500Medium,
+  Fraunces_600SemiBold,
+  Fraunces_400Regular_Italic,
+} from '@expo-google-fonts/fraunces';
 import { getDatabase } from '../src/db/database';
 import { useAppStore } from '../src/store/useAppStore';
 import { AuthProvider, useAuth } from '../src/contexts/AuthContext';
@@ -75,6 +91,16 @@ function RootNavigator() {
     Oswald_400Regular,
     Oswald_500Medium,
     Oswald_600SemiBold,
+    InstrumentSerif_400Regular,
+    InstrumentSerif_400Regular_Italic,
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Fraunces_400Regular,
+    Fraunces_500Medium,
+    Fraunces_600SemiBold,
+    Fraunces_400Regular_Italic,
   });
   if (fontError) {
     // Log to console but don't block — system font fallback is fine.

@@ -29,6 +29,7 @@ import { lookupBarcode } from '../src/services/openFoodFacts';
 import { classifyFood, type ClassificationResult, type Rating, type Flag } from '../src/engine/foodClassifier';
 import { getProductReplacements, type ProductCategory } from '../src/engine/productReplacements';
 import { HeritageScanResult } from '../src/screens/heritage/HeritageScanResult';
+import { getThemeImpl } from '../src/themes/registry';
 
 type ScanState =
   | { phase: 'scanning' }
@@ -224,22 +225,27 @@ export default function ScanScreen() {
         </View>
       )}
 
-      {state.phase === 'results' && themePreset === 'heritage-apothecary' && (
-        <HeritageScanResult
-          result={state.result}
-          onScanAgain={resetScanner}
-          onGoBack={() => router.back()}
-        />
-      )}
-
-      {state.phase === 'results' && themePreset !== 'heritage-apothecary' && (
-        <ResultsView
-          result={state.result}
-          onScanAgain={resetScanner}
-          onGoBack={() => router.back()}
-          themeColors={c}
-        />
-      )}
+      {state.phase === 'results' && (() => {
+        const themeImpl = getThemeImpl(themePreset);
+        if (themeImpl?.ScanResult) {
+          const ScanResult = themeImpl.ScanResult;
+          return (
+            <ScanResult
+              result={state.result}
+              onScanAgain={resetScanner}
+              onGoBack={() => router.back()}
+            />
+          );
+        }
+        return (
+          <ResultsView
+            result={state.result}
+            onScanAgain={resetScanner}
+            onGoBack={() => router.back()}
+            themeColors={c}
+          />
+        );
+      })()}
     </View>
   );
 }

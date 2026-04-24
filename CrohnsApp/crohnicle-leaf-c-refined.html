@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crohnicle — Leaf-C Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#FAF8F3;
+  --surface:#FFFFFF;
+  --tile:#F7F3EC;
+  --tile-warm:#F1EADB;
+  --tile-deep:#EADFC9;
+  --mark:#6B8E6F;
+  --mark-deep:#4A6B4F;
+  --mark-soft:#A8C1AC;
+  --mark-faint:#E0E9DF;
+  --accent:#C67B5C;
+  --text:#2A2A2A;
+  --text-muted:#6B6B6B;
+  --text-faint:#9B9B9B;
+  --border:rgba(107,142,111,0.15);
+  --border-strong:rgba(107,142,111,0.3);
+  --shadow-sm:0 2px 6px rgba(42,42,42,0.04);
+  --shadow-md:0 6px 20px rgba(42,42,42,0.06);
+  --shadow-lg:0 20px 60px rgba(42,42,42,0.12);
+}
+
+html,body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 32px;
+}
+
+.italic{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
+
+/* ===== HERO ===== */
+.hero{
+  padding:140px 0 120px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 50% 30%,rgba(107,142,111,0.14),transparent 50%),
+    radial-gradient(ellipse at 20% 80%,rgba(198,123,92,0.05),transparent 40%);
+  pointer-events:none;
+}
+
+.hero-mark{
+  width:200px;
+  height:200px;
+  background:var(--tile);
+  border-radius:48px;
+  margin:0 auto 48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--mark);
+  box-shadow:var(--shadow-lg),inset 0 0 0 1px rgba(107,142,111,0.1);
+  position:relative;
+}
+
+.hero-mark::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(180deg,rgba(255,255,255,0.5),transparent 40%);
+}
+
+.hero-mark svg{
+  width:130px;
+  height:130px;
+  position:relative;
+  z-index:1;
+}
+
+.hero-badge{
+  display:inline-block;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--mark);
+  font-weight:600;
+  padding:6px 16px;
+  background:rgba(107,142,111,0.08);
+  border-radius:999px;
+  margin-bottom:28px;
+}
+
+.hero h1{
+  font-weight:700;
+  font-size:82px;
+  letter-spacing:-0.04em;
+  line-height:1;
+  margin-bottom:24px;
+}
+
+.hero h1 em{
+  color:var(--mark);
+}
+
+.hero-tagline{
+  font-size:21px;
+  color:var(--text-muted);
+  max-width:620px;
+  margin:0 auto;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+
+/* ===== SECTIONS ===== */
+section{padding:100px 0}
+
+.section-header{
+  margin-bottom:72px;
+  max-width:720px;
+}
+
+.section-header.center{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.section-eyebrow{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--mark);
+  font-weight:600;
+  margin-bottom:16px;
+}
+
+.section-title{
+  font-size:48px;
+  letter-spacing:-0.035em;
+  line-height:1.05;
+  font-weight:700;
+  margin-bottom:24px;
+}
+
+.section-sub{
+  font-size:18px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* ===== REFINEMENT COMPARISON ===== */
+.refinement{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:64px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:center;
+}
+
+.refinement-side{
+  text-align:center;
+}
+
+.refinement-label{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--text-faint);
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.refinement-label.new{color:var(--mark)}
+
+.refinement-tile{
+  width:220px;
+  height:220px;
+  border-radius:48px;
+  margin:0 auto 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:var(--shadow-md);
+  position:relative;
+}
+
+.refinement-tile.old{
+  background:var(--tile-warm);
+  color:var(--mark-soft);
+  opacity:0.7;
+}
+
+.refinement-tile.new{
+  background:var(--tile);
+  color:var(--mark);
+}
+
+.refinement-tile svg{
+  width:140px;
+  height:140px;
+}
+
+.refinement-note{
+  font-size:14px;
+  color:var(--text-muted);
+  line-height:1.5;
+}
+
+.refinement-notes-list{
+  list-style:none;
+  padding:0;
+  margin-top:40px;
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  padding-top:48px;
+  border-top:1px solid var(--border);
+}
+
+.refinement-notes-list li{
+  font-size:14px;
+  color:var(--text-muted);
+  padding-left:20px;
+  position:relative;
+  line-height:1.6;
+}
+
+.refinement-notes-list li::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:9px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--mark);
+}
+
+.refinement-notes-list li strong{
+  color:var(--text);
+  display:block;
+  margin-bottom:4px;
+  font-weight:600;
+}
+
+/* ===== VARIATIONS ===== */
+.variations{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+}
+
+.variation{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:36px;
+  text-align:center;
+  transition:transform 0.3s cubic-bezier(0.2,0.8,0.2,1),box-shadow 0.3s;
+}
+
+.variation:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+}
+
+.variation-tile{
+  width:140px;
+  height:140px;
+  background:var(--tile);
+  border-radius:32px;
+  margin:0 auto 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--mark);
+  box-shadow:var(--shadow-sm);
+}
+
+.variation-tile svg{width:92px;height:92px}
+
+.variation-name{
+  font-size:17px;
+  font-weight:600;
+  margin-bottom:8px;
+  letter-spacing:-0.01em;
+}
+
+.variation-desc{
+  font-size:13px;
+  color:var(--text-muted);
+  line-height:1.5;
+}
+
+.variation-use{
+  margin-top:16px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:11px;
+  color:var(--text-faint);
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-weight:600;
+}
+
+/* ===== SCALE ===== */
+.scale-section{
+  background:linear-gradient(180deg,var(--bg),var(--tile-warm));
+  padding:120px 0;
+}
+
+.scale-strip{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:56px 40px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-around;
+  gap:24px;
+  margin-bottom:32px;
+  box-shadow:var(--shadow-sm);
+  flex-wrap:wrap;
+}
+
+.scale-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
+.scale-tile{
+  background:var(--tile);
+  color:var(--mark);
+  border-radius:22%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+}
+
+.scale-tile svg{width:64%;height:64%}
+
+.scale-label{
+  font-size:11px;
+  color:var(--text-faint);
+  font-weight:500;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:0.05em;
+}
+
+.scale-note{
+  text-align:center;
+  color:var(--text-muted);
+  font-size:14px;
+  margin-top:16px;
+  font-style:italic;
+}
+
+/* ===== WORDMARK ===== */
+.wordmark-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.wordmark-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:44px 48px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+  transition:all 0.3s cubic-bezier(0.2,0.8,0.2,1);
+  position:relative;
+}
+
+.wordmark-card:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--border-strong);
+}
+
+.wordmark-card.recommended{
+  background:linear-gradient(135deg,rgba(107,142,111,0.04),transparent);
+  border-color:var(--border-strong);
+}
+
+.wordmark-card.recommended::before{
+  content:'Recommended';
+  position:absolute;
+  top:16px;
+  right:16px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--mark);
+  font-weight:600;
+  padding:4px 10px;
+  background:rgba(107,142,111,0.1);
+  border-radius:999px;
+}
+
+.wm-mark{
+  width:56px;
+  height:56px;
+  flex-shrink:0;
+  color:var(--mark);
+}
+
+.wm-mark svg{width:100%;height:100%}
+
+.wm-content{flex:1}
+
+.wm-name{
+  font-size:36px;
+  color:var(--text);
+  line-height:1;
+  margin-bottom:8px;
+  letter-spacing:-0.025em;
+}
+
+.wm-meta{
+  font-size:12px;
+  color:var(--text-faint);
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-weight:500;
+}
+
+.wm-meta span{color:var(--text-muted)}
+
+.wm-inter{font-family:'Inter',sans-serif;font-weight:700}
+.wm-playfair{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:40px}
+.wm-fraunces{font-family:'Fraunces',serif;font-weight:600;font-variation-settings:"opsz" 72,"SOFT" 100}
+.wm-cormorant{font-family:'Cormorant',serif;font-weight:500;font-size:42px;letter-spacing:0.01em}
+.wm-plex{font-family:'IBM Plex Serif',serif;font-weight:500;letter-spacing:-0.01em}
+.wm-manrope{font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:-0.02em}
+
+/* ===== LOCKUPS ===== */
+.lockups{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:24px;
+}
+
+.lockup{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:64px 48px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  min-height:240px;
+}
+
+.lockup-horizontal{
+  grid-column:1/2;
+  grid-row:1/2;
+  flex-direction:row;
+  gap:24px;
+}
+
+.lockup-stacked{
+  grid-column:2/3;
+  grid-row:1/3;
+  gap:20px;
+}
+
+.lockup-icon{
+  grid-column:1/2;
+  grid-row:2/3;
+  flex-direction:row;
+  gap:32px;
+}
+
+.lockup-icon-item{display:flex;flex-direction:column;align-items:center;gap:12px}
+.lockup-icon-item .tile{width:80px;height:80px;background:var(--tile);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--mark);box-shadow:var(--shadow-sm)}
+.lockup-icon-item .tile svg{width:55px;height:55px}
+.lockup-icon-item .size{font-size:11px;color:var(--text-faint);letter-spacing:0.08em}
+
+.lockup-mark{color:var(--mark);flex-shrink:0}
+.lockup-mark.md svg{width:56px;height:56px}
+.lockup-mark.lg svg{width:84px;height:84px}
+
+.lockup-name{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:42px;
+  letter-spacing:-0.02em;
+  color:var(--text);
+  line-height:0.95;
+}
+
+.lockup-name.stacked-name{font-size:32px}
+
+.lockup-tagline{
+  font-size:12px;
+  color:var(--text-muted);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-top:4px;
+  font-weight:500;
+}
+
+.lockup-label{
+  position:absolute;
+  top:20px;
+  left:24px;
+  font-size:11px;
+  color:var(--text-faint);
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-weight:600;
+}
+
+/* ===== PALETTE ===== */
+.palette{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:16px;
+}
+
+.swatch{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.swatch-chip{
+  aspect-ratio:1;
+  border-radius:18px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05),0 2px 6px rgba(0,0,0,0.04);
+  position:relative;
+  overflow:hidden;
+}
+
+.swatch-chip::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,0.15),transparent 40%);
+}
+
+.swatch-name{
+  font-size:13px;
+  font-weight:600;
+}
+
+.swatch-hex{
+  font-family:'IBM Plex Serif',serif;
+  font-size:11px;
+  color:var(--text-muted);
+  letter-spacing:0.04em;
+}
+
+.swatch-use{
+  font-size:11px;
+  color:var(--text-faint);
+  line-height:1.4;
+}
+
+/* ===== CONTEXT MOCKUPS ===== */
+.context-section{
+  background:linear-gradient(180deg,var(--tile-warm),var(--tile-deep));
+  padding:120px 0;
+}
+
+.contexts{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:32px;
+  margin-top:48px;
+}
+
+.context{
+  background:var(--surface);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+
+.context-body{padding:40px}
+
+.context-label{
+  font-size:11px;
+  color:var(--mark);
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.context-title{
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  margin-bottom:8px;
+}
+
+.context-desc{
+  font-size:14px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* Splash screen mockup */
+.splash-preview{
+  aspect-ratio:9/19.5;
+  max-width:200px;
+  margin:0 auto;
+  background:#0a0a0a;
+  border-radius:28px;
+  padding:5px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  position:relative;
+}
+
+.splash-screen{
+  height:100%;
+  background:linear-gradient(180deg,var(--tile) 0%,var(--tile-warm) 100%);
+  border-radius:23px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.splash-notch{
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+  width:30%;
+  height:13px;
+  background:#0a0a0a;
+  border-radius:8px;
+}
+
+.splash-mark{
+  width:72px;
+  height:72px;
+  color:var(--mark);
+  margin-bottom:16px;
+}
+
+.splash-wordmark{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:22px;
+  letter-spacing:-0.02em;
+  color:var(--text);
+}
+
+.splash-tagline{
+  font-size:8px;
+  color:var(--text-muted);
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  margin-top:6px;
+  font-weight:500;
+}
+
+.splash-loader{
+  position:absolute;
+  bottom:40px;
+  width:24px;
+  height:2px;
+  background:rgba(107,142,111,0.2);
+  border-radius:2px;
+  overflow:hidden;
+}
+
+.splash-loader::after{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  width:60%;
+  height:100%;
+  background:var(--mark);
+  border-radius:2px;
+  animation:load 2s ease-in-out infinite;
+}
+
+@keyframes load{
+  0%,100%{transform:translateX(-100%)}
+  50%{transform:translateX(120%)}
+}
+
+.context-splash{padding:40px 20px}
+
+/* Web header mockup */
+.web-preview{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+
+.web-chrome{
+  background:var(--tile);
+  padding:8px 12px;
+  display:flex;
+  gap:6px;
+  border-bottom:1px solid var(--border);
+}
+
+.web-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.15);
+}
+
+.web-url{
+  margin-left:auto;
+  background:var(--bg);
+  border-radius:4px;
+  padding:2px 10px;
+  font-family:'IBM Plex Serif',serif;
+  font-size:10px;
+  color:var(--text-muted);
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.web-header{
+  display:flex;
+  align-items:center;
+  padding:18px 24px;
+  border-bottom:1px solid var(--border);
+}
+
+.web-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.web-mark{width:28px;height:28px;color:var(--mark)}
+
+.web-name{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:18px;
+  letter-spacing:-0.02em;
+}
+
+.web-nav{
+  margin-left:auto;
+  display:flex;
+  gap:20px;
+}
+
+.web-nav span{
+  font-size:12px;
+  color:var(--text-muted);
+  font-weight:500;
+}
+
+.web-hero{
+  padding:32px 24px 40px;
+  text-align:center;
+}
+
+.web-hero h3{
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:22px;
+  letter-spacing:-0.025em;
+  line-height:1.1;
+  margin-bottom:10px;
+}
+
+.web-hero h3 em{
+  font-style:italic;
+  color:var(--mark);
+  font-weight:400;
+}
+
+.web-hero p{
+  font-size:11px;
+  color:var(--text-muted);
+  max-width:260px;
+  margin:0 auto 16px;
+  line-height:1.5;
+}
+
+.web-btn{
+  display:inline-block;
+  background:var(--mark);
+  color:#fff;
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:600;
+}
+
+/* Business card mockup */
+.card-stack{
+  position:relative;
+  padding:24px 0 32px;
+  height:260px;
+}
+
+.biz-card{
+  position:absolute;
+  width:64%;
+  aspect-ratio:1.75;
+  border-radius:10px;
+  box-shadow:0 14px 40px rgba(0,0,0,0.15);
+  padding:22px;
+  display:flex;
+}
+
+.biz-card.front{
+  top:30px;
+  left:8%;
+  background:var(--tile);
+  transform:rotate(-3deg);
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.biz-card.back{
+  top:20px;
+  right:0;
+  background:var(--mark);
+  color:var(--tile);
+  transform:rotate(4deg);
+  align-items:center;
+  justify-content:center;
+}
+
+.biz-mark-small{width:40px;height:40px;color:var(--mark)}
+
+.biz-wordmark{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:20px;
+  color:var(--text);
+  letter-spacing:-0.02em;
+}
+
+.biz-tag{
+  font-size:8px;
+  color:var(--text-muted);
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  margin-top:4px;
+}
+
+.biz-details{
+  font-family:'IBM Plex Serif',serif;
+  font-size:8px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+.biz-back-mark{
+  width:52px;
+  height:52px;
+  color:var(--tile);
+}
+
+.context-cards{padding:40px 20px 0}
+
+/* App icon mockup */
+.bigicon-preview{
+  padding:40px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.bigicon{
+  width:140px;
+  height:140px;
+  background:var(--tile);
+  border-radius:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--mark);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  position:relative;
+}
+
+.bigicon::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(180deg,rgba(255,255,255,0.5),transparent 40%);
+}
+
+.bigicon svg{width:92px;height:92px;position:relative;z-index:1}
+
+.bigicon.dark{background:var(--mark);color:var(--tile)}
+.bigicon.alt{background:var(--accent);color:var(--tile)}
+
+/* ===== EXPORT LIST ===== */
+.export{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:56px;
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:48px;
+}
+
+.export-lead h3{
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:32px;
+  letter-spacing:-0.025em;
+  line-height:1.1;
+  margin-bottom:16px;
+}
+
+.export-lead h3 em{color:var(--mark);font-style:italic;font-weight:400}
+
+.export-lead p{
+  font-size:15px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+.export-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.export-item{
+  padding:20px;
+  background:var(--tile);
+  border-radius:14px;
+}
+
+.export-filename{
+  font-family:'IBM Plex Serif',serif;
+  font-size:13px;
+  color:var(--mark-deep);
+  margin-bottom:6px;
+  font-weight:500;
+}
+
+.export-label{
+  font-size:12px;
+  color:var(--text-muted);
+  line-height:1.4;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  padding:120px 0;
+  text-align:center;
+  border-top:1px solid var(--border);
+}
+
+.footer-mark{
+  width:64px;
+  height:64px;
+  color:var(--mark);
+  margin:0 auto 24px;
+}
+
+.footer-text{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:20px;
+  color:var(--text-muted);
+  max-width:520px;
+  margin:0 auto;
+  line-height:1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1100px){
+  .variations{grid-template-columns:repeat(2,1fr)}
+  .palette{grid-template-columns:repeat(3,1fr)}
+  .wordmark-grid{grid-template-columns:1fr}
+  .lockups{grid-template-columns:1fr;grid-auto-flow:row}
+  .lockup-horizontal,.lockup-stacked,.lockup-icon{grid-column:auto;grid-row:auto}
+}
+
+@media (max-width:900px){
+  .refinement{grid-template-columns:1fr;padding:40px}
+  .refinement-notes-list{grid-template-columns:1fr}
+  .contexts{grid-template-columns:1fr}
+  .export{grid-template-columns:1fr;padding:40px}
+  .export-list{grid-template-columns:1fr}
+  .hero h1{font-size:56px}
+  .section-title{font-size:36px}
+  .scale-strip{padding:32px 16px}
+}
+
+@media (max-width:560px){
+  .variations{grid-template-columns:1fr}
+  .palette{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:80px 0}
+  .hero-mark{width:140px;height:140px;border-radius:34px}
+  .hero-mark svg{width:90px;height:90px}
+  .hero h1{font-size:40px}
+  .section-title{font-size:28px}
+  .container{padding:0 20px}
+  .refinement,.export{padding:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-mark">
+      <svg viewBox="0 0 100 100">
+        <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="hero-badge">Finalist · Refined</div>
+    <h1>Leaf-<em class="italic">C</em></h1>
+    <p class="hero-tagline">A single leaf whose silhouette is already a C. Timeless, warm, and unmistakably about living well.</p>
+  </div>
+</div>
+
+<!-- ===== REFINEMENT ===== -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Step One</div>
+      <h2 class="section-title">From sketch to <span class="italic">master</span></h2>
+      <p class="section-sub">The first-pass mark worked conceptually but the path had redundant curves and uneven weight. The refined version rebuilds the silhouette with four clean Bézier segments.</p>
+    </div>
+
+    <div class="refinement">
+      <div class="refinement-side">
+        <div class="refinement-label">Original sketch</div>
+        <div class="refinement-tile old">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 24 C 20 26, 16 74, 68 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 24 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="refinement-note">Asymmetric weight, lumpy inner curve, tip slightly blunt.</div>
+      </div>
+      <div class="refinement-side">
+        <div class="refinement-label new">Refined master</div>
+        <div class="refinement-tile new">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="refinement-note">Balanced silhouette, sharper tip, elegant inner C-curve.</div>
+      </div>
+      <ul class="refinement-notes-list">
+        <li><strong>Sharpened tip</strong>Control point moved closer to anchor so the tip reads pointed, not rounded.</li>
+        <li><strong>Balanced outer curve</strong>Two symmetric segments replace the original single curve — more elegant at any size.</li>
+        <li><strong>Cleaner C negative space</strong>Inner concave reconstructed with a single flowing bend, creating a visible "C" on the right edge.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VARIATIONS ===== -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Step Two</div>
+      <h2 class="section-title">Six variations, <span class="italic">one system</span></h2>
+      <p class="section-sub">Every brand needs flexibility. Here's the same mark rendered for different contexts — from a minimal favicon to a decorated editorial piece.</p>
+    </div>
+
+    <div class="variations">
+      <div class="variation">
+        <div class="variation-tile">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="variation-name">01 — Silhouette</div>
+        <div class="variation-desc">The master mark. Solid fill, no detail. The workhorse.</div>
+        <div class="variation-use">App icon · favicon · watermark</div>
+      </div>
+
+      <div class="variation">
+        <div class="variation-tile">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+            <path d="M 78 20 Q 55 48, 45 82" stroke="#F7F3EC" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="variation-name">02 — With Vein</div>
+        <div class="variation-desc">A subtle central vein adds life and craft detail.</div>
+        <div class="variation-use">Hero moments · splash · print</div>
+      </div>
+
+      <div class="variation">
+        <div class="variation-tile">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+            <path d="M 78 20 L 84 12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="variation-name">03 — With Stem</div>
+        <div class="variation-desc">A whisper of stem reinforces the leaf reading.</div>
+        <div class="variation-use">Marketing · narrative contexts</div>
+      </div>
+
+      <div class="variation">
+        <div class="variation-tile">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="variation-name">04 — Outlined</div>
+        <div class="variation-desc">Stroke-only variant for dense UI or light backgrounds.</div>
+        <div class="variation-use">Nav bars · tab icons · dense UI</div>
+      </div>
+
+      <div class="variation">
+        <div class="variation-tile">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+            <path d="M 78 20 C 50 30, 42 40, 42 48 C 44 58, 52 72, 56 84 C 50 82, 42 78, 38 74 C 34 68, 34 58, 38 48 C 44 36, 58 28, 78 20 Z" fill="#F7F3EC" opacity="0.25"/>
+          </svg>
+        </div>
+        <div class="variation-name">05 — Two-Tone</div>
+        <div class="variation-desc">Inner highlight suggests fold and depth.</div>
+        <div class="variation-use">Premium · web hero · App Store</div>
+      </div>
+
+      <div class="variation">
+        <div class="variation-tile">
+          <svg viewBox="0 0 100 100">
+            <path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/>
+            <text x="48" y="60" text-anchor="middle" font-family="'Playfair Display', serif" font-style="italic" font-size="30" font-weight="400" fill="#F7F3EC">c</text>
+          </svg>
+        </div>
+        <div class="variation-name">06 — Monogram</div>
+        <div class="variation-desc">An italic lowercase c nested inside. For premium moments.</div>
+        <div class="variation-use">Signature · collector editions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCALE ===== -->
+<section class="scale-section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-eyebrow">Step Three</div>
+      <h2 class="section-title">Holds up <span class="italic">at every size</span></h2>
+      <p class="section-sub">From 16px browser favicon to 1024px App Store icon. The silhouette stays legible because it's carried by the outline, not the detail.</p>
+    </div>
+
+    <div class="scale-strip">
+      <div class="scale-item">
+        <div class="scale-tile" style="width:16px;height:16px;border-radius:3px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">16px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:24px;height:24px;border-radius:5px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">24px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:32px;height:32px;border-radius:7px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">32px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:48px;height:48px;border-radius:10px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">48px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:64px;height:64px;border-radius:14px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">64px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:96px;height:96px;border-radius:21px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">96px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:128px;height:128px;border-radius:28px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">128px</div>
+      </div>
+      <div class="scale-item">
+        <div class="scale-tile" style="width:180px;height:180px;border-radius:40px"><svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg></div>
+        <div class="scale-label">180px</div>
+      </div>
+    </div>
+    <p class="scale-note">Verified: tested at browser tab size, notification icon, Android launcher (48dp), iOS home screen (60pt), and App Store (1024px).</p>
+  </div>
+</section>
+
+<!-- ===== WORDMARK ===== -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Step Four</div>
+      <h2 class="section-title">Pairing with <span class="italic">Crohnicle</span></h2>
+      <p class="section-sub">A mark alone isn't a brand. Here are six typography treatments for the wordmark, each paired with the refined Leaf-C. My recommendation is marked — but I'd love your read.</p>
+    </div>
+
+    <div class="wordmark-grid">
+
+      <div class="wordmark-card">
+        <div class="wm-mark">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="wm-content">
+          <div class="wm-name wm-inter">Crohnicle</div>
+          <div class="wm-meta">Inter Bold · <span>Clean, modern sans</span></div>
+        </div>
+      </div>
+
+      <div class="wordmark-card recommended">
+        <div class="wm-mark">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="wm-content">
+          <div class="wm-name wm-fraunces">Crohnicle</div>
+          <div class="wm-meta">Fraunces SemiBold · <span>Warm modern serif</span></div>
+        </div>
+      </div>
+
+      <div class="wordmark-card">
+        <div class="wm-mark">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="wm-content">
+          <div class="wm-name wm-playfair">Crohnicle</div>
+          <div class="wm-meta">Playfair Display Italic · <span>Editorial chronicle feel</span></div>
+        </div>
+      </div>
+
+      <div class="wordmark-card">
+        <div class="wm-mark">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="wm-content">
+          <div class="wm-name wm-cormorant">Crohnicle</div>
+          <div class="wm-meta">Cormorant Medium · <span>Elegant, luxe, feminine</span></div>
+        </div>
+      </div>
+
+      <div class="wordmark-card">
+        <div class="wm-mark">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="wm-content">
+          <div class="wm-name wm-plex">Crohnicle</div>
+          <div class="wm-meta">IBM Plex Serif · <span>Technical, trustworthy</span></div>
+        </div>
+      </div>
+
+      <div class="wordmark-card">
+        <div class="wm-mark">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="wm-content">
+          <div class="wm-name wm-manrope">Crohnicle</div>
+          <div class="wm-meta">Manrope SemiBold · <span>Friendly rounded sans</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCKUPS ===== -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Step Five</div>
+      <h2 class="section-title">Lockups for <span class="italic">every context</span></h2>
+      <p class="section-sub">Using Fraunces as the working wordmark. Swap it for any of the six typography options above to preview in real time.</p>
+    </div>
+
+    <div class="lockups">
+
+      <div class="lockup lockup-horizontal">
+        <div class="lockup-label">Horizontal · primary</div>
+        <div class="lockup-mark lg">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="lockup-name">Crohnicle</div>
+          <div class="lockup-tagline">Living well with IBD</div>
+        </div>
+      </div>
+
+      <div class="lockup lockup-stacked">
+        <div class="lockup-label">Stacked</div>
+        <div class="lockup-mark lg">
+          <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+        </div>
+        <div style="text-align:center">
+          <div class="lockup-name stacked-name">Crohnicle</div>
+          <div class="lockup-tagline">est. 2026</div>
+        </div>
+      </div>
+
+      <div class="lockup lockup-icon">
+        <div class="lockup-label">Icon scales</div>
+        <div class="lockup-icon-item">
+          <div class="tile" style="width:40px;height:40px;border-radius:9px">
+            <svg viewBox="0 0 100 100" style="width:26px;height:26px"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+          <div class="size">40</div>
+        </div>
+        <div class="lockup-icon-item">
+          <div class="tile" style="width:64px;height:64px;border-radius:14px">
+            <svg viewBox="0 0 100 100" style="width:42px;height:42px"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+          <div class="size">64</div>
+        </div>
+        <div class="lockup-icon-item">
+          <div class="tile" style="width:96px;height:96px;border-radius:21px">
+            <svg viewBox="0 0 100 100" style="width:64px;height:64px"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+          <div class="size">96</div>
+        </div>
+        <div class="lockup-icon-item">
+          <div class="tile" style="width:128px;height:128px;border-radius:28px">
+            <svg viewBox="0 0 100 100" style="width:84px;height:84px"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+          <div class="size">128</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PALETTE ===== -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Step Six</div>
+      <h2 class="section-title">The full <span class="italic">palette</span></h2>
+      <p class="section-sub">Warm sage as anchor, cream and off-white as canvas. Semantic colors — safe, caution, danger — harmonized to the brand family so nothing feels jarring.</p>
+    </div>
+
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#6B8E6F"></div>
+        <div class="swatch-name" style="color:#6B8E6F">Sage</div>
+        <div class="swatch-hex">#6B8E6F</div>
+        <div class="swatch-use">Primary brand color</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#4A6B4F"></div>
+        <div class="swatch-name" style="color:#4A6B4F">Deep Sage</div>
+        <div class="swatch-hex">#4A6B4F</div>
+        <div class="swatch-use">Text · active states</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#F7F3EC;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08)"></div>
+        <div class="swatch-name" style="color:#8E8573">Cream</div>
+        <div class="swatch-hex">#F7F3EC</div>
+        <div class="swatch-use">Icon backgrounds</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#FAF8F3;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08)"></div>
+        <div class="swatch-name" style="color:#8E8573">Canvas</div>
+        <div class="swatch-hex">#FAF8F3</div>
+        <div class="swatch-use">Page background</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#C67B5C"></div>
+        <div class="swatch-name" style="color:#C67B5C">Terracotta</div>
+        <div class="swatch-hex">#C67B5C</div>
+        <div class="swatch-use">Warm accent · sparingly</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#2A2A2A"></div>
+        <div class="swatch-name" style="color:#2A2A2A">Ink</div>
+        <div class="swatch-hex">#2A2A2A</div>
+        <div class="swatch-use">Body text</div>
+      </div>
+    </div>
+
+    <div class="palette" style="margin-top:24px">
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#8AB08E"></div>
+        <div class="swatch-name" style="color:#5F7D63">Safe</div>
+        <div class="swatch-hex">#8AB08E</div>
+        <div class="swatch-use">Food rating: Green</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#E5B961"></div>
+        <div class="swatch-name" style="color:#A58340">Caution</div>
+        <div class="swatch-hex">#E5B961</div>
+        <div class="swatch-use">Food rating: Yellow</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#D27A6E"></div>
+        <div class="swatch-name" style="color:#A1544A">Danger</div>
+        <div class="swatch-hex">#D27A6E</div>
+        <div class="swatch-use">Food rating: Red</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#E0E9DF"></div>
+        <div class="swatch-name" style="color:#7A8C7D">Mist</div>
+        <div class="swatch-hex">#E0E9DF</div>
+        <div class="swatch-use">Cards · dividers</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#6B6B6B"></div>
+        <div class="swatch-name" style="color:#6B6B6B">Stone</div>
+        <div class="swatch-hex">#6B6B6B</div>
+        <div class="swatch-use">Secondary text</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:#9B9B9B"></div>
+        <div class="swatch-name" style="color:#9B9B9B">Ash</div>
+        <div class="swatch-hex">#9B9B9B</div>
+        <div class="swatch-use">Muted metadata</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTEXT ===== -->
+<section class="context-section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-eyebrow">Step Seven</div>
+      <h2 class="section-title">Alive in <span class="italic">the world</span></h2>
+      <p class="section-sub">Here's Leaf-C as it would actually appear across the touchpoints a patient meets first.</p>
+    </div>
+
+    <div class="contexts">
+
+      <!-- App icon -->
+      <div class="context">
+        <div class="context-body">
+          <div class="context-label">Touchpoint 01</div>
+          <div class="context-title">App icon, three treatments</div>
+          <div class="context-desc">Light, dark, and warm — all harmonized to the sage brand family. Dark variant performs best on iOS's translucent dock.</div>
+        </div>
+        <div class="bigicon-preview">
+          <div class="bigicon">
+            <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+          <div class="bigicon dark">
+            <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+          <div class="bigicon alt">
+            <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Splash -->
+      <div class="context context-splash">
+        <div class="context-body" style="padding-bottom:24px">
+          <div class="context-label">Touchpoint 02</div>
+          <div class="context-title">Splash screen</div>
+          <div class="context-desc">The first two seconds of the app. Calm, warm, unmistakably Crohnicle.</div>
+        </div>
+        <div class="splash-preview">
+          <div class="splash-screen">
+            <div class="splash-notch"></div>
+            <div class="splash-mark">
+              <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/><path d="M 78 20 Q 55 48, 45 82" stroke="#F7F3EC" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <div class="splash-wordmark">Crohnicle</div>
+            <div class="splash-tagline">Living well with IBD</div>
+            <div class="splash-loader"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web -->
+      <div class="context">
+        <div class="context-body">
+          <div class="context-label">Touchpoint 03</div>
+          <div class="context-title">Web landing page</div>
+          <div class="context-desc">How the mark + wordmark sit together in a typical nav bar and hero.</div>
+        </div>
+        <div style="padding:0 20px 20px">
+          <div class="web-preview">
+            <div class="web-chrome">
+              <div class="web-dot"></div><div class="web-dot"></div><div class="web-dot"></div>
+              <div class="web-url">crohnicle.com</div>
+            </div>
+            <div class="web-header">
+              <div class="web-brand">
+                <div class="web-mark">
+                  <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+                </div>
+                <div class="web-name">Crohnicle</div>
+              </div>
+              <div class="web-nav">
+                <span>Features</span>
+                <span>Science</span>
+                <span>Blog</span>
+                <span>Get app</span>
+              </div>
+            </div>
+            <div class="web-hero">
+              <h3>Living well <em>with IBD</em><br>starts with knowing.</h3>
+              <p>Scan any food. Get a clear answer in under two seconds. No guesswork, no anxiety.</p>
+              <div class="web-btn">Download for iOS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business cards -->
+      <div class="context">
+        <div class="context-body">
+          <div class="context-label">Touchpoint 04</div>
+          <div class="context-title">Business cards</div>
+          <div class="context-desc">Mark-forward front, wordmark-forward back. Minimal, confident, trustworthy.</div>
+        </div>
+        <div class="card-stack context-cards">
+          <div class="biz-card back">
+            <div class="biz-back-mark">
+              <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <div class="biz-card front">
+            <div>
+              <div class="biz-mark-small">
+                <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <div>
+              <div class="biz-wordmark">Crohnicle</div>
+              <div class="biz-tag">Living well with IBD</div>
+              <div class="biz-details" style="margin-top:10px">
+                Sean LeBlanc · Founder<br>
+                sean@crohnicle.com<br>
+                crohnicle.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPORT ===== -->
+<section>
+  <div class="container">
+    <div class="export">
+      <div class="export-lead">
+        <h3>Ready to <em>ship</em></h3>
+        <p>Once you confirm the wordmark choice, here's the asset list to generate from the master SVG and drop into the Expo app.</p>
+      </div>
+      <div class="export-list">
+        <div class="export-item">
+          <div class="export-filename">icon.png</div>
+          <div class="export-label">1024 × 1024 · iOS App Store</div>
+        </div>
+        <div class="export-item">
+          <div class="export-filename">adaptive-icon.png</div>
+          <div class="export-label">432 × 432 · Android adaptive</div>
+        </div>
+        <div class="export-item">
+          <div class="export-filename">splash.png</div>
+          <div class="export-label">1284 × 2778 · iOS splash</div>
+        </div>
+        <div class="export-item">
+          <div class="export-filename">favicon.png</div>
+          <div class="export-label">48 × 48 · Web favicon</div>
+        </div>
+        <div class="export-item">
+          <div class="export-filename">logo-mark.svg</div>
+          <div class="export-label">Vector master · all uses</div>
+        </div>
+        <div class="export-item">
+          <div class="export-filename">logo-lockup.svg</div>
+          <div class="export-label">Mark + wordmark · horizontal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer">
+  <div class="container">
+    <div class="footer-mark">
+      <svg viewBox="0 0 100 100"><path d="M 78 20 C 40 22, 22 38, 22 60 C 22 78, 40 86, 56 84 C 52 72, 44 58, 42 48 C 40 36, 52 28, 78 20 Z" fill="currentColor"/></svg>
+    </div>
+    <p class="footer-text">A brand is a promise kept quietly, over time. Pick the wordmark, and we'll start shipping.</p>
+  </div>
+</section>
+
+</body>
+</html>

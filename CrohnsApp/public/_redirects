@@ -1,1 +1,23 @@
-/*    /index.html   200
+# Cloudflare Pages SPA routing — only rewrite paths that look like app
+# routes. Static assets must be served as-is so WASM, JS, fonts, and
+# images don't get the SPA HTML fallback (which breaks WebAssembly
+# instantiation).
+
+# Never rewrite asset paths
+/assets/*    /assets/:splat    200
+/_expo/*     /_expo/:splat     200
+/*.wasm      /:splat           200
+/*.js        /:splat           200
+/*.css       /:splat           200
+/*.ttf       /:splat           200
+/*.woff      /:splat           200
+/*.woff2     /:splat           200
+/*.png       /:splat           200
+/*.jpg       /:splat           200
+/*.svg       /:splat           200
+/*.ico       /:splat           200
+/*.json      /:splat           200
+/*.webmanifest /:splat         200
+
+# Catch-all: route everything else to the SPA
+/*           /index.html       200

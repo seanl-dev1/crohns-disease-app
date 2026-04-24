@@ -16,7 +16,7 @@ import { Platform } from 'react-native';
 import { useThemeColors, sizing, typography, elevation } from '../../src/theme';
 import { useAppStore } from '../../src/store/useAppStore';
 import { useHaptic } from '../../src/hooks/useHaptic';
-import { HERITAGE_COLORS, HERITAGE_FONTS } from '../../src/components/heritage/fonts';
+import { getThemeImpl } from '../../src/themes/registry';
 
 type IoniconsName = keyof typeof Ionicons.glyphMap;
 
@@ -34,7 +34,9 @@ export default function TabLayout() {
   const c = useThemeColors();
   const haptic = useHaptic();
   const themePreset = useAppStore((s) => s.themePreset);
-  const isHeritage = themePreset === 'heritage-apothecary';
+  const themeImpl = getThemeImpl(themePreset);
+  const tabOverride = themeImpl?.tabBarStyle;
+  const headerOverride = themeImpl?.header;
 
   const tabIcon = (name: keyof typeof ICONS) =>
     ({ color, focused }: { color: string; focused: boolean }) => (
@@ -45,16 +47,17 @@ export default function TabLayout() {
       />
     );
 
-  // Heritage overrides: tab bar uses serif small-caps label font, navy top
-  // hairline, copper active tint, and cream background instead of shadow.
-  const tabBarStyle = isHeritage
+  // When a registered theme provides tab-bar overrides, apply them.
+  // Otherwise fall back to the default modern elevation-shadow style.
+  const tabBarStyle = tabOverride
     ? {
-        backgroundColor: HERITAGE_COLORS.paper,
-        borderTopWidth: 1,
-        borderTopColor: HERITAGE_COLORS.navy,
+        backgroundColor: tabOverride.backgroundColor ?? c.tabBar,
+        borderTopWidth: tabOverride.borderTopWidth ?? 0,
+        borderTopColor: tabOverride.borderTopColor,
         height: Platform.OS === 'ios' ? 88 : 72,
         paddingBottom: Platform.OS === 'ios' ? 28 : 12,
         paddingTop: 10,
+        ...(tabOverride.extraStyle ?? {}),
       }
     : {
         backgroundColor: c.tabBar,
@@ -65,12 +68,12 @@ export default function TabLayout() {
         paddingTop: 10,
       };
 
-  const tabBarLabelStyle = isHeritage
+  const tabBarLabelStyle = tabOverride
     ? {
-        fontSize: 10.5,
-        fontFamily: HERITAGE_FONTS.labelRegular,
-        letterSpacing: 2,
-        textTransform: 'uppercase' as const,
+        fontSize: tabOverride.labelFontSize ?? 10.5,
+        fontFamily: tabOverride.labelFontFamily,
+        letterSpacing: tabOverride.labelLetterSpacing ?? 1.5,
+        textTransform: tabOverride.labelTextTransform ?? 'uppercase',
         marginTop: 2,
       }
     : {
@@ -87,19 +90,19 @@ export default function TabLayout() {
       }}
       screenOptions={{
         headerStyle: {
-          backgroundColor: isHeritage ? HERITAGE_COLORS.cream : c.background,
+          backgroundColor: headerOverride?.backgroundColor ?? c.background,
           // Large-title style headers feel more modern; subtle bottom shadow
           ...Platform.select({
             ios: { shadowColor: 'transparent' },
             android: { elevation: 0 },
           }),
         },
-        headerTintColor: isHeritage ? HERITAGE_COLORS.navy : c.text,
-        headerTitleStyle: isHeritage
+        headerTintColor: headerOverride?.tintColor ?? c.text,
+        headerTitleStyle: headerOverride
           ? {
-              fontFamily: HERITAGE_FONTS.serifMediumItalic,
-              fontSize: 18,
-              color: HERITAGE_COLORS.navy,
+              fontFamily: headerOverride.titleFontFamily,
+              fontSize: headerOverride.titleFontSize ?? 18,
+              color: headerOverride.titleColor ?? c.text,
             }
           : {
               fontWeight: typography.weightBold,
@@ -107,8 +110,8 @@ export default function TabLayout() {
               letterSpacing: typography.tracking.tight,
             },
         tabBarStyle,
-        tabBarActiveTintColor: isHeritage ? HERITAGE_COLORS.copper : c.tabActive,
-        tabBarInactiveTintColor: isHeritage ? HERITAGE_COLORS.inkFaint : c.tabInactive,
+        tabBarActiveTintColor: tabOverride?.activeTintColor ?? c.tabActive,
+        tabBarInactiveTintColor: tabOverride?.inactiveTintColor ?? c.tabInactive,
         tabBarLabelStyle,
         tabBarItemStyle: {
           paddingTop: 4,
@@ -120,8 +123,8 @@ export default function TabLayout() {
         options={{
           title: 'Dashboard',
           headerTitle: 'Today',
-          // Heritage Dashboard ships its own masthead; hide the native header.
-          headerShown: !isHeritage,
+          // Themes that ship their own masthead hide the native header.
+          headerShown: !(headerOverride?.hidden ?? false),
           tabBarIcon: tabIcon('index'),
         }}
       />
