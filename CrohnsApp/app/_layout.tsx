@@ -7,6 +7,34 @@ import { useEffect } from 'react';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme, ActivityIndicator, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import {
+  PlayfairDisplay_400Regular,
+  PlayfairDisplay_500Medium,
+  PlayfairDisplay_600SemiBold,
+  PlayfairDisplay_400Regular_Italic,
+  PlayfairDisplay_500Medium_Italic,
+  PlayfairDisplay_700Bold,
+} from '@expo-google-fonts/playfair-display';
+import {
+  CormorantGaramond_400Regular,
+  CormorantGaramond_400Regular_Italic,
+  CormorantGaramond_500Medium,
+  CormorantGaramond_500Medium_Italic,
+  CormorantGaramond_600SemiBold,
+} from '@expo-google-fonts/cormorant-garamond';
+import {
+  Lora_400Regular,
+  Lora_400Regular_Italic,
+  Lora_500Medium,
+  Lora_600SemiBold,
+} from '@expo-google-fonts/lora';
+import {
+  Oswald_300Light,
+  Oswald_400Regular,
+  Oswald_500Medium,
+  Oswald_600SemiBold,
+} from '@expo-google-fonts/oswald';
 import { getDatabase } from '../src/db/database';
 import { useAppStore } from '../src/store/useAppStore';
 import { AuthProvider, useAuth } from '../src/contexts/AuthContext';
@@ -20,6 +48,30 @@ function RootNavigator() {
   const { session, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
+
+  // Load Heritage Apothecary fonts (also used by other serif-leaning presets).
+  // expo-font handles both web (<link> injection) and native (bundled assets).
+  const [fontsLoaded] = useFonts({
+    PlayfairDisplay_400Regular,
+    PlayfairDisplay_500Medium,
+    PlayfairDisplay_600SemiBold,
+    PlayfairDisplay_700Bold,
+    PlayfairDisplay_400Regular_Italic,
+    PlayfairDisplay_500Medium_Italic,
+    CormorantGaramond_400Regular,
+    CormorantGaramond_400Regular_Italic,
+    CormorantGaramond_500Medium,
+    CormorantGaramond_500Medium_Italic,
+    CormorantGaramond_600SemiBold,
+    Lora_400Regular,
+    Lora_400Regular_Italic,
+    Lora_500Medium,
+    Lora_600SemiBold,
+    Oswald_300Light,
+    Oswald_400Regular,
+    Oswald_500Medium,
+    Oswald_600SemiBold,
+  });
 
   useEffect(() => {
     async function init() {
@@ -66,7 +118,7 @@ function RootNavigator() {
     }
   }, [session, authLoading, segments, onboardingComplete]);
 
-  if (authLoading) {
+  if (authLoading || !fontsLoaded) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: theme.background }}>
         <ActivityIndicator size="large" color={theme.primary} />

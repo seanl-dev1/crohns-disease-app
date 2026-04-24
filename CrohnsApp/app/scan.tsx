@@ -28,6 +28,7 @@ import { useAppStore } from '../src/store/useAppStore';
 import { lookupBarcode } from '../src/services/openFoodFacts';
 import { classifyFood, type ClassificationResult, type Rating, type Flag } from '../src/engine/foodClassifier';
 import { getProductReplacements, type ProductCategory } from '../src/engine/productReplacements';
+import { HeritageScanResult } from '../src/screens/heritage/HeritageScanResult';
 
 type ScanState =
   | { phase: 'scanning' }
@@ -39,6 +40,7 @@ type ScanState =
 export default function ScanScreen() {
   const c = useThemeColors();
   const { user } = useAppStore();
+  const themePreset = useAppStore((s) => s.themePreset);
   const [permission, requestPermission] = useCameraPermissions();
   const [state, setState] = useState<ScanState>({ phase: 'scanning' });
   const [scanned, setScanned] = useState(false);
@@ -222,7 +224,15 @@ export default function ScanScreen() {
         </View>
       )}
 
-      {state.phase === 'results' && (
+      {state.phase === 'results' && themePreset === 'heritage-apothecary' && (
+        <HeritageScanResult
+          result={state.result}
+          onScanAgain={resetScanner}
+          onGoBack={() => router.back()}
+        />
+      )}
+
+      {state.phase === 'results' && themePreset !== 'heritage-apothecary' && (
         <ResultsView
           result={state.result}
           onScanAgain={resetScanner}

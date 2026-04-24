@@ -14,10 +14,13 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useThemeColors, spacing, sizing } from '../../src/theme';
+import { useAppStore } from '../../src/store/useAppStore';
 import { knowledgeArticles } from '../../src/data/knowledgeArticles';
+import { HeritageArticle } from '../../src/screens/heritage/HeritageArticle';
 
 export default function ArticleScreen() {
   const c = useThemeColors();
+  const themePreset = useAppStore((s) => s.themePreset);
   const { id } = useLocalSearchParams<{ id: string }>();
   const article = knowledgeArticles.find((a) => a.id === Number(id));
 
@@ -46,6 +49,22 @@ export default function ArticleScreen() {
   const prevArticle = currentIndex > 0 ? knowledgeArticles[currentIndex - 1] : null;
   const nextArticle =
     currentIndex < knowledgeArticles.length - 1 ? knowledgeArticles[currentIndex + 1] : null;
+
+  // Heritage preset → render the apothecary edition.
+  if (themePreset === 'heritage-apothecary') {
+    return (
+      <HeritageArticle
+        article={article}
+        libraryIndex={currentIndex}
+        prev={prevArticle}
+        next={nextArticle}
+        onBack={() => router.back()}
+        onGoTo={(goId) =>
+          router.replace({ pathname: '/article/[id]', params: { id: goId } })
+        }
+      />
+    );
+  }
 
   return (
     <View style={[styles.container, { backgroundColor: c.background }]}>

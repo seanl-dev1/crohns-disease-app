@@ -26,6 +26,7 @@ import { router } from 'expo-router';
 import { useThemeColors, spacing, sizing, type ThemeColors } from '../../src/theme';
 import { useAppStore, type DiseaseState } from '../../src/store/useAppStore';
 import { getTodaysTip, TIP_CATEGORY_LABELS } from '../../src/data/dailyTips';
+import { HeritageDashboard } from '../../src/screens/heritage/HeritageDashboard';
 
 // ─── Disease State Options ────────────────────────────────
 
@@ -71,6 +72,18 @@ const PRESET_GOALS = [
 // ─── Main Screen ──────────────────────────────────────────
 
 export default function DashboardScreen() {
+  // Theme gate: Heritage Apothecary preset renders a completely different screen.
+  // All other presets fall through to the default dashboard.
+  // We delegate to a separate component so hook-ordering stays stable when
+  // the user toggles presets at runtime.
+  const themePreset = useAppStore((s) => s.themePreset);
+  if (themePreset === 'heritage-apothecary') {
+    return <HeritageDashboard />;
+  }
+  return <DefaultDashboard />;
+}
+
+function DefaultDashboard() {
   const c = useThemeColors();
   const {
     user,
