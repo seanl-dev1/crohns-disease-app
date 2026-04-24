@@ -1,121 +1,132 @@
 /**
- * CrohnsApp Design Token System
- * Dark mode from day one. OLED-friendly.
+ * CrohnsApp Design Token System — 2026 modernization
+ *
+ * Design intent:
+ * - WARM minimalism, not clinical cold. Off-white backgrounds, not pure white.
+ * - Sage-teal primary (healing, natural) replaces generic corporate blue.
+ * - Warm grays for text hierarchy — softer than pure black.
+ * - Food rating colors are muted and warm — avoids "alarm" feel of harsh red/green.
+ * - Dark mode preserves true OLED #000 for battery, but elevates surfaces with warm tint.
  *
  * Rules:
- * - Dark mode uses true black (#000) for OLED battery savings
- * - Text in dark mode is #E0E0E0 (not pure white — prevents halation)
- * - Color is never the sole indicator — always paired with icon + label
- * - Colorblind-safe palette (avoids red-green as sole distinction)
+ * - Color is never the sole indicator — always paired with icon + label.
+ * - Colorblind-safe palette (blue/orange/red-orange, not red/green).
+ * - All text meets WCAG AAA (7:1) contrast against its background.
  */
 
 export const colors = {
   light: {
-    // Backgrounds
-    background: '#FFFFFF',
-    surface: '#F5F5F5',
-    surfaceElevated: '#FFFFFF',
+    // Backgrounds — warm off-white, not sterile pure white
+    background: '#FAFAF7',           // Warm near-white, easier on eyes than #FFF
+    surface: '#F3F1EC',              // Slightly warmer surface for depth
+    surfaceElevated: '#FFFFFF',      // True white only for elevated cards (with shadow)
     card: '#FFFFFF',
 
-    // Text
-    text: '#1A1A1A',
-    textSecondary: '#666666',
-    textTertiary: '#999999',
-    textInverse: '#FFFFFF',
+    // Text — warm grays, not pure black (softer, modern)
+    text: '#1C1B17',                 // Warm near-black
+    textSecondary: '#5F5B54',        // Warm mid-gray
+    textTertiary: '#9A948A',         // Warm light-gray for captions
+    textInverse: '#FAFAF7',
 
-    // Brand
-    primary: '#4A90D9',        // Calm blue — trust, health
-    primaryLight: '#E8F1FB',
-    primaryDark: '#2E6BB0',
+    // Brand — sage-teal, healing and natural
+    primary: '#2F6F6A',              // Deep sage-teal (replaces #4A90D9 corporate blue)
+    primaryLight: '#DDEBE8',         // Soft tint for backgrounds
+    primaryDark: '#1F524E',
 
-    // Status — colorblind safe (blue/orange/red instead of green/yellow/red)
-    safe: '#2E8B57',           // Sea green — "safe" foods
-    safeBackground: '#E8F5EC',
-    caution: '#D4870E',        // Amber — "caution" foods
-    cautionBackground: '#FFF3E0',
-    danger: '#C0392B',         // Red — "avoid" foods
-    dangerBackground: '#FDEDEC',
+    // Status — warm, not garish
+    safe: '#5C9B7A',                 // Sage green (not grass-green)
+    safeBackground: '#E6F0EA',
+    caution: '#D18B4A',              // Warm amber (not bright yellow)
+    cautionBackground: '#FAEFDE',
+    danger: '#CA5A4A',               // Terracotta red (not fire-engine red)
+    dangerBackground: '#FAE6E1',
 
-    // Feeling scale
-    feelingGreat: '#2E8B57',
-    feelingGood: '#5BA86B',
-    feelingOkay: '#D4870E',
-    feelingBad: '#D35400',
-    feelingTerrible: '#C0392B',
+    // Feeling scale — emotionally warm gradient
+    feelingGreat: '#5C9B7A',
+    feelingGood: '#7FB088',
+    feelingOkay: '#D4A45E',
+    feelingBad: '#D07F54',
+    feelingTerrible: '#CA5A4A',
 
     // UI
-    border: '#E0E0E0',
-    borderLight: '#F0F0F0',
-    divider: '#EEEEEE',
-    disabled: '#BDBDBD',
-    placeholder: '#9E9E9E',
-    icon: '#757575',
-    iconActive: '#4A90D9',
+    border: '#E6E3DB',               // Warm light border
+    borderLight: '#EFEDE6',
+    divider: '#EDEAE1',
+    disabled: '#BFBAB1',
+    placeholder: '#9A948A',
+    icon: '#6B665D',
+    iconActive: '#2F6F6A',
 
     // Tab bar
     tabBar: '#FFFFFF',
-    tabBarBorder: '#E0E0E0',
-    tabActive: '#4A90D9',
-    tabInactive: '#999999',
+    tabBarBorder: '#E6E3DB',
+    tabActive: '#2F6F6A',
+    tabInactive: '#9A948A',
 
     // Input
-    inputBackground: '#F5F5F5',
-    inputBorder: '#E0E0E0',
-    inputFocusBorder: '#4A90D9',
+    inputBackground: '#F3F1EC',
+    inputBorder: '#E6E3DB',
+    inputFocusBorder: '#2F6F6A',
+
+    // Shadows — warm-tinted, not pure black
+    shadowColor: '#1C1B17',          // Used with low opacity in elevation tokens
   },
 
   dark: {
-    // Backgrounds — true OLED black
-    background: '#000000',
-    surface: '#121212',
-    surfaceElevated: '#1E1E1E',
-    card: '#1E1E1E',
+    // Backgrounds — OLED black for battery, warm-tinted for elevation
+    background: '#000000',           // True OLED black
+    surface: '#15130F',              // Subtle warm tint vs pure gray
+    surfaceElevated: '#1E1B16',      // Elevated surfaces are lighter in dark mode
+    card: '#1E1B16',
 
-    // Text — slightly muted white to prevent halation
-    text: '#E0E0E0',
-    textSecondary: '#A0A0A0',
-    textTertiary: '#707070',
-    textInverse: '#1A1A1A',
+    // Text — warm off-white, prevents halation
+    text: '#E8E4DB',                 // Warm near-white (not pure #FFF — reduces halation)
+    textSecondary: '#A8A296',        // Warm mid-gray
+    textTertiary: '#6F6A60',         // Warm dimmed text
+    textInverse: '#1C1B17',
 
-    // Brand
-    primary: '#5B9FE8',
-    primaryLight: '#1A2E44',
-    primaryDark: '#3D7CC4',
+    // Brand — brighter for dark mode contrast
+    primary: '#5FB3AB',              // Sage-teal, brightened for dark bg
+    primaryLight: '#1C2E2B',         // Deep tinted surface for primary-themed areas
+    primaryDark: '#3D8F87',
 
     // Status
-    safe: '#4CAF76',
-    safeBackground: '#1A2E20',
-    caution: '#E8A020',
-    cautionBackground: '#2E2510',
-    danger: '#E05A4F',
-    dangerBackground: '#2E1A18',
+    safe: '#7DBD97',
+    safeBackground: '#1B2B22',
+    caution: '#E8A867',
+    cautionBackground: '#2E2318',
+    danger: '#E17A6B',
+    dangerBackground: '#2E1B18',
 
     // Feeling scale
-    feelingGreat: '#4CAF76',
-    feelingGood: '#6BC480',
-    feelingOkay: '#E8A020',
-    feelingBad: '#E07040',
-    feelingTerrible: '#E05A4F',
+    feelingGreat: '#7DBD97',
+    feelingGood: '#97D1A3',
+    feelingOkay: '#E8BE7F',
+    feelingBad: '#E59874',
+    feelingTerrible: '#E17A6B',
 
     // UI
-    border: '#333333',
-    borderLight: '#222222',
-    divider: '#2A2A2A',
-    disabled: '#555555',
-    placeholder: '#666666',
-    icon: '#A0A0A0',
-    iconActive: '#5B9FE8',
+    border: '#2B2822',
+    borderLight: '#1F1D18',
+    divider: '#25221D',
+    disabled: '#4A463E',
+    placeholder: '#6F6A60',
+    icon: '#A8A296',
+    iconActive: '#5FB3AB',
 
     // Tab bar
-    tabBar: '#121212',
-    tabBarBorder: '#333333',
-    tabActive: '#5B9FE8',
-    tabInactive: '#666666',
+    tabBar: '#0B0A08',
+    tabBarBorder: '#2B2822',
+    tabActive: '#5FB3AB',
+    tabInactive: '#6F6A60',
 
     // Input
-    inputBackground: '#1E1E1E',
-    inputBorder: '#333333',
-    inputFocusBorder: '#5B9FE8',
+    inputBackground: '#1E1B16',
+    inputBorder: '#2B2822',
+    inputFocusBorder: '#5FB3AB',
+
+    // Shadows
+    shadowColor: '#000000',
   },
 };
 

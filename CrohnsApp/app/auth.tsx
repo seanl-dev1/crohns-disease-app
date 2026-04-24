@@ -18,7 +18,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../src/theme/colors';
-import { spacing, sizing } from '../src/theme/spacing';
+import { spacing, sizing, typography, elevation } from '../src/theme/spacing';
 import { useAuth } from '../src/contexts/AuthContext';
 
 export default function AuthScreen() {
@@ -84,7 +84,7 @@ export default function AuthScreen() {
         {/* Header */}
         <View style={styles.header}>
           <View style={[styles.iconCircle, { backgroundColor: theme.primaryLight }]}>
-            <Ionicons name="shield-checkmark" size={48} color={theme.primary} />
+            <Ionicons name="shield-checkmark" size={56} color={theme.primary} />
           </View>
           <Text style={[styles.title, { color: theme.text }]}>
             CrohnsApp
@@ -95,8 +95,8 @@ export default function AuthScreen() {
           </Text>
         </View>
 
-        {/* Form */}
-        <View style={styles.form}>
+        {/* Form — elevated card */}
+        <View style={[styles.form, { backgroundColor: theme.surfaceElevated, ...elevation.raised }]}>
           <Text style={[styles.label, { color: theme.textSecondary }]}>Email</Text>
           <TextInput
             style={[
@@ -228,35 +228,43 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.xxl,
+    maxWidth: 480,
+    width: '100%',
+    alignSelf: 'center',
   },
   header: {
     alignItems: 'center',
     marginBottom: spacing.xl,
   },
   iconCircle: {
-    width: 96,
-    height: 96,
-    borderRadius: 48,
+    width: 112,
+    height: 112,
+    borderRadius: 56,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: spacing.md,
+    marginBottom: spacing.lg,
   },
   title: {
-    fontSize: sizing.fontHeading,
-    fontWeight: '700',
+    fontSize: sizing.fontHero,
+    fontWeight: typography.weightBold,
+    letterSpacing: typography.tracking.tight,
     marginBottom: spacing.sm,
   },
   subtitle: {
     fontSize: sizing.fontBase,
     textAlign: 'center',
-    lineHeight: 22,
+    lineHeight: sizing.fontBase * sizing.lineHeightRelaxed,
+    maxWidth: 340,
   },
   form: {
     marginBottom: spacing.xl,
+    padding: spacing.lg,
+    borderRadius: sizing.radiusXL,
   },
   label: {
     fontSize: sizing.fontSm,
-    fontWeight: '600',
+    fontWeight: typography.weightSemibold,
+    letterSpacing: typography.tracking.wide,
     marginBottom: spacing.xs,
     marginTop: spacing.md,
   },
@@ -281,7 +289,7 @@ const styles = StyleSheet.create({
   },
   button: {
     height: sizing.tapTargetLarge,
-    borderRadius: sizing.radiusMedium,
+    borderRadius: sizing.radiusRound,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: spacing.lg,
@@ -289,7 +297,8 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#FFFFFF',
     fontSize: sizing.fontLg,
-    fontWeight: '700',
+    fontWeight: typography.weightBold,
+    letterSpacing: typography.tracking.wide,
   },
   switchButton: {
     alignItems: 'center',
@@ -302,6 +311,6 @@ const styles = StyleSheet.create({
   privacy: {
     fontSize: sizing.fontXs,
     textAlign: 'center',
-    lineHeight: 18,
+    lineHeight: sizing.fontXs * sizing.lineHeightRelaxed,
   },
 });

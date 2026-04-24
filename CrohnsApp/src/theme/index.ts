@@ -1,8 +1,8 @@
 import { useColorScheme } from 'react-native';
 import { colors, type ThemeColors, type ColorScheme } from './colors';
-import { spacing, sizing } from './spacing';
+import { spacing, sizing, typography, elevation, motion } from './spacing';
 
-export { colors, spacing, sizing };
+export { colors, spacing, sizing, typography, elevation, motion };
 export type { ThemeColors, ColorScheme };
 
 /**
