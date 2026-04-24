@@ -1,0 +1,2060 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A0908">
+<title>CrohnsApp — 5 Visual Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Nunito:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+/* ========== GLOBAL PAGE SHELL ========== */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:#111113;
+  color:#E6E4DF;
+  min-height:100vh;
+}
+
+.page-header{
+  padding:28px 20px 18px;
+  text-align:center;
+  background:linear-gradient(180deg,#17171A 0%,#111113 100%);
+  border-bottom:1px solid #222226;
+}
+.page-header h1{
+  font-size:22px;
+  line-height:1.2;
+  margin:0 0 6px;
+  font-weight:600;
+  letter-spacing:-0.3px;
+  color:#F4F1EA;
+}
+.page-header p{
+  margin:0;
+  color:#8E8B82;
+  font-size:14px;
+}
+
+/* ========== DIRECTION TAB BAR ========== */
+.tabs{
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  gap:6px;
+  padding:12px 12px;
+  background:rgba(17,17,19,0.92);
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid #222226;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  color:#A8A49A;
+  background:#1E1E22;
+  border:1px solid #26262B;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:background .15s ease,color .15s ease,border-color .15s ease;
+  letter-spacing:-0.1px;
+}
+.tab:hover{background:#27272C}
+.tab.active{
+  background:#F4F1EA;
+  color:#14120E;
+  border-color:#F4F1EA;
+}
+
+/* ========== DIRECTION SECTION ========== */
+.direction{display:none;padding:24px 16px 80px}
+.direction.active{display:block}
+.direction-heading{
+  max-width:960px;
+  margin:0 auto 20px;
+  text-align:center;
+  color:#E6E4DF;
+}
+.direction-heading .eyebrow{
+  font-size:11px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  color:#8E8B82;
+  margin-bottom:10px;
+  font-weight:600;
+}
+.direction-heading h2{
+  margin:0 0 10px;
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:-0.5px;
+}
+.direction-heading .sub{
+  margin:0 auto;
+  max-width:560px;
+  font-size:15px;
+  line-height:1.55;
+  color:#A8A49A;
+}
+
+/* ========== PHONE FRAMES ========== */
+.phones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px;
+  justify-content:center;
+  align-items:flex-start;
+  padding:8px 0 28px;
+}
+.phone{
+  width:360px;
+  max-width:92vw;
+  aspect-ratio:360/760;
+  border-radius:46px;
+  background:#000;
+  padding:12px;
+  box-shadow:
+    0 0 0 2px #1a1a1c inset,
+    0 0 0 3px #2b2b2f,
+    0 24px 60px -20px rgba(0,0,0,0.6),
+    0 10px 28px -14px rgba(0,0,0,0.45);
+  position:relative;
+  flex:0 0 auto;
+}
+.phone-screen{
+  width:100%;
+  height:100%;
+  border-radius:34px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+.phone-label{
+  text-align:center;
+  font-size:12px;
+  font-weight:600;
+  color:#8E8B82;
+  margin-top:10px;
+  letter-spacing:0.3px;
+}
+.notch{
+  position:absolute;
+  top:14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:100px;
+  height:26px;
+  background:#000;
+  border-radius:999px;
+  z-index:3;
+}
+
+/* status bar — shared structure, per-direction colors */
+.statusbar{
+  height:40px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  padding:0 22px 6px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:-0.2px;
+  flex:0 0 auto;
+}
+.statusbar .sb-right{display:flex;gap:6px;align-items:center;font-size:13px}
+.sb-dot{width:16px;height:10px;background:currentColor;border-radius:3px;opacity:.8}
+
+/* scroll area within phone */
+.screen-body{
+  flex:1 1 auto;
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.screen-body::-webkit-scrollbar{display:none}
+
+/* shared utility shapes */
+.mock-divider{height:1px;width:100%;opacity:.5}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.1px}
+.mini-dot{width:8px;height:8px;border-radius:999px;display:inline-block}
+
+/* blurb */
+.blurb{
+  max-width:780px;
+  margin:8px auto 0;
+  padding:20px 22px;
+  background:#18181B;
+  border:1px solid #24242A;
+  border-radius:16px;
+  color:#CFCCC4;
+  font-size:14px;
+  line-height:1.6;
+}
+.blurb strong{color:#F4F1EA;font-weight:600}
+
+@media (max-width:820px){
+  .phones{gap:20px}
+  .phone{width:320px}
+  .direction{padding:20px 10px 80px}
+  .direction-heading h2{font-size:22px}
+}
+
+/* ==================================================================== */
+/* ============== DIRECTION 1: WARM MINIMALIST HEALTH ================== */
+/* ==================================================================== */
+.d1 .phone-screen{
+  background:#FAFAF7;
+  color:#14120E;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  line-height:1.5;
+}
+.d1 .statusbar{color:#14120E}
+.d1 .screen-body{padding:14px 18px 90px}
+
+.d1 .greeting-date{font-size:10.5px;font-weight:600;letter-spacing:1.4px;color:#837E74;text-transform:uppercase;margin:30px 0 8px}
+.d1 .greeting-hero{font-size:22px;line-height:1.25;letter-spacing:-0.5px;font-weight:700;margin:0 0 2px;color:#14120E}
+.d1 .greeting-sub{font-size:14px;color:#4A4740;margin:0 0 18px;font-weight:400}
+
+.d1 .state-toggle{
+  display:flex;gap:6px;
+  background:#F4F3EE;
+  padding:4px;
+  border-radius:12px;
+  margin-bottom:16px;
+}
+.d1 .state-toggle .st{
+  flex:1;
+  padding:9px 6px;
+  text-align:center;
+  font-size:11.5px;
+  font-weight:600;
+  color:#837E74;
+  border-radius:9px;
+  letter-spacing:-0.1px;
+}
+.d1 .state-toggle .st.active{background:#FFFFFF;color:#2F6F6A;box-shadow:0 1px 3px rgba(42,36,22,.06)}
+
+.d1 .card{
+  background:#FFFFFF;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:12px;
+  box-shadow:0 1px 3px rgba(42,36,22,.04),0 2px 8px rgba(42,36,22,.03);
+}
+.d1 .card .card-eye{font-size:10.5px;font-weight:600;color:#837E74;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:8px}
+.d1 .card .card-title{font-size:15px;font-weight:600;color:#14120E;margin:0 0 4px}
+.d1 .card .card-body{font-size:13px;color:#4A4740;margin:0;line-height:1.5}
+
+.d1 .goal-ring{
+  display:flex;align-items:center;gap:14px;
+}
+.d1 .ring-viz{
+  width:56px;height:56px;border-radius:999px;
+  background:conic-gradient(#3E8866 0 72%,#E8EDE5 72% 100%);
+  display:grid;place-items:center;
+  flex:0 0 auto;
+}
+.d1 .ring-inner{
+  width:42px;height:42px;border-radius:999px;background:#FFF;
+  display:grid;place-items:center;
+  font-size:13px;font-weight:700;color:#2F6F6A;
+}
+.d1 .goal-text{flex:1}
+
+.d1 .quick-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.d1 .qa{
+  background:#FFFFFF;
+  border-radius:14px;
+  padding:12px 8px;
+  text-align:center;
+  box-shadow:0 1px 2px rgba(42,36,22,.04);
+}
+.d1 .qa .qi{
+  width:32px;height:32px;border-radius:999px;margin:0 auto 6px;
+  background:#E8F0EC;display:grid;place-items:center;color:#2F6F6A;font-size:15px;font-weight:700;
+}
+.d1 .qa .ql{font-size:11px;font-weight:600;color:#14120E;letter-spacing:-0.1px}
+
+.d1 .tip-card{
+  background:linear-gradient(145deg,#EDF3F0 0%,#F4F3EE 100%);
+  border-radius:16px;padding:16px;margin-bottom:12px;
+}
+.d1 .tip-card .tc-eye{font-size:10.5px;font-weight:600;color:#2F6F6A;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:6px}
+.d1 .tip-card .tc-title{font-size:15px;font-weight:600;color:#14120E;margin:0 0 4px;letter-spacing:-0.2px}
+.d1 .tip-card .tc-body{font-size:13px;color:#4A4740;margin:0;line-height:1.5}
+
+.d1 .tabbar{
+  position:absolute;left:14px;right:14px;bottom:14px;
+  height:54px;border-radius:999px;background:#FFF;
+  display:flex;align-items:center;justify-content:space-around;
+  box-shadow:0 6px 22px rgba(42,36,22,.09),0 2px 4px rgba(42,36,22,.04);
+}
+.d1 .tb{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1}
+.d1 .tb .tb-ic{font-size:17px;color:#B8B3A5}
+.d1 .tb .tb-lb{font-size:10px;color:#B8B3A5;font-weight:500}
+.d1 .tb.active .tb-ic,.d1 .tb.active .tb-lb{color:#2F6F6A}
+.d1 .tb.active .tb-lb{font-weight:600}
+
+/* scan screen d1 */
+.d1 .scan-header{display:flex;justify-content:space-between;align-items:center;margin:24px 0 16px}
+.d1 .scan-back{width:32px;height:32px;border-radius:10px;background:#F4F3EE;display:grid;place-items:center;font-size:14px;color:#14120E}
+.d1 .scan-title{font-size:13px;font-weight:600;color:#14120E}
+.d1 .product-head{margin-bottom:14px}
+.d1 .product-name{font-size:19px;font-weight:700;letter-spacing:-0.3px;line-height:1.25;margin:4px 0 2px}
+.d1 .product-brand{font-size:12.5px;color:#837E74}
+.d1 .rating-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#FAE6E2;color:#A0332B;
+  border-radius:999px;padding:6px 12px;
+  font-size:12px;font-weight:600;letter-spacing:-0.1px;
+  margin-top:10px;
+}
+.d1 .rating-pill .rp-ic{font-size:10px}
+.d1 .reasons{background:#FFF;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(42,36,22,.04)}
+.d1 .reasons-t{font-size:11px;font-weight:600;letter-spacing:1.2px;color:#837E74;text-transform:uppercase;margin-bottom:10px}
+.d1 .reason-row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #EDEBE4;font-size:13px;color:#14120E;align-items:flex-start}
+.d1 .reason-row:last-child{border-bottom:none}
+.d1 .reason-row .rn{width:20px;height:20px;border-radius:999px;background:#FAE6E2;color:#A0332B;display:grid;place-items:center;font-size:11px;font-weight:700;flex:0 0 auto;margin-top:1px}
+.d1 .reason-row .rb{font-size:11.5px;color:#837E74;font-weight:400;margin-top:2px;line-height:1.4}
+.d1 .reason-row .rt{font-size:13px;font-weight:600;color:#14120E}
+.d1 .replace-t{font-size:11px;font-weight:600;letter-spacing:1.2px;color:#837E74;text-transform:uppercase;margin:8px 0 10px}
+.d1 .replace-row{background:#FFF;border-radius:14px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(42,36,22,.04)}
+.d1 .replace-row .av{width:36px;height:36px;border-radius:10px;background:#E8F3EA;display:grid;place-items:center;font-size:15px}
+.d1 .replace-row .tx{flex:1}
+.d1 .replace-row .rt2{font-size:13px;font-weight:600;color:#14120E;margin:0}
+.d1 .replace-row .rb2{font-size:11.5px;color:#837E74;margin:1px 0 0}
+.d1 .replace-row .chev{color:#B8B3A5;font-weight:700}
+
+/* article d1 */
+.d1 .art-hero{padding:28px 0 14px}
+.d1 .art-meta{font-size:10.5px;font-weight:600;letter-spacing:1.4px;color:#2F6F6A;text-transform:uppercase;margin-bottom:10px}
+.d1 .art-title{font-size:24px;line-height:1.2;letter-spacing:-0.5px;font-weight:700;margin:0 0 10px;color:#14120E}
+.d1 .art-byline{font-size:12px;color:#837E74;margin-bottom:18px}
+.d1 .art-chip-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.d1 .art-chip{background:#F4F3EE;color:#4A4740;font-size:10.5px;font-weight:600;padding:4px 9px;border-radius:999px}
+.d1 .art-body p{font-size:13.5px;line-height:1.6;color:#14120E;margin:0 0 12px}
+.d1 .art-h3{font-size:15px;font-weight:600;letter-spacing:-0.2px;margin:14px 0 8px;color:#14120E}
+.d1 .art-nav{background:#FFF;border-radius:14px;padding:12px 14px;margin:14px 0;box-shadow:0 1px 2px rgba(42,36,22,.04)}
+.d1 .art-nav-t{font-size:10.5px;font-weight:600;letter-spacing:1.2px;color:#837E74;text-transform:uppercase;margin-bottom:8px}
+.d1 .art-nav-row{font-size:12.5px;padding:5px 0;color:#14120E;border-bottom:1px solid #EDEBE4;display:flex;justify-content:space-between;align-items:center}
+.d1 .art-nav-row:last-child{border-bottom:none}
+.d1 .art-nav-row .nn{color:#837E74;font-size:11px;font-weight:600}
+
+/* ==================================================================== */
+/* ============== DIRECTION 2: PREMIUM WELLNESS NIGHT ================== */
+/* ==================================================================== */
+.d2 .phone-screen{
+  background:#0A0908;
+  color:#E8DFD0;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  line-height:1.55;
+}
+.d2 .statusbar{color:#E8DFD0}
+.d2 .screen-body{padding:14px 20px 100px}
+
+.d2 .d2-eye{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#D4AF8C;text-transform:uppercase;margin:26px 0 10px}
+.d2 .d2-hero{
+  font-family:'Instrument Serif',serif;
+  font-size:32px;line-height:1.08;letter-spacing:-0.5px;
+  margin:0 0 4px;color:#F2E9D8;font-weight:400;
+}
+.d2 .d2-hero em{font-style:italic;color:#D4AF8C}
+.d2 .d2-sub{font-size:13.5px;color:#A69987;margin:4px 0 20px;line-height:1.55}
+
+.d2 .d2-stateline{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 16px;
+  background:#16120D;
+  border-radius:14px;
+  margin-bottom:16px;
+  border:1px solid #201A13;
+}
+.d2 .d2-stateline .sl{flex:1}
+.d2 .d2-stateline .sl-l{font-size:10.5px;font-weight:600;letter-spacing:1.4px;color:#8A7D6A;text-transform:uppercase;margin-bottom:4px}
+.d2 .d2-stateline .sl-v{font-size:14px;color:#E8DFD0;font-weight:500}
+.d2 .d2-stateline .sl-dot{width:8px;height:8px;border-radius:999px;background:#7FAE8E;box-shadow:0 0 8px rgba(127,174,142,.6);margin-right:6px;display:inline-block}
+
+.d2 .d2-card{
+  background:#15110B;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:12px;
+  border:1px solid #22190F;
+}
+.d2 .d2-card-t{font-family:'Instrument Serif',serif;font-size:22px;line-height:1.15;color:#F2E9D8;font-weight:400;margin:0 0 4px;letter-spacing:-0.2px}
+.d2 .d2-card-sub{font-size:12.5px;color:#A69987;margin:0 0 14px;line-height:1.5}
+.d2 .d2-bar{height:6px;border-radius:999px;background:#22190F;overflow:hidden}
+.d2 .d2-bar-fill{height:100%;background:linear-gradient(90deg,#D4AF8C,#E8C9A8);border-radius:999px}
+.d2 .d2-bar-meta{display:flex;justify-content:space-between;font-size:11px;color:#8A7D6A;margin-top:6px;font-weight:500}
+
+.d2 .d2-quick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.d2 .d2-q{background:#15110B;border:1px solid #22190F;border-radius:16px;padding:14px 8px;text-align:center}
+.d2 .d2-q-ic{font-size:18px;color:#D4AF8C;margin-bottom:4px}
+.d2 .d2-q-lb{font-size:11.5px;color:#C4B79F;font-weight:500;letter-spacing:-0.1px}
+
+.d2 .d2-tip{
+  background:linear-gradient(160deg,#1F170E 0%,#15110B 100%);
+  border:1px solid #2B2014;
+  border-radius:18px;padding:20px;
+}
+.d2 .d2-tip-eye{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#D4AF8C;text-transform:uppercase;margin-bottom:10px}
+.d2 .d2-tip-t{font-family:'Instrument Serif',serif;font-size:20px;line-height:1.2;color:#F2E9D8;font-weight:400;margin:0 0 6px;letter-spacing:-0.2px}
+.d2 .d2-tip-b{font-size:13px;color:#A69987;margin:0;line-height:1.55}
+
+.d2 .tabbar{
+  position:absolute;left:16px;right:16px;bottom:14px;
+  height:58px;border-radius:999px;
+  background:rgba(34,25,15,.82);
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border:1px solid rgba(212,175,140,.12);
+  display:flex;align-items:center;justify-content:space-around;
+}
+.d2 .tb{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1}
+.d2 .tb .tb-ic{font-size:17px;color:#6E6354}
+.d2 .tb .tb-lb{font-size:10px;color:#6E6354;font-weight:500}
+.d2 .tb.active .tb-ic,.d2 .tb.active .tb-lb{color:#D4AF8C}
+.d2 .tb.active .tb-lb{font-weight:600}
+
+/* d2 scan */
+.d2 .scan-back{width:36px;height:36px;border-radius:12px;background:#15110B;border:1px solid #22190F;display:grid;place-items:center;color:#E8DFD0;font-size:14px}
+.d2 .scan-header{display:flex;justify-content:space-between;align-items:center;margin:24px 0 14px}
+.d2 .scan-title{font-size:12.5px;color:#A69987;font-weight:600;letter-spacing:1.2px;text-transform:uppercase}
+.d2 .d2-prod{margin:8px 0 16px}
+.d2 .d2-prod-brand{font-size:11.5px;font-weight:600;letter-spacing:1.4px;color:#D4AF8C;text-transform:uppercase;margin-bottom:6px}
+.d2 .d2-prod-name{font-family:'Instrument Serif',serif;font-size:26px;line-height:1.15;color:#F2E9D8;font-weight:400;margin:0;letter-spacing:-0.3px}
+.d2 .d2-rating{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#2E1814;color:#E8A8A0;
+  border:1px solid #4A2620;
+  padding:7px 13px;border-radius:999px;
+  font-size:12px;font-weight:600;letter-spacing:-0.1px;
+  margin-top:14px;
+}
+.d2 .d2-reasons{background:#15110B;border:1px solid #22190F;border-radius:18px;padding:18px;margin-bottom:12px}
+.d2 .d2-reasons-t{font-family:'Instrument Serif',serif;font-size:18px;color:#F2E9D8;font-weight:400;margin:0 0 12px;letter-spacing:-0.2px}
+.d2 .d2-reason{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #22190F}
+.d2 .d2-reason:last-child{border-bottom:none;padding-bottom:0}
+.d2 .d2-reason .rn{width:22px;height:22px;border-radius:999px;background:#2E1814;color:#E8A8A0;display:grid;place-items:center;font-size:11px;font-weight:700;flex:0 0 auto;margin-top:1px;border:1px solid #4A2620}
+.d2 .d2-reason .rt{font-size:13.5px;font-weight:500;color:#E8DFD0}
+.d2 .d2-reason .rb{font-size:11.5px;color:#8A7D6A;margin-top:2px;line-height:1.5}
+.d2 .d2-repl-t{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#D4AF8C;text-transform:uppercase;margin:6px 0 10px}
+.d2 .d2-repl{background:#15110B;border:1px solid #22190F;border-radius:16px;padding:14px;margin-bottom:8px;display:flex;gap:12px;align-items:center}
+.d2 .d2-repl .av{width:40px;height:40px;border-radius:12px;background:#22190F;color:#D4AF8C;display:grid;place-items:center;font-size:16px}
+.d2 .d2-repl .tx{flex:1}
+.d2 .d2-repl .rt2{font-size:13.5px;font-weight:500;color:#E8DFD0;margin:0}
+.d2 .d2-repl .rb2{font-size:11.5px;color:#8A7D6A;margin:1px 0 0}
+.d2 .d2-repl .chev{color:#6E6354}
+
+/* d2 article */
+.d2 .art-hero{padding:30px 0 16px}
+.d2 .art-meta{font-size:11px;font-weight:600;letter-spacing:2px;color:#D4AF8C;text-transform:uppercase;margin-bottom:14px}
+.d2 .art-title{font-family:'Instrument Serif',serif;font-size:34px;line-height:1.05;color:#F2E9D8;font-weight:400;margin:0 0 16px;letter-spacing:-0.6px}
+.d2 .art-title em{font-style:italic;color:#D4AF8C}
+.d2 .art-byline{font-size:12px;color:#8A7D6A;display:flex;gap:8px;align-items:center;margin-bottom:24px}
+.d2 .art-byline .dot{width:3px;height:3px;border-radius:999px;background:#5A4E3A}
+.d2 .art-body p{font-size:14px;line-height:1.75;color:#C4B79F;margin:0 0 14px}
+.d2 .art-body p.lead{font-size:15.5px;color:#E8DFD0;font-weight:400}
+.d2 .art-h3{font-family:'Instrument Serif',serif;font-size:20px;line-height:1.2;color:#F2E9D8;font-weight:400;margin:22px 0 10px;letter-spacing:-0.2px}
+.d2 .art-nav{background:#15110B;border:1px solid #22190F;border-radius:16px;padding:16px;margin:18px 0}
+.d2 .art-nav-t{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#D4AF8C;text-transform:uppercase;margin-bottom:12px}
+.d2 .art-nav-row{font-size:13px;padding:8px 0;color:#C4B79F;border-bottom:1px solid #22190F;display:flex;justify-content:space-between;align-items:center}
+.d2 .art-nav-row:last-child{border-bottom:none}
+.d2 .art-nav-row .nn{color:#D4AF8C;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* ==================================================================== */
+/* ============== DIRECTION 3: CLINICAL MODERN (APPLE HEALTH) ========== */
+/* ==================================================================== */
+.d3 .phone-screen{
+  background:#F2F1F6;
+  color:#1C1C1E;
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;
+  font-size:13px;
+  line-height:1.4;
+}
+.d3 .statusbar{color:#1C1C1E;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter',sans-serif}
+.d3 .screen-body{padding:8px 16px 100px}
+
+.d3 .d3-head{padding:14px 0 10px;display:flex;justify-content:space-between;align-items:center}
+.d3 .d3-head .d3-date{font-size:14px;color:#8E8E93;font-weight:500}
+.d3 .d3-head .d3-pro{width:30px;height:30px;border-radius:999px;background:#AEAEB2;display:grid;place-items:center;color:#FFF;font-weight:700;font-size:13px}
+.d3 .d3-title{font-size:34px;font-weight:700;line-height:1.05;letter-spacing:-1px;color:#1C1C1E;margin:6px 0 4px}
+.d3 .d3-subtitle{font-size:16px;color:#636366;margin:0 0 16px}
+
+.d3 .d3-state-row{display:flex;gap:6px;background:#E5E5EA;padding:3px;border-radius:10px;margin-bottom:18px}
+.d3 .d3-state-row .st{flex:1;padding:7px 4px;text-align:center;font-size:13px;font-weight:500;color:#636366;border-radius:8px}
+.d3 .d3-state-row .st.active{background:#FFF;color:#1C1C1E;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+
+.d3 .d3-sh{font-size:20px;font-weight:700;letter-spacing:-0.4px;margin:18px 0 10px;color:#1C1C1E;display:flex;justify-content:space-between;align-items:baseline}
+.d3 .d3-sh .see{font-size:15px;color:#007AFF;font-weight:500;letter-spacing:0}
+.d3 .d3-stats{display:flex;gap:10px;overflow-x:auto;margin:0 -16px 16px;padding:2px 16px 4px;scrollbar-width:none}
+.d3 .d3-stats::-webkit-scrollbar{display:none}
+.d3 .d3-stat{flex:0 0 140px;background:#FFF;border-radius:14px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.d3 .d3-stat .ic{font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.d3 .d3-stat .big{font-size:24px;font-weight:700;letter-spacing:-0.6px;line-height:1}
+.d3 .d3-stat .unit{font-size:12px;color:#8E8E93;font-weight:500;margin-left:3px}
+.d3 .d3-stat .foot{font-size:11px;color:#8E8E93;margin-top:6px;font-weight:500}
+.d3 .d3-stat.pink{border-top:3px solid #FF375F}
+.d3 .d3-stat.pink .ic{color:#FF375F}
+.d3 .d3-stat.orange{border-top:3px solid #FF9500}
+.d3 .d3-stat.orange .ic{color:#FF9500}
+.d3 .d3-stat.green{border-top:3px solid #34C759}
+.d3 .d3-stat.green .ic{color:#34C759}
+.d3 .d3-stat.blue{border-top:3px solid #007AFF}
+.d3 .d3-stat.blue .ic{color:#007AFF}
+
+.d3 .d3-goal{background:#FFF;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.d3 .d3-goal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.d3 .d3-goal-t{font-size:15px;font-weight:600;color:#1C1C1E}
+.d3 .d3-goal-v{font-size:13px;color:#34C759;font-weight:600;font-variant-numeric:tabular-nums}
+.d3 .d3-goal-bar{height:8px;border-radius:999px;background:#E5E5EA;overflow:hidden}
+.d3 .d3-goal-bar-fill{height:100%;background:linear-gradient(90deg,#34C759,#30D158);border-radius:999px}
+
+.d3 .d3-quick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.d3 .d3-q{background:#FFF;border-radius:14px;padding:12px 8px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.d3 .d3-q .ic{width:36px;height:36px;border-radius:999px;margin:0 auto 6px;display:grid;place-items:center;font-size:16px;color:#FFF;font-weight:700}
+.d3 .d3-q .lb{font-size:12px;font-weight:600;color:#1C1C1E}
+
+.d3 .d3-tip{background:linear-gradient(160deg,#007AFF,#0051D5);border-radius:14px;padding:16px;color:#FFF;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,122,255,.18)}
+.d3 .d3-tip-eye{font-size:11px;font-weight:600;letter-spacing:0.6px;opacity:.85;text-transform:uppercase;margin-bottom:4px}
+.d3 .d3-tip-t{font-size:16px;font-weight:700;letter-spacing:-0.3px;margin:0 0 4px}
+.d3 .d3-tip-b{font-size:13px;opacity:.9;margin:0;line-height:1.5}
+
+.d3 .tabbar{
+  position:absolute;left:0;right:0;bottom:0;
+  height:70px;background:rgba(250,250,252,.92);
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-top:0.5px solid rgba(60,60,67,.18);
+  display:flex;align-items:flex-start;justify-content:space-around;
+  padding:8px 0;
+}
+.d3 .tb{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;position:relative;padding-top:4px}
+.d3 .tb .tb-ic{font-size:22px;color:#8E8E93}
+.d3 .tb .tb-lb{font-size:10px;color:#8E8E93;font-weight:500;letter-spacing:0}
+.d3 .tb.active .tb-ic,.d3 .tb.active .tb-lb{color:#007AFF}
+.d3 .tb.active .tb-lb{font-weight:600}
+.d3 .tb.active::before{content:"";position:absolute;top:0;width:20px;height:2px;background:#007AFF;border-radius:2px}
+
+/* d3 scan */
+.d3 .scan-back{width:30px;height:30px;border-radius:999px;background:rgba(120,120,128,.16);display:grid;place-items:center;color:#007AFF;font-size:14px;font-weight:600}
+.d3 .scan-header{display:flex;justify-content:space-between;align-items:center;padding:14px 0 10px}
+.d3 .scan-title{font-size:17px;font-weight:600;color:#1C1C1E}
+.d3 .d3-scan-prod{background:#FFF;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.d3 .d3-scan-prod .brand{font-size:13px;color:#8E8E93;font-weight:500;margin-bottom:2px}
+.d3 .d3-scan-prod .name{font-size:22px;font-weight:700;letter-spacing:-0.5px;line-height:1.1;margin:0 0 10px;color:#1C1C1E}
+.d3 .d3-badge-row{display:flex;gap:6px;flex-wrap:wrap}
+.d3 .d3-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:600}
+.d3 .d3-badge.red{background:rgba(255,55,95,.12);color:#FF375F}
+.d3 .d3-badge.gray{background:rgba(120,120,128,.12);color:#636366}
+
+.d3 .d3-rating-card{background:#FFF;border-radius:16px;padding:18px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;gap:16px;align-items:center}
+.d3 .d3-rating-card .rcl{
+  width:70px;height:70px;border-radius:999px;
+  background:conic-gradient(#FF375F 0 72%,#E5E5EA 72% 100%);
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.d3 .d3-rating-card .rcl-in{width:54px;height:54px;border-radius:999px;background:#FFF;display:grid;place-items:center;font-size:16px;font-weight:700;color:#FF375F}
+.d3 .d3-rating-card .rcr{flex:1}
+.d3 .d3-rating-card .rcr-t{font-size:13px;font-weight:600;color:#FF375F;letter-spacing:-0.1px}
+.d3 .d3-rating-card .rcr-s{font-size:18px;font-weight:700;color:#1C1C1E;margin:2px 0;letter-spacing:-0.4px}
+.d3 .d3-rating-card .rcr-b{font-size:12.5px;color:#636366;line-height:1.45}
+
+.d3 .d3-section{background:#FFF;border-radius:16px;padding:4px 16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.d3 .d3-sect-t{font-size:11px;font-weight:600;color:#8E8E93;letter-spacing:0.4px;text-transform:uppercase;padding:12px 0 8px}
+.d3 .d3-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:0.5px solid rgba(60,60,67,.1);font-size:14px;color:#1C1C1E}
+.d3 .d3-row:last-child{border-bottom:none}
+.d3 .d3-row .k{font-weight:500}
+.d3 .d3-row .v{color:#8E8E93;font-weight:500;display:flex;align-items:center;gap:6px}
+.d3 .d3-row .v.bad{color:#FF375F}
+.d3 .d3-row .chev{color:#C7C7CC;font-size:14px;margin-left:4px}
+
+.d3 .d3-repl-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:0.5px solid rgba(60,60,67,.1)}
+.d3 .d3-repl-row:last-child{border-bottom:none}
+.d3 .d3-repl-row .av{width:40px;height:40px;border-radius:10px;background:rgba(52,199,89,.14);display:grid;place-items:center;color:#34C759;font-size:18px;font-weight:700;flex:0 0 auto}
+.d3 .d3-repl-row .tx{flex:1}
+.d3 .d3-repl-row .rt2{font-size:14px;font-weight:500;color:#1C1C1E}
+.d3 .d3-repl-row .rb2{font-size:12px;color:#8E8E93;margin-top:1px}
+.d3 .d3-repl-row .chev{color:#C7C7CC}
+
+/* d3 article */
+.d3 .art-top{display:flex;justify-content:space-between;align-items:center;padding:14px 0 10px}
+.d3 .art-back{width:30px;height:30px;border-radius:999px;background:rgba(120,120,128,.16);display:grid;place-items:center;color:#007AFF;font-size:14px;font-weight:600}
+.d3 .art-bm{width:30px;height:30px;border-radius:999px;background:rgba(120,120,128,.16);display:grid;place-items:center;color:#007AFF;font-size:14px}
+.d3 .art-eye{font-size:13px;font-weight:600;letter-spacing:-0.2px;color:#007AFF;margin:10px 0 8px}
+.d3 .art-title{font-size:30px;font-weight:700;line-height:1.05;letter-spacing:-0.9px;color:#1C1C1E;margin:0 0 10px}
+.d3 .art-meta-row{display:flex;gap:10px;font-size:13px;color:#8E8E93;font-weight:500;margin-bottom:18px;align-items:center}
+.d3 .art-meta-row .dot{width:3px;height:3px;border-radius:999px;background:#C7C7CC}
+.d3 .art-lead{font-size:16px;line-height:1.5;color:#1C1C1E;font-weight:500;margin:0 0 14px}
+.d3 .art-body p{font-size:15px;line-height:1.55;color:#1C1C1E;margin:0 0 12px}
+.d3 .art-h3{font-size:19px;font-weight:700;letter-spacing:-0.4px;margin:18px 0 8px}
+.d3 .art-nav{background:#FFF;border-radius:14px;padding:4px 16px;margin:18px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.d3 .art-nav-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:0.5px solid rgba(60,60,67,.1);align-items:center;font-size:14px;color:#1C1C1E}
+.d3 .art-nav-row:last-child{border-bottom:none}
+.d3 .art-nav-row .nn{font-size:13px;color:#8E8E93;font-weight:500;font-variant-numeric:tabular-nums}
+.d3 .art-nav-row .chev{color:#C7C7CC}
+
+/* ==================================================================== */
+/* ============== DIRECTION 4: SOFT ORGANIC PASTEL ===================== */
+/* ==================================================================== */
+.d4 .phone-screen{
+  background:#FFF8F0;
+  color:#4E3B2A;
+  font-family:'Nunito',sans-serif;
+  font-size:13.5px;
+  line-height:1.5;
+}
+.d4 .statusbar{color:#4E3B2A}
+.d4 .screen-body{padding:10px 18px 100px}
+
+.d4 .d4-header{padding:20px 0 8px;display:flex;justify-content:space-between;align-items:flex-start}
+.d4 .d4-greet{flex:1}
+.d4 .d4-hi{font-size:16px;font-weight:700;color:#A67248;margin-bottom:2px}
+.d4 .d4-main{font-size:22px;font-weight:800;letter-spacing:-0.3px;line-height:1.15;margin:0;color:#3D2E22}
+.d4 .d4-avatar{width:44px;height:44px;border-radius:999px;background:linear-gradient(135deg,#FFD4B8,#F9B38A);display:grid;place-items:center;font-size:22px;flex:0 0 auto}
+
+.d4 .d4-mood{
+  background:linear-gradient(145deg,#FFE8D4,#FFD4B8);
+  border-radius:28px;padding:20px;margin:16px 0 14px;
+  position:relative;overflow:hidden;
+}
+.d4 .d4-mood::after{
+  content:"";position:absolute;right:-20px;top:-20px;
+  width:120px;height:120px;border-radius:999px;
+  background:radial-gradient(circle,rgba(255,255,255,.4),transparent 60%);
+}
+.d4 .d4-mood-t{font-size:13px;font-weight:800;color:#7A4F2A;margin-bottom:4px;position:relative;z-index:1}
+.d4 .d4-mood-q{font-size:17px;font-weight:700;line-height:1.2;color:#3D2E22;margin:0 0 14px;position:relative;z-index:1}
+.d4 .d4-mood-row{display:flex;gap:8px;position:relative;z-index:1}
+.d4 .d4-mood-opt{flex:1;background:rgba(255,255,255,.7);border-radius:18px;padding:10px 6px;text-align:center;backdrop-filter:blur(6px)}
+.d4 .d4-mood-opt .em{font-size:22px;line-height:1}
+.d4 .d4-mood-opt .lb{font-size:10px;font-weight:700;color:#6B4C30;margin-top:3px;letter-spacing:0.1px}
+.d4 .d4-mood-opt.selected{background:#FFF;box-shadow:0 4px 12px rgba(122,79,42,.18)}
+
+.d4 .d4-row-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.d4 .d4-rc{
+  border-radius:22px;padding:14px;
+}
+.d4 .d4-rc.mint{background:#D7EEDB;color:#2C5A3A}
+.d4 .d4-rc.lav{background:#E4D9F0;color:#4A3769}
+.d4 .d4-rc .rc-ic{font-size:20px;margin-bottom:4px}
+.d4 .d4-rc .rc-t{font-size:13px;font-weight:800;margin:0 0 2px;letter-spacing:-0.2px}
+.d4 .d4-rc .rc-b{font-size:11.5px;font-weight:600;opacity:.85}
+.d4 .d4-rc .rc-big{font-size:22px;font-weight:800;letter-spacing:-0.3px;margin-top:4px;line-height:1}
+
+.d4 .d4-goal{
+  background:#FFF;border-radius:24px;padding:16px;margin-bottom:12px;
+  border:2px solid #F2E6D2;
+}
+.d4 .d4-goal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.d4 .d4-goal-t{font-size:14px;font-weight:800;color:#3D2E22}
+.d4 .d4-goal-pc{font-size:12px;font-weight:800;color:#62986D;background:#D7EEDB;padding:3px 8px;border-radius:999px}
+.d4 .d4-goal-bar{height:10px;border-radius:999px;background:#F8EBD2;overflow:hidden}
+.d4 .d4-goal-bar-fill{height:100%;background:linear-gradient(90deg,#62986D,#94C89E);border-radius:999px;position:relative}
+.d4 .d4-goal-foot{font-size:11.5px;font-weight:600;color:#A67248;margin-top:6px}
+
+.d4 .d4-quick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:16px 0 12px}
+.d4 .d4-q{
+  border-radius:22px;padding:14px 6px;text-align:center;
+  background:#FFF;border:2px solid #F2E6D2;
+}
+.d4 .d4-q.peach{background:#FFE8D4;border-color:#FFD4B8}
+.d4 .d4-q.mint{background:#DDF1E0;border-color:#BEE4C5}
+.d4 .d4-q.lav{background:#E4D9F0;border-color:#CFB9E5}
+.d4 .d4-q .ic{font-size:22px;margin-bottom:4px}
+.d4 .d4-q .lb{font-size:11px;font-weight:800;color:#3D2E22;letter-spacing:-0.1px}
+
+.d4 .d4-tip{
+  background:linear-gradient(160deg,#E4D9F0,#D1C4E9);
+  border-radius:24px;padding:16px 18px;margin-bottom:12px;
+}
+.d4 .d4-tip-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.d4 .d4-tip-badge{background:rgba(255,255,255,.55);padding:4px 10px;border-radius:999px;font-size:10.5px;font-weight:800;color:#4A3769;letter-spacing:0.3px}
+.d4 .d4-tip-em{font-size:18px}
+.d4 .d4-tip-t{font-size:16px;font-weight:800;line-height:1.2;color:#2F2547;margin:0 0 3px;letter-spacing:-0.2px}
+.d4 .d4-tip-b{font-size:12.5px;font-weight:600;color:#5A4775;margin:0;line-height:1.5}
+
+.d4 .tabbar{
+  position:absolute;left:14px;right:14px;bottom:12px;
+  height:66px;border-radius:32px;
+  background:#FFF;
+  display:flex;align-items:center;justify-content:space-around;
+  box-shadow:0 8px 24px rgba(166,114,72,.15),0 2px 4px rgba(166,114,72,.06);
+  border:2px solid #F8EBD2;
+}
+.d4 .tb{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1}
+.d4 .tb .tb-pill{
+  padding:5px 12px;border-radius:999px;display:flex;align-items:center;gap:5px;
+  transition:background .2s ease;
+}
+.d4 .tb .tb-ic{font-size:17px;color:#B89A7A}
+.d4 .tb .tb-lb{font-size:10px;color:#B89A7A;font-weight:800;letter-spacing:0.1px}
+.d4 .tb.active .tb-pill{background:#FFE8D4}
+.d4 .tb.active .tb-ic,.d4 .tb.active .tb-lb{color:#A65D2A}
+
+/* d4 scan */
+.d4 .scan-back{width:38px;height:38px;border-radius:999px;background:#FFE8D4;display:grid;place-items:center;color:#7A4F2A;font-size:16px;font-weight:800}
+.d4 .scan-header{display:flex;justify-content:space-between;align-items:center;padding:18px 0 6px}
+.d4 .scan-title{font-size:14px;font-weight:800;color:#3D2E22}
+.d4 .d4-scan-hero{
+  background:linear-gradient(160deg,#FFE8D4 0%,#FFD4B8 100%);
+  border-radius:28px;padding:20px;margin:12px 0 14px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.d4 .d4-scan-hero::before{
+  content:"";position:absolute;top:-40px;right:-40px;
+  width:140px;height:140px;border-radius:999px;background:rgba(255,255,255,.3);
+}
+.d4 .d4-scan-hero .em{font-size:48px;margin-bottom:6px;position:relative;z-index:1}
+.d4 .d4-scan-hero .bn{font-size:11.5px;font-weight:800;color:#7A4F2A;letter-spacing:0.6px;text-transform:uppercase;margin-bottom:2px;position:relative;z-index:1}
+.d4 .d4-scan-hero .pr{font-size:22px;font-weight:800;letter-spacing:-0.4px;color:#3D2E22;margin:0;position:relative;z-index:1}
+.d4 .d4-scan-hero .pl{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:10px;padding:7px 14px;border-radius:999px;
+  background:#FAD5D0;color:#9A3A30;
+  font-size:12.5px;font-weight:800;letter-spacing:-0.1px;
+  position:relative;z-index:1;
+}
+
+.d4 .d4-card{
+  background:#FFF;border-radius:24px;padding:16px;margin-bottom:10px;
+  border:2px solid #F2E6D2;
+}
+.d4 .d4-card .ct{font-size:12px;font-weight:800;letter-spacing:0.8px;color:#A67248;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.d4 .d4-reason{display:flex;gap:10px;padding:8px 0;align-items:flex-start}
+.d4 .d4-reason:not(:last-child){border-bottom:1.5px dashed #F2E6D2}
+.d4 .d4-reason .em{font-size:20px;line-height:1.1;margin-top:2px}
+.d4 .d4-reason .rt{font-size:13.5px;font-weight:800;color:#3D2E22}
+.d4 .d4-reason .rb{font-size:11.5px;font-weight:600;color:#8A6D4E;line-height:1.45;margin-top:2px}
+
+.d4 .d4-repl{display:flex;align-items:center;gap:12px;padding:10px 0}
+.d4 .d4-repl:not(:last-child){border-bottom:1.5px dashed #F2E6D2}
+.d4 .d4-repl .av{width:42px;height:42px;border-radius:14px;background:#DDF1E0;display:grid;place-items:center;font-size:22px}
+.d4 .d4-repl .tx{flex:1}
+.d4 .d4-repl .rt2{font-size:13.5px;font-weight:800;color:#3D2E22}
+.d4 .d4-repl .rb2{font-size:11.5px;font-weight:600;color:#8A6D4E;margin-top:1px}
+.d4 .d4-repl .badge{background:#DDF1E0;color:#2C5A3A;font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px;letter-spacing:0.2px}
+
+/* d4 article */
+.d4 .art-back{width:38px;height:38px;border-radius:999px;background:#FFE8D4;display:grid;place-items:center;color:#7A4F2A;font-size:16px;font-weight:800}
+.d4 .art-head-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0 6px}
+.d4 .art-head-title{font-size:14px;font-weight:800;color:#3D2E22}
+.d4 .art-hero{
+  background:linear-gradient(160deg,#E4D9F0 0%,#D1C4E9 100%);
+  border-radius:28px;padding:26px 20px 24px;margin:12px 0 16px;
+  position:relative;overflow:hidden;
+}
+.d4 .art-hero::after{content:"";position:absolute;bottom:-30px;left:-30px;width:130px;height:130px;border-radius:999px;background:rgba(255,255,255,.2)}
+.d4 .art-hero .em{font-size:40px;margin-bottom:8px;position:relative;z-index:1}
+.d4 .art-hero .eye{font-size:11px;font-weight:800;letter-spacing:1.4px;color:#4A3769;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:1}
+.d4 .art-hero .t{font-size:24px;font-weight:800;line-height:1.15;letter-spacing:-0.5px;color:#2F2547;margin:0 0 10px;position:relative;z-index:1}
+.d4 .art-hero .m{font-size:11.5px;font-weight:800;color:#5A4775;display:flex;gap:8px;align-items:center;position:relative;z-index:1;letter-spacing:0.1px}
+.d4 .art-hero .dot{width:3px;height:3px;border-radius:999px;background:#5A4775}
+
+.d4 .art-body p{font-size:14px;line-height:1.65;color:#3D2E22;margin:0 0 14px;font-weight:500}
+.d4 .art-body p.lead{font-size:15px;font-weight:700;color:#2F2547}
+.d4 .art-h3{font-size:18px;font-weight:800;letter-spacing:-0.3px;margin:20px 0 8px;color:#3D2E22}
+.d4 .art-nav{
+  background:#FFF;border-radius:24px;padding:16px;margin:16px 0;
+  border:2px solid #F2E6D2;
+}
+.d4 .art-nav-t{font-size:12px;font-weight:800;letter-spacing:0.8px;color:#A67248;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.d4 .art-nav-row{display:flex;justify-content:space-between;padding:8px 0;align-items:center;font-size:13.5px;font-weight:700;color:#3D2E22}
+.d4 .art-nav-row:not(:last-child){border-bottom:1.5px dashed #F2E6D2}
+.d4 .art-nav-row .nn{font-size:11.5px;color:#A67248;font-weight:800;background:#FFE8D4;padding:3px 9px;border-radius:999px;letter-spacing:0.2px}
+
+/* ==================================================================== */
+/* ============== DIRECTION 5: BOLD EDITORIAL ========================== */
+/* ==================================================================== */
+.d5 .phone-screen{
+  background:#F7F3EC;
+  color:#1A1A1A;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  line-height:1.6;
+}
+.d5 .statusbar{color:#1A1A1A}
+.d5 .screen-body{padding:8px 22px 100px}
+
+.d5 .d5-masthead{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0 10px;
+  border-bottom:1px solid #1A1A1A;
+}
+.d5 .d5-masthead .m-t{
+  font-family:'Instrument Serif',serif;
+  font-size:22px;font-weight:400;letter-spacing:-0.4px;color:#1A1A1A;
+}
+.d5 .d5-masthead .m-t em{font-style:italic;color:#C85A3E}
+.d5 .d5-masthead .m-d{font-size:10px;font-weight:600;letter-spacing:2px;color:#6B6459;text-transform:uppercase;font-variant-numeric:tabular-nums}
+
+.d5 .d5-hero{padding:22px 0 16px;border-bottom:1px solid #D9D0BE}
+.d5 .d5-eye{font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#C85A3E;text-transform:uppercase;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.d5 .d5-greet{
+  font-family:'Instrument Serif',serif;
+  font-size:38px;line-height:0.95;letter-spacing:-1px;
+  color:#1A1A1A;font-weight:400;margin:0;
+}
+.d5 .d5-greet em{font-style:italic}
+.d5 .d5-greet-sub{
+  font-family:'Instrument Serif',serif;font-style:italic;
+  font-size:24px;color:#6B6459;margin-top:8px;line-height:1;letter-spacing:-0.3px;font-weight:400;
+}
+.d5 .d5-state{margin-top:18px;display:flex;gap:14px;align-items:center}
+.d5 .d5-state-l{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#6B6459;text-transform:uppercase}
+.d5 .d5-state-pills{display:flex;gap:6px}
+.d5 .d5-state-pill{
+  font-size:12px;font-weight:600;padding:5px 12px;border:1px solid #1A1A1A;border-radius:999px;color:#1A1A1A;letter-spacing:-0.1px;
+}
+.d5 .d5-state-pill.active{background:#1A1A1A;color:#F7F3EC}
+
+.d5 .d5-sect{padding:22px 0 14px;border-bottom:1px solid #D9D0BE}
+.d5 .d5-sect-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.d5 .d5-sect-t{font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#1A1A1A;text-transform:uppercase}
+.d5 .d5-sect-no{font-size:10.5px;font-weight:600;color:#C85A3E;font-variant-numeric:tabular-nums;letter-spacing:1px}
+
+.d5 .d5-feature{display:flex;gap:14px;align-items:flex-start}
+.d5 .d5-feature .ft{flex:1}
+.d5 .d5-feature .ft-h{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;line-height:1.1;letter-spacing:-0.4px;color:#1A1A1A;margin:0 0 6px}
+.d5 .d5-feature .ft-b{font-size:13px;line-height:1.55;color:#3D362C;margin:0 0 10px}
+.d5 .d5-feature .ft-meta{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#6B6459;text-transform:uppercase}
+.d5 .d5-feature .num{
+  font-family:'Instrument Serif',serif;font-size:52px;line-height:0.9;letter-spacing:-2px;color:#C85A3E;font-weight:400;
+  font-variant-numeric:tabular-nums;
+}
+
+.d5 .d5-quick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin:10px 0 0;border-top:1px solid #D9D0BE;border-bottom:1px solid #D9D0BE}
+.d5 .d5-q{padding:14px 6px;text-align:center;border-right:1px solid #D9D0BE}
+.d5 .d5-q:last-child{border-right:none}
+.d5 .d5-q .ic{font-size:18px;color:#1A1A1A;margin-bottom:6px}
+.d5 .d5-q .lb{font-size:10.5px;font-weight:600;letter-spacing:1.6px;color:#1A1A1A;text-transform:uppercase}
+
+.d5 .d5-brief{display:flex;gap:10px;padding:14px 0;border-bottom:1px solid #D9D0BE;align-items:flex-start}
+.d5 .d5-brief:last-child{border-bottom:none}
+.d5 .d5-brief .b-idx{font-family:'Instrument Serif',serif;font-size:20px;letter-spacing:-0.2px;color:#C85A3E;font-weight:400;min-width:24px;font-variant-numeric:tabular-nums;line-height:1.05}
+.d5 .d5-brief .b-body{flex:1}
+.d5 .d5-brief .b-t{font-size:13.5px;font-weight:600;color:#1A1A1A;line-height:1.3;margin:0 0 2px;letter-spacing:-0.2px}
+.d5 .d5-brief .b-b{font-size:12px;color:#6B6459;margin:0;line-height:1.45}
+
+.d5 .d5-quote{
+  padding:18px 0 4px;
+}
+.d5 .d5-quote .bar{height:1px;background:#C85A3E;width:40px;margin-bottom:14px}
+.d5 .d5-quote .q{font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;line-height:1.25;letter-spacing:-0.3px;color:#1A1A1A;margin:0 0 10px}
+.d5 .d5-quote .a{font-size:10.5px;font-weight:600;letter-spacing:2px;color:#6B6459;text-transform:uppercase}
+
+.d5 .tabbar{
+  position:absolute;left:0;right:0;bottom:0;
+  height:66px;background:#F7F3EC;
+  border-top:1px solid #1A1A1A;
+  display:flex;align-items:center;justify-content:space-around;
+  padding:10px 0 16px;
+}
+.d5 .tb{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;position:relative;padding-top:4px}
+.d5 .tb .tb-lb{font-family:'Instrument Serif',serif;font-size:13px;color:#6B6459;letter-spacing:-0.2px;font-weight:400}
+.d5 .tb .tb-no{font-size:9px;font-weight:600;color:#B2A78F;letter-spacing:1.6px;font-variant-numeric:tabular-nums}
+.d5 .tb.active .tb-lb{color:#1A1A1A;font-style:italic}
+.d5 .tb.active::after{content:"";position:absolute;bottom:-4px;height:1px;width:34px;background:#1A1A1A}
+
+/* d5 scan */
+.d5 .scan-back{font-size:12.5px;font-weight:600;color:#1A1A1A;letter-spacing:0.2px}
+.d5 .scan-top{display:flex;justify-content:space-between;align-items:center;padding:14px 0 10px;border-bottom:1px solid #1A1A1A}
+.d5 .scan-title{font-family:'Instrument Serif',serif;font-size:16px;color:#1A1A1A}
+.d5 .d5-scan-eye{font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#C85A3E;text-transform:uppercase;margin:18px 0 10px}
+.d5 .d5-scan-brand{font-size:11.5px;font-weight:600;letter-spacing:1.4px;color:#6B6459;text-transform:uppercase;margin-bottom:4px}
+.d5 .d5-scan-name{font-family:'Instrument Serif',serif;font-size:32px;line-height:1;letter-spacing:-0.8px;color:#1A1A1A;font-weight:400;margin:0}
+.d5 .d5-scan-name em{font-style:italic}
+.d5 .d5-verdict{
+  padding:18px 0;margin-top:16px;
+  border-top:1px solid #1A1A1A;border-bottom:1px solid #D9D0BE;
+}
+.d5 .d5-verdict-l{font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#C85A3E;text-transform:uppercase;margin-bottom:8px}
+.d5 .d5-verdict-v{font-family:'Instrument Serif',serif;font-size:26px;line-height:1.1;letter-spacing:-0.5px;color:#1A1A1A;font-weight:400;margin:0 0 6px}
+.d5 .d5-verdict-v em{font-style:italic;color:#C85A3E}
+.d5 .d5-verdict-b{font-size:13px;color:#3D362C;line-height:1.55;margin:0}
+
+.d5 .d5-scan-sect{padding:18px 0;border-bottom:1px solid #D9D0BE}
+.d5 .d5-ssh{font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#1A1A1A;text-transform:uppercase;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline}
+.d5 .d5-ssh .sn{color:#C85A3E;font-size:10.5px}
+.d5 .d5-reason-row{display:flex;gap:14px;padding:10px 0;align-items:flex-start}
+.d5 .d5-reason-row:not(:last-child){border-bottom:1px solid #E6DFCE}
+.d5 .d5-reason-row .rn{font-family:'Instrument Serif',serif;font-size:22px;color:#C85A3E;line-height:1;font-weight:400;min-width:28px;font-variant-numeric:tabular-nums}
+.d5 .d5-reason-row .rb{flex:1}
+.d5 .d5-reason-row .rt{font-size:13.5px;font-weight:600;color:#1A1A1A;line-height:1.3;margin:0 0 2px;letter-spacing:-0.1px}
+.d5 .d5-reason-row .rd{font-size:12px;color:#6B6459;margin:0;line-height:1.5}
+
+.d5 .d5-repl-row{display:flex;padding:12px 0;gap:14px;align-items:flex-start}
+.d5 .d5-repl-row:not(:last-child){border-bottom:1px solid #E6DFCE}
+.d5 .d5-repl-row .rn{font-family:'Instrument Serif',serif;font-size:18px;color:#C85A3E;font-weight:400;min-width:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+.d5 .d5-repl-row .rb{flex:1}
+.d5 .d5-repl-row .rt2{font-family:'Instrument Serif',serif;font-size:17px;line-height:1.15;color:#1A1A1A;font-weight:400;margin:0 0 2px;letter-spacing:-0.2px}
+.d5 .d5-repl-row .rd2{font-size:11.5px;color:#6B6459;margin:0;line-height:1.45}
+
+/* d5 article */
+.d5 .art-top{display:flex;justify-content:space-between;align-items:center;padding:14px 0 10px;border-bottom:1px solid #1A1A1A}
+.d5 .art-back{font-size:12.5px;font-weight:600;color:#1A1A1A;letter-spacing:0.2px}
+.d5 .art-issue{font-size:10px;font-weight:600;letter-spacing:2px;color:#6B6459;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.d5 .art-eye{font-size:10.5px;font-weight:600;letter-spacing:2.8px;color:#C85A3E;text-transform:uppercase;margin:22px 0 16px}
+.d5 .art-title{font-family:'Instrument Serif',serif;font-size:42px;line-height:0.95;letter-spacing:-1.2px;color:#1A1A1A;font-weight:400;margin:0 0 14px}
+.d5 .art-title em{font-style:italic}
+.d5 .art-meta-row{display:flex;gap:12px;font-size:10.5px;font-weight:600;letter-spacing:1.6px;color:#6B6459;text-transform:uppercase;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid #D9D0BE;align-items:center;font-variant-numeric:tabular-nums}
+.d5 .art-meta-row .dot{width:3px;height:3px;border-radius:999px;background:#6B6459}
+.d5 .art-body{padding-top:2px}
+.d5 .art-body p{font-size:14.5px;line-height:1.7;color:#1A1A1A;margin:0 0 14px;font-weight:400}
+.d5 .art-body p.drop::first-letter{
+  font-family:'Instrument Serif',serif;float:left;font-size:56px;line-height:0.85;padding:6px 8px 0 0;color:#C85A3E;font-weight:400;
+}
+.d5 .art-body p.lead{font-size:16px;line-height:1.55;color:#1A1A1A;font-weight:500}
+.d5 .art-h3{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;letter-spacing:-0.4px;margin:22px 0 10px;color:#1A1A1A}
+.d5 .art-h3 em{font-style:italic}
+.d5 .art-nav{padding:18px 0;border-top:1px solid #1A1A1A;border-bottom:1px solid #D9D0BE;margin-top:14px}
+.d5 .art-nav-t{font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#1A1A1A;text-transform:uppercase;margin-bottom:14px}
+.d5 .art-nav-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #E6DFCE;align-items:flex-start;gap:10px}
+.d5 .art-nav-row:last-child{border-bottom:none;padding-bottom:0}
+.d5 .art-nav-row .nt{font-family:'Instrument Serif',serif;font-size:16px;line-height:1.2;color:#1A1A1A;font-weight:400;letter-spacing:-0.2px;flex:1}
+.d5 .art-nav-row .nn{font-size:10.5px;font-weight:600;letter-spacing:1.6px;color:#C85A3E;font-variant-numeric:tabular-nums;white-space:nowrap;margin-top:3px}
+
+/* ==================================================================== */
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>CrohnsApp &mdash; 5 Visual Directions</h1>
+  <p>Tap a direction to preview three mocked screens.</p>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-dir="d1" role="tab">Warm Minimalist</button>
+  <button class="tab" data-dir="d2" role="tab">Wellness Night</button>
+  <button class="tab" data-dir="d3" role="tab">Clinical Modern</button>
+  <button class="tab" data-dir="d4" role="tab">Organic Pastel</button>
+  <button class="tab" data-dir="d5" role="tab">Bold Editorial</button>
+</nav>
+
+<!-- ============ DIRECTION 1 : WARM MINIMALIST HEALTH ============ -->
+<section class="direction d1 active" id="d1">
+  <div class="direction-heading">
+    <div class="eyebrow">Direction 01</div>
+    <h2>Warm Minimalist Health</h2>
+    <p class="sub">Calm, breathing, clean. Sage-teal on warm off-white. Generous whitespace, soft shadows, Inter throughout. Think Finch meets Headspace at its most gentle.</p>
+  </div>
+
+  <div class="phones">
+
+    <!-- Phone 1 : Dashboard -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="greeting-date">Thursday &middot; April 24</div>
+            <h1 class="greeting-hero">Good afternoon,<br>Sean.</h1>
+            <p class="greeting-sub">How are you feeling today?</p>
+
+            <div class="state-toggle">
+              <div class="st active">Remission</div>
+              <div class="st">Uncertain</div>
+              <div class="st">Flare</div>
+            </div>
+
+            <div class="card">
+              <div class="card-eye">Weekly goal</div>
+              <div class="goal-ring">
+                <div class="ring-viz"><div class="ring-inner">72%</div></div>
+                <div class="goal-text">
+                  <div class="card-title">5 meals, 2 scans left</div>
+                  <div class="card-body">You're tracking well this week. Two more days to close the ring.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="quick-grid">
+              <div class="qa"><div class="qi">+</div><div class="ql">Log food</div></div>
+              <div class="qa"><div class="qi" style="background:#FAE6E2;color:#A0332B">&middot;&middot;</div><div class="ql">Log symptom</div></div>
+              <div class="qa"><div class="qi" style="background:#F4F3EE;color:#4A4740">&#9741;</div><div class="ql">Scan</div></div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tc-eye">Today's gentle tip</div>
+              <div class="tc-title">Chew one extra time per bite.</div>
+              <div class="tc-body">Post-resection, thorough chewing reduces work downstream. Small change, noticeable difference.</div>
+            </div>
+
+            <div class="card">
+              <div class="card-eye">This week</div>
+              <div class="card-title" style="font-size:22px;letter-spacing:-0.3px">4 good days</div>
+              <div class="card-body">Mild symptoms Tuesday, otherwise steady. Keep doing what you're doing.</div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb active"><div class="tb-ic">&#9728;</div><div class="tb-lb">Today</div></div>
+            <div class="tb"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Symptoms</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb"><div class="tb-ic">&middot;&middot;&middot;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Dashboard</div>
+    </div>
+
+    <!-- Phone 2 : Scan Result -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-header">
+              <div class="scan-back">&#8249;</div>
+              <div class="scan-title">Scan result</div>
+              <div style="width:32px"></div>
+            </div>
+            <div class="product-head">
+              <div class="greeting-date" style="margin:0 0 4px">Ben &amp; Jerry's</div>
+              <div class="product-name">Chunky Monkey<br>Ice Cream</div>
+              <span class="rating-pill"><span class="rp-ic">&#9679;</span>Often a trigger</span>
+            </div>
+
+            <div class="reasons">
+              <div class="reasons-t">Why this rating</div>
+              <div class="reason-row">
+                <div class="rn">1</div>
+                <div>
+                  <div class="rt">High saturated fat</div>
+                  <div class="rb">24g per serving &mdash; sluggish digestion after bowel resection.</div>
+                </div>
+              </div>
+              <div class="reason-row">
+                <div class="rn">2</div>
+                <div>
+                  <div class="rt">Lactose &amp; dairy</div>
+                  <div class="rb">Cream base frequently triggers gas and loose stool.</div>
+                </div>
+              </div>
+              <div class="reason-row">
+                <div class="rn">3</div>
+                <div>
+                  <div class="rt">Added sugar &amp; chunks</div>
+                  <div class="rb">Walnut pieces can catch at narrowed sections.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="replace-t">Similar, gentler</div>
+            <div class="replace-row">
+              <div class="av">&#127846;</div>
+              <div class="tx">
+                <div class="rt2">Coconut-base "banana chunk"</div>
+                <div class="rb2">So Delicious &middot; no dairy, softer on most</div>
+              </div>
+              <div class="chev">&#8250;</div>
+            </div>
+            <div class="replace-row">
+              <div class="av">&#127846;</div>
+              <div class="tx">
+                <div class="rt2">Lactaid vanilla bean</div>
+                <div class="rb2">Same format, lactose removed</div>
+              </div>
+              <div class="chev">&#8250;</div>
+            </div>
+            <div class="replace-row">
+              <div class="av">&#127846;</div>
+              <div class="tx">
+                <div class="rt2">Frozen banana "nice cream"</div>
+                <div class="rb2">Homemade &middot; one ingredient, no fat</div>
+              </div>
+              <div class="chev">&#8250;</div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-ic">&#9728;</div><div class="tb-lb">Today</div></div>
+            <div class="tb active"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Symptoms</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb"><div class="tb-ic">&middot;&middot;&middot;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Food scan result</div>
+    </div>
+
+    <!-- Phone 3 : Knowledge article -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-header">
+              <div class="scan-back">&#8249;</div>
+              <div class="scan-title">Knowledge hub</div>
+              <div style="width:32px"></div>
+            </div>
+            <div class="art-hero">
+              <div class="art-meta">Lifestyle &middot; 8 min read</div>
+              <h1 class="art-title">Smoking and Crohn's: the one lifestyle change that changes the disease.</h1>
+              <div class="art-byline">Updated April 2026 &middot; Reviewed by Dr. Lena Chen, MD</div>
+              <div class="art-chip-row">
+                <div class="art-chip">Evidence-based</div>
+                <div class="art-chip">Lifestyle</div>
+                <div class="art-chip">Long-read</div>
+              </div>
+            </div>
+            <div class="art-body">
+              <p>Of everything you can change about living with Crohn's &mdash; diet, stress, sleep, exercise &mdash; quitting smoking is the single intervention with the most consistent effect on disease activity in the research literature.</p>
+              <p>That's not hyperbole. A 2024 meta-analysis pooled data from 21 cohort studies: active smokers with Crohn's had roughly double the relapse rate of non-smokers, needed surgery sooner, and responded less well to biologics.</p>
+              <h3 class="art-h3">Why nicotine matters here</h3>
+              <p>The mechanism isn't fully mapped, but the working theory involves impaired gut blood flow, altered mucosal healing, and shifts in the gut microbiome. Unlike ulcerative colitis &mdash; where smoking paradoxically reduces symptoms &mdash; Crohn's and tobacco are cleanly antagonistic.</p>
+              <div class="art-nav">
+                <div class="art-nav-t">In this article</div>
+                <div class="art-nav-row"><span>Why nicotine matters here</span><span class="nn">01</span></div>
+                <div class="art-nav-row"><span>What happens when you quit</span><span class="nn">02</span></div>
+                <div class="art-nav-row"><span>Methods that actually work</span><span class="nn">03</span></div>
+                <div class="art-nav-row"><span>The vaping question</span><span class="nn">04</span></div>
+              </div>
+              <h3 class="art-h3">What happens when you quit</h3>
+              <p>Within a year of quitting, most patients see a measurable drop in flare frequency &mdash; often comparable to adding a disease-modifying medication.</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-ic">&#9728;</div><div class="tb-lb">Today</div></div>
+            <div class="tb"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Symptoms</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb active"><div class="tb-ic">&middot;&middot;&middot;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Knowledge article</div>
+    </div>
+
+  </div>
+
+  <div class="blurb">
+    <strong>When this feels right.</strong> You want the app to fade into the background, not shout. It's quiet, forgiving, and gets out of your way on low-spoon days. The sage-teal reads as "healing" without being medical. If you picked up your phone at 3am mid-flare, this one wouldn't burn your eyes.
+  </div>
+</section>
+
+<!-- ============ DIRECTION 2 : PREMIUM WELLNESS NIGHT ============ -->
+<section class="direction d2" id="d2">
+  <div class="direction-heading">
+    <div class="eyebrow">Direction 02</div>
+    <h2>Premium Wellness Night</h2>
+    <p class="sub">Dark-first, OLED-friendly. Warm sand accents on near-black, elegant Instrument Serif headings, glass-pill tab bar. Think Calm or a premium fintech app after dark.</p>
+  </div>
+
+  <div class="phones">
+
+    <!-- Phone 1 : Dashboard -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="d2-eye">Thursday &middot; April 24</div>
+            <h1 class="d2-hero">Good afternoon, <em>Sean</em>.</h1>
+            <p class="d2-sub">A quiet window for how you're feeling today.</p>
+
+            <div class="d2-stateline">
+              <div class="sl"><div class="sl-l">Currently</div><div class="sl-v"><span class="sl-dot"></span>Remission, 42 days</div></div>
+              <div style="color:#D4AF8C">&#8250;</div>
+            </div>
+
+            <div class="d2-card">
+              <div class="d2-card-t">This week, in rhythm</div>
+              <div class="d2-card-sub">Five meals logged, two scans, zero flare notes.</div>
+              <div class="d2-bar"><div class="d2-bar-fill" style="width:72%"></div></div>
+              <div class="d2-bar-meta"><span>72% to goal</span><span>2 days left</span></div>
+            </div>
+
+            <div class="d2-quick">
+              <div class="d2-q"><div class="d2-q-ic">&#127834;</div><div class="d2-q-lb">Log food</div></div>
+              <div class="d2-q"><div class="d2-q-ic">&#9829;</div><div class="d2-q-lb">Symptom</div></div>
+              <div class="d2-q"><div class="d2-q-ic">&#9741;</div><div class="d2-q-lb">Scan</div></div>
+            </div>
+
+            <div class="d2-tip">
+              <div class="d2-tip-eye">Tonight's note</div>
+              <div class="d2-tip-t">A last meal before 7pm tends to help.</div>
+              <div class="d2-tip-b">After resection, giving digestion a full runway before sleep reduces morning cramping.</div>
+            </div>
+
+            <div class="d2-card" style="margin-top:12px">
+              <div class="d2-card-t" style="font-size:18px">Recent labs</div>
+              <div class="d2-card-sub">CRP 2.1 mg/L &middot; Calprotectin 68 &mu;g/g &middot; last month</div>
+              <div class="d2-bar-meta" style="margin-top:10px;color:#7FAE8E">
+                <span style="color:#7FAE8E;font-weight:600">&#10003; All within range</span><span>View labs &#8250;</span>
+              </div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb active"><div class="tb-ic">&#9728;</div><div class="tb-lb">Today</div></div>
+            <div class="tb"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Body</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb"><div class="tb-ic">&middot;&middot;&middot;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Dashboard</div>
+    </div>
+
+    <!-- Phone 2 : Scan Result -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-header">
+              <div class="scan-back">&#8249;</div>
+              <div class="scan-title">Scan result</div>
+              <div style="width:36px"></div>
+            </div>
+
+            <div class="d2-prod">
+              <div class="d2-prod-brand">Ben &amp; Jerry's</div>
+              <h2 class="d2-prod-name">Chunky Monkey, 473 ml</h2>
+              <span class="d2-rating">&#9679; Often a trigger for you</span>
+            </div>
+
+            <div class="d2-reasons">
+              <h3 class="d2-reasons-t">The short of it</h3>
+              <div class="d2-reason">
+                <div class="rn">1</div>
+                <div>
+                  <div class="rt">High saturated fat &mdash; 24g</div>
+                  <div class="rb">Post-resection digestion struggles with heavy fat loads.</div>
+                </div>
+              </div>
+              <div class="d2-reason">
+                <div class="rn">2</div>
+                <div>
+                  <div class="rt">Full dairy cream base</div>
+                  <div class="rb">Lactose often triggers gas and urgency for you.</div>
+                </div>
+              </div>
+              <div class="d2-reason">
+                <div class="rn">3</div>
+                <div>
+                  <div class="rt">Walnut chunks &amp; added sugar</div>
+                  <div class="rb">Hard bits may pass roughly through narrowed segments.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d2-repl-t">Similar, gentler</div>
+            <div class="d2-repl">
+              <div class="av">&#127846;</div>
+              <div class="tx"><div class="rt2">So Delicious coconut "banana"</div><div class="rb2">Dairy-free, low lactose, similar mouthfeel</div></div>
+              <div class="chev">&#8250;</div>
+            </div>
+            <div class="d2-repl">
+              <div class="av">&#127846;</div>
+              <div class="tx"><div class="rt2">Lactaid vanilla bean</div><div class="rb2">Lactose removed, same cream format</div></div>
+              <div class="chev">&#8250;</div>
+            </div>
+            <div class="d2-repl">
+              <div class="av">&#127846;</div>
+              <div class="tx"><div class="rt2">Frozen banana "nice cream"</div><div class="rb2">One ingredient, whipped in a blender</div></div>
+              <div class="chev">&#8250;</div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-ic">&#9728;</div><div class="tb-lb">Today</div></div>
+            <div class="tb active"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Body</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb"><div class="tb-ic">&middot;&middot;&middot;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Food scan result</div>
+    </div>
+
+    <!-- Phone 3 : Article -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-header">
+              <div class="scan-back">&#8249;</div>
+              <div class="scan-title">Library</div>
+              <div style="width:36px"></div>
+            </div>
+
+            <div class="art-hero">
+              <div class="art-meta">Lifestyle &middot; Long read</div>
+              <h1 class="art-title">Smoking and Crohn's: the <em>one</em> lifestyle change that truly moves the disease.</h1>
+              <div class="art-byline">8 min read<span class="dot"></span>Updated April 2026<span class="dot"></span>Reviewed clinically</div>
+            </div>
+
+            <div class="art-body">
+              <p class="lead">Of everything you can change about living with Crohn's, quitting smoking has the most consistent effect on disease activity in the research literature.</p>
+              <p>A 2024 meta-analysis of 21 cohort studies found active smokers with Crohn's had roughly double the relapse rate of non-smokers, needed surgery sooner, and responded less well to biologics.</p>
+              <h3 class="art-h3">Why nicotine matters here</h3>
+              <p>The mechanism isn't fully mapped, but the working theory involves impaired gut blood flow, altered mucosal healing, and shifts in the microbiome. Unlike ulcerative colitis &mdash; where smoking paradoxically reduces symptoms &mdash; Crohn's and tobacco are cleanly antagonistic.</p>
+              <div class="art-nav">
+                <div class="art-nav-t">In this piece</div>
+                <div class="art-nav-row"><span>Why nicotine matters here</span><span class="nn">I</span></div>
+                <div class="art-nav-row"><span>What happens when you quit</span><span class="nn">II</span></div>
+                <div class="art-nav-row"><span>Methods that actually work</span><span class="nn">III</span></div>
+                <div class="art-nav-row"><span>The vaping question</span><span class="nn">IV</span></div>
+              </div>
+              <h3 class="art-h3">What happens when you quit</h3>
+              <p>Within a year of quitting, patients typically see a measurable drop in flare frequency &mdash; often comparable to adding a disease-modifying medication.</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-ic">&#9728;</div><div class="tb-lb">Today</div></div>
+            <div class="tb"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Body</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb active"><div class="tb-ic">&middot;&middot;&middot;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Knowledge article</div>
+    </div>
+
+  </div>
+
+  <div class="blurb">
+    <strong>When this feels right.</strong> You want the app to feel premium, a little cinematic, and kind at night. The warm sand over near-black says "I take this seriously, but I'm not a clinical portal." OLED dark mode saves your battery on 3am flare checks and goes easy on your eyes. The serif headlines add gravitas without feeling stuffy.
+  </div>
+</section>
+
+<!-- ============ DIRECTION 3 : CLINICAL MODERN ============ -->
+<section class="direction d3" id="d3">
+  <div class="direction-heading">
+    <div class="eyebrow">Direction 03</div>
+    <h2>Clinical Modern</h2>
+    <p class="sub">Apple Health-inspired. Crisp white cards on cool gray canvas, system blue primary, bright category pops (pink, orange, green), stat carousels, SF Pro-like type. Data-forward and trustworthy.</p>
+  </div>
+
+  <div class="phones">
+
+    <!-- Phone 1 : Dashboard -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="d3-head">
+              <div class="d3-date">Thursday, Apr 24</div>
+              <div class="d3-pro">S</div>
+            </div>
+            <h1 class="d3-title">Summary</h1>
+            <p class="d3-subtitle">Good afternoon, Sean.</p>
+
+            <div class="d3-state-row">
+              <div class="st active">Remission</div>
+              <div class="st">Uncertain</div>
+              <div class="st">Flare</div>
+            </div>
+
+            <div class="d3-sh">Today<span class="see">See all</span></div>
+            <div class="d3-stats">
+              <div class="d3-stat pink">
+                <div class="ic">&#9829; Symptoms</div>
+                <div class="big">0<span class="unit">logs</span></div>
+                <div class="foot">No logs yet today</div>
+              </div>
+              <div class="d3-stat orange">
+                <div class="ic">&#128293; Hydration</div>
+                <div class="big">1.3<span class="unit">L</span></div>
+                <div class="foot">65% of goal</div>
+              </div>
+              <div class="d3-stat green">
+                <div class="ic">&#127827; Nutrition</div>
+                <div class="big">3<span class="unit">meals</span></div>
+                <div class="foot">All low-trigger</div>
+              </div>
+              <div class="d3-stat blue">
+                <div class="ic">&#9821; Meds</div>
+                <div class="big">2/2<span class="unit">taken</span></div>
+                <div class="foot">On schedule</div>
+              </div>
+            </div>
+
+            <div class="d3-sh">Weekly goal<span class="see">Edit</span></div>
+            <div class="d3-goal">
+              <div class="d3-goal-top">
+                <div class="d3-goal-t">Low-trigger meals</div>
+                <div class="d3-goal-v">18 / 25</div>
+              </div>
+              <div class="d3-goal-bar"><div class="d3-goal-bar-fill" style="width:72%"></div></div>
+            </div>
+
+            <div class="d3-quick">
+              <div class="d3-q"><div class="ic" style="background:#34C759">+</div><div class="lb">Log food</div></div>
+              <div class="d3-q"><div class="ic" style="background:#FF375F">&#9829;</div><div class="lb">Symptom</div></div>
+              <div class="d3-q"><div class="ic" style="background:#007AFF">&#9741;</div><div class="lb">Scan</div></div>
+            </div>
+
+            <div class="d3-sh">Tip<span class="see"></span></div>
+            <div class="d3-tip">
+              <div class="d3-tip-eye">Gentle reminder</div>
+              <h3 class="d3-tip-t">Chew each bite a few extra times.</h3>
+              <p class="d3-tip-b">After bowel resection, mechanical breakdown in your mouth does more of the work. Small change, real payoff.</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb active"><div class="tb-ic">&#9728;</div><div class="tb-lb">Summary</div></div>
+            <div class="tb"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Symptoms</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb"><div class="tb-ic">&#9776;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Dashboard</div>
+    </div>
+
+    <!-- Phone 2 : Scan -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-header">
+              <div class="scan-back">&#8249;</div>
+              <div class="scan-title">Scan Result</div>
+              <div style="width:30px;text-align:right;color:#007AFF;font-weight:600">&#9734;</div>
+            </div>
+
+            <div class="d3-scan-prod">
+              <div class="brand">Ben &amp; Jerry's &middot; 473 ml</div>
+              <h1 class="name">Chunky Monkey</h1>
+              <div class="d3-badge-row">
+                <div class="d3-badge red">&#9679; High fat</div>
+                <div class="d3-badge red">&#9679; Lactose</div>
+                <div class="d3-badge gray">Ice cream</div>
+              </div>
+            </div>
+
+            <div class="d3-rating-card">
+              <div class="rcl"><div class="rcl-in">72</div></div>
+              <div class="rcr">
+                <div class="rcr-t">&#9679; Often a trigger</div>
+                <div class="rcr-s">High-risk for you</div>
+                <div class="rcr-b">Three factors we flagged. Tap below for details.</div>
+              </div>
+            </div>
+
+            <div class="d3-section">
+              <div class="d3-sect-t">Factors</div>
+              <div class="d3-row"><span class="k">Saturated fat</span><span class="v bad">24g &#8250;</span></div>
+              <div class="d3-row"><span class="k">Lactose</span><span class="v bad">High &#8250;</span></div>
+              <div class="d3-row"><span class="k">Added sugar</span><span class="v">28g &#8250;</span></div>
+              <div class="d3-row"><span class="k">Nut chunks</span><span class="v">Walnut &#8250;</span></div>
+            </div>
+
+            <div class="d3-section">
+              <div class="d3-sect-t">Try instead</div>
+              <div class="d3-repl-row">
+                <div class="av">&#127846;</div>
+                <div class="tx"><div class="rt2">So Delicious coconut "banana"</div><div class="rb2">Dairy-free &middot; similar format</div></div>
+                <div class="chev">&#8250;</div>
+              </div>
+              <div class="d3-repl-row">
+                <div class="av">&#127846;</div>
+                <div class="tx"><div class="rt2">Lactaid vanilla bean</div><div class="rb2">Lactose removed &middot; same cream</div></div>
+                <div class="chev">&#8250;</div>
+              </div>
+              <div class="d3-repl-row">
+                <div class="av">&#127846;</div>
+                <div class="tx"><div class="rt2">Frozen banana nice cream</div><div class="rb2">Homemade &middot; one ingredient</div></div>
+                <div class="chev">&#8250;</div>
+              </div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-ic">&#9728;</div><div class="tb-lb">Summary</div></div>
+            <div class="tb active"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Symptoms</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb"><div class="tb-ic">&#9776;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Food scan result</div>
+    </div>
+
+    <!-- Phone 3 : Article -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="art-top">
+              <div class="art-back">&#8249;</div>
+              <div class="art-bm">&#9734;</div>
+            </div>
+            <div class="art-eye">Lifestyle</div>
+            <h1 class="art-title">Smoking and Crohn's: the single biggest lifestyle change.</h1>
+            <div class="art-meta-row"><span>8 min read</span><span class="dot"></span><span>Apr 2026</span><span class="dot"></span><span>Reviewed</span></div>
+
+            <p class="art-lead">Of everything you can change about Crohn's &mdash; diet, stress, sleep &mdash; quitting smoking has the most consistent effect on disease activity in the research.</p>
+            <div class="art-body">
+              <p>A 2024 meta-analysis of 21 cohort studies found active smokers with Crohn's had roughly double the relapse rate of non-smokers, needed surgery sooner, and responded less well to biologics.</p>
+              <h3 class="art-h3">Why nicotine matters here</h3>
+              <p>The mechanism isn't fully mapped, but the working theory involves impaired gut blood flow, altered mucosal healing, and shifts in the microbiome. Unlike ulcerative colitis, Crohn's and tobacco are cleanly antagonistic.</p>
+              <div class="art-nav">
+                <div class="art-nav-row"><span>Why nicotine matters here</span><span class="nn">1 min</span><span class="chev">&#8250;</span></div>
+                <div class="art-nav-row"><span>What happens when you quit</span><span class="nn">2 min</span><span class="chev">&#8250;</span></div>
+                <div class="art-nav-row"><span>Methods that actually work</span><span class="nn">3 min</span><span class="chev">&#8250;</span></div>
+                <div class="art-nav-row"><span>The vaping question</span><span class="nn">2 min</span><span class="chev">&#8250;</span></div>
+              </div>
+              <h3 class="art-h3">What happens when you quit</h3>
+              <p>Within a year of quitting, patients typically see a measurable drop in flare frequency &mdash; often comparable to adding a disease-modifying medication.</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-ic">&#9728;</div><div class="tb-lb">Summary</div></div>
+            <div class="tb"><div class="tb-ic">&#127834;</div><div class="tb-lb">Food</div></div>
+            <div class="tb"><div class="tb-ic">&#9829;</div><div class="tb-lb">Symptoms</div></div>
+            <div class="tb"><div class="tb-ic">&#9821;</div><div class="tb-lb">Meds</div></div>
+            <div class="tb active"><div class="tb-ic">&#9776;</div><div class="tb-lb">More</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Knowledge article</div>
+    </div>
+
+  </div>
+
+  <div class="blurb">
+    <strong>When this feels right.</strong> You want the app to feel like it belongs next to Apple Health on your home screen. It's trustworthy, data-forward, and optimized for quick scanning. The bright category accents make scan results pop without feeling cartoonish. Reads as "a clinician would be fine if I showed them this."
+  </div>
+</section>
+
+<!-- ============ DIRECTION 4 : SOFT ORGANIC PASTEL ============ -->
+<section class="direction d4" id="d4">
+  <div class="direction-heading">
+    <div class="eyebrow">Direction 04</div>
+    <h2>Soft Organic Pastel</h2>
+    <p class="sub">Playful, approachable, cozy. Peach, mint, lavender on cream. Chunky rounded cards, Nunito weight 800, gentle gradients, emoji-forward headers. Finch-meets-Flo for tracking without guilt.</p>
+  </div>
+
+  <div class="phones">
+
+    <!-- Phone 1 : Dashboard -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="d4-header">
+              <div class="d4-greet">
+                <div class="d4-hi">Hi Sean &#128075;</div>
+                <h1 class="d4-main">A gentle afternoon<br>is a good afternoon.</h1>
+              </div>
+              <div class="d4-avatar">&#127793;</div>
+            </div>
+
+            <div class="d4-mood">
+              <div class="d4-mood-t">TODAY</div>
+              <h2 class="d4-mood-q">How's your belly feeling?</h2>
+              <div class="d4-mood-row">
+                <div class="d4-mood-opt"><div class="em">&#128531;</div><div class="lb">Rough</div></div>
+                <div class="d4-mood-opt"><div class="em">&#128528;</div><div class="lb">Off</div></div>
+                <div class="d4-mood-opt selected"><div class="em">&#128578;</div><div class="lb">Okay</div></div>
+                <div class="d4-mood-opt"><div class="em">&#128522;</div><div class="lb">Good</div></div>
+                <div class="d4-mood-opt"><div class="em">&#128525;</div><div class="lb">Great</div></div>
+              </div>
+            </div>
+
+            <div class="d4-row-cards">
+              <div class="d4-rc mint">
+                <div class="rc-ic">&#127807;</div>
+                <div class="rc-t">Days in remission</div>
+                <div class="rc-big">42</div>
+                <div class="rc-b">You're doing great</div>
+              </div>
+              <div class="d4-rc lav">
+                <div class="rc-ic">&#128008;</div>
+                <div class="rc-t">Last flare</div>
+                <div class="rc-big">6 wk</div>
+                <div class="rc-b">ago &middot; trending up</div>
+              </div>
+            </div>
+
+            <div class="d4-goal">
+              <div class="d4-goal-top">
+                <div class="d4-goal-t">Weekly cozy goal &#128150;</div>
+                <div class="d4-goal-pc">72%</div>
+              </div>
+              <div class="d4-goal-bar"><div class="d4-goal-bar-fill" style="width:72%"></div></div>
+              <div class="d4-goal-foot">5 meals, 2 scans &middot; 2 days left</div>
+            </div>
+
+            <div class="d4-quick">
+              <div class="d4-q peach"><div class="ic">&#127834;</div><div class="lb">Log food</div></div>
+              <div class="d4-q mint"><div class="ic">&#129656;</div><div class="lb">Symptom</div></div>
+              <div class="d4-q lav"><div class="ic">&#128247;</div><div class="lb">Scan</div></div>
+            </div>
+
+            <div class="d4-tip">
+              <div class="d4-tip-head">
+                <span class="d4-tip-badge">TIP OF THE DAY</span>
+                <span class="d4-tip-em">&#128161;</span>
+              </div>
+              <h3 class="d4-tip-t">Chew extra slow today.</h3>
+              <p class="d4-tip-b">After your resection, your mouth does more of the digesting work. Your belly will thank you later. &#127793;</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb active"><div class="tb-pill"><span class="tb-ic">&#127968;</span><span class="tb-lb">TODAY</span></div></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#127834;</span></div><span class="tb-lb">FOOD</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#129656;</span></div><span class="tb-lb">BODY</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#128138;</span></div><span class="tb-lb">MEDS</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#128218;</span></div><span class="tb-lb">MORE</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Dashboard</div>
+    </div>
+
+    <!-- Phone 2 : Scan -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-header">
+              <div class="scan-back">&#8249;</div>
+              <div class="scan-title">Scan Result</div>
+              <div style="width:38px"></div>
+            </div>
+
+            <div class="d4-scan-hero">
+              <div class="em">&#127846;</div>
+              <div class="bn">Ben &amp; Jerry's</div>
+              <h1 class="pr">Chunky Monkey</h1>
+              <span class="pl">&#128064; Often a trigger for you</span>
+            </div>
+
+            <div class="d4-card">
+              <div class="ct"><span>&#129504;</span>What we noticed</div>
+              <div class="d4-reason">
+                <div class="em">&#129391;</div>
+                <div>
+                  <div class="rt">High saturated fat</div>
+                  <div class="rb">24g per serving &mdash; your belly might find this heavy.</div>
+                </div>
+              </div>
+              <div class="d4-reason">
+                <div class="em">&#129371;</div>
+                <div>
+                  <div class="rt">Dairy &amp; lactose</div>
+                  <div class="rb">Cream base often leads to gas for you.</div>
+                </div>
+              </div>
+              <div class="d4-reason">
+                <div class="em">&#127820;</div>
+                <div>
+                  <div class="rt">Sugar + walnut chunks</div>
+                  <div class="rb">The hard bits can be tough going for a resected bowel.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d4-card">
+              <div class="ct"><span>&#128150;</span>Gentler picks</div>
+              <div class="d4-repl">
+                <div class="av">&#127846;</div>
+                <div class="tx">
+                  <div class="rt2">Coconut "banana chunk"</div>
+                  <div class="rb2">So Delicious &middot; dairy-free</div>
+                </div>
+                <span class="badge">GENTLE</span>
+              </div>
+              <div class="d4-repl">
+                <div class="av">&#127846;</div>
+                <div class="tx">
+                  <div class="rt2">Lactaid vanilla bean</div>
+                  <div class="rb2">Same cream, no lactose</div>
+                </div>
+                <span class="badge">GENTLE</span>
+              </div>
+              <div class="d4-repl">
+                <div class="av">&#127820;</div>
+                <div class="tx">
+                  <div class="rt2">Frozen banana nice cream</div>
+                  <div class="rb2">Homemade &middot; one ingredient</div>
+                </div>
+                <span class="badge">EASY</span>
+              </div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#127968;</span></div><span class="tb-lb">TODAY</span></div>
+            <div class="tb active"><div class="tb-pill"><span class="tb-ic">&#127834;</span><span class="tb-lb">FOOD</span></div></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#129656;</span></div><span class="tb-lb">BODY</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#128138;</span></div><span class="tb-lb">MEDS</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#128218;</span></div><span class="tb-lb">MORE</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Food scan result</div>
+    </div>
+
+    <!-- Phone 3 : Article -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="art-head-row">
+              <div class="art-back">&#8249;</div>
+              <div class="art-head-title">Library</div>
+              <div style="width:38px"></div>
+            </div>
+
+            <div class="art-hero">
+              <div class="em">&#127793;</div>
+              <div class="eye">Lifestyle &middot; 8 min</div>
+              <h1 class="t">Smoking &amp; Crohn's: the one change that truly moves the dial.</h1>
+              <div class="m"><span>Apr 2026</span><span class="dot"></span><span>Dr. review</span></div>
+            </div>
+
+            <div class="art-body">
+              <p class="lead">Diet, stress, sleep, exercise &mdash; they all matter. But quitting smoking has the <em>most consistent</em> effect on Crohn's activity in the research.</p>
+              <p>A 2024 meta-analysis pooled 21 cohort studies: active smokers with Crohn's had roughly double the relapse rate of non-smokers, needed surgery sooner, and responded less well to biologics. &#128170;</p>
+
+              <h3 class="art-h3">Why nicotine matters here</h3>
+              <p>The exact mechanism isn't fully mapped, but working theories point at impaired gut blood flow, slowed mucosal healing, and shifts in your microbiome.</p>
+
+              <div class="art-nav">
+                <div class="art-nav-t"><span>&#128220;</span>In this article</div>
+                <div class="art-nav-row"><span>Why nicotine matters</span><span class="nn">1</span></div>
+                <div class="art-nav-row"><span>When you quit</span><span class="nn">2</span></div>
+                <div class="art-nav-row"><span>Methods that work</span><span class="nn">3</span></div>
+                <div class="art-nav-row"><span>The vaping question</span><span class="nn">4</span></div>
+              </div>
+
+              <h3 class="art-h3">What happens when you quit</h3>
+              <p>Within a year of quitting, most patients see a measurable drop in flare frequency &mdash; often comparable to adding a disease-modifying med. &#127881;</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#127968;</span></div><span class="tb-lb">TODAY</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#127834;</span></div><span class="tb-lb">FOOD</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#129656;</span></div><span class="tb-lb">BODY</span></div>
+            <div class="tb"><div class="tb-pill"><span class="tb-ic">&#128138;</span></div><span class="tb-lb">MEDS</span></div>
+            <div class="tb active"><div class="tb-pill"><span class="tb-ic">&#128218;</span><span class="tb-lb">MORE</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Knowledge article</div>
+    </div>
+
+  </div>
+
+  <div class="blurb">
+    <strong>When this feels right.</strong> You want the app to feel like a kind friend, not a medical record. The pastels and rounded-everything take the edge off tracking a chronic illness. Emoji and gentle language reduce the shame reflex around symptoms. Best for days when the goal is just "keep going."
+  </div>
+</section>
+
+<!-- ============ DIRECTION 5 : BOLD EDITORIAL ============ -->
+<section class="direction d5" id="d5">
+  <div class="direction-heading">
+    <div class="eyebrow">Direction 05</div>
+    <h2>Bold Editorial</h2>
+    <p class="sub">Premium health publication feel. Cream canvas, deep black text, single terracotta accent, hairline rules. Instrument Serif hero type with drop caps on long-reads. Reads like Substack or NYT Cooking.</p>
+  </div>
+
+  <div class="phones">
+
+    <!-- Phone 1 : Dashboard -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="d5-masthead">
+              <div class="m-t">Crohn<em>&apos;</em>s.</div>
+              <div class="m-d">Thu 24 Apr 2026</div>
+            </div>
+
+            <div class="d5-hero">
+              <div class="d5-eye">&mdash; No. 108 &middot; Afternoon edition</div>
+              <h1 class="d5-greet">Good<br>afternoon,<br><em>Sean.</em></h1>
+              <div class="d5-greet-sub">how are you today?</div>
+              <div class="d5-state">
+                <div class="d5-state-l">State</div>
+                <div class="d5-state-pills">
+                  <span class="d5-state-pill active">Remission</span>
+                  <span class="d5-state-pill">Uncertain</span>
+                  <span class="d5-state-pill">Flare</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d5-sect">
+              <div class="d5-sect-head">
+                <div class="d5-sect-t">&mdash; The Week</div>
+                <div class="d5-sect-no">NO. 17</div>
+              </div>
+              <div class="d5-feature">
+                <div class="num">72<span style="font-size:24px">%</span></div>
+                <div class="ft">
+                  <h3 class="ft-h">Four good days, one soft day.</h3>
+                  <p class="ft-b">Five low-trigger meals logged, two scans. You're on rhythm for a closed week.</p>
+                  <div class="ft-meta">18 / 25 meals logged</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d5-sect">
+              <div class="d5-sect-head"><div class="d5-sect-t">&mdash; Shortcuts</div></div>
+              <div class="d5-quick">
+                <div class="d5-q"><div class="ic">&#127834;</div><div class="lb">Log food</div></div>
+                <div class="d5-q"><div class="ic">&#9829;</div><div class="lb">Symptom</div></div>
+                <div class="d5-q"><div class="ic">&#9741;</div><div class="lb">Scan</div></div>
+              </div>
+            </div>
+
+            <div class="d5-sect">
+              <div class="d5-sect-head">
+                <div class="d5-sect-t">&mdash; In Brief</div>
+                <div class="d5-sect-no">03 ITEMS</div>
+              </div>
+              <div class="d5-brief">
+                <div class="b-idx">01</div>
+                <div class="b-body">
+                  <div class="b-t">Chew one extra time per bite &mdash; the one-minute tip.</div>
+                  <p class="b-b">Post-resection digestion benefits more than you'd think.</p>
+                </div>
+              </div>
+              <div class="d5-brief">
+                <div class="b-idx">02</div>
+                <div class="b-body">
+                  <div class="b-t">Recent labs are in range.</div>
+                  <p class="b-b">CRP 2.1 &middot; Calprotectin 68. Both comfortably low.</p>
+                </div>
+              </div>
+              <div class="d5-brief">
+                <div class="b-idx">03</div>
+                <div class="b-body">
+                  <div class="b-t">Humira due tomorrow.</div>
+                  <p class="b-b">Pre-check the pen 15 minutes before.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d5-sect d5-quote">
+              <div class="bar"></div>
+              <p class="q">&ldquo;Healing happens in the quiet weeks.&rdquo;</p>
+              <div class="a">&mdash; on living with Crohn's, 2024</div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb active"><div class="tb-lb">Today</div><div class="tb-no">I</div></div>
+            <div class="tb"><div class="tb-lb">Food</div><div class="tb-no">II</div></div>
+            <div class="tb"><div class="tb-lb">Body</div><div class="tb-no">III</div></div>
+            <div class="tb"><div class="tb-lb">Meds</div><div class="tb-no">IV</div></div>
+            <div class="tb"><div class="tb-lb">More</div><div class="tb-no">V</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Dashboard</div>
+    </div>
+
+    <!-- Phone 2 : Scan Result -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="scan-top">
+              <div class="scan-back">&#8249; Back</div>
+              <div class="scan-title">Scan</div>
+              <div style="font-size:12px;font-weight:600;color:#1A1A1A">Save</div>
+            </div>
+
+            <div class="d5-scan-eye">&mdash; Filed under ice cream</div>
+            <div class="d5-scan-brand">Ben &amp; Jerry's &middot; 473 ml</div>
+            <h1 class="d5-scan-name">Chunky<br><em>Monkey.</em></h1>
+
+            <div class="d5-verdict">
+              <div class="d5-verdict-l">The verdict</div>
+              <h2 class="d5-verdict-v"><em>Often</em> a trigger for you.</h2>
+              <p class="d5-verdict-b">Three factors compound here. For a resected bowel, this is a heavy lift on all of them at once.</p>
+            </div>
+
+            <div class="d5-scan-sect">
+              <div class="d5-ssh"><span>The three reasons</span><span class="sn">03</span></div>
+              <div class="d5-reason-row">
+                <div class="rn">I</div>
+                <div class="rb">
+                  <p class="rt">High saturated fat &mdash; 24g</p>
+                  <p class="rd">Post-resection digestion struggles with heavy fat loads. Expect slow transit and possible urgency.</p>
+                </div>
+              </div>
+              <div class="d5-reason-row">
+                <div class="rn">II</div>
+                <div class="rb">
+                  <p class="rt">Full dairy cream base</p>
+                  <p class="rd">Lactose has been a repeat trigger in your history.</p>
+                </div>
+              </div>
+              <div class="d5-reason-row">
+                <div class="rn">III</div>
+                <div class="rb">
+                  <p class="rt">Walnut chunks &amp; added sugar</p>
+                  <p class="rd">Hard inclusions may pass roughly through narrowed segments.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d5-scan-sect">
+              <div class="d5-ssh"><span>Gentler alternatives</span><span class="sn">03</span></div>
+              <div class="d5-repl-row">
+                <div class="rn">01</div>
+                <div class="rb">
+                  <p class="rt2">So Delicious coconut "banana"</p>
+                  <p class="rd2">Dairy-free, low lactose, similar mouthfeel.</p>
+                </div>
+              </div>
+              <div class="d5-repl-row">
+                <div class="rn">02</div>
+                <div class="rb">
+                  <p class="rt2">Lactaid vanilla bean</p>
+                  <p class="rd2">Lactose removed; same cream format.</p>
+                </div>
+              </div>
+              <div class="d5-repl-row">
+                <div class="rn">03</div>
+                <div class="rb">
+                  <p class="rt2">Frozen banana "nice cream"</p>
+                  <p class="rd2">One ingredient, whipped in a blender.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-lb">Today</div><div class="tb-no">I</div></div>
+            <div class="tb active"><div class="tb-lb">Food</div><div class="tb-no">II</div></div>
+            <div class="tb"><div class="tb-lb">Body</div><div class="tb-no">III</div></div>
+            <div class="tb"><div class="tb-lb">Meds</div><div class="tb-no">IV</div></div>
+            <div class="tb"><div class="tb-lb">More</div><div class="tb-no">V</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Food scan result</div>
+    </div>
+
+    <!-- Phone 3 : Article -->
+    <div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar"><span>9:41</span><span class="sb-right"><span class="sb-dot"></span><span>100%</span></span></div>
+          <div class="screen-body">
+            <div class="art-top">
+              <div class="art-back">&#8249; Library</div>
+              <div class="art-issue">No. 34</div>
+            </div>
+
+            <div class="art-eye">&mdash; Lifestyle</div>
+            <h1 class="art-title">Smoking<br>&amp; <em>Crohn&apos;s.</em></h1>
+            <div class="art-meta-row"><span>8 Min</span><span class="dot"></span><span>Apr 26</span><span class="dot"></span><span>Clinically Reviewed</span></div>
+
+            <div class="art-body">
+              <p class="drop">Of everything you can change about living with Crohn's &mdash; diet, stress, sleep, exercise &mdash; quitting smoking is the single intervention with the most consistent effect on disease activity in the research literature.</p>
+              <p>A 2024 meta-analysis of 21 cohort studies found active smokers with Crohn's had roughly double the relapse rate of non-smokers, needed surgery sooner, and responded less well to biologics.</p>
+
+              <h3 class="art-h3">Why <em>nicotine</em> matters here</h3>
+              <p>The mechanism isn't fully mapped, but the working theory involves impaired gut blood flow, altered mucosal healing, and shifts in the gut microbiome. Unlike ulcerative colitis, Crohn's and tobacco are cleanly antagonistic.</p>
+
+              <div class="art-nav">
+                <div class="art-nav-t">&mdash; In this piece</div>
+                <div class="art-nav-row">
+                  <div class="nt">Why nicotine matters here</div>
+                  <div class="nn">I &middot; 1 MIN</div>
+                </div>
+                <div class="art-nav-row">
+                  <div class="nt">What happens when you quit</div>
+                  <div class="nn">II &middot; 2 MIN</div>
+                </div>
+                <div class="art-nav-row">
+                  <div class="nt">Methods that actually work</div>
+                  <div class="nn">III &middot; 3 MIN</div>
+                </div>
+                <div class="art-nav-row">
+                  <div class="nt">The vaping question</div>
+                  <div class="nn">IV &middot; 2 MIN</div>
+                </div>
+              </div>
+
+              <h3 class="art-h3">What happens when <em>you quit</em></h3>
+              <p>Within a year of quitting, most patients see a measurable drop in flare frequency &mdash; often comparable to adding a disease-modifying medication to the regimen.</p>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tb"><div class="tb-lb">Today</div><div class="tb-no">I</div></div>
+            <div class="tb"><div class="tb-lb">Food</div><div class="tb-no">II</div></div>
+            <div class="tb"><div class="tb-lb">Body</div><div class="tb-no">III</div></div>
+            <div class="tb"><div class="tb-lb">Meds</div><div class="tb-no">IV</div></div>
+            <div class="tb active"><div class="tb-lb">More</div><div class="tb-no">V</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Knowledge article</div>
+    </div>
+
+  </div>
+
+  <div class="blurb">
+    <strong>When this feels right.</strong> You want the app to feel like a premium weekly publication about <em>your</em> health &mdash; thoughtful, curated, a little literary. Best if you love reading long-form health writing and want the Knowledge Hub to shine as much as the trackers. Serif headers and drop caps give the gravitas without feeling stuffy.
+  </div>
+</section>
+
+<script>
+(function(){
+  const tabs = document.querySelectorAll('.tab');
+  const dirs = document.querySelectorAll('.direction');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      const id = t.dataset.dir;
+      tabs.forEach(x => x.classList.toggle('active', x === t));
+      dirs.forEach(d => d.classList.toggle('active', d.id === id));
+      window.scrollTo({top: document.querySelector('.tabs').offsetTop - 8, behavior: 'smooth'});
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
