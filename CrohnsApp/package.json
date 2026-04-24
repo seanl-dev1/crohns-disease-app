@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build:web": "expo export -p web && node scripts/postbuild-web.mjs",
+    "deploy:web": "npm run build:web && wrangler pages deploy dist --project-name=crohns-disease-app --commit-dirty=true"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
