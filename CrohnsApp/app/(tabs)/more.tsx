@@ -93,9 +93,16 @@ export default function MoreScreen() {
           themeColors={c}
         />
         <MenuItem
+          icon="color-palette-outline"
+          label="Appearance"
+          subtitle="Pick from 10 visual themes"
+          onPress={() => router.push('/theme')}
+          themeColors={c}
+        />
+        <MenuItem
           icon="settings-outline"
           label="Settings"
-          subtitle="Notifications, theme, privacy"
+          subtitle="Notifications, privacy"
           onPress={() => {}}
           themeColors={c}
         />

@@ -6,6 +6,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import type { ThemePresetId } from '../theme/presets';
 
 export type DiseaseState = 'flare' | 'remission' | 'uncertain';
 export type DietaryPhase =
@@ -91,6 +92,10 @@ interface AppState {
   // App state — NOT persisted
   isLoading: boolean;
   setLoading: (loading: boolean) => void;
+
+  // Theme preset — persisted so the user's chosen theme survives restarts
+  themePreset: ThemePresetId;
+  setThemePreset: (preset: ThemePresetId) => void;
 }
 
 const defaultUser: UserProfile = {
@@ -158,15 +163,19 @@ export const useAppStore = create<AppState>()(
 
       isLoading: true,
       setLoading: (isLoading) => set({ isLoading }),
+
+      themePreset: 'warm-minimalist' as ThemePresetId,
+      setThemePreset: (themePreset) => set({ themePreset }),
     }),
     {
       name: 'crohnsapp-storage',
       storage: createJSONStorage(() => AsyncStorage),
-      // Persist user profile, weekly goal, and last check-in
+      // Persist user profile, weekly goal, last check-in, and theme
       partialize: (state) => ({
         user: state.user,
         weeklyGoal: state.weeklyGoal,
         lastCheckin: state.lastCheckin,
+        themePreset: state.themePreset,
       }),
     }
   )
