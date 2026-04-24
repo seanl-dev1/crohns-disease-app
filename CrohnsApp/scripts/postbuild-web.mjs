@@ -26,22 +26,41 @@ const PWA_TAGS = `
     <meta name="description" content="Your personal Crohn's disease companion — food scanning, symptom tracking, and evidence-based guidance." />`;
 
 async function main() {
-  const html = await readFile(indexPath, 'utf8');
+  let html = await readFile(indexPath, 'utf8');
+  const original = html;
 
-  if (html.includes('rel="manifest"')) {
-    console.log('postbuild-web: PWA tags already present, skipping');
+  // 1. Swap script tag from `defer` to `type="module"` — required because
+  //    Expo SDK 54 web bundle uses `import.meta`, which only works in modules.
+  //    Without this, browser throws:
+  //      SyntaxError: Cannot use 'import.meta' outside a module
+  //    and the app renders as a blank page.
+  html = html.replace(/(\sdefer)(>)/g, ' type="module"$2');
+
+  // 2. Inject PWA manifest + apple-touch-icon + theme-color meta tags.
+  const PWA_TAGS = `
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#2F6F6A" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="CrohnsApp" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Your personal Crohn's disease companion — food scanning, symptom tracking, and evidence-based guidance." />`;
+
+  if (!html.includes('rel="manifest"')) {
+    html = html.replace('</head>', `${PWA_TAGS}\n  </head>`);
+  }
+
+  if (html === original) {
+    console.log('postbuild-web: nothing to patch (already up to date)');
     return;
   }
 
-  // Inject tags just before </head>
-  const patched = html.replace('</head>', `${PWA_TAGS}\n  </head>`);
-
-  if (patched === html) {
-    throw new Error('postbuild-web: failed to find </head> in dist/index.html');
-  }
-
-  await writeFile(indexPath, patched, 'utf8');
-  console.log('postbuild-web: PWA tags injected into dist/index.html');
+  await writeFile(indexPath, html, 'utf8');
+  const patches = [];
+  if (html.includes('type="module"') && !original.includes('type="module"')) patches.push('script→module');
+  if (html.includes('rel="manifest"') && !original.includes('rel="manifest"')) patches.push('PWA tags');
+  console.log(`postbuild-web: patched (${patches.join(', ')})`);
 }
 
 main().catch((err) => {

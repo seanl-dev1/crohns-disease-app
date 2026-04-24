@@ -51,7 +51,11 @@ function RootNavigator() {
 
   // Load Heritage Apothecary fonts (also used by other serif-leaning presets).
   // expo-font handles both web (<link> injection) and native (bundled assets).
-  const [fontsLoaded] = useFonts({
+  // Load Heritage fonts but do NOT block render on them. If fonts fail or
+  // take time to load, app renders with system-font fallback and re-renders
+  // once fonts are ready. Blocking on useFonts() caused a blank page on web
+  // when a single font import errored silently.
+  const [fontsLoaded, fontError] = useFonts({
     PlayfairDisplay_400Regular,
     PlayfairDisplay_500Medium,
     PlayfairDisplay_600SemiBold,
@@ -72,6 +76,10 @@ function RootNavigator() {
     Oswald_500Medium,
     Oswald_600SemiBold,
   });
+  if (fontError) {
+    // Log to console but don't block — system font fallback is fine.
+    console.warn('Heritage font load error:', fontError);
+  }
 
   useEffect(() => {
     async function init() {
@@ -118,7 +126,10 @@ function RootNavigator() {
     }
   }, [session, authLoading, segments, onboardingComplete]);
 
-  if (authLoading || !fontsLoaded) {
+  // Block render only on auth loading. Fonts are non-blocking — app will
+  // paint with system-font fallback immediately and swap to Playfair/etc.
+  // once they arrive.
+  if (authLoading) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: theme.background }}>
         <ActivityIndicator size="large" color={theme.primary} />

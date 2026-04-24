@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crohnicle — Logo & Icon Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#FAF8F3;
+  --surface:#FFFFFF;
+  --tile-bg:#F7F3EC;
+  --tile-bg-warm:#F1EADB;
+  --mark:#6B8E6F;
+  --mark-deep:#4A6B4F;
+  --mark-soft:#A8C1AC;
+  --text:#2A2A2A;
+  --text-muted:#6B6B6B;
+  --text-faint:#9B9B9B;
+  --border:rgba(107,142,111,0.15);
+  --border-strong:rgba(107,142,111,0.3);
+  --shadow-sm:0 2px 6px rgba(42,42,42,0.04);
+  --shadow-md:0 6px 20px rgba(42,42,42,0.06);
+  --shadow-lg:0 20px 60px rgba(42,42,42,0.12);
+}
+
+html,body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 32px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:140px 0 100px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(107,142,111,0.08),transparent 60%);
+  pointer-events:none;
+}
+
+.hero-mark{
+  width:112px;
+  height:112px;
+  background:var(--tile-bg);
+  border-radius:26px;
+  margin:0 auto 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--mark);
+  box-shadow:var(--shadow-md),inset 0 0 0 1px rgba(107,142,111,0.08);
+  position:relative;
+}
+
+.hero-mark svg{width:70px;height:70px}
+
+.hero-badge{
+  display:inline-block;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--mark);
+  font-weight:600;
+  padding:6px 14px;
+  background:rgba(107,142,111,0.08);
+  border-radius:999px;
+  margin-bottom:24px;
+}
+
+.hero h1{
+  font-weight:700;
+  font-size:76px;
+  letter-spacing:-0.04em;
+  line-height:1;
+  margin-bottom:24px;
+  color:var(--text);
+}
+
+.hero h1 em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:400;
+  color:var(--mark);
+  letter-spacing:-0.02em;
+}
+
+.hero-tagline{
+  font-size:21px;
+  color:var(--text-muted);
+  font-weight:400;
+  margin-bottom:56px;
+  letter-spacing:-0.01em;
+  max-width:620px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.5;
+}
+
+.hero-meta{
+  display:inline-flex;
+  gap:32px;
+  padding:14px 32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-size:13px;
+  color:var(--text-muted);
+  box-shadow:var(--shadow-sm);
+}
+
+.hero-meta span{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+}
+
+.hero-meta .dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--mark);
+}
+
+/* ===== PRINCIPLES ===== */
+.principles{padding:40px 0 80px}
+
+.principles-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.principle{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+  transition:transform 0.3s cubic-bezier(0.2,0.8,0.2,1),box-shadow 0.3s;
+}
+
+.principle:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+}
+
+.principle-num{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:28px;
+  color:var(--mark);
+  margin-bottom:12px;
+  line-height:1;
+}
+
+.principle-text{
+  font-size:15px;
+  color:var(--text);
+  line-height:1.55;
+}
+
+.principle-text strong{
+  display:block;
+  margin-bottom:4px;
+  font-weight:600;
+}
+
+/* ===== SECTIONS ===== */
+section{padding:80px 0}
+
+.section-header{
+  margin-bottom:64px;
+  max-width:680px;
+}
+
+.section-header.center{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.section-eyebrow{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--mark);
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+.section-title{
+  font-size:44px;
+  letter-spacing:-0.035em;
+  line-height:1.08;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.section-title em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:400;
+  color:var(--mark);
+}
+
+.section-sub{
+  font-size:17px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* ===== CATEGORY ===== */
+.category{margin-bottom:72px}
+
+.category-header{
+  display:flex;
+  align-items:baseline;
+  gap:24px;
+  margin-bottom:36px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--border);
+}
+
+.category-roman{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:34px;
+  color:var(--mark);
+  line-height:1;
+}
+
+.category-name{
+  font-size:24px;
+  font-weight:600;
+  letter-spacing:-0.02em;
+}
+
+.category-desc{
+  margin-left:auto;
+  font-size:14px;
+  color:var(--text-muted);
+  font-style:italic;
+}
+
+/* ===== ICON GRID ===== */
+.icon-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:28px;
+}
+
+.concept{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.tile{
+  width:128px;
+  height:128px;
+  background:var(--tile-bg);
+  border-radius:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  box-shadow:var(--shadow-sm),inset 0 0 0 1px rgba(107,142,111,0.08);
+  color:var(--mark);
+  transition:transform 0.3s cubic-bezier(0.2,0.8,0.2,1),box-shadow 0.3s;
+  position:relative;
+}
+
+.tile::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(180deg,rgba(255,255,255,0.5),transparent 40%);
+  pointer-events:none;
+}
+
+.tile:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:var(--shadow-md);
+}
+
+.tile svg{
+  width:88px;
+  height:88px;
+  position:relative;
+  z-index:1;
+}
+
+.concept-num{
+  font-size:11px;
+  color:var(--text-faint);
+  font-weight:500;
+  letter-spacing:0.12em;
+  margin-bottom:6px;
+  font-variant-numeric:tabular-nums;
+}
+
+.concept-name{
+  font-size:15px;
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:8px;
+  letter-spacing:-0.01em;
+}
+
+.concept-desc{
+  font-size:13px;
+  color:var(--text-muted);
+  line-height:1.45;
+  max-width:170px;
+}
+
+/* ===== TOP 5 ===== */
+.top-section{
+  background:linear-gradient(180deg,var(--bg),var(--tile-bg-warm));
+  padding:120px 0;
+}
+
+.top-pick{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:80px;
+  padding:64px 0;
+  border-bottom:1px solid var(--border);
+  align-items:center;
+}
+
+.top-pick:first-of-type{padding-top:0}
+.top-pick:last-child{border-bottom:none;padding-bottom:0}
+
+.top-pick-info .rank{
+  display:inline-block;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:15px;
+  color:var(--mark);
+  margin-bottom:12px;
+  letter-spacing:0.02em;
+}
+
+.top-pick-info .name{
+  font-size:38px;
+  font-weight:700;
+  letter-spacing:-0.03em;
+  margin-bottom:20px;
+  line-height:1.05;
+}
+
+.top-pick-info .pitch{
+  font-size:16px;
+  color:var(--text-muted);
+  line-height:1.65;
+  margin-bottom:28px;
+}
+
+.top-pick-info .attrs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.attr{
+  padding:7px 14px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-size:12px;
+  color:var(--text-muted);
+  font-weight:500;
+  letter-spacing:0.02em;
+}
+
+.variants{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  padding:20px 0 40px;
+}
+
+.variant-wrap{position:relative}
+
+.variant{
+  aspect-ratio:1;
+  border-radius:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:var(--shadow-md),inset 0 0 0 1px rgba(0,0,0,0.04);
+  position:relative;
+  overflow:hidden;
+}
+
+.variant::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,0.3),transparent 40%);
+  pointer-events:none;
+}
+
+.variant svg{
+  width:58%;
+  height:58%;
+  position:relative;
+  z-index:1;
+}
+
+.v-primary{background:var(--tile-bg);color:var(--mark)}
+.v-mono{background:#FFFFFF;color:#2A2A2A}
+.v-inverse{background:var(--mark);color:#F7F3EC}
+
+.variant-label{
+  margin-top:16px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--text-faint);
+  font-weight:600;
+  text-align:center;
+}
+
+/* ===== PHONE MOCKUP ===== */
+.phone-section{
+  background:linear-gradient(180deg,var(--tile-bg-warm) 0%,#EADFC9 100%);
+  padding:120px 0 140px;
+}
+
+.phones-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:24px;
+  margin-top:64px;
+}
+
+.phone-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.phone{
+  width:100%;
+  aspect-ratio:9/19.5;
+  background:#0a0a0a;
+  border-radius:32px;
+  padding:6px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(0,0,0,0.15),
+    inset 0 0 0 2px #2a2a2a;
+  position:relative;
+}
+
+.phone-screen{
+  height:100%;
+  border-radius:26px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 30% 20%,#D4C09A 0%,transparent 50%),
+    radial-gradient(ellipse at 70% 80%,#A88D6B 0%,transparent 60%),
+    linear-gradient(160deg,#C4A97F 0%,#8E7355 100%);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+
+.notch{
+  position:absolute;
+  top:6px;
+  left:50%;
+  transform:translateX(-50%);
+  width:30%;
+  height:14px;
+  background:#0a0a0a;
+  border-radius:10px;
+  z-index:10;
+}
+
+.status-bar{
+  padding:10px 14px 4px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:white;
+  font-size:9px;
+  font-weight:600;
+  margin-top:12px;
+}
+
+.sb-indicators{
+  display:flex;
+  gap:3px;
+  align-items:center;
+}
+
+.sb-indicators .bar{
+  width:2px;
+  background:white;
+  border-radius:1px;
+}
+
+.sb-indicators .bar:nth-child(1){height:3px}
+.sb-indicators .bar:nth-child(2){height:4px}
+.sb-indicators .bar:nth-child(3){height:5px}
+.sb-indicators .bar:nth-child(4){height:6px}
+
+.sb-battery{
+  width:14px;
+  height:7px;
+  border:1px solid white;
+  border-radius:2px;
+  padding:1px;
+  position:relative;
+  margin-left:4px;
+}
+
+.sb-battery::after{
+  content:'';
+  position:absolute;
+  right:-2px;
+  top:2px;
+  width:1px;
+  height:3px;
+  background:white;
+  border-radius:0 1px 1px 0;
+}
+
+.sb-battery-fill{
+  background:white;
+  height:100%;
+  width:75%;
+  border-radius:1px;
+}
+
+.app-grid{
+  padding:16px 12px 8px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px 10px;
+  flex:1;
+}
+
+.app-icon{
+  aspect-ratio:1;
+  border-radius:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.app-crohnicle{
+  background:var(--tile-bg);
+  color:var(--mark);
+  box-shadow:0 4px 12px rgba(0,0,0,0.3),0 0 0 1.5px rgba(107,142,111,0.4);
+  position:relative;
+  z-index:2;
+}
+
+.app-crohnicle svg{
+  width:65%;
+  height:65%;
+}
+
+.app-crohnicle::after{
+  content:'';
+  position:absolute;
+  inset:-4px;
+  border:1.5px solid rgba(255,255,255,0.6);
+  border-radius:14px;
+  animation:pulse 2.5s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:0.4;transform:scale(1)}
+  50%{opacity:0.9;transform:scale(1.05)}
+}
+
+.dock{
+  margin:4px 12px 14px;
+  padding:8px;
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius:14px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+
+.dock .app-icon{box-shadow:0 1px 3px rgba(0,0,0,0.15)}
+
+.phone-caption{
+  margin-top:24px;
+  text-align:center;
+}
+
+.phone-caption-num{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:15px;
+  color:var(--mark);
+  margin-bottom:4px;
+}
+
+.phone-caption-name{
+  font-size:14px;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  padding:120px 0 100px;
+  text-align:center;
+}
+
+.footer-title{
+  font-size:40px;
+  font-weight:700;
+  letter-spacing:-0.03em;
+  margin-bottom:20px;
+  line-height:1.1;
+}
+
+.footer-title em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:400;
+  color:var(--mark);
+}
+
+.footer-text{
+  font-size:17px;
+  color:var(--text-muted);
+  max-width:580px;
+  margin:0 auto 48px;
+  line-height:1.6;
+}
+
+.footer-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.step{
+  padding:24px 20px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  text-align:left;
+  transition:transform 0.3s cubic-bezier(0.2,0.8,0.2,1),box-shadow 0.3s;
+}
+
+.step:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+}
+
+.step-num{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:20px;
+  color:var(--mark);
+  margin-bottom:8px;
+}
+
+.step-title{
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.step-desc{
+  font-size:13px;
+  color:var(--text-muted);
+  line-height:1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1100px){
+  .icon-grid{grid-template-columns:repeat(4,1fr)}
+  .phones-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media (max-width:900px){
+  .icon-grid{grid-template-columns:repeat(3,1fr)}
+  .principles-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-steps{grid-template-columns:repeat(2,1fr)}
+  .top-pick{grid-template-columns:1fr;gap:40px}
+  .phones-grid{grid-template-columns:repeat(2,1fr);max-width:480px;margin-left:auto;margin-right:auto}
+  .hero h1{font-size:54px}
+  .section-title{font-size:32px}
+}
+
+@media (max-width:560px){
+  .icon-grid{grid-template-columns:repeat(2,1fr)}
+  .principles-grid{grid-template-columns:1fr}
+  .footer-steps{grid-template-columns:1fr}
+  .phones-grid{grid-template-columns:1fr;max-width:240px}
+  .hero{padding:80px 0 60px}
+  .hero h1{font-size:42px}
+  .section-title{font-size:26px}
+  .container{padding:0 20px}
+  .category-header{flex-wrap:wrap}
+  .category-desc{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-mark">
+      <svg viewBox="0 0 100 100">
+        <path d="M 78 22 C 20 25, 15 75, 70 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 22 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="hero-badge">Brand exploration · v0.1</div>
+    <h1>Crohnicle <em>mark studies</em></h1>
+    <p class="hero-tagline">Crohn's + Chronicle. A guidance-first app for living well with IBD — warm, calm, and never clinical.</p>
+    <div class="hero-meta">
+      <span><span class="dot"></span>25 concepts</span>
+      <span><span class="dot"></span>5 categories</span>
+      <span><span class="dot"></span>3 color variants</span>
+      <span><span class="dot"></span>Home-screen preview</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRINCIPLES ===== -->
+<section class="principles">
+  <div class="container">
+    <div class="principles-grid">
+      <div class="principle">
+        <div class="principle-num">i</div>
+        <div class="principle-text"><strong>Warm, not clinical</strong>No medical crosses, no bright red, no sterile blue.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">ii</div>
+        <div class="principle-text"><strong>Calm, not alarming</strong>The app is guidance, not a daily chore. The mark should feel the same.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">iii</div>
+        <div class="principle-text"><strong>Legible at 16px</strong>Single focal element. Works as a favicon and a 1024px App Store icon.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">iv</div>
+        <div class="principle-text"><strong>Ownable</strong>Distinct from "Chronicle", "Crohn's Chronicles", and generic health-app tropes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 25 CONCEPTS ===== -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The Full Field</div>
+      <h2 class="section-title">25 concepts, <em>five directions</em></h2>
+      <p class="section-sub">Each concept is a first-draft sketch meant to test a direction, not a final mark. Hover to lift the tile.</p>
+    </div>
+
+    <!-- ===== CATEGORY I: LETTERFORM ===== -->
+    <div class="category">
+      <div class="category-header">
+        <span class="category-roman">I.</span>
+        <span class="category-name">Letterform-driven</span>
+        <span class="category-desc">The "C" is the hero</span>
+      </div>
+      <div class="icon-grid">
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+              <path d="M 78 22 A 30 30 0 1 0 74 76"/>
+            </svg>
+          </div>
+          <div class="concept-num">01</div>
+          <div class="concept-name">The Unfinished C</div>
+          <div class="concept-desc">Book-like opening — chronicle in progress.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 74 25 C 38 25, 22 40, 28 50 C 36 56, 46 48, 40 55 C 34 62, 22 60, 28 70 C 36 82, 60 78, 74 75"/>
+            </svg>
+          </div>
+          <div class="concept-num">02</div>
+          <div class="concept-name">Gut-C</div>
+          <div class="concept-desc">The inner curve has an organic bulge — anatomy, discovered.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round">
+              <path d="M 80 22 A 32 32 0 1 0 80 78" stroke-width="9"/>
+              <path d="M 68 38 A 16 16 0 1 0 68 62" stroke-width="5"/>
+            </svg>
+          </div>
+          <div class="concept-num">03</div>
+          <div class="concept-name">Nested C</div>
+          <div class="concept-desc">Two concentric Cs — shield-like depth without a shield.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+              <path d="M 70 30 A 26 26 0 1 0 70 70"/>
+              <circle cx="78" cy="28" r="5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="concept-num">04</div>
+          <div class="concept-name">C with a Dot</div>
+          <div class="concept-desc">The dot is you — the current chapter.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+              <path d="M 72 22 Q 22 22, 22 50 Q 22 78, 72 78 L 72 70 Q 32 70, 32 50 Q 32 30, 72 30 Z"/>
+              <path d="M 72 22 L 72 30 L 82 26 Z" opacity="0.55"/>
+            </svg>
+          </div>
+          <div class="concept-num">05</div>
+          <div class="concept-name">Ribbon C</div>
+          <div class="concept-desc">A C formed from a single folding ribbon.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== CATEGORY II: JOURNEY ===== -->
+    <div class="category">
+      <div class="category-header">
+        <span class="category-roman">II.</span>
+        <span class="category-name">Journey & Chronicle</span>
+        <span class="category-desc">The story angle</span>
+      </div>
+      <div class="icon-grid">
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+              <path d="M 15 28 Q 50 22, 48 50 Q 50 78, 15 72 Z"/>
+              <path d="M 85 28 Q 50 22, 52 50 Q 50 78, 85 72 Z"/>
+            </svg>
+          </div>
+          <div class="concept-num">06</div>
+          <div class="concept-name">Open Spine</div>
+          <div class="concept-desc">Open book from above; pages form a C in negative space.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+              <path d="M 42 35 L 42 82 L 50 74 L 58 82 L 58 35 Z"/>
+              <path d="M 42 35 Q 50 14, 58 35 Q 56 24, 50 20 Q 44 24, 42 35 Z"/>
+              <line x1="50" y1="22" x2="50" y2="32" stroke="#F7F3EC" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="concept-num">07</div>
+          <div class="concept-name">Bookmark Leaf</div>
+          <div class="concept-desc">Ribbon terminating in a leaf — chronicle plus healing.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 8">
+              <path d="M 72 28 A 28 28 0 1 0 72 72"/>
+            </svg>
+          </div>
+          <div class="concept-num">08</div>
+          <div class="concept-name">Pathway C</div>
+          <div class="concept-desc">Footstep-style dashes — the IBD journey, walked.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+              <path d="M 72 28 A 28 28 0 1 0 72 72"/>
+              <circle cx="72" cy="28" r="4.5" fill="currentColor"/>
+              <circle cx="47" cy="22.5" r="4.5" fill="currentColor"/>
+              <circle cx="28" cy="37" r="4.5" fill="currentColor"/>
+              <circle cx="28" cy="63" r="4.5" fill="currentColor"/>
+              <circle cx="47" cy="77.5" r="4.5" fill="currentColor"/>
+              <circle cx="72" cy="72" r="4.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="concept-num">09</div>
+          <div class="concept-name">Timeline C</div>
+          <div class="concept-desc">Entry nodes along a curve — your log, visualized.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+              <path d="M 20 72 Q 50 20, 80 72"/>
+              <circle cx="50" cy="30" r="6" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="concept-num">10</div>
+          <div class="concept-name">Chapter Arc</div>
+          <div class="concept-desc">A rising arc — flare to remission, chapter by chapter.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== CATEGORY III: GUT ===== -->
+    <div class="category">
+      <div class="category-header">
+        <span class="category-roman">III.</span>
+        <span class="category-name">Gut & anatomy</span>
+        <span class="category-desc">Stylized, never literal</span>
+      </div>
+      <div class="icon-grid">
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 30 35 C 12 35, 12 65, 35 65 C 58 65, 42 35, 65 35 C 88 35, 88 65, 70 65"/>
+            </svg>
+          </div>
+          <div class="concept-num">11</div>
+          <div class="concept-name">The Loop</div>
+          <div class="concept-desc">One continuous line folded like a calm knot.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+              <path d="M 18 62 Q 34 48, 50 62 T 82 62"/>
+              <path d="M 18 50 Q 34 36, 50 50 T 82 50"/>
+              <path d="M 18 38 Q 34 24, 50 38 T 82 38"/>
+            </svg>
+          </div>
+          <div class="concept-num">12</div>
+          <div class="concept-name">Three Waves</div>
+          <div class="concept-desc">Peristalsis and calm seas — the same gesture.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round">
+              <path d="M 20 32 Q 35 22, 50 32 Q 65 42, 50 52 Q 35 62, 50 72 Q 65 82, 82 72"/>
+            </svg>
+          </div>
+          <div class="concept-num">13</div>
+          <div class="concept-name">Knot Untied</div>
+          <div class="concept-desc">A loose knot with one end trailing free.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+              <path d="M 50 50 Q 54 46, 48 46 Q 40 46, 40 54 Q 40 66, 56 66 Q 74 66, 74 46 Q 74 22, 46 22 Q 18 22, 18 56"/>
+            </svg>
+          </div>
+          <div class="concept-num">14</div>
+          <div class="concept-name">Soft Coil</div>
+          <div class="concept-desc">A fern-frond spiral tightening inward.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 12 50 L 25 50 L 32 35 L 42 68 L 52 38 L 60 50 L 68 50 Q 88 50, 88 32 Q 88 22, 76 22"/>
+            </svg>
+          </div>
+          <div class="concept-num">15</div>
+          <div class="concept-name">The Pulse</div>
+          <div class="concept-desc">Heartbeat line resolving into a C.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== CATEGORY IV: SAFETY ===== -->
+    <div class="category">
+      <div class="category-header">
+        <span class="category-roman">IV.</span>
+        <span class="category-name">Safety & guidance</span>
+        <span class="category-desc">Protection, quietly</span>
+      </div>
+      <div class="icon-grid">
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round">
+              <circle cx="50" cy="50" r="32" stroke-width="3.5"/>
+              <path d="M 58 28 A 22 22 0 1 0 58 72" stroke-width="6"/>
+              <line x1="50" y1="14" x2="50" y2="22" stroke-width="3"/>
+              <line x1="50" y1="78" x2="50" y2="86" stroke-width="3"/>
+              <line x1="14" y1="50" x2="22" y2="50" stroke-width="3"/>
+              <line x1="78" y1="50" x2="86" y2="50" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="concept-num">16</div>
+          <div class="concept-name">The Compass</div>
+          <div class="concept-desc">A C as the needle — navigation through IBD.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100">
+              <path d="M 50 14 L 80 22 L 80 50 Q 80 76, 50 86 Q 20 76, 20 50 L 20 22 Z" fill="currentColor"/>
+              <path d="M 62 38 A 16 16 0 1 0 62 62" fill="none" stroke="#F7F3EC" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="concept-num">17</div>
+          <div class="concept-name">Soft Shield</div>
+          <div class="concept-desc">A rounded shield with the C cut inside.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100">
+              <rect x="46" y="70" width="8" height="18" rx="2" fill="currentColor"/>
+              <path d="M 78 28 A 30 30 0 0 0 22 28" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" opacity="0.25"/>
+              <path d="M 70 40 A 22 22 0 0 0 30 40" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+              <path d="M 62 52 A 13 13 0 0 0 38 52" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="concept-num">18</div>
+          <div class="concept-name">Lighthouse Sweep</div>
+          <div class="concept-desc">A C-shaped beam fanning from a small base.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+              <path d="M 16 52 Q 50 80, 84 52"/>
+              <path d="M 22 42 Q 50 68, 78 42"/>
+              <path d="M 28 32 Q 50 56, 72 32"/>
+            </svg>
+          </div>
+          <div class="concept-num">19</div>
+          <div class="concept-name">The Nest</div>
+          <div class="concept-desc">Concentric arcs forming a warm cradle.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 75 25 A 30 30 0 1 0 75 75"/>
+              <polyline points="38,52 48,60 62,44" stroke-width="6"/>
+            </svg>
+          </div>
+          <div class="concept-num">20</div>
+          <div class="concept-name">Checkmark in Curve</div>
+          <div class="concept-desc">A gentle C cradling an approval mark.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== CATEGORY V: ORGANIC ===== -->
+    <div class="category">
+      <div class="category-header">
+        <span class="category-roman">V.</span>
+        <span class="category-name">Organic & natural</span>
+        <span class="category-desc">Growth, healing, warmth</span>
+      </div>
+      <div class="icon-grid">
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100">
+              <path d="M 78 24 C 20 26, 16 74, 68 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 24 Z" fill="currentColor"/>
+              <path d="M 78 24 Q 55 50, 45 74" stroke="#F7F3EC" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="concept-num">21</div>
+          <div class="concept-name">Leaf-C</div>
+          <div class="concept-desc">A leaf whose silhouette is already a C.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100">
+              <path d="M 72 25 A 28 28 0 1 0 72 75" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+              <path d="M 58 36 C 50 46, 50 56, 58 60 C 66 64, 70 58, 70 52 C 70 44, 64 40, 58 36 Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="concept-num">22</div>
+          <div class="concept-name">Droplet Cradle</div>
+          <div class="concept-desc">A water drop held inside the C's opening.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+              <line x1="15" y1="68" x2="85" y2="68"/>
+              <path d="M 32 68 A 18 18 0 0 1 68 68" fill="currentColor" stroke="none"/>
+              <line x1="50" y1="22" x2="50" y2="30"/>
+              <line x1="22" y1="40" x2="27" y2="44"/>
+              <line x1="78" y1="40" x2="73" y2="44"/>
+              <line x1="14" y1="55" x2="20" y2="56"/>
+              <line x1="86" y1="55" x2="80" y2="56"/>
+            </svg>
+          </div>
+          <div class="concept-num">23</div>
+          <div class="concept-name">Sunrise Arc</div>
+          <div class="concept-desc">A new day over a steady horizon.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 20 65 Q 50 82, 80 65"/>
+              <line x1="50" y1="73" x2="50" y2="38" stroke-width="4"/>
+              <path d="M 50 52 Q 32 44, 34 32 Q 46 36, 50 52 Z" fill="currentColor" stroke="none"/>
+              <path d="M 50 46 Q 68 38, 66 26 Q 54 30, 50 46 Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="concept-num">24</div>
+          <div class="concept-name">Sprout</div>
+          <div class="concept-desc">A shoot emerging from the C as soil line.</div>
+        </div>
+
+        <div class="concept">
+          <div class="tile">
+            <svg viewBox="0 0 100 100">
+              <path d="M 50 18 C 28 30, 28 70, 50 82 C 72 70, 72 30, 50 18 Z" fill="currentColor"/>
+              <line x1="50" y1="22" x2="50" y2="78" stroke="#F7F3EC" stroke-width="2.5"/>
+              <circle cx="42" cy="38" r="2.8" fill="#F7F3EC"/>
+              <circle cx="58" cy="45" r="2.8" fill="#F7F3EC"/>
+              <circle cx="42" cy="52" r="2.8" fill="#F7F3EC"/>
+              <circle cx="58" cy="59" r="2.8" fill="#F7F3EC"/>
+              <circle cx="42" cy="66" r="2.8" fill="#F7F3EC"/>
+            </svg>
+          </div>
+          <div class="concept-num">25</div>
+          <div class="concept-name">Pod Split</div>
+          <div class="concept-desc">A seed pod opening — transformation from inside.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== TOP 5 ===== -->
+<div class="top-section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-eyebrow">The Shortlist</div>
+      <h2 class="section-title">Top 5 picks, <em>three ways</em></h2>
+      <p class="section-sub">Each finalist rendered in the three palettes you'll need: warm primary, monochrome, and inverse. If a mark is strong, it holds up across all three.</p>
+    </div>
+
+    <!-- #02 Gut-C -->
+    <div class="top-pick">
+      <div class="top-pick-info">
+        <div class="rank">Finalist No. 01 · #02</div>
+        <div class="name">Gut-C</div>
+        <p class="pitch">The quiet winner. Reads as a clean "C" at any size, but a closer look reveals an organic anatomical bulge on the inner curve. Meaning you discover, not meaning you're told.</p>
+        <div class="attrs">
+          <span class="attr">Distinctive</span>
+          <span class="attr">Clinically safe</span>
+          <span class="attr">Hidden depth</span>
+          <span class="attr">Scales to 16px</span>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant-wrap">
+          <div class="variant v-primary">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M 74 25 C 38 25, 22 40, 28 50 C 36 56, 46 48, 40 55 C 34 62, 22 60, 28 70 C 36 82, 60 78, 74 75"/></svg>
+          </div>
+          <div class="variant-label">Primary</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-mono">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M 74 25 C 38 25, 22 40, 28 50 C 36 56, 46 48, 40 55 C 34 62, 22 60, 28 70 C 36 82, 60 78, 74 75"/></svg>
+          </div>
+          <div class="variant-label">Monochrome</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-inverse">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M 74 25 C 38 25, 22 40, 28 50 C 36 56, 46 48, 40 55 C 34 62, 22 60, 28 70 C 36 82, 60 78, 74 75"/></svg>
+          </div>
+          <div class="variant-label">Inverse</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #07 Bookmark Leaf -->
+    <div class="top-pick">
+      <div class="top-pick-info">
+        <div class="rank">Finalist No. 02 · #07</div>
+        <div class="name">Bookmark Leaf</div>
+        <p class="pitch">Perfectly unites Chronicle (the bookmark) with healing (the leaf tip). Narratively perfect for the name, and a single silhouette means it reads instantly at any scale.</p>
+        <div class="attrs">
+          <span class="attr">Narrative</span>
+          <span class="attr">Warm</span>
+          <span class="attr">Single-silhouette</span>
+          <span class="attr">Ownable</span>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant-wrap">
+          <div class="variant v-primary">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+              <path d="M 42 35 L 42 82 L 50 74 L 58 82 L 58 35 Z"/>
+              <path d="M 42 35 Q 50 14, 58 35 Q 56 24, 50 20 Q 44 24, 42 35 Z"/>
+              <line x1="50" y1="22" x2="50" y2="32" stroke="#F7F3EC" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="variant-label">Primary</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-mono">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+              <path d="M 42 35 L 42 82 L 50 74 L 58 82 L 58 35 Z"/>
+              <path d="M 42 35 Q 50 14, 58 35 Q 56 24, 50 20 Q 44 24, 42 35 Z"/>
+              <line x1="50" y1="22" x2="50" y2="32" stroke="#FFFFFF" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="variant-label">Monochrome</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-inverse">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+              <path d="M 42 35 L 42 82 L 50 74 L 58 82 L 58 35 Z"/>
+              <path d="M 42 35 Q 50 14, 58 35 Q 56 24, 50 20 Q 44 24, 42 35 Z"/>
+              <line x1="50" y1="22" x2="50" y2="32" stroke="#6B8E6F" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="variant-label">Inverse</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #11 The Loop -->
+    <div class="top-pick">
+      <div class="top-pick-info">
+        <div class="rank">Finalist No. 03 · #11</div>
+        <div class="name">The Loop</div>
+        <p class="pitch">The most modern of the finalists. A single unbroken line that reads as movement, continuity, calm. No letters, no anatomy — pure brand gesture. Ages like a good icon should: well.</p>
+        <div class="attrs">
+          <span class="attr">Modern</span>
+          <span class="attr">Minimal</span>
+          <span class="attr">Timeless</span>
+          <span class="attr">Wordmark-ready</span>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant-wrap">
+          <div class="variant v-primary">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M 30 35 C 12 35, 12 65, 35 65 C 58 65, 42 35, 65 35 C 88 35, 88 65, 70 65"/></svg>
+          </div>
+          <div class="variant-label">Primary</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-mono">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M 30 35 C 12 35, 12 65, 35 65 C 58 65, 42 35, 65 35 C 88 35, 88 65, 70 65"/></svg>
+          </div>
+          <div class="variant-label">Monochrome</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-inverse">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M 30 35 C 12 35, 12 65, 35 65 C 58 65, 42 35, 65 35 C 88 35, 88 65, 70 65"/></svg>
+          </div>
+          <div class="variant-label">Inverse</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #16 The Compass -->
+    <div class="top-pick">
+      <div class="top-pick-info">
+        <div class="rank">Finalist No. 04 · #16</div>
+        <div class="name">The Compass</div>
+        <p class="pitch">The most literal expression of the "navigation through IBD" brand promise. Densest of the five — great on a phone screen, tougher at favicon scale. Best if you plan to lean into the navigation metaphor in marketing.</p>
+        <div class="attrs">
+          <span class="attr">Narrative</span>
+          <span class="attr">Complex</span>
+          <span class="attr">Best at medium+ sizes</span>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant-wrap">
+          <div class="variant v-primary">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round">
+              <circle cx="50" cy="50" r="32" stroke-width="3.5"/>
+              <path d="M 58 28 A 22 22 0 1 0 58 72" stroke-width="6"/>
+              <line x1="50" y1="14" x2="50" y2="22" stroke-width="3"/>
+              <line x1="50" y1="78" x2="50" y2="86" stroke-width="3"/>
+              <line x1="14" y1="50" x2="22" y2="50" stroke-width="3"/>
+              <line x1="78" y1="50" x2="86" y2="50" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="variant-label">Primary</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-mono">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round">
+              <circle cx="50" cy="50" r="32" stroke-width="3.5"/>
+              <path d="M 58 28 A 22 22 0 1 0 58 72" stroke-width="6"/>
+              <line x1="50" y1="14" x2="50" y2="22" stroke-width="3"/>
+              <line x1="50" y1="78" x2="50" y2="86" stroke-width="3"/>
+              <line x1="14" y1="50" x2="22" y2="50" stroke-width="3"/>
+              <line x1="78" y1="50" x2="86" y2="50" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="variant-label">Monochrome</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-inverse">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round">
+              <circle cx="50" cy="50" r="32" stroke-width="3.5"/>
+              <path d="M 58 28 A 22 22 0 1 0 58 72" stroke-width="6"/>
+              <line x1="50" y1="14" x2="50" y2="22" stroke-width="3"/>
+              <line x1="50" y1="78" x2="50" y2="86" stroke-width="3"/>
+              <line x1="14" y1="50" x2="22" y2="50" stroke-width="3"/>
+              <line x1="78" y1="50" x2="86" y2="50" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="variant-label">Inverse</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #21 Leaf-C -->
+    <div class="top-pick">
+      <div class="top-pick-info">
+        <div class="rank">Finalist No. 05 · #21</div>
+        <div class="name">Leaf-C</div>
+        <p class="pitch">The safest, most timeless pick. A single leaf that naturally forms a C silhouette — wellness-adjacent, warm, instantly readable. The no-regrets choice if you want a mark that looks just as right in ten years.</p>
+        <div class="attrs">
+          <span class="attr">Timeless</span>
+          <span class="attr">Universal</span>
+          <span class="attr">Scales to favicon</span>
+          <span class="attr">Low risk</span>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant-wrap">
+          <div class="variant v-primary">
+            <svg viewBox="0 0 100 100">
+              <path d="M 78 24 C 20 26, 16 74, 68 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 24 Z" fill="currentColor"/>
+              <path d="M 78 24 Q 55 50, 45 74" stroke="#F7F3EC" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="variant-label">Primary</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-mono">
+            <svg viewBox="0 0 100 100">
+              <path d="M 78 24 C 20 26, 16 74, 68 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 24 Z" fill="currentColor"/>
+              <path d="M 78 24 Q 55 50, 45 74" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="variant-label">Monochrome</div>
+        </div>
+        <div class="variant-wrap">
+          <div class="variant v-inverse">
+            <svg viewBox="0 0 100 100">
+              <path d="M 78 24 C 20 26, 16 74, 68 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 24 Z" fill="currentColor"/>
+              <path d="M 78 24 Q 55 50, 45 74" stroke="#6B8E6F" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="variant-label">Inverse</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== HOME SCREEN ===== -->
+<section class="phone-section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-eyebrow">On A Real Screen</div>
+      <h2 class="section-title">How each mark lives <em>in the wild</em></h2>
+      <p class="section-sub">The ultimate test: does the icon hold its own next to Phone, Messages, and Mail? Each finalist, shown as it would appear on a Crohn's patient's home screen.</p>
+    </div>
+
+    <div class="phones-grid">
+
+      <!-- Phone 1: Gut-C -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="notch"></div>
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-indicators">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="sb-battery"><div class="sb-battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="app-grid">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#65D964,#2FB54A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#3A3A3C,#1C1C1E);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE27A,#F4BD27);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#E0C7A0,#A88454);"></div>
+              <div class="app-crohnicle app-icon">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M 74 25 C 38 25, 22 40, 28 50 C 36 56, 46 48, 40 55 C 34 62, 22 60, 28 70 C 36 82, 60 78, 74 75"/></svg>
+              </div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#F0F0F0);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#B580FF,#7C2ED5);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE58A,#F4C842);"></div>
+            </div>
+            <div class="dock">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <div class="phone-caption-num">No. 01</div>
+          <div class="phone-caption-name">Gut-C</div>
+        </div>
+      </div>
+
+      <!-- Phone 2: Bookmark Leaf -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="notch"></div>
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-indicators">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="sb-battery"><div class="sb-battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="app-grid">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#65D964,#2FB54A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#3A3A3C,#1C1C1E);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE27A,#F4BD27);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#E0C7A0,#A88454);"></div>
+              <div class="app-crohnicle app-icon">
+                <svg viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M 42 35 L 42 82 L 50 74 L 58 82 L 58 35 Z"/>
+                  <path d="M 42 35 Q 50 14, 58 35 Q 56 24, 50 20 Q 44 24, 42 35 Z"/>
+                </svg>
+              </div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#F0F0F0);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#B580FF,#7C2ED5);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE58A,#F4C842);"></div>
+            </div>
+            <div class="dock">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <div class="phone-caption-num">No. 02</div>
+          <div class="phone-caption-name">Bookmark Leaf</div>
+        </div>
+      </div>
+
+      <!-- Phone 3: The Loop -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="notch"></div>
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-indicators">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="sb-battery"><div class="sb-battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="app-grid">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#65D964,#2FB54A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#3A3A3C,#1C1C1E);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE27A,#F4BD27);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#E0C7A0,#A88454);"></div>
+              <div class="app-crohnicle app-icon">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M 30 35 C 12 35, 12 65, 35 65 C 58 65, 42 35, 65 35 C 88 35, 88 65, 70 65"/></svg>
+              </div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#F0F0F0);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#B580FF,#7C2ED5);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE58A,#F4C842);"></div>
+            </div>
+            <div class="dock">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <div class="phone-caption-num">No. 03</div>
+          <div class="phone-caption-name">The Loop</div>
+        </div>
+      </div>
+
+      <!-- Phone 4: The Compass -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="notch"></div>
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-indicators">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="sb-battery"><div class="sb-battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="app-grid">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#65D964,#2FB54A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#3A3A3C,#1C1C1E);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE27A,#F4BD27);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#E0C7A0,#A88454);"></div>
+              <div class="app-crohnicle app-icon">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round">
+                  <circle cx="50" cy="50" r="32" stroke-width="3.5"/>
+                  <path d="M 58 28 A 22 22 0 1 0 58 72" stroke-width="6"/>
+                  <line x1="50" y1="14" x2="50" y2="22" stroke-width="3"/>
+                  <line x1="50" y1="78" x2="50" y2="86" stroke-width="3"/>
+                  <line x1="14" y1="50" x2="22" y2="50" stroke-width="3"/>
+                  <line x1="78" y1="50" x2="86" y2="50" stroke-width="3"/>
+                </svg>
+              </div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#F0F0F0);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#B580FF,#7C2ED5);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE58A,#F4C842);"></div>
+            </div>
+            <div class="dock">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <div class="phone-caption-num">No. 04</div>
+          <div class="phone-caption-name">The Compass</div>
+        </div>
+      </div>
+
+      <!-- Phone 5: Leaf-C -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="notch"></div>
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-indicators">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="sb-battery"><div class="sb-battery-fill"></div></div>
+              </div>
+            </div>
+            <div class="app-grid">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#65D964,#2FB54A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#3A3A3C,#1C1C1E);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE27A,#F4BD27);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#E0C7A0,#A88454);"></div>
+              <div class="app-crohnicle app-icon">
+                <svg viewBox="0 0 100 100">
+                  <path d="M 78 24 C 20 26, 16 74, 68 78 C 50 70, 38 60, 35 50 C 32 38, 50 30, 78 24 Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#F0F0F0);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#B580FF,#7C2ED5);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFE58A,#F4C842);"></div>
+            </div>
+            <div class="dock">
+              <div class="app-icon" style="background:linear-gradient(135deg,#4FE07B,#22A849);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#68C0F9,#2580E2);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#FFFFFF,#E8E8E8);"></div>
+              <div class="app-icon" style="background:linear-gradient(135deg,#F45B68,#D62A3A);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <div class="phone-caption-num">No. 05</div>
+          <div class="phone-caption-name">Leaf-C</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer">
+  <div class="container">
+    <h2 class="footer-title">Pick a direction. <em>Then we go deeper.</em></h2>
+    <p class="footer-text">These are first-pass sketches — the ideas, not the final mark. Once you choose a direction, the real work begins: refining proportions, locking the grid, pairing with a wordmark, and testing at every scale from favicon to billboard.</p>
+    <div class="footer-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Pick a finalist</div>
+        <div class="step-desc">Tell me the number that's resonating. If you're split, tell me what feels right and wrong about each.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Refine the mark</div>
+        <div class="step-desc">Sharpen proportions, test at 16 / 32 / 120 / 512 / 1024px. Produce a clean vector master.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Pair with a wordmark</div>
+        <div class="step-desc">Typography study for "Crohnicle" — serif vs. sans, custom letterforms, lockups.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Ship assets</div>
+        <div class="step-desc">App icon (all platforms), favicon, splash screen, marketing hero. Drop them into the Expo app.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
